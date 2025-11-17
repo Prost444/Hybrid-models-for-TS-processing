@@ -1,2 +1,4 @@
+src/data/m3/csv/*.csv filter=lfs diff=lfs merge=lfs -text
+src/outputs/m3_eval/*.pt filter=lfs diff=lfs merge=lfs -text
 src/data/m4/*.csv filter=lfs diff=lfs merge=lfs -text
 src/data/m4/csv/*.csv filter=lfs diff=lfs merge=lfs -text
