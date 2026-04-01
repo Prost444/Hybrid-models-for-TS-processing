@@ -1,5 +1,6 @@
 """Experiment and evaluation pipelines."""
 from .m3_benchmark import run_m3_benchmark
+from .m4_benchmark import run_m4_benchmark
 
 # Legacy pipelines import helformer (TensorFlow) — load lazily to avoid
 # crashing when TF is absent or the models __init__ was cleaned up.
@@ -10,4 +11,5 @@ from .m3_benchmark import run_m3_benchmark
 
 __all__ = [
     "run_m3_benchmark",
+    "run_m4_benchmark",
 ]
