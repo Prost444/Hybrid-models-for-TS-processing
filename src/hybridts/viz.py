@@ -55,6 +55,218 @@ def save_raw_series_plot(
     plt.close(fig)
 
 
+def save_helformer_hw_decomposition_pair_plot(
+    *,
+    y_tr: np.ndarray,
+    y_te: np.ndarray,
+    base_train: np.ndarray,
+    base_test: np.ndarray,
+    title: str,
+    save_path: Path,
+) -> None:
+    """Save a paired plot for the Holt-Winters ratio decomposition used by Helformer.
+
+    Left: original series (train/test) with HW baseline (fitted/forecast).
+    Right: multiplicative ratio series y/base (train/test).
+    """
+    import matplotlib.pyplot as plt
+
+    y_tr_arr = np.asarray(y_tr, float).ravel()
+    y_te_arr = np.asarray(y_te, float).ravel()
+    base_train_arr = np.asarray(base_train, float).ravel()
+    base_test_arr = np.asarray(base_test, float).ravel()
+
+    n_tr = int(y_tr_arr.size)
+    n_te = int(y_te_arr.size)
+    if n_tr == 0 or n_te == 0:
+        return
+
+    if base_train_arr.size != n_tr:
+        base_train_arr = np.resize(base_train_arr, n_tr)
+    if base_test_arr.size != n_te:
+        base_test_arr = np.resize(base_test_arr, n_te)
+
+    denom_tr = np.where(np.abs(base_train_arr) < 1e-8, 1.0, base_train_arr)
+    ratio_tr = y_tr_arr / denom_tr
+    denom_te = np.where(np.abs(base_test_arr) < 1e-8, 1.0, base_test_arr)
+    ratio_te = y_te_arr / denom_te
+
+    xs_tr = np.arange(n_tr)
+    xs_te = np.arange(n_tr, n_tr + n_te)
+
+    fig, axes = plt.subplots(1, 2, figsize=(13.2, 4.2))
+    ax0, ax1 = axes
+
+    # Series + baseline
+    ax0.plot(xs_tr, y_tr_arr, linewidth=1.9, label="y (train)", color="C0")
+    ax0.plot(xs_te, y_te_arr, linewidth=2.0, label="y (test)", color="C3")
+    ax0.plot(xs_tr, base_train_arr, linewidth=1.7, label="HW baseline (fit)", color="C1")
+    ax0.plot(xs_te, base_test_arr, linewidth=1.7, linestyle="--", label="HW baseline (fcst)", color="C1")
+    ax0.axvline(x=n_tr - 0.5, color="0.35", linestyle="--", linewidth=1.0, alpha=0.7)
+    ax0.set_title("Series vs. Holt-Winters baseline", fontsize=10)
+    ax0.set_xlabel("t")
+    ax0.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax0.minorticks_on()
+    ax0.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+    ax0.legend(fontsize=8, frameon=False, ncol=2)
+
+    # Ratio component
+    ratio_tr = np.where(np.isfinite(ratio_tr), ratio_tr, np.nan)
+    ratio_te = np.where(np.isfinite(ratio_te), ratio_te, np.nan)
+    ax1.plot(xs_tr, ratio_tr, linewidth=1.7, label="y/base (train)", color="C0")
+    ax1.plot(xs_te, ratio_te, linewidth=1.8, label="y/base (test)", color="C3")
+    ax1.axhline(1.0, color="0.35", linewidth=1.0, alpha=0.65)
+    ax1.axvline(x=n_tr - 0.5, color="0.35", linestyle="--", linewidth=1.0, alpha=0.7)
+    ax1.set_title("Multiplicative ratio component", fontsize=10)
+    ax1.set_xlabel("t")
+    ax1.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax1.minorticks_on()
+    ax1.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+    ax1.legend(fontsize=8, frameon=False, ncol=1)
+
+    fig.suptitle(title, fontsize=10)
+    fig.tight_layout()
+    save_path = Path(save_path)
+    _ensure_dir(save_path.parent)
+    fig.savefig(save_path, bbox_inches="tight", dpi=160)
+    plt.close(fig)
+
+
+def save_helformer_hw_components_plot(
+    *,
+    y_tr: np.ndarray,
+    y_te: np.ndarray,
+    base_train: np.ndarray,
+    base_test: np.ndarray,
+    season: np.ndarray | None,
+    title: str,
+    save_path: Path,
+    seasonal_mode: str = "mul",
+) -> None:
+    """Save Holt-Winters decomposition components (trend-like, seasonal, residual).
+
+    - Trend-like component: baseline without seasonality (base/season for multiplicative, base-season for additive)
+    - Seasonal component: seasonal factor/value from statsmodels (train only)
+    - Residual component: y/base (multiplicative) or y-base (additive)
+    """
+    import matplotlib.pyplot as plt
+
+    y_tr_arr = np.asarray(y_tr, float).ravel()
+    y_te_arr = np.asarray(y_te, float).ravel()
+    base_train_arr = np.asarray(base_train, float).ravel()
+    base_test_arr = np.asarray(base_test, float).ravel()
+    season_arr = None if season is None else np.asarray(season, float).ravel()
+
+    n_tr = int(y_tr_arr.size)
+    n_te = int(y_te_arr.size)
+    if n_tr == 0 or n_te == 0:
+        return
+
+    if base_train_arr.size != n_tr:
+        base_train_arr = np.resize(base_train_arr, n_tr)
+    if base_test_arr.size != n_te:
+        base_test_arr = np.resize(base_test_arr, n_te)
+    if season_arr is not None and season_arr.size != n_tr:
+        season_arr = np.resize(season_arr, n_tr)
+
+    denom_tr = np.where(np.abs(base_train_arr) < 1e-8, 1.0, base_train_arr)
+    denom_te = np.where(np.abs(base_test_arr) < 1e-8, 1.0, base_test_arr)
+
+    seasonal_mode = (seasonal_mode or "none").lower()
+    is_mul = seasonal_mode.startswith("mul")
+    is_add = seasonal_mode.startswith("add")
+
+    # Helformer uses a ratio residual regardless of additive/multiplicative HW.
+    residual_tr = y_tr_arr / denom_tr
+    residual_te = y_te_arr / denom_te
+    residual_tr = np.where(np.isfinite(residual_tr), residual_tr, np.nan)
+    residual_te = np.where(np.isfinite(residual_te), residual_te, np.nan)
+
+    trend_like = None
+    if season_arr is not None and np.any(np.isfinite(season_arr)):
+        if is_mul:
+            season_safe = np.where(np.abs(season_arr) < 1e-8, 1.0, season_arr)
+            trend_like = base_train_arr / season_safe
+        elif is_add:
+            trend_like = base_train_arr - season_arr
+        else:
+            trend_like = base_train_arr
+        trend_like = np.where(np.isfinite(trend_like), trend_like, np.nan)
+    else:
+        trend_like = base_train_arr
+
+    xs_tr = np.arange(n_tr)
+    xs_te = np.arange(n_tr, n_tr + n_te)
+
+    fig, axes = plt.subplots(4, 1, figsize=(12.8, 9.6), sharex=False)
+
+    # 1) Series + baseline
+    ax = axes[0]
+    ax.plot(xs_tr, y_tr_arr, linewidth=1.9, label="y (train)", color="C0")
+    ax.plot(xs_te, y_te_arr, linewidth=2.0, label="y (test)", color="C3")
+    ax.plot(xs_tr, base_train_arr, linewidth=1.7, label="HW baseline (fit)", color="C1")
+    ax.plot(xs_te, base_test_arr, linewidth=1.7, linestyle="--", label="HW baseline (fcst)", color="C1")
+    ax.axvline(x=n_tr - 0.5, color="0.35", linestyle="--", linewidth=1.0, alpha=0.7)
+    ax.set_title("Series vs. Holt-Winters baseline", fontsize=10)
+    ax.set_xlabel("t")
+    ax.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax.minorticks_on()
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+    ax.legend(fontsize=8, frameon=False, ncol=2)
+
+    # 2) Trend-like component (train only)
+    ax = axes[1]
+    if trend_like is not None:
+        ax.plot(xs_tr, trend_like, linewidth=1.8, color="C0")
+    ax.set_title("Trend-like component (baseline without seasonality)", fontsize=10)
+    ax.set_xlabel("t (train)")
+    ax.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax.minorticks_on()
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+
+    # 3) Seasonal component (train only)
+    ax = axes[2]
+    if season_arr is not None:
+        ax.plot(xs_tr, season_arr, linewidth=1.6, color="C2")
+        ax.axhline(1.0 if is_mul else 0.0, color="0.35", linewidth=1.0, alpha=0.65)
+    else:
+        ax.text(
+            0.5,
+            0.5,
+            "No seasonal component",
+            transform=ax.transAxes,
+            ha="center",
+            va="center",
+            fontsize=9,
+            color="0.35",
+        )
+    ax.set_title("Seasonal component (state)", fontsize=10)
+    ax.set_xlabel("t (train)")
+    ax.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax.minorticks_on()
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+
+    # 4) Residual component (train/test)
+    ax = axes[3]
+    ax.plot(xs_tr, residual_tr, linewidth=1.6, label="residual (train)", color="C0")
+    ax.plot(xs_te, residual_te, linewidth=1.7, label="residual (test)", color="C3")
+    ax.axhline(1.0, color="0.35", linewidth=1.0, alpha=0.65)
+    ax.axvline(x=n_tr - 0.5, color="0.35", linestyle="--", linewidth=1.0, alpha=0.7)
+    ax.set_title("Residual component", fontsize=10)
+    ax.set_xlabel("t")
+    ax.grid(True, which="major", linestyle="-", linewidth=0.6, alpha=0.25)
+    ax.minorticks_on()
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.5, alpha=0.18)
+    ax.legend(fontsize=8, frameon=False, ncol=2)
+
+    fig.suptitle(title, fontsize=10)
+    fig.tight_layout()
+    save_path = Path(save_path)
+    _ensure_dir(save_path.parent)
+    fig.savefig(save_path, bbox_inches="tight", dpi=160)
+    plt.close(fig)
+
+
 def save_acf_pacf_plot(
     *,
     y: np.ndarray,
@@ -74,7 +286,8 @@ def save_acf_pacf_plot(
     except Exception:
         return
 
-    max_lags = int(min(max(1, nlags), max(1, y.size // 2)))
+    # statsmodels PACF requires nlags < 0.5 * nobs (strict inequality).
+    max_lags = int(min(max(1, nlags), max(1, (y.size - 1) // 2)))
     acf_vals = sm_acf(y, nlags=max_lags, fft=False)
     pacf_vals = sm_pacf(y, nlags=max_lags, method="ywm")
     lags = np.arange(1, max_lags + 1)
@@ -450,6 +663,142 @@ def save_series_viz_bundle(
         )
 
 
+def save_series_viz_bundle_basic(
+    *,
+    out_dir: Path,
+    series_key: str,
+    title_prefix: str,
+    y_tr: np.ndarray,
+    y_te: np.ndarray,
+    forecasts: Dict[str, np.ndarray],
+    acf_lags: int = 48,
+    zoom_tail: int = 120,
+) -> None:
+    """Save per-series plots without MODWT-related visuals."""
+    out_dir = Path(out_dir)
+    save_raw_series_plot(
+        y_tr=y_tr,
+        y_te=y_te,
+        title=f"{title_prefix} raw series",
+        save_path=out_dir / "01_raw_series" / f"{series_key}.png",
+    )
+    save_acf_pacf_plot(
+        y=y_tr,
+        title=f"{title_prefix} ACF/PACF",
+        save_path=out_dir / "02_acf_pacf" / f"{series_key}.png",
+        nlags=acf_lags,
+    )
+    save_forecast_zoom_plot(
+        y_tr=y_tr,
+        y_te=y_te,
+        forecasts=forecasts,
+        title=f"{title_prefix} forecast (zoom)",
+        save_path=out_dir / "03_forecast_zoom" / f"{series_key}.png",
+        tail=zoom_tail,
+    )
+
+    from .data import plot_forecast
+
+    plot_forecast(
+        f"{title_prefix} forecast",
+        np.asarray(y_tr, float),
+        np.asarray(y_te, float),
+        forecasts,
+        save_path=out_dir / "04_forecast_full" / f"{series_key}.png",
+    )
+    save_forecast_test_only_plot(
+        y_te=np.asarray(y_te, float),
+        forecasts=forecasts,
+        title=f"{title_prefix} forecast (test only)",
+        save_path=out_dir / "05_forecast_test_only" / f"{series_key}.png",
+    )
+
+
+def save_series_viz_bundle_helformer_hw(
+    *,
+    out_dir: Path,
+    series_key: str,
+    title_prefix: str,
+    y_tr: np.ndarray,
+    y_te: np.ndarray,
+    forecasts: Dict[str, np.ndarray],
+    base_train: np.ndarray | None,
+    base_test: np.ndarray | None,
+    season: np.ndarray | None,
+    seasonal_mode: str = "mul",
+    acf_lags: int = 48,
+    zoom_tail: int = 120,
+) -> None:
+    """Save per-series plots with Holt-Winters (HW) decomposition (no MODWT visuals).
+
+    The directory structure is:
+    - 01_raw_series/<series_key>.png
+    - 02_acf_pacf/<series_key>.png
+    - 03_hw_pair/<series_key>.png (optional)
+    - 04_hw_components/<series_key>.png (optional)
+    - 05_forecast_zoom/<series_key>.png
+    - 06_forecast_full/<series_key>.png
+    - 07_forecast_test_only/<series_key>.png
+    """
+    out_dir = Path(out_dir)
+    save_raw_series_plot(
+        y_tr=y_tr,
+        y_te=y_te,
+        title=f"{title_prefix} raw series",
+        save_path=out_dir / "01_raw_series" / f"{series_key}.png",
+    )
+    save_acf_pacf_plot(
+        y=y_tr,
+        title=f"{title_prefix} ACF/PACF",
+        save_path=out_dir / "02_acf_pacf" / f"{series_key}.png",
+        nlags=acf_lags,
+    )
+    if base_train is not None and base_test is not None:
+        save_helformer_hw_decomposition_pair_plot(
+            y_tr=np.asarray(y_tr, float),
+            y_te=np.asarray(y_te, float),
+            base_train=np.asarray(base_train, float),
+            base_test=np.asarray(base_test, float),
+            title=f"{title_prefix} HW ratio decomposition",
+            save_path=out_dir / "03_hw_pair" / f"{series_key}.png",
+        )
+        save_helformer_hw_components_plot(
+            y_tr=np.asarray(y_tr, float),
+            y_te=np.asarray(y_te, float),
+            base_train=np.asarray(base_train, float),
+            base_test=np.asarray(base_test, float),
+            season=None if season is None else np.asarray(season, float),
+            seasonal_mode=str(seasonal_mode or "mul"),
+            title=f"{title_prefix} HW decomposition components",
+            save_path=out_dir / "04_hw_components" / f"{series_key}.png",
+        )
+
+    save_forecast_zoom_plot(
+        y_tr=y_tr,
+        y_te=y_te,
+        forecasts=forecasts,
+        title=f"{title_prefix} forecast (zoom)",
+        save_path=out_dir / "05_forecast_zoom" / f"{series_key}.png",
+        tail=zoom_tail,
+    )
+
+    from .data import plot_forecast
+
+    plot_forecast(
+        f"{title_prefix} forecast",
+        np.asarray(y_tr, float),
+        np.asarray(y_te, float),
+        forecasts,
+        save_path=out_dir / "06_forecast_full" / f"{series_key}.png",
+    )
+    save_forecast_test_only_plot(
+        y_te=np.asarray(y_te, float),
+        forecasts=forecasts,
+        title=f"{title_prefix} forecast (test only)",
+        save_path=out_dir / "07_forecast_test_only" / f"{series_key}.png",
+    )
+
+
 def save_component_forecast_plot(
     *,
     y_tr: np.ndarray,
@@ -599,6 +948,10 @@ def save_component_forecast_test_only_plot(
 
 __all__ = [
     "save_series_viz_bundle",
+    "save_series_viz_bundle_basic",
+    "save_series_viz_bundle_helformer_hw",
+    "save_helformer_hw_decomposition_pair_plot",
+    "save_helformer_hw_components_plot",
     "save_component_forecast_plot",
     "save_component_forecast_test_only_plot",
     "save_forecast_test_only_plot",

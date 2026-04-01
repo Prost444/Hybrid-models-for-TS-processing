@@ -1,0 +1,7 @@
+::     ::
+Trading Metrics
+Timestamp: 2025-12-22 21:50:25
+Total Return: -137.8479%
+Volatility: 0.0248
+Max Drawdown: -1.4980
+Sharpe Ratio: -1.9636

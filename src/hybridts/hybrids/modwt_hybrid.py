@@ -82,8 +82,8 @@ def modwt_decompose_with_boundary(
         pad_len = int(min(max(8, (2 ** J) * L), max(1, N - 1)))
         y_work = _pad(y, pad_len)
 
-    W = ext_modwt.modwt(y_work, wavelet, J, mode="wrap")
-    M = ext_modwt.modwtmra(W, wavelet, mode="wrap")
+    W = ext_modw.modwt(y_work, wavelet, J, mode="wrap")
+    M = ext_modw.modwtmra(W, wavelet, mode="wrap")
     arr = (
         np.vstack([np.asarray(c, float) for c in M])
         if isinstance(M, (list, tuple))

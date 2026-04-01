@@ -3,15 +3,39 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Sequence
+import warnings
 
 import numpy as np
 import pandas as pd
 import torch
 
+warnings.filterwarnings("ignore", message=".*np.object.*", category=FutureWarning)
+
 try:  # pragma: no cover - optional dependency
     from tqdm.auto import tqdm
 except Exception:  # pragma: no cover - best-effort fallback
     tqdm = None
+
+try:  # pragma: no cover - optional dependency
+    import tensorflow as tf
+except Exception:  # pragma: no cover - fallback when TF is missing
+    tf = None
+
+try:  # pragma: no cover - optional dependency
+    import optuna
+    from optuna.integration import TFKerasPruningCallback
+except Exception:  # pragma: no cover - fallback when Optuna is missing
+    optuna = None
+    TFKerasPruningCallback = None
+
+try:  # pragma: no cover - optional dependency
+    from statsmodels.tsa.holtwinters import ExponentialSmoothing
+except Exception:  # pragma: no cover - fallback when statsmodels is missing
+    ExponentialSmoothing = None
+try:  # pragma: no cover - optional dependency
+    from statsmodels.tools.sm_exceptions import ConvergenceWarning
+except Exception:  # pragma: no cover - fallback when statsmodels is missing
+    ConvergenceWarning = None
 
 from ..config.settings import settings
 from ..data import (
@@ -30,12 +54,21 @@ from ..data import (
 )
 from ..hybrids import HybridComponent, HybridPlus, VWHybridMixed, build_global_hybrid_components
 from ..hybrids.modwt_hybrid import modwt_decompose_with_boundary
-from ..models import arima_forecast, auto_arima_forecast, ets_forecast, make_model, prophet_forecast
+from ..models import (
+    arima_forecast,
+    auto_arima_forecast,
+    create_helformer_model,
+    ets_forecast,
+    make_model,
+    prophet_forecast,
+)
 from ..training import TrainConfig
 from ..viz import (
     save_component_forecast_plot,
     save_component_forecast_test_only_plot,
     save_series_viz_bundle,
+    save_series_viz_bundle_basic,
+    save_series_viz_bundle_helformer_hw,
     save_simulation_full_plot,
     save_simulation_train_plot,
 )
@@ -108,6 +141,302 @@ def _progress(iterable, **kwargs):
     if tqdm is None:
         return iterable
     return tqdm(iterable, **kwargs)
+
+
+def _ensure_min_length(series: np.ndarray, min_len: int) -> np.ndarray:
+    series = np.asarray(series, float).ravel()
+    if series.size == 0:
+        return np.zeros(min_len, dtype=float)
+    if series.size >= min_len:
+        return series
+    pad_len = min_len - series.size
+    pad_val = float(series[0])
+    pad = np.full(pad_len, pad_val, dtype=float)
+    return np.concatenate([pad, series])
+
+
+def _minmax_fit(series: np.ndarray) -> tuple[float, float]:
+    series = np.asarray(series, float).ravel()
+    if series.size == 0:
+        return 0.0, 1.0
+    vmin = float(np.nanmin(series))
+    vmax = float(np.nanmax(series))
+    scale = vmax - vmin
+    if not np.isfinite(scale) or abs(scale) < 1e-8:
+        scale = 1.0
+    return vmin, float(scale)
+
+
+def _minmax_transform(series: np.ndarray, vmin: float, scale: float) -> np.ndarray:
+    return (np.asarray(series, float) - vmin) / scale
+
+
+def _minmax_inverse(series: np.ndarray, vmin: float, scale: float) -> np.ndarray:
+    return np.asarray(series, float) * scale + vmin
+
+
+def _build_xy(series: np.ndarray, lookback: int) -> tuple[np.ndarray, np.ndarray]:
+    series = np.asarray(series, float).ravel()
+    if series.size <= lookback:
+        series = _ensure_min_length(series, lookback + 1)
+    X, Y = [], []
+    for i in range(lookback, len(series)):
+        X.append(series[i - lookback : i])
+        Y.append(series[i])
+    X = np.asarray(X, np.float32).reshape(-1, lookback, 1)
+    Y = np.asarray(Y, np.float32).reshape(-1, 1)
+    return X, Y
+
+
+def _build_x(series: np.ndarray, lookback: int) -> np.ndarray:
+    series = np.asarray(series, float).ravel()
+    if series.size <= lookback:
+        series = _ensure_min_length(series, lookback + 1)
+    X = []
+    for i in range(lookback, len(series)):
+        X.append(series[i - lookback : i])
+    return np.asarray(X, np.float32).reshape(-1, lookback, 1)
+
+
+def _hw_baseline(
+    y_tr: np.ndarray,
+    horizon: int,
+    seasonal_period: int | None,
+    trend: str,
+    seasonal: str,
+) -> tuple[np.ndarray, np.ndarray] | None:
+    if ExponentialSmoothing is None:
+        return None
+    data = np.asarray(y_tr, float).ravel()
+    if data.size < 4:
+        return None
+    seasonal_periods = seasonal_period if seasonal_period and seasonal_period > 1 else None
+    seasonal_mode = seasonal if seasonal_periods else None
+    trend_mode = trend
+    if (trend_mode == "mul" or seasonal_mode == "mul") and np.any(data <= 0):
+        if trend_mode == "mul":
+            trend_mode = "add"
+        if seasonal_mode == "mul":
+            seasonal_mode = "add"
+    try:
+        model = ExponentialSmoothing(
+            data,
+            trend=trend_mode,
+            seasonal=seasonal_mode,
+            seasonal_periods=seasonal_periods,
+        )
+        with warnings.catch_warnings():
+            if ConvergenceWarning is not None:
+                warnings.filterwarnings("ignore", category=ConvergenceWarning)
+            warnings.filterwarnings("ignore", category=RuntimeWarning)
+            fitted = model.fit(optimized=True, use_brute=True)
+        base_train = np.asarray(fitted.fittedvalues, float)
+        if base_train.size != data.size:
+            base_train = np.resize(base_train, data.size)
+        base_train = np.where(np.isfinite(base_train), base_train, data)
+        base_test = np.asarray(fitted.forecast(horizon), float)
+        if base_test.size != horizon:
+            base_test = np.resize(base_test, horizon)
+        last_val = base_train[-1] if base_train.size else (data[-1] if data.size else 0.0)
+        base_test = np.where(np.isfinite(base_test), base_test, last_val)
+        return base_train, base_test
+    except Exception:
+        return None
+
+
+def _predict_test_windows(model, x_test: np.ndarray) -> np.ndarray:
+    if x_test.size == 0:
+        return np.zeros(0, dtype=float)
+    if tf is None:
+        raise RuntimeError("TensorFlow is required to run Helformer predictions")
+    x_tensor = tf.convert_to_tensor(x_test, dtype=tf.float32)
+    preds = model(x_tensor, training=False)
+    return np.asarray(preds.numpy(), float).reshape(-1)
+
+
+def _predict_rollout(
+    model,
+    history: list[float],
+    lookback: int,
+    horizon: int,
+) -> np.ndarray:
+    if horizon <= 0:
+        return np.zeros(0, dtype=float)
+    if lookback <= 0:
+        raise ValueError("lookback must be positive")
+    hist = list(history)
+    if not hist:
+        hist = [0.0] * lookback
+    preds: list[float] = []
+    for _ in range(horizon):
+        if len(hist) >= lookback:
+            window = hist[-lookback:]
+        else:
+            pad_val = hist[0]
+            window = [pad_val] * (lookback - len(hist)) + hist
+        x_step = np.asarray(window, np.float32).reshape(1, lookback, 1)
+        pred = _predict_test_windows(model, x_step)
+        pred_val = float(pred[-1]) if pred.size else (hist[-1] if hist else 0.0)
+        if not np.isfinite(pred_val):
+            pred_val = hist[-1] if hist else 0.0
+        preds.append(pred_val)
+        hist.append(pred_val)
+    return np.asarray(preds, float)
+
+
+def _predict_rollout_full(
+    model,
+    series_scaled: np.ndarray,
+    lookback: int,
+    total_len: int,
+) -> np.ndarray:
+    if total_len <= 0:
+        return np.zeros(0, dtype=float)
+    if lookback <= 0:
+        raise ValueError("lookback must be positive")
+    series_scaled = np.asarray(series_scaled, float).ravel().tolist()
+    if not series_scaled:
+        seed = [0.0] * lookback
+    elif len(series_scaled) >= lookback:
+        seed = series_scaled[:lookback]
+    else:
+        pad_val = series_scaled[0]
+        seed = series_scaled + [pad_val] * (lookback - len(series_scaled))
+    if total_len <= lookback:
+        return np.asarray(seed[:total_len], float)
+    preds = _predict_rollout(model, seed, lookback, total_len - lookback)
+    return np.asarray(seed + preds.tolist(), float)
+
+
+def _ratio_std_score(
+    y_tr: np.ndarray,
+    horizon: int,
+    seasonal_period: int | None,
+    trend: str,
+    seasonal: str,
+) -> float:
+    baseline = _hw_baseline(
+        y_tr,
+        horizon,
+        seasonal_period=seasonal_period,
+        trend=trend,
+        seasonal=seasonal,
+    )
+    if baseline is None:
+        return float("nan")
+    base_train, _ = baseline
+    denom = np.where(np.abs(base_train) < 1e-8, 1.0, base_train)
+    ratio = np.asarray(y_tr, float) / denom
+    if ratio.size == 0:
+        return float("nan")
+    return float(np.nanstd(ratio))
+
+
+def _select_by_ratio_std(
+    pairs: Sequence[tuple[str, np.ndarray, np.ndarray]],
+    *,
+    horizon: int,
+    seasonal_period: int | None,
+    trend: str,
+    seasonal: str,
+    min_std: float | None,
+    top_k: int | None,
+) -> list[tuple[str, np.ndarray, np.ndarray]]:
+    scored: list[tuple[float, tuple[str, np.ndarray, np.ndarray]]] = []
+    for sid, y_tr, y_te in pairs:
+        score = _ratio_std_score(
+            y_tr,
+            horizon,
+            seasonal_period=seasonal_period,
+            trend=trend,
+            seasonal=seasonal,
+        )
+        if not np.isfinite(score):
+            continue
+        if min_std is not None and score < float(min_std):
+            continue
+        scored.append((score, (sid, y_tr, y_te)))
+    if not scored:
+        return []
+    scored.sort(key=lambda item: item[0], reverse=True)
+    if top_k is not None and top_k > 0:
+        scored = scored[:top_k]
+    picked = [item[1] for item in scored]
+    sample = ", ".join(f"{sid} (std={score:.4f})" for score, (sid, _, _) in scored[:3])
+    print(f"[m4] selected by ratio std: {sample}")
+    return picked
+
+
+def _run_helformer_optuna(
+    X: np.ndarray,
+    Y: np.ndarray,
+    lookback: int,
+    *,
+    n_trials: int,
+    timeout: float | None,
+    validation_split: float,
+) -> dict[str, Any]:
+    if optuna is None:
+        raise RuntimeError("Optuna is required for Helformer tuning")
+    if tf is None:
+        raise RuntimeError("TensorFlow is required for Helformer tuning")
+    if X.size == 0 or Y.size == 0:
+        raise ValueError("not enough data for Helformer tuning")
+    if not (0.0 < validation_split < 1.0):
+        raise ValueError("validation_split must be between 0 and 1")
+    n_trials = int(n_trials)
+    if n_trials <= 0:
+        raise ValueError("n_trials must be positive")
+
+    def objective(trial: optuna.Trial) -> float:
+        learning_rate = trial.suggest_float("learning_rate", 0.0001, 0.01, log=True)
+        units = trial.suggest_int("units", 20, 50, step=5)
+        dropout_rate = trial.suggest_float("dropout_rate", 0.0, 0.3)
+        batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 128])
+        epochs = trial.suggest_int("epochs", 50, 150, step=10)
+        num_blocks = trial.suggest_int("num_blocks", 1, 4)
+        num_heads = trial.suggest_int("num_heads", 2, 10, step=2)
+        head_size = trial.suggest_int("head_size", 8, 64, step=8)
+
+        tf.keras.backend.clear_session()
+        try:
+            model = create_helformer_model(
+                lookback=lookback,
+                num_blocks=num_blocks,
+                num_heads=num_heads,
+                head_size=head_size,
+                dropout_rate=dropout_rate,
+                units=units,
+            )
+            model.compile(
+                optimizer=tf.keras.optimizers.Adam(learning_rate=float(learning_rate)),
+                loss="mean_squared_error",
+            )
+            callbacks = []
+            if TFKerasPruningCallback is not None:
+                callbacks = [TFKerasPruningCallback(trial, "val_loss")]
+            history = model.fit(
+                X,
+                Y,
+                batch_size=int(batch_size),
+                epochs=int(epochs),
+                validation_split=float(validation_split),
+                verbose=0,
+                callbacks=callbacks,
+            )
+            val_loss = history.history.get("val_loss")
+            if not val_loss:
+                return float("inf")
+            return float(min(val_loss))
+        finally:
+            try:
+                tf.keras.backend.clear_session()
+            except Exception:
+                pass
+
+    study = optuna.create_study(direction="minimize")
+    study.optimize(objective, n_trials=n_trials, timeout=timeout)
+    return dict(study.best_params)
 
 
 MODEL_LABELS = {
@@ -184,9 +513,32 @@ def evaluate_m4_hybrids(
     simulate_full_series: bool = False,
     simulation_mode: str = "rollout",
     simulation_train_only_plot: bool = False,
+    use_helformer: bool = False,
+    helformer_epochs: int = 40,
+    helformer_batch_size: int = 32,
+    helformer_lr: float = 8e-4,
+    helformer_num_blocks: int = 4,
+    helformer_num_heads: int = 4,
+    helformer_head_size: int = 56,
+    helformer_dropout: float = 0.11266524308240201,
+    helformer_units: int = 25,
+    helformer_lookback: int = 30,
+    helformer_verbose: int = 0,
+    helformer_use_hw: bool = True,
+    helformer_hw_trend: str = "mul",
+    helformer_hw_seasonal: str = "mul",
+    helformer_optuna: bool = False,
+    helformer_optuna_trials: int = 50,
+    helformer_optuna_timeout: float | None = None,
+    helformer_optuna_validation_split: float = 0.2,
+    helformer_pick_by_ratio_std: bool = False,
+    helformer_ratio_std_min: float | None = None,
+    helformer_forecast_mode: str = "rollout",
     model_params: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> pd.DataFrame:
-    base_models = tuple((m.lower() for m in (base_models or ("timesnet", "nbeats"))))
+    if base_models is None:
+        base_models = ("timesnet", "nbeats")
+    base_models = tuple((m.lower() for m in base_models))
     label_map = {name: MODEL_LABELS.get(name, f"{name.title()}+") for name in base_models}
     hybrid_models = base_models
 
@@ -204,6 +556,14 @@ def evaluate_m4_hybrids(
     rng = np.random.default_rng(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
+    if use_helformer:
+        if tf is None:
+            raise RuntimeError("TensorFlow is required to train Helformer")
+        tf.random.set_seed(seed)
+        # Helformer is always used with HW decomposition in M4 experiments.
+        helformer_use_hw = True
+        if helformer_optuna and optuna is None:
+            raise RuntimeError("Optuna is required when helformer_optuna is enabled")
 
     rows: List[Dict] = []
     categories = tuple(categories)
@@ -228,22 +588,37 @@ def evaluate_m4_hybrids(
             print(f"[m4:{cat}] no pairs found in CSV dir: {csv_dir}")
             continue
 
-        selected_list: List[tuple[str, np.ndarray, np.ndarray]]
+        selected_list: List[tuple[str, np.ndarray, np.ndarray]] | None = None
         if series_override and cat in series_override:
             wanted = set(series_override[cat])
             selected_list = [triple for triple in pairs if triple[0] in wanted]
             if n_per_cat and n_per_cat > 0:
                 selected_list = selected_list[: min(len(selected_list), n_per_cat)]
-        elif n_per_cat is None or n_per_cat <= 0:
-            selected_list = pairs
-        elif pick == "first":
-            selected_list = pairs[:n_per_cat]
-        elif pick == "last":
-            selected_list = pairs[-n_per_cat:]
-        else:
-            count = min(n_per_cat, len(pairs))
-            idx = rng.choice(len(pairs), size=count, replace=False)
-            selected_list = [pairs[int(i)] for i in idx]
+        elif use_helformer and helformer_pick_by_ratio_std:
+            selected_list = _select_by_ratio_std(
+                pairs,
+                horizon=H,
+                seasonal_period=per,
+                trend=helformer_hw_trend,
+                seasonal=helformer_hw_seasonal,
+                min_std=helformer_ratio_std_min,
+                top_k=n_per_cat if n_per_cat and n_per_cat > 0 else None,
+            )
+            if not selected_list:
+                print(f"[m4:{cat}] ratio-std selection empty; falling back to pick={pick}")
+                selected_list = None
+
+        if selected_list is None:
+            if n_per_cat is None or n_per_cat <= 0:
+                selected_list = list(pairs)
+            elif pick == "first":
+                selected_list = list(pairs[:n_per_cat])
+            elif pick == "last":
+                selected_list = list(pairs[-n_per_cat:])
+            else:
+                count = min(n_per_cat, len(pairs))
+                idx = rng.choice(len(pairs), size=count, replace=False)
+                selected_list = [pairs[int(i)] for i in idx]
 
         # Global hybrid components for neural base models (TimesNet / N-BEATS).
         # For M4 we optionally use MODWT components computed on the full series
@@ -376,7 +751,8 @@ def evaluate_m4_hybrids(
                 weight_decay=2e-4,
                 clip=0.5,
             )
-            forecasts: Dict[str, np.ndarray] = {}
+            naive = seasonal_naive(y_tr, H, per)
+            forecasts: Dict[str, np.ndarray] = {"Naive": naive.copy()}
             component_forecasts: Dict[str, Dict[str, np.ndarray]] = {}
             simulations: Dict[str, np.ndarray] = {}
             for model_name in hybrid_models:
@@ -500,6 +876,165 @@ def evaluate_m4_hybrids(
                 except Exception as exc:
                     print(f"[m4:{cat}:{sid}] {label} failed: {exc}")
 
+            if use_helformer:
+                try:
+                    tf.keras.backend.clear_session()
+                    y_tr_arr = np.asarray(y_tr, float).ravel()
+                    y_te_arr = np.asarray(y_te, float).ravel()
+                    ratio_train = y_tr_arr.copy()
+                    ratio_test = y_te_arr.copy()
+                    base_train = None
+                    base_test = None
+                    if helformer_use_hw:
+                        baseline = _hw_baseline(
+                            y_tr_arr,
+                            H,
+                            seasonal_period=per,
+                            trend=helformer_hw_trend,
+                            seasonal=helformer_hw_seasonal,
+                        )
+                        if baseline is not None:
+                            base_train, base_test = baseline
+                            denom = np.where(np.abs(base_train) < 1e-8, 1.0, base_train)
+                            ratio_train = y_tr_arr / denom
+                            denom_te = np.where(np.abs(base_test) < 1e-8, 1.0, base_test)
+                            ratio_test = y_te_arr / denom_te
+                        else:
+                            print(
+                                f"[m4:{cat}:{sid}] Helformer HW baseline failed; "
+                                "using raw series."
+                            )
+                    n_train = int(ratio_train.size)
+                    min_windows = 8
+                    max_lookback = max(1, n_train - min_windows)
+                    effective_lookback = min(int(helformer_lookback), max_lookback)
+                    if n_train <= effective_lookback:
+                        effective_lookback = max(1, n_train - 1)
+                    if effective_lookback != int(helformer_lookback):
+                        print(
+                            f"[m4:{cat}:{sid}] Helformer lookback adjusted "
+                            f"{int(helformer_lookback)} -> {effective_lookback} "
+                            f"(train_len={n_train})"
+                        )
+                    ratio_train = _ensure_min_length(ratio_train, effective_lookback + 1)
+                    vmin, scale = _minmax_fit(ratio_train)
+                    scaled_train = _minmax_transform(ratio_train, vmin, scale)
+                    X, Y = _build_xy(scaled_train, effective_lookback)
+                    if X.shape[0] == 0:
+                        raise ValueError("not enough data for Helformer windows")
+                    best_params = None
+                    if helformer_optuna:
+                        try:
+                            best_params = _run_helformer_optuna(
+                                X,
+                                Y,
+                                lookback=effective_lookback,
+                                n_trials=int(helformer_optuna_trials),
+                                timeout=helformer_optuna_timeout,
+                                validation_split=float(helformer_optuna_validation_split),
+                            )
+                            print(
+                                f"[m4:{cat}:{sid}] Helformer Optuna best params: "
+                                f"{best_params}"
+                            )
+                        except Exception as exc:
+                            print(f"[m4:{cat}:{sid}] Helformer Optuna failed: {exc}")
+                            best_params = None
+
+                    if best_params:
+                        lr = float(best_params["learning_rate"])
+                        units = int(best_params["units"])
+                        dropout_rate = float(best_params["dropout_rate"])
+                        batch_size = int(best_params["batch_size"])
+                        epochs_fit = int(best_params["epochs"])
+                        num_blocks = int(best_params["num_blocks"])
+                        num_heads = int(best_params["num_heads"])
+                        head_size = int(best_params["head_size"])
+                    else:
+                        lr = float(helformer_lr)
+                        units = int(helformer_units)
+                        dropout_rate = float(helformer_dropout)
+                        batch_size = int(helformer_batch_size)
+                        epochs_fit = int(helformer_epochs)
+                        num_blocks = int(helformer_num_blocks)
+                        num_heads = int(helformer_num_heads)
+                        head_size = int(helformer_head_size)
+
+                    model = create_helformer_model(
+                        lookback=effective_lookback,
+                        num_blocks=num_blocks,
+                        num_heads=num_heads,
+                        head_size=head_size,
+                        dropout_rate=dropout_rate,
+                        units=units,
+                    )
+                    model.compile(
+                        optimizer=tf.keras.optimizers.Adam(learning_rate=lr),
+                        loss="mean_squared_error",
+                    )
+                    model.fit(
+                        X,
+                        Y,
+                        batch_size=batch_size,
+                        epochs=epochs_fit,
+                        verbose=int(helformer_verbose),
+                    )
+                    mode = str(helformer_forecast_mode or "rollout").lower()
+                    pred_ratio_scaled_full = None
+                    if mode in {"rollout_full", "full", "full_rollout"}:
+                        pred_ratio_scaled_full = _predict_rollout_full(
+                            model,
+                            scaled_train,
+                            effective_lookback,
+                            total_len,
+                        )
+                        pred_ratio_scaled = pred_ratio_scaled_full[-H:]
+                    elif mode in {"rollout", "iterative", "recursive"}:
+                        scaled_history = scaled_train.tolist()
+                        pred_ratio_scaled = _predict_rollout(
+                            model,
+                            scaled_history,
+                            effective_lookback,
+                            H,
+                        )
+                    elif mode in {"test_windows", "teacher", "direct"}:
+                        ratio_test = _ensure_min_length(ratio_test, 1)
+                        test_values = np.concatenate([ratio_train[-effective_lookback:], ratio_test])
+                        scaled_test = _minmax_transform(test_values, vmin, scale)
+                        x_test = _build_x(scaled_test, effective_lookback)
+                        pred_ratio_scaled = _predict_test_windows(model, x_test)
+                    else:
+                        raise ValueError(f"Unknown Helformer forecast mode '{helformer_forecast_mode}'")
+                    pred_ratio = _minmax_inverse(pred_ratio_scaled, vmin, scale)
+                    if base_test is not None:
+                        pred = pred_ratio * base_test
+                    else:
+                        pred = pred_ratio
+                    forecasts["Helformer"] = pred[:H]
+                    if simulate_full_series:
+                        if pred_ratio_scaled_full is None:
+                            pred_ratio_scaled_full = _predict_rollout_full(
+                                model,
+                                scaled_train,
+                                effective_lookback,
+                                total_len,
+                            )
+                        pred_ratio_full = _minmax_inverse(pred_ratio_scaled_full, vmin, scale)
+                        if base_test is not None and base_train is not None:
+                            base_full = np.concatenate([base_train, base_test])
+                            base_full = np.resize(base_full, total_len)
+                            pred_full = pred_ratio_full[:total_len] * base_full
+                        else:
+                            pred_full = pred_ratio_full[:total_len]
+                        simulations["Helformer"] = np.asarray(pred_full, float)
+                except Exception as exc:
+                    print(f"[m4:{cat}:{sid}] Helformer failed: {exc}")
+                finally:
+                    try:
+                        tf.keras.backend.clear_session()
+                    except Exception:
+                        pass
+
             # Classical baselines
             try:
                 forecasts["ARIMA"] = arima_forecast(y_tr, H)
@@ -518,12 +1053,9 @@ def evaluate_m4_hybrids(
                 forecasts["Prophet"] = prophet_forecast(y_tr, H, freq=freq)
             except Exception as exc:
                 print(f"[m4:{cat}:{sid}] Prophet failed: {exc}")
-
-            if not forecasts:
-                naive = seasonal_naive(y_tr, H, per)
-                for model_name in base_models:
-                    label = label_map[model_name]
-                    forecasts[label] = naive.copy()
+            for model_name in base_models:
+                label = label_map[model_name]
+                forecasts.setdefault(label, naive.copy())
 
             rec = {"category": cat, "series_id": sid}
             for name, pred in forecasts.items():
@@ -537,18 +1069,56 @@ def evaluate_m4_hybrids(
             title = f"{cat.upper()} {sid} (H={H}, L={L})"
             if visualize:
                 series_key = f"{cat}_{sid}"
-                save_series_viz_bundle(
-                    out_dir=out_dir / "viz",
-                    series_key=series_key,
-                    title_prefix=title,
-                    y_tr=y_tr,
-                    y_te=y_te,
-                    forecasts=forecasts,
-                    wavelet=wavelet,
-                    level=cat_level,
-                    boundary=boundary,
-                    component_forecasts=component_forecasts if component_forecasts else None,
-                )
+                viz_dir = out_dir / "viz"
+                if use_helformer and not base_models:
+                    hw = None
+                    try:
+                        from ..models.helformer import helformer_hw_components
+
+                        hw = helformer_hw_components(
+                            y_tr,
+                            y_te,
+                            seasonal_period=per,
+                            hw_trend=helformer_hw_trend,
+                            hw_seasonal=helformer_hw_seasonal,
+                        )
+                    except Exception as exc:
+                        print(f"[m4:{cat}:{sid}] HW decomposition failed: {exc}")
+                        hw = None
+                    save_series_viz_bundle_helformer_hw(
+                        out_dir=viz_dir,
+                        series_key=series_key,
+                        title_prefix=title,
+                        y_tr=np.asarray(y_tr, float),
+                        y_te=np.asarray(y_te, float),
+                        forecasts=forecasts,
+                        base_train=None if hw is None else hw.base_train,
+                        base_test=None if hw is None else hw.base_test,
+                        season=None if hw is None else hw.season,
+                        seasonal_mode="mul" if hw is None else hw.seasonal_mode,
+                    )
+                elif not base_models:
+                    save_series_viz_bundle_basic(
+                        out_dir=viz_dir,
+                        series_key=series_key,
+                        title_prefix=title,
+                        y_tr=np.asarray(y_tr, float),
+                        y_te=np.asarray(y_te, float),
+                        forecasts=forecasts,
+                    )
+                else:
+                    save_series_viz_bundle(
+                        out_dir=viz_dir,
+                        series_key=series_key,
+                        title_prefix=title,
+                        y_tr=y_tr,
+                        y_te=y_te,
+                        forecasts=forecasts,
+                        wavelet=wavelet,
+                        level=cat_level,
+                        boundary=boundary,
+                        component_forecasts=component_forecasts if component_forecasts else None,
+                    )
                 if simulate_full_series and simulations:
                     if simulation_train_only_plot:
                         save_simulation_train_plot(

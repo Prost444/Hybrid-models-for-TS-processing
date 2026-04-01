@@ -1,0 +1,12 @@
+{
+  "categories": ["yearly", "quarterly", "monthly"],
+  "n_per_cat": 30,
+  "pick": "random",
+  "seed": 42,
+  "neural_epochs": 80,
+  "neural_models": ["dlinear", "autoformer", "fedformer", "patchtst", "nbeats", "timesnet"],
+  "classical_models": ["seasonal_naive", "auto_arima", "ets", "prophet"],
+  "out_dir": "src/outputs/m3_benchmark_v3",
+  "visualize": false,
+  "device": "cpu"
+}

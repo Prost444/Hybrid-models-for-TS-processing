@@ -1,17 +1,21 @@
+"""CLI entry point for M3 benchmark evaluation."""
 from __future__ import annotations
 
 import argparse
 import json
+import warnings
 from inspect import signature
 from pathlib import Path
+
+warnings.filterwarnings("ignore", message=".*np.object.*", category=FutureWarning)
 
 from project_paths import ensure_src_on_path
 
 ensure_src_on_path()
 
-from hybridts.pipelines import evaluate_m3_hybrids
+from hybridts.pipelines.m3_benchmark import run_m3_benchmark
 
-DEFAULT_CONFIG = Path("configs/m3_eval.json")
+DEFAULT_CONFIG = Path("configs/m3_smoke.json")
 
 
 def load_config(path: Path | None):
@@ -22,21 +26,21 @@ def load_config(path: Path | None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate hybrid models on the M3 dataset")
+    parser = argparse.ArgumentParser(description="M3 benchmark evaluation")
     parser.add_argument(
         "--config",
         type=Path,
         default=DEFAULT_CONFIG,
-        help="Path to a JSON file with pipeline parameters",
+        help="Path to a JSON config file (default: configs/m3_smoke.json)",
     )
     args = parser.parse_args()
 
     cfg = load_config(args.config)
-    sig = signature(evaluate_m3_hybrids)
+    sig = signature(run_m3_benchmark)
     allowed = {k for k in sig.parameters}
     filtered = {k: v for k, v in cfg.items() if k in allowed}
 
-    evaluate_m3_hybrids(**filtered)
+    run_m3_benchmark(**filtered)
 
 
 if __name__ == "__main__":

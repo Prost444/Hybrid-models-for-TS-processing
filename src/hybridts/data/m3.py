@@ -183,6 +183,36 @@ def rmse(y_true: np.ndarray, y_pred: np.ndarray):
     return float(np.sqrt(mse(y_true, y_pred)))
 
 
+def mae(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """Mean Absolute Error."""
+    y_true = np.asarray(y_true, float)
+    y_pred = np.asarray(y_pred, float)
+    if y_true.size == 0:
+        return 0.0
+    return float(np.mean(np.abs(y_true - y_pred)))
+
+
+def mase(y_true: np.ndarray, y_pred: np.ndarray, y_train: np.ndarray,
+         seasonal_period: int = 1) -> float:
+    """Mean Absolute Scaled Error (Hyndman & Koehler 2006).
+
+    The scaling factor is the in-sample mean absolute error of the
+    seasonal naïve method.  For non-seasonal data use *seasonal_period=1*
+    which reduces to the ordinary naïve (random walk) baseline.
+    """
+    y_true = np.asarray(y_true, float)
+    y_pred = np.asarray(y_pred, float)
+    y_train = np.asarray(y_train, float)
+    if y_true.size == 0:
+        return 0.0
+    m = max(1, int(seasonal_period))
+    naive_errors = np.abs(y_train[m:] - y_train[:-m])
+    scale = float(np.mean(naive_errors)) if naive_errors.size > 0 else 1.0
+    if scale < 1e-12:
+        scale = 1.0  # degenerate case — constant training series
+    return float(np.mean(np.abs(y_true - y_pred)) / scale)
+
+
 def r2_score(y_true: np.ndarray, y_pred: np.ndarray):
     y_true = np.asarray(y_true, float)
     y_pred = np.asarray(y_pred, float)
@@ -298,5 +328,7 @@ __all__ = [
     "mape",
     "mse",
     "rmse",
+    "mae",
+    "mase",
     "r2_score",
 ]

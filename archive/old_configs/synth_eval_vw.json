@@ -1,0 +1,33 @@
+{
+  "profiles": [
+    "flat_low_noise",
+    "trend_only",
+    "season_only",
+    "trend_season",
+    "trend_season_high_noise",
+    "season_high_noise"
+  ],
+  "n_per_profile": 2,
+  "length": 400,
+  "horizon": 24,
+  "epochs": 8,
+  "base_models": [],
+  "seed": 42,
+  "wavelet": "db4",
+  "level": 1,
+  "visualize": true,
+  "use_helformer": true,
+  "helformer_epochs": 100,
+  "helformer_batch_size": 32,
+  "helformer_lr": 0.0008,
+  "helformer_num_blocks": 4,
+  "helformer_num_heads": 4,
+  "helformer_head_size": 56,
+  "helformer_dropout": 0.11266524308240201,
+  "helformer_units": 25,
+  "helformer_lookback": 30,
+  "helformer_verbose": 0,
+  "helformer_use_hw": true,
+  "helformer_hw_trend": "mul",
+  "helformer_hw_seasonal": "mul"
+}

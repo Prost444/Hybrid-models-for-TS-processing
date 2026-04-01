@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import warnings
 import json
 from inspect import signature
 from pathlib import Path
+
+warnings.filterwarnings("ignore", message=".*np.object.*", category=FutureWarning)
 
 from project_paths import ensure_src_on_path
 
@@ -41,4 +44,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

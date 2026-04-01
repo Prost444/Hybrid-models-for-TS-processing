@@ -1,0 +1,22 @@
+::     ::
+Training Data Evaluation Metrics
+Timestamp: 2025-12-20 17:32:31
+
+MSE: 605067.1630
+RMSE: 777.8606
+MAPE: 3.4910%
+MAE: 502.9420
+R^2 Score: 0.9978
+Explained Variance Score (EVS): 0.9981
+KGE: 0.9795
+-----
+Testing Data Evaluation Metrics
+Timestamp: 2025-12-20 17:32:31
+
+MSE: 322470894.9477
+RMSE: 17957.4746
+MAPE: 46.1562%
+MAE: 16912.6556
+R^2 Score: -0.2038
+Explained Variance Score (EVS): 0.8626
+KGE: 0.5491

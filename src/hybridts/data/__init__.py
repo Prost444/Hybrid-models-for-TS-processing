@@ -12,6 +12,8 @@ from .m3 import (
     mape,
     mse,
     rmse,
+    mae,
+    mase,
     r2_score,
 )
 from .m4 import M4_H, M4_P, ensure_m4_csv, load_m4_train_test
@@ -33,5 +35,7 @@ __all__ = [
     "mape",
     "mse",
     "rmse",
+    "mae",
+    "mase",
     "r2_score",
 ]

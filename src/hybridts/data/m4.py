@@ -72,6 +72,12 @@ def _raw_paths(raw_dir: Path, cat: str) -> tuple[Path, Path]:
     label = _CAT_LABEL[cat]
     train_path = raw_dir / "Train" / f"{label}-train.csv"
     test_path = raw_dir / "Test" / f"{label}-test.csv"
+    if train_path.exists() and test_path.exists():
+        return train_path, test_path
+    alt_train = raw_dir / f"{label}-train.csv"
+    alt_test = raw_dir / f"{label}-test.csv"
+    if alt_train.exists() and alt_test.exists():
+        return alt_train, alt_test
     return train_path, test_path
 
 
@@ -162,12 +168,18 @@ def ensure_m4_csv(
             continue
         train_raw, test_raw = _raw_paths(raw_dir, cat)
         if not train_raw.exists() or not test_raw.exists():
-            raise FileNotFoundError(
-                f"M4 raw wide CSVs not found for '{cat}'. Expected:\n"
-                f"  - {train_raw}\n"
-                f"  - {test_raw}\n"
-                f"Put files into `src/data/m4/raw/Train` and `src/data/m4/raw/Test` (or pass raw_dir=...)."
-            )
+            alt_raw_dir = raw_dir.parent
+            alt_train, alt_test = _raw_paths(alt_raw_dir, cat)
+            if alt_train.exists() and alt_test.exists():
+                train_raw, test_raw = alt_train, alt_test
+            else:
+                raise FileNotFoundError(
+                    f"M4 raw wide CSVs not found for '{cat}'. Expected:\n"
+                    f"  - {train_raw}\n"
+                    f"  - {test_raw}\n"
+                    f"Put files into `src/data/m4/raw/Train` and `src/data/m4/raw/Test` "
+                    f"or into `{alt_raw_dir}` (or pass raw_dir=...)."
+                )
         print(f"[m4:{cat}] building normalized CSVs from raw files")
         _normalize_from_raw_wide_csv(
             cat=cat,
