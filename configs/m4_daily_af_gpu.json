@@ -8,5 +8,6 @@
     "classical_models": [],
     "out_dir": "src/outputs/m4_benchmark_daily_af",
     "visualize": false,
-    "device": "cuda"
+    "device": "cuda",
+    "max_train_samples": 512
 }

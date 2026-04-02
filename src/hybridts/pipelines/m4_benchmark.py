@@ -25,6 +25,7 @@ from ..data import (
     smape, mape, mse, rmse, mae, mase,
 )
 from ..models import make_model, arima_forecast, auto_arima_forecast, ets_forecast, prophet_forecast
+from torch.utils.data import Subset
 from ..training import TrainConfig, WindowDatasetStd, train_model
 
 
@@ -36,8 +37,16 @@ def _progress(it, **kw):
 
 def _train_and_forecast(model_name: str, y_tr: np.ndarray, H: int, P: int,
                         epochs: int, model_params: dict | None = None,
-                        device: str = "cpu") -> np.ndarray:
-    """Train a neural model on one series and return H-step forecast."""
+                        device: str = "cpu",
+                        max_train_samples: int = 0) -> np.ndarray:
+    """Train a neural model on one series and return H-step forecast.
+
+    Parameters
+    ----------
+    max_train_samples : int
+        If >0 and the dataset has more windows, subsample to this many
+        (keeping the most recent windows). 0 = no limit.
+    """
     L = best_L(y_tr, H, P)
     cfg = TrainConfig(lookback=L, horizon=H, epochs=epochs, batch_size=32,
                       lr=1e-3, weight_decay=1e-4, clip=1.0, device=device)
@@ -48,7 +57,14 @@ def _train_and_forecast(model_name: str, y_tr: np.ndarray, H: int, P: int,
     if len(ds) < 1:
         raise ValueError(f"Not enough data for {model_name}: len(y_tr)={len(y_tr)}, L={L}, H={H}")
 
-    train_model(model, ds, cfg)
+    # Subsample if too many windows (keep most recent for recency bias)
+    if max_train_samples > 0 and len(ds) > max_train_samples:
+        indices = list(range(len(ds) - max_train_samples, len(ds)))
+        ds_train = Subset(ds, indices)
+    else:
+        ds_train = ds
+
+    train_model(model, ds_train, cfg)
 
     mu, sd = ds.scaler
     model.eval()
@@ -90,6 +106,7 @@ def run_m4_benchmark(
     visualize: bool = False,
     device: str = "cpu",
     force_rebuild_csv: bool = False,
+    max_train_samples: int = 0,
 ) -> pd.DataFrame:
     """Run a full M4 benchmark.
 
@@ -214,7 +231,8 @@ def run_m4_benchmark(
                     pred = _train_and_forecast(nname, y_tr, H, P,
                                                epochs=neural_epochs,
                                                model_params=params,
-                                               device=device)
+                                               device=device,
+                                               max_train_samples=max_train_samples)
                     pred = np.asarray(pred, float).ravel()[:H]
                     forecasts[nname] = pred
                     metrics = _compute_metrics(y_te, pred, y_tr, P)
