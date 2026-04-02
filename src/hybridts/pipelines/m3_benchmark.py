@@ -138,7 +138,17 @@ def run_m3_benchmark(
     all_model_names = list(classical_models) + list(neural_models)
 
     rows: List[Dict] = []
+    checkpoint_csv = out_path / "metrics_checkpoint.csv"
     t0 = time.time()
+
+    # Resume from checkpoint if it exists
+    if checkpoint_csv.exists():
+        prev = pd.read_csv(checkpoint_csv)
+        rows = prev.to_dict("records")
+        done_keys = {(r["category"], r["series_id"]) for r in rows}
+        print(f"[checkpoint] resuming — {len(rows)} series already done")
+    else:
+        done_keys = set()
 
     for cat in _progress(categories, desc="M3 categories"):
         H = M3_H[cat]
@@ -161,6 +171,9 @@ def run_m3_benchmark(
             selected = [pairs[int(i)] for i in sorted(idx)]
 
         for sid, y_tr, y_te in _progress(selected, desc=f"{cat}", leave=False):
+            if (cat, sid) in done_keys:
+                continue
+
             rec: Dict[str, Any] = {"category": cat, "series_id": sid}
             forecasts: Dict[str, np.ndarray] = {}
 
@@ -205,6 +218,9 @@ def run_m3_benchmark(
                     print(f"[{cat}:{sid}] {nname} failed: {exc}")
 
             rows.append(rec)
+
+            # Incremental checkpoint after each series
+            pd.DataFrame(rows).to_csv(checkpoint_csv, index=False)
 
             if visualize:
                 save_png = out_path / f"{cat}_{sid}.png"
