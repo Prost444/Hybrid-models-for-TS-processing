@@ -1,0 +1,12 @@
+{
+    "categories": ["daily"],
+    "n_per_cat": 30,
+    "pick": "random",
+    "seed": 42,
+    "neural_epochs": 30,
+    "neural_models": ["autoformer", "fedformer"],
+    "classical_models": [],
+    "out_dir": "src/outputs/m4_benchmark_daily_af",
+    "visualize": false,
+    "device": "cuda"
+}
