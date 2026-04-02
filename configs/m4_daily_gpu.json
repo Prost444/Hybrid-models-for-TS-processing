@@ -1,0 +1,12 @@
+{
+    "categories": ["daily"],
+    "n_per_cat": 30,
+    "pick": "random",
+    "seed": 42,
+    "neural_epochs": 50,
+    "neural_models": ["dlinear", "patchtst", "nbeats", "timesnet"],
+    "classical_models": ["seasonal_naive", "auto_arima", "ets", "prophet"],
+    "out_dir": "src/outputs/m4_benchmark_daily",
+    "visualize": false,
+    "device": "cuda"
+}
