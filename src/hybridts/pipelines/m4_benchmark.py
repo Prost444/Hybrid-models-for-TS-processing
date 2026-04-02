@@ -48,7 +48,15 @@ def _train_and_forecast(model_name: str, y_tr: np.ndarray, H: int, P: int,
         (keeping the most recent windows). 0 = no limit.
     """
     L = best_L(y_tr, H, P)
-    cfg = TrainConfig(lookback=L, horizon=H, epochs=epochs, batch_size=32,
+    # Scale batch size with dataset size to better utilize GPU
+    n_windows = max(1, len(y_tr) - L - H + 1)
+    if n_windows > 1024:
+        bs = 256
+    elif n_windows > 256:
+        bs = 128
+    else:
+        bs = 32
+    cfg = TrainConfig(lookback=L, horizon=H, epochs=epochs, batch_size=bs,
                       lr=1e-3, weight_decay=1e-4, clip=1.0, device=device)
 
     model = make_model(model_name, cfg, params=model_params)
