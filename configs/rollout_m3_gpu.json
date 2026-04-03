@@ -1,0 +1,11 @@
+{
+    "dataset": "m3",
+    "categories": ["yearly", "quarterly", "monthly"],
+    "n_per_cat": 30,
+    "pick": "random",
+    "seed": 42,
+    "neural_epochs": 50,
+    "neural_models": ["dlinear", "autoformer", "fedformer", "patchtst", "nbeats", "timesnet"],
+    "classical_models": ["seasonal_naive", "auto_arima", "ets"],
+    "device": "cuda"
+}

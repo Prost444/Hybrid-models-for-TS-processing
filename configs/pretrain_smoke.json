@@ -1,0 +1,12 @@
+{
+    "pretrain_category": "monthly",
+    "pretrain_dataset": "m3",
+    "eval_n": 2,
+    "eval_pick": "first",
+    "seed": 42,
+    "pretrain_epochs": 2,
+    "finetune_epochs": 2,
+    "pretrain_models": ["patchtst"],
+    "batch_size": 32,
+    "device": "cpu"
+}

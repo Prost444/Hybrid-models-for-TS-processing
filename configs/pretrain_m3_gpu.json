@@ -1,0 +1,12 @@
+{
+    "pretrain_category": "monthly",
+    "pretrain_dataset": "m3",
+    "eval_n": 30,
+    "eval_pick": "random",
+    "seed": 42,
+    "pretrain_epochs": 50,
+    "finetune_epochs": 20,
+    "pretrain_models": ["autoformer", "fedformer", "patchtst"],
+    "batch_size": 256,
+    "device": "cuda"
+}

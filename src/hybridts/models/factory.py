@@ -12,6 +12,7 @@ import torch.nn as nn
 from .autoformer import Autoformer
 from .dlinear import DLinear
 from .fedformer import FEDformer
+from .helformer_pt import HelformerPT
 from .nbeats import NBEATSV2
 from .patchtst import PatchTST
 from .timesnet import TimesNetV2
@@ -123,6 +124,16 @@ def make_model(name: str, cfg: TrainConfig, *, params: Mapping[str, Any] | None 
         p["patch_len"] = min(p["patch_len"], max(2, cfg.lookback))
         p["stride"] = min(p["stride"], max(1, p["patch_len"] // 2))
         return PatchTST(cfg.lookback, cfg.horizon, **p)
+    if name == "helformer":
+        defaults = {
+            "num_blocks": 4,
+            "num_heads": 4,
+            "head_size": 56,
+            "dropout": 0.11,
+            "units": 25,
+        }
+        p = _pick_params(defaults, params)
+        return HelformerPT(lookback=cfg.lookback, **p)
     raise ValueError(f"Unknown model '{name}'")
 
 

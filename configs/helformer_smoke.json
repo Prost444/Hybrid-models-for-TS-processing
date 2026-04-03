@@ -1,0 +1,11 @@
+{
+    "dataset": "m3",
+    "categories": ["quarterly"],
+    "n_per_cat": 2,
+    "pick": "first",
+    "seed": 42,
+    "epochs": 5,
+    "lookback": 30,
+    "use_hw": true,
+    "device": "cpu"
+}

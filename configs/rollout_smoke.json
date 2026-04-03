@@ -1,0 +1,11 @@
+{
+    "dataset": "m3",
+    "categories": ["quarterly"],
+    "n_per_cat": 2,
+    "pick": "first",
+    "seed": 42,
+    "neural_epochs": 10,
+    "neural_models": ["dlinear"],
+    "classical_models": ["seasonal_naive"],
+    "device": "cpu"
+}
