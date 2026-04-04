@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  4 APR 2026 10:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  4 APR 2026 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1525,13 +1525,13 @@ Overfull \hbox (3.4747pt too wide) in paragraph at lines 907--909
 [24]) (./chapters/chapter2.tex
 
 [25]
-Overfull \hbox (0.10112pt too wide) in paragraph at lines 9--16
+Overfull \hbox (0.10112pt too wide) in paragraph at lines 9--15
 \TU/TimesNewRoman(1)/m/n/14.4 гнозирования временных рядов. Последовательно изл
 ожены: постановка экс-
  []
 
 
-Overfull \hbox (15.20174pt too wide) in paragraph at lines 24--27
+Overfull \hbox (15.20174pt too wide) in paragraph at lines 23--26
 \TU/TimesNewRoman(1)/m/n/14.4 ритетных набора данных для одномерного прогнозиро
 вания: M3 Competition [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 2[][][][]\TU/Times
 NewRoman(1)/m/n/14.4 ]
@@ -1544,213 +1544,212 @@ NewRoman(1)/m/n/14.4 ]
 [27]
 
 [28]
-Overfull \hbox (2.19225pt too wide) in paragraph at lines 186--189
-[]\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]3[][] дополняет картину метрикой MA
+Overfull \hbox (17.84904pt too wide) in paragraph at lines 192--202
+\TU/TimesNewRoman(1)/m/n/14.4 сированной HW-декомпозиции. Примечательна катастр
+офическая ошибка Auto-
+ []
+
+
+Overfull \hbox (9.78067pt too wide) in paragraph at lines 192--202
+\TU/TimesNewRoman(1)/m/n/14.4 ARIMA на профилях с выраженной сезонностью (seaso
+nal: 41.2, trend_seasonal:
+ []
+
+File: figures/synth_seasonal.png Graphic file (type bmp)
+<figures/synth_seasonal.png>
+File: figures/synth_trend_seasonal.png Graphic file (type bmp)
+<figures/synth_trend_seasonal.png>
+File: figures/synth_complex.png Graphic file (type bmp)
+<figures/synth_complex.png>
+
+
+[29]
+
+[30]
+Overfull \hbox (2.19225pt too wide) in paragraph at lines 259--262
+[]\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]4[][] дополняет картину метрикой MA
 SE, нечувствительной к мас-
  []
 
 
 
-[29]
-Overfull \hbox (5.97874pt too wide) in paragraph at lines 226--240
-[]\TU/TimesNewRoman(1)/m/it/14.4 Зависимость от частоты. \TU/TimesNewRoman(1)/m
-/n/14.4 На годовых рядах (самые короткие, 14–47 то-
- []
-
+[31]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
-
-Overfull \hbox (117.87697pt too wide) in paragraph at lines 254--258
-\TU/TimesNewRoman(1)/m/n/14.4 ям. Четко видна закономерность: по мере увеличени
-я длины рядов (yearly $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(1)/m/n/14.4 quar
-terly $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(1)/m/n/14.4 monthly)
- []
-
-
-
-[30]
-File: figures/m3_yearly_T612_median.png Graphic file (type bmp)
-<figures/m3_yearly_T612_median.png>
-File: figures/m3_quarterly_T239_median.png Graphic file (type bmp)
-<figures/m3_quarterly_T239_median.png>
-File: figures/m3_monthly_T616_median.png Graphic file (type bmp)
-<figures/m3_monthly_T616_median.png>
+File: figures/m3_yearly_T352.png Graphic file (type bmp)
+<figures/m3_yearly_T352.png>
+File: figures/m3_quarterly_T478.png Graphic file (type bmp)
+<figures/m3_quarterly_T478.png>
+File: figures/m3_monthly_T779.png Graphic file (type bmp)
+<figures/m3_monthly_T779.png>
 
 
-[31]
-Overfull \hbox (0.82582pt too wide) in paragraph at lines 315--324
+[32]
+
+[33]
+Overfull \hbox (0.82582pt too wide) in paragraph at lines 380--386
 []\TU/TimesNewRoman(1)/m/n/14.4 На M4 наблюдается более выраженное превосходств
 о классических мо-
  []
 
 
+Overfull \hbox (5.15993pt too wide) in paragraph at lines 380--386
+\TU/TimesNewRoman(1)/m/n/14.4 следние позиции; причины рассмотрены в кросс-дата
+сетном анализе (п. [][]2.2.4[][]). 
+ []
 
-[32]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
-Overfull \hbox (16.11763pt too wide) in paragraph at lines 359--368
+
+[34]
+Overfull \hbox (16.11763pt too wide) in paragraph at lines 421--427
 []\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
 ежает ETS (2.46) и Auto-
  []
 
+File: figures/m4_quarterly_Q2061.png Graphic file (type bmp)
+<figures/m4_quarterly_Q2061.png>
+File: figures/m4_monthly_M4124.png Graphic file (type bmp)
+<figures/m4_monthly_M4124.png>
+File: figures/m4_daily_D362.png Graphic file (type bmp)
+<figures/m4_daily_D362.png>
 
-Overfull \hbox (2.36978pt too wide) in paragraph at lines 359--368
-\TU/TimesNewRoman(1)/m/n/14.4 стрирует конкурентоспособный результат, занимая ч
-етвёртое место. TimesNet
- []
-
-
-Overfull \hbox (43.36078pt too wide) in paragraph at lines 359--368
-\TU/TimesNewRoman(1)/m/n/14.4 новятся полностью конкурентоспособными с классиче
-скими подходами. Autoformer
- []
-
-
-
-[33]
-File: figures/m4_quarterly_Q18256_median.png Graphic file (type bmp)
-<figures/m4_quarterly_Q18256_median.png>
-File: figures/m4_monthly_M27091_median.png Graphic file (type bmp)
-<figures/m4_monthly_M27091_median.png>
-File: figures/m4_daily_D2163_median.png Graphic file (type bmp)
-<figures/m4_daily_D2163_median.png>
-
-
-[34]
 
 [35]
+
+[36]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
+
+
+[37]
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
-
-[36]
-Overfull \hbox (10.0419pt too wide) in paragraph at lines 488--495
+Overfull \hbox (10.0419pt too wide) in paragraph at lines 544--551
 \TU/TimesNewRoman(1)/m/n/14.4 TimesNet (обучаемая 2D-декомпозиция) показывает р
 езультаты на уровне клас-
  []
 
 
-Overfull \hbox (0.18173pt too wide) in paragraph at lines 488--495
+Overfull \hbox (0.18173pt too wide) in paragraph at lines 544--551
 \TU/TimesNewRoman(1)/m/n/14.4 нительно подтверждает эффективность декомпозиции 
 при наличии выражен-
  []
 
 
 
-[37]
-Overfull \hbox (26.29889pt too wide) in paragraph at lines 570--574
-[]\TU/TimesNewRoman(1)/m/n/14.4 На M4 Helformer (12.71 overall) располагается м
-ежду ETS (11.53) и TimesNet
- []
-
-
-Overfull \hbox (9.70915pt too wide) in paragraph at lines 570--574
-\TU/TimesNewRoman(1)/m/n/14.4 (16.36), проигрывая ETS на quarterly (17.38 vs. 1
-6.72) и monthly (18.09 vs. 15.40),
- []
-
-
-
 [38]
-Overfull \hbox (32.81622pt too wide) in paragraph at lines 575--582
-\TU/TimesNewRoman(1)/m/n/14.4 бильный базовый прогноз, который нейросетевая ком
-понента дополняет, но не раз-
- []
 
-
-Overfull \hbox (14.60005pt too wide) in paragraph at lines 623--632
+[39]
+Overfull \hbox (14.60005pt too wide) in paragraph at lines 603--612
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу на rollout:
  []
 
 
-Overfull \hbox (6.77399pt too wide) in paragraph at lines 623--632
+Overfull \hbox (6.77399pt too wide) in paragraph at lines 603--612
 \TU/TimesNewRoman(1)/m/n/14.4 делению строятся итеративно), а ETS даже незначит
 ельно улучшается ($\OMS/cmsy/m/n/14.4 ^^@$\TU/TimesNewRoman(1)/m/n/14.4 0.28).
  []
 
 
-Overfull \hbox (16.5669pt too wide) in paragraph at lines 623--632
+Overfull \hbox (16.5669pt too wide) in paragraph at lines 603--612
 \TU/TimesNewRoman(1)/m/n/14.4 Среди нейросетевых моделей наибольшая деградация 
 наблюдается у FEDformer
  []
 
 
 
-[39]
-Overfull \hbox (1.30092pt too wide) in paragraph at lines 667--675
+[40]
+Overfull \hbox (1.30092pt too wide) in paragraph at lines 647--655
 \TU/TimesNewRoman(1)/m/n/14.4 обучаемой декомпозицией (FEDformer, TimesNet) нак
 апливают ошибки быст-
  []
 
+File: figures/rollout_m3_quarterly_T478.png Graphic file (type bmp)
+<figures/rollout_m3_quarterly_T478.png>
+File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
+<figures/rollout_m3_monthly_T779.png>
 
 
-[40]
-Overfull \hbox (10.622pt too wide) in paragraph at lines 710--717
+[41]
+Overfull \hbox (10.622pt too wide) in paragraph at lines 704--711
 \TU/TimesNewRoman(1)/m/n/14.4 опережает Autoformer from-scratch (16.67) и прибл
 ижается к уровню ETS (21.04
  []
 
 
 
-[41]
-Overfull \hbox (3.85518pt too wide) in paragraph at lines 741--749
+[42]
+File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
+<figures/pretrain_m3_monthly_patchtst_T779.png>
+File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
+<figures/pretrain_m3_monthly_autoformer_T779.png>
+
+
+[43]
+Overfull \hbox (3.85518pt too wide) in paragraph at lines 749--757
 []\TU/TimesNewRoman(1)/b/n/14.4 RQ1: Когда обучаемая декомпозиция эффективнее ф
 иксированной?
  []
 
 
-Overfull \hbox (2.53851pt too wide) in paragraph at lines 751--757
+Overfull \hbox (2.53851pt too wide) in paragraph at lines 759--765
 \TU/TimesNewRoman(1)/m/n/14.4 грессионные модели (ARIMA) остаются наиболее эффе
 ктивными. Среди ней-
  []
 
 
-Overfull \hbox (2.89229pt too wide) in paragraph at lines 751--757
+Overfull \hbox (2.89229pt too wide) in paragraph at lines 759--765
 \TU/TimesNewRoman(1)/m/n/14.4 росетевых архитектур TimesNet с 2D-свертками и N-
 BEATS с residual-стеками
  []
 
 
-Overfull \hbox (0.4276pt too wide) in paragraph at lines 758--767
+Overfull \hbox (0.4276pt too wide) in paragraph at lines 766--775
 []\TU/TimesNewRoman(1)/b/n/14.4 RQ3: Оправдана ли сложность трансформерных архи
 тектур? \TU/TimesNewRoman(1)/m/n/14.4 В per-
  []
 
 
-Overfull \hbox (7.27765pt too wide) in paragraph at lines 758--767
+Overfull \hbox (7.27765pt too wide) in paragraph at lines 766--775
 \TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.50). Однако гибридный Helformer (ранг 2.0
 0) демонстрирует, что транс-
  []
 
 
+Overfull \hbox (59.75285pt too wide) in paragraph at lines 776--781
+\TU/TimesNewRoman(1)/m/n/14.4 композиция проигрывает фиксированной; на кварталь
+ных обучаемая 2D-декомпозиция
+ []
 
-[42]
-Overfull \hbox (6.74779pt too wide) in paragraph at lines 802--809
+
+
+[44]
+Overfull \hbox (6.74779pt too wide) in paragraph at lines 808--815
 \TU/TimesNewRoman(1)/m/n/14.4 ные, проектируются для глобального обучения на бо
 льших корпусах [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 23[][][][];
  []
 
 
-Overfull \hbox (4.65593pt too wide) in paragraph at lines 810--815
+Overfull \hbox (4.65593pt too wide) in paragraph at lines 816--821
 \TU/TimesNewRoman(1)/m/n/14.4 мость дополнительного исследования устойчивости H
 W-декомпозиции. 
  []
 
 
-Overfull \hbox (21.76549pt too wide) in paragraph at lines 816--820
+Overfull \hbox (21.76549pt too wide) in paragraph at lines 822--826
 []\TU/TimesNewRoman(1)/m/it/14.4 Вычислительные ограничения. \TU/TimesNewRoman(
 1)/m/n/14.4 Autoformer и FEDformer обучались с 30 эпо-
  []
 
 
 
-[43]) (./chapters/conclusion.tex
+[45]) (./chapters/conclusion.tex
 
-[44]
+[46]
 Overfull \hbox (2.70245pt too wide) in paragraph at lines 21--29
 \TU/TimesNewRoman(1)/m/n/14.4 ETS с автоматическим подбором параметров показал 
 лучший средний sMAPE
@@ -1770,7 +1769,7 @@ Overfull \hbox (4.46501pt too wide) in paragraph at lines 39--48
 
 
 
-[45]
+[47]
 Overfull \hbox (36.0083pt too wide) in paragraph at lines 77--80
 \TU/TimesNewRoman(1)/m/n/14.4 вать предпочтение моделям без сложной обучаемой д
 екомпозиции (PatchTST,
@@ -1778,7 +1777,7 @@ Overfull \hbox (36.0083pt too wide) in paragraph at lines 77--80
 
 
 
-[46]
+[48]
 Overfull \hbox (69.35983pt too wide) in paragraph at lines 95--98
 []\TU/TimesNewRoman(1)/m/n/14.4 расширение модельного набора за счет современны
 х архитектур (iTransformer [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 40[][][][]\TU
@@ -1787,9 +1786,9 @@ Overfull \hbox (69.35983pt too wide) in paragraph at lines 95--98
 
 )
 
-[47]
+[49]
 
-[48]
+[50]
 Overfull \hbox (22.83644pt too wide) in paragraph at lines 227--227
 []\TU/TimesNewRoman(0)/m/n/14.4 A State Space Framework for Automatic Forecasti
 ng Using Exponential Smooth-
@@ -1797,9 +1796,9 @@ ng Using Exponential Smooth-
 
 
 
-[49]
+[51]
 
-[50]
+[52]
 Overfull \hbox (7.09712pt too wide) in paragraph at lines 227--227
 []\TU/TimesNewRoman(0)/m/n/14.4 Informer: Beyond Efficient Transformer for Long
  Sequence Time-Series Fore-
@@ -1814,7 +1813,7 @@ Overfull \hbox (20.00163pt too wide) in paragraph at lines 227--227
 
 
 
-[51]
+[53]
 Overfull \hbox (15.45717pt too wide) in paragraph at lines 227--227
 \TU/TimesNewRoman(0)/m/n/14.4 tions. — 2024. — URL: [][]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][]$[][]
@@ -1823,24 +1822,24 @@ Overfull \hbox (15.45717pt too wide) in paragraph at lines 227--227
 
 
 
-[52] (./main.aux)
+[54] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 60701B36F98A656B8F4BF2CB579CC25F;10185.
+(rerunfilecheck)             Checksum: BB6C861A8A604F6DC5E092068182F562;10121.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26444 strings out of 473832
- 527753 string characters out of 5729482
- 1622129 words of memory out of 5000000
- 49109 multiletter control sequences out of 15000+600000
- 570359 words of font info for 142 fonts, out of 8000000 for 9000
+ 26515 strings out of 473832
+ 530077 string characters out of 5729482
+ 1624519 words of memory out of 5000000
+ 49172 multiletter control sequences out of 15000+600000
+ 570367 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,12n,93p,693b,7707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (52 pages).
+Output written on main.pdf (54 pages).

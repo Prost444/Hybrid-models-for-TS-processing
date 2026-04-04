@@ -3620,15 +3620,14 @@
     <bcf:citekey order="80" intorder="1">makridakis2000m3</bcf:citekey>
     <bcf:citekey order="80" intorder="2">hyndman2008expsmoothing</bcf:citekey>
     <bcf:citekey order="81" intorder="1">zeng2023transformers</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">kehinde2025helformer</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">cerqueira2020evaluating</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">bandara2020forecasting</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">cerqueira2020evaluating</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">bandara2020forecasting</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">nie2023patchtst</bcf:citekey>
+    <bcf:citekey order="84" intorder="2">liu2024itransformer</bcf:citekey>
     <bcf:citekey order="85" intorder="1">nie2023patchtst</bcf:citekey>
-    <bcf:citekey order="85" intorder="2">liu2024itransformer</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">nie2023patchtst</bcf:citekey>
-    <bcf:citekey order="86" intorder="2">wu2021autoformer</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">liu2024itransformer</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">challu2023nhits</bcf:citekey>
+    <bcf:citekey order="85" intorder="2">wu2021autoformer</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">liu2024itransformer</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">challu2023nhits</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

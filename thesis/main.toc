@@ -193,40 +193,38 @@
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \contentsline {subsection}{\numberline {2.2}Прямое сравнение моделей}{28}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Результаты на~M3 Competition}{28}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}Диагностика на~синтетических рядах}{28}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Результаты на~M3 Competition}{29}{subsubsection.2.2.2}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {2.2.2}Результаты на~M4 Competition}{31}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Кросс-датасетный анализ}{34}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3}Результаты на~M4 Competition}{32}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Кросс-датасетный анализ}{37}{subsubsection.2.2.4}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.3}Helformer: гибридная фиксированная декомпозиция}{37}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Итеративное прогнозирование}{39}{subsection.2.3}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.4}Итеративное прогнозирование}{39}{subsection.2.4}%
-\xpg@aux {}{english}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.5}Предобучение трансформерных моделей}{41}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.4}Предобучение трансформерных моделей}{41}{subsection.2.4}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.6}Обсуждение результатов}{42}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Ограничения эксперимента}{43}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.5}Обсуждение результатов}{44}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Ограничения эксперимента}{45}{subsection.2.6}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {section}{Заключение}{45}{Item.19}%
+\contentsline {section}{Заключение}{47}{Item.19}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
-\contentsline {section}{Список литературы}{48}{section*.23}%
+\contentsline {section}{Список литературы}{50}{section*.29}%
 \xpg@aux {}{english}
 \xpg@aux {}{russian}
 \xpg@aux {}{english}
