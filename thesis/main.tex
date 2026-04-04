@@ -1,0 +1,241 @@
+% ===========================================================================
+%  main.tex  --  Бакалаврская работа (НИР)
+%  Тема: Прогнозирование временных рядов за счёт обучаемых параметров
+%        разложения на компоненты и нейросетевых механизмов учёта
+%        долгосрочных зависимостей
+%
+%  Компиляция: xelatex -> biber -> xelatex -> xelatex
+%  Кодировка:  UTF-8
+% ===========================================================================
+\documentclass[a4paper,14pt]{extarticle}
+
+% ---- Шрифты (XeLaTeX) ---------------------------------------------------
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}[
+  BoldFont       = Times New Roman Bold,
+  ItalicFont     = Times New Roman Italic,
+  BoldItalicFont = Times New Roman Bold Italic,
+]
+% Фолбэк: если Times New Roman недоступен, раскомментировать строку ниже
+% \setmainfont{PT Serif}
+
+% ---- Языки ---------------------------------------------------------------
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+% ---- Геометрия страницы (ГОСТ 7.32-2017) --------------------------------
+%  Левое поле 30 мм, правое 15 мм, верхнее 20 мм, нижнее 20 мм
+\usepackage[
+  left   = 30mm,
+  right  = 15mm,
+  top    = 20mm,
+  bottom = 20mm,
+]{geometry}
+
+% ---- Межстрочный интервал ------------------------------------------------
+\usepackage{setspace}
+\onehalfspacing          % полуторный интервал (ГОСТ 7.32)
+
+% ---- Абзацный отступ ------------------------------------------------------
+\usepackage{indentfirst} % отступ у первого абзаца раздела
+\setlength{\parindent}{1.25cm}
+
+% ---- Нумерация страниц ----------------------------------------------------
+%  Внизу по центру, начиная с титульного листа (но на титульном не печатается)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ---- Заголовки (titlesec) -------------------------------------------------
+%  Глава  — 16pt, жирный, по центру, прописные необязательны (в PDF — нет)
+%  Раздел — 14pt, жирный, по центру
+%  Подраздел — 12pt, жирный, по центру
+\usepackage{titlesec}
+
+% \section  = Глава (нумерация без слова «Глава»)
+\titleformat{\section}
+  {\centering\bfseries\fontsize{16pt}{19.2pt}\selectfont}
+  {\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{24pt}{12pt}
+
+% \subsection = Раздел 1.1.
+\titleformat{\subsection}
+  {\centering\bfseries\fontsize{14pt}{16.8pt}\selectfont}
+  {\thesubsection.}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{18pt}{8pt}
+
+% \subsubsection = Подраздел 1.1.1.
+\titleformat{\subsubsection}
+  {\centering\bfseries\fontsize{12pt}{14.4pt}\selectfont}
+  {\thesubsubsection.}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+
+% ---- Оглавление -----------------------------------------------------------
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\bfseries}
+
+% ---- Подписи к рисункам и таблицам (ГОСТ) --------------------------------
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{gost}{. }
+\captionsetup{
+  labelsep     = gost,
+  justification = centering,
+  font         = {normalsize},
+  labelfont    = {bf, it},
+  textfont     = {},
+  singlelinecheck = false,
+}
+\captionsetup[figure]{name=Рисунок}
+\captionsetup[table]{name=Таблица, justification=raggedright, singlelinecheck=false}
+
+% ---- Графика --------------------------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% ---- Таблицы --------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% ---- Математика -----------------------------------------------------------
+\usepackage{amsmath,amssymb,amsfonts}
+
+% ---- Гиперссылки ----------------------------------------------------------
+\usepackage[
+  colorlinks  = true,
+  linkcolor   = black,
+  citecolor   = black,
+  urlcolor    = blue,
+  bookmarks   = true,
+]{hyperref}
+
+% ---- Библиография (biblatex-gost) ----------------------------------------
+%  Стиль gost-numeric — нумерованный список по ГОСТ Р 7.0.5-2008
+\usepackage[
+  backend  = biber,
+  style    = gost-numeric,
+  sorting  = none,
+  language = auto,
+  autolang = other,
+]{biblatex}
+\addbibresource{references.bib}
+
+% ---- Приложения -----------------------------------------------------------
+\usepackage[title]{appendix}
+
+% ---- Листинги кода (если потребуется) -------------------------------------
+\usepackage{listings}
+\lstset{
+  basicstyle   = \small\ttfamily,
+  breaklines   = true,
+  frame        = single,
+  tabsize      = 4,
+  inputencoding = utf8,
+}
+
+% ---- Прочие пакеты --------------------------------------------------------
+\usepackage{enumitem}        % настройка списков
+\usepackage{float}           % опция [H] для размещения
+\usepackage{subcaption}      % подрисунки
+
+% ===========================================================================
+\begin{document}
+
+% ------- Титульный лист ---------------------------------------------------
+\thispagestyle{empty}
+\begin{center}
+  {\small МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}\\[4pt]
+  {\small Федеральное государственное автономное образовательное учреждение\\
+  высшего образования}\\[4pt]
+  {\small\bfseries <<Московский политехнический университет>>}\\[4pt]
+  {\small (Московский Политех)}\\[24pt]
+
+  {\small Факультет информационных технологий}\\[4pt]
+  {\small Кафедра <<Информатика и информационные технологии>>}\\[48pt]
+
+  {\large\bfseries БАКАЛАВРСКАЯ РАБОТА}\\[24pt]
+
+  {\large Прогнозирование временных рядов за счёт обучаемых параметров\\
+  разложения на компоненты и нейросетевых механизмов учёта\\
+  долгосрочных зависимостей}\\[48pt]
+\end{center}
+
+\vfill
+
+\noindent
+\begin{tabular}{@{}ll}
+  Направление подготовки: & 09.03.02 <<Информационные системы и технологии>> \\[6pt]
+  Выполнил:               & студент группы КМБО-03-22 \\
+                          & Лазарев А.\,К.\ \hrulefill \\[6pt]
+  Научный руководитель:   & \hrulefill \\[6pt]
+\end{tabular}
+
+\vspace{36pt}
+
+\begin{center}
+  Москва, 2026
+\end{center}
+
+\newpage
+
+% ------- Оглавление --------------------------------------------------------
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% ------- Введение ----------------------------------------------------------
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+
+Прогнозирование временных рядов является одной из центральных задач в
+анализе данных, финансовой аналитике, управлении запасами и планировании
+ресурсов.  Классические статистические модели (ARIMA, ETS, Prophet) на
+протяжении десятилетий оставались стандартом де-факто для краткосрочного
+прогноза.  В последние годы были предложены нейросетевые архитектуры,
+явно включающие механизмы обучаемой декомпозиции рядов на компоненты
+(тренд, сезонность, остаток) и модули учёта долгосрочных зависимостей на
+основе внимания, свёрток и линейных проекций.
+
+Настоящая работа посвящена исследованию условий, при которых обучаемая
+декомпозиция и нейросетевые механизмы учёта долгосрочных зависимостей
+дают практическое преимущество по сравнению с фиксированными
+статистическими подходами --- и ситуаций, в которых более простые методы
+оказываются предпочтительнее.  В качестве экспериментальной базы
+используются данные соревнований M3 и M4, а в качестве моделей ---
+ARIMA, ETS, Prophet, N-BEATS, DLinear, Autoformer, TimesNet и Helformer.
+
+\newpage
+
+% ------- Глава 1 -----------------------------------------------------------
+\input{chapters/chapter1}
+
+% ------- Глава 2 -----------------------------------------------------------
+\input{chapters/chapter2}
+
+% ------- Заключение --------------------------------------------------------
+\input{chapters/conclusion}
+
+% ------- Список литературы -------------------------------------------------
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Список литературы}
+\printbibliography[title={Список литературы}]
+
+% ------- Приложение --------------------------------------------------------
+\newpage
+\appendix
+\section*{Приложение}
+\addcontentsline{toc}{section}{Приложение}
+
+% TODO: Добавить листинги кода, дополнительные таблицы и визуализации.
+
+Полный код проекта доступен в репозитории:\\
+\url{https://github.com/sheeelby/Hybrid-models-for-TS-processing}
+
+\end{document}

@@ -1,0 +1,100 @@
+% ===========================================================================
+%  chapter1.tex  --  Глава 1. Теоретическая часть
+% ===========================================================================
+
+\section{Теоретическая часть}
+\label{sec:theory}
+
+\subsection{Временные ряды и постановка задачи}
+\label{subsec:ts-problem}
+
+\subsubsection{Введение в анализ временных рядов}
+\label{sssec:ts-intro}
+
+% TODO: Определение временного ряда, стационарность (строгая/слабая),
+%       автоковариационная функция, разностный оператор.
+
+\subsubsection{Постановка задачи прогнозирования}
+\label{sssec:problem-statement}
+
+% TODO: Формализация: входное окно L, горизонт H, модель f,
+%       задача минимизации функции ошибки.
+
+\subsubsection{Метрики качества прогноза}
+\label{sssec:metrics}
+
+% TODO: MSE, RMSE, MAPE, sMAPE --- определения и свойства.
+
+\subsection{Классические модели временных рядов}
+\label{subsec:classical-models}
+
+\subsubsection{Модели AR, MA, ARIMA, SARIMA}
+\label{sssec:arima}
+
+% TODO: Формулировка AR(p), MA(q), ARMA(p,q), ARIMA(p,d,q), SARIMA.
+%       Операторная запись, условия стационарности/обратимости.
+
+\subsubsection{ACF, PACF и выбор порядка модели}
+\label{sssec:acf-pacf}
+
+% TODO: Определения автокорреляционной и частной автокорреляционной функций,
+%       их использование для подбора порядков ARIMA.
+
+\subsubsection{ETS (Exponential Smoothing)}
+\label{sssec:ets}
+
+% TODO: Простое экспоненциальное сглаживание, метод Хольта, метод Хольта--Уинтерса,
+%       аддитивная и мультипликативная сезонность, пространство состояний.
+
+\subsubsection{Модель Prophet}
+\label{sssec:prophet}
+
+% TODO: Аддитивная декомпозиция Prophet: тренд (кусочно-линейный или логистический),
+%       сезонность (ряд Фурье), эффекты праздников.
+
+\subsection{Нейросетевые модели для временных рядов}
+\label{subsec:neural-models}
+
+\subsubsection{N-BEATS}
+\label{sssec:nbeats}
+
+% TODO: Архитектура N-BEATS: стек блоков, basis expansion,
+%       интерпретируемая конфигурация (trend + seasonality blocks).
+
+\subsubsection{DLinear}
+\label{sssec:dlinear}
+
+% TODO: Идея Zeng et al. (2023): MA-декомпозиция + два линейных слоя,
+%       аргумент о достаточности простых проекций.
+
+\subsubsection{Autoformer}
+\label{sssec:autoformer}
+
+% TODO: Progressive decomposition architecture, Auto-Correlation mechanism,
+%       сравнение с классическим self-attention.
+
+\subsubsection{TimesNet}
+\label{sssec:timesnet}
+
+% TODO: Преобразование 1D -> 2D, multi-period Inception-блоки,
+%       адаптивный выбор периодов через FFT.
+
+\subsubsection{Helformer}
+\label{sssec:helformer}
+
+% TODO: Self-Attention + LSTM, Holt-Winters декомпозиция,
+%       итеративный многошаговый прогноз.
+
+\subsubsection{FEDformer}
+\label{sssec:fedformer}
+
+% TODO: Frequency Enhanced Decomposed Transformer,
+%       Fourier/Wavelet attention, seasonal-trend decomposition.
+
+\subsection{Обучаемая декомпозиция: сравнительный обзор}
+\label{subsec:decomposition-comparison}
+
+% TODO: Систематизация подходов к декомпозиции:
+%       фиксированная (ETS, STL) vs обучаемая (DLinear MA-kernel,
+%       Autoformer progressive, N-BEATS basis expansion).
+%       Таблица сравнения.

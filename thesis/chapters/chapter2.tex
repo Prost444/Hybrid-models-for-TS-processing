@@ -1,0 +1,93 @@
+% ===========================================================================
+%  chapter2.tex  --  Глава 2. Практическая часть
+% ===========================================================================
+
+\section{Практическая часть}
+\label{sec:experiments}
+
+\subsection{Описание параметров и архитектур моделей}
+\label{subsec:model-configs}
+
+\subsubsection{Классические модели: ARIMA, ARIMA-auto, ETS, Prophet}
+\label{sssec:classical-configs}
+
+% TODO: Параметры каждой модели, защиты от вырожденных прогнозов,
+%       обработка коротких рядов, fallback-стратегии.
+
+\subsubsection{Нейросетевые модели: N-BEATS, DLinear, Autoformer, TimesNet, Helformer}
+\label{sssec:neural-configs}
+
+% TODO: Гиперпараметры, режим обучения per-series,
+%       нормализация, количество эпох, learning rate.
+
+\subsection{Диагностика моделей на синтетических рядах}
+\label{subsec:synthetic}
+
+\subsubsection{Используемые синтетические профили}
+\label{sssec:synthetic-profiles}
+
+% TODO: flat_low_noise, trend_only, season_only, trend_season,
+%       trend_season_high_noise, season_high_noise.
+%       Визуализации рядов.
+
+\subsubsection{ACF/PACF-анализ и подбор параметров ARIMA}
+\label{sssec:acf-analysis}
+
+% TODO: Графики ACF/PACF для каждого профиля, выводы о порядках.
+
+\subsubsection{Результаты на синтетических рядах}
+\label{sssec:synthetic-results}
+
+% TODO: Таблицы метрик, графики прогнозов,
+%       сравнительный анализ по профилям.
+
+\subsection{Benchmark на данных M3 Competition}
+\label{subsec:m3-benchmark}
+
+\subsubsection{Описание набора данных M3}
+\label{sssec:m3-description}
+
+% TODO: Категории (yearly, quarterly, monthly), количество рядов,
+%       горизонты прогноза, длины рядов.
+
+\subsubsection{Результаты на M3}
+\label{sssec:m3-results}
+
+% TODO: Средние метрики по категориям (таблицы),
+%       визуализации прогнозов на отдельных рядах,
+%       разложения Helformer.
+
+\subsubsection{Анализ результатов M3}
+\label{sssec:m3-analysis}
+
+% TODO: Сравнительный анализ: когда нейросети лучше/хуже ETS,
+%       влияние частоты и длины ряда, роль декомпозиции.
+
+\subsection{Benchmark на данных M4 Competition}
+\label{subsec:m4-benchmark}
+
+\subsubsection{Описание набора данных M4}
+\label{sssec:m4-description}
+
+% TODO: Категории, масштаб, отличия от M3.
+
+\subsubsection{Результаты на M4}
+\label{sssec:m4-results}
+
+% TODO: Таблицы метрик, визуализации.
+
+\subsubsection{Анализ результатов M4}
+\label{sssec:m4-analysis}
+
+% TODO: Масштабируемость моделей, влияние длины ряда,
+%       сравнение с M3.
+
+\subsection{Сводный анализ и ответы на исследовательские вопросы}
+\label{subsec:rq-answers}
+
+% TODO:
+%  RQ1: Когда learnable decomposition эффективнее fixed?
+%  RQ2: Какой механизм долгосрочных зависимостей лучше для коротких рядов?
+%  RQ3: Оправдана ли сложность трансформерных архитектур?
+%  RQ4: Влияет ли тип декомпозиции по-разному для разных частот?
+%  RQ5: Каковы реальные границы per-series обучения нейросетей?
