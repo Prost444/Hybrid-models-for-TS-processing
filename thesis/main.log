@@ -1,0 +1,1846 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  4 APR 2026 10:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen141
+)
+\c@part=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\c@figure=\count198
+\c@table=\count199
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen142
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count266
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count267
+\g__pdf_backend_link_int=\count268
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count269
+\l__fontspec_language_int=\count270
+\l__fontspec_strnum_int=\count271
+\l__fontspec_tmp_int=\count272
+\l__fontspec_tmpa_int=\count273
+\l__fontspec_tmpb_int=\count274
+\l__fontspec_tmpc_int=\count275
+\l__fontspec_em_int=\count276
+\l__fontspec_emdef_int=\count277
+\l__fontspec_strong_int=\count278
+\l__fontspec_strongdef_int=\count279
+\l__fontspec_tmpa_dim=\dimen143
+\l__fontspec_tmpb_dim=\dimen144
+\l__fontspec_tmpc_dim=\dimen145
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Ligatures=TeX,Ligatures=TeX,BoldFont = Times New Roman
+(fontspec)             Bold,ItalicFont = Times New Roman Italic,BoldItalicFont
+(fontspec)             = Times New Roman Bold Italic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New Roman
+(fontspec)             Bold/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New Roman
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman Bold
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Courier New scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Courier New scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Courier New/B scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Courier New/I scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Courier New/BI scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'CourierNew(0)' created for font 'Courier
+(fontspec)             New' with options
+(fontspec)             [Ligatures=TeX,WordSpace={1,0,0},HyphenChar=None,Punctua
+tionSpace=WordSpace,Scale=0.85,Script=Latin].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[0.85]"Courier
+(fontspec)             New/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[0.85]"Courier
+(fontspec)             New/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[0.85]"Courier
+(fontspec)             New/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.85]"Courier
+(fontspec)             New/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX,Ligatures=TeX,Script=Latin].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+Package: polyglossia 2025/01/31 v2.4 Modern multilingual typesetting with XeLaT
+eX and LuaLaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count280
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+\l_xpg_alias_keyvals_int=\count281
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
+File: gloss-latex.ldf polyglossia: module for default language
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/gloss-russian.ldf
+File: gloss-russian.ldf polyglossia: module for Russian
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/xpg-cyrillicnumbers.s
+ty
+Package: xpg-cyrillicnumbers 2019/11/15 v0.2 Formatting of Cyrillic alphabetic 
+numbers
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/babelsh.def
+File: babelsh.def 2022/06/21 Babel common definitions for shorthands
+ Taken verbatim from babel files (2022/06/06 v3.76)
+)
+Package babel Info: Making " an active character on input line 115.
+)
+
+Package polyglossia Info: Default language is russian
+
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
+File: gloss-english.ldf polyglossia: module for English
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen146
+\Gm@wd@mp=\dimen147
+\Gm@odd@mp=\dimen148
+\Gm@even@mp=\dimen149
+\Gm@layoutwidth=\dimen150
+\Gm@layoutheight=\dimen151
+\Gm@layouthoffset=\dimen152
+\Gm@layoutvoffset=\dimen153
+\Gm@dimlist=\toks18
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks19
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box53
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen154
+\ttl@minus=\dimen155
+\ttl@toksa=\toks20
+\titlewidth=\dimen156
+\titlewidthlast=\dimen157
+\titlewidthfirst=\dimen158
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforesecskip=\skip73
+\cftsecindent=\skip74
+\cftsecnumwidth=\skip75
+\cftbeforesubsecskip=\skip76
+\cftsubsecindent=\skip77
+\cftsubsecnumwidth=\skip78
+\cftbeforesubsubsecskip=\skip79
+\cftsubsubsecindent=\skip80
+\cftsubsubsecnumwidth=\skip81
+\cftbeforeparaskip=\skip82
+\cftparaindent=\skip83
+\cftparanumwidth=\skip84
+\cftbeforesubparaskip=\skip85
+\cftsubparaindent=\skip86
+\cftsubparanumwidth=\skip87
+\cftbeforeloftitleskip=\skip88
+\cftafterloftitleskip=\skip89
+\cftbeforefigskip=\skip90
+\cftfigindent=\skip91
+\cftfignumwidth=\skip92
+\c@lofdepth=\count285
+\c@lotdepth=\count286
+\cftbeforelottitleskip=\skip93
+\cftafterlottitleskip=\skip94
+\cftbeforetabskip=\skip95
+\cfttabindent=\skip96
+\cfttabnumwidth=\skip97
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count287
+\c@continuedfloat=\count288
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen167
+\Gin@req@width=\dimen168
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen169
+\lightrulewidth=\dimen170
+\cmidrulewidth=\dimen171
+\belowrulesep=\dimen172
+\belowbottomsep=\dimen173
+\aboverulesep=\dimen174
+\abovetopsep=\dimen175
+\cmidrulesep=\dimen176
+\cmidrulekern=\dimen177
+\defaultaddspace=\dimen178
+\@cmidla=\count289
+\@cmidlb=\count290
+\@aboverulesep=\dimen179
+\@belowrulesep=\dimen180
+\@thisruleclass=\count291
+\@lastruleclass=\count292
+\@thisrulewidth=\dimen181
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen182
+\ar@mcellbox=\box54
+\extrarowheight=\dimen183
+\NC@list=\toks21
+\extratabsurround=\skip98
+\backup@length=\skip99
+\ar@cellbox=\box55
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip100
+\LTright=\skip101
+\LTpre=\skip102
+\LTpost=\skip103
+\LTchunksize=\count293
+\LTcapwidth=\dimen184
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count294
+\LT@rows=\count295
+\c@LT@tables=\count296
+\c@LT@chunks=\count297
+\LT@p@ftn=\toks22
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip104
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen185
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen186
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count298
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count299
+\leftroot@=\count300
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count301
+\DOTSCASE@=\count302
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box61
+\strutbox@=\box62
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen187
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count303
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count304
+\dotsspace@=\muskip17
+\c@parentequation=\count305
+\dspbrk@lvl=\count306
+\tag@help=\toks24
+\row@=\count307
+\column@=\count308
+\maxfields@=\count309
+\andhelp@=\toks25
+\eqnshift@=\dimen188
+\alignsep@=\dimen189
+\tagshift@=\dimen190
+\tagwidth@=\dimen191
+\totwidth@=\dimen192
+\lineht@=\dimen193
+\@envbody=\toks26
+\multlinegap=\skip105
+\multlinetaggap=\skip106
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count310
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen194
+\Hy@linkcounter=\count311
+\Hy@pagecounter=\count312
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count313
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4040.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count314
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen195
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count315
+\Field@Width=\dimen196
+\Fld@charsize=\dimen197
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring ON on input line 6060.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count316
+\c@Item=\count317
+\c@Hfootnote=\count318
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
+\pdfm@box=\box63
+\c@Hy@AnnotLevel=\count319
+\HyField@AnnotCount=\count320
+\Fld@listcount=\count321
+\c@bookmark@seq@number=\count322
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip107
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count323
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count324
+\c@listtotal=\count325
+\c@listcount=\count326
+\c@liststart=\count327
+\c@liststop=\count328
+\c@citecount=\count329
+\c@citetotal=\count330
+\c@multicitecount=\count331
+\c@multicitetotal=\count332
+\c@instcount=\count333
+\c@maxnames=\count334
+\c@minnames=\count335
+\c@maxitems=\count336
+\c@minitems=\count337
+\c@citecounter=\count338
+\c@maxcitecounter=\count339
+\c@savedcitecounter=\count340
+\c@uniquelist=\count341
+\c@uniquename=\count342
+\c@refsection=\count343
+\c@refsegment=\count344
+\c@maxextratitle=\count345
+\c@maxextratitleyear=\count346
+\c@maxextraname=\count347
+\c@maxextradate=\count348
+\c@maxextraalpha=\count349
+\c@abbrvpenalty=\count350
+\c@highnamepenalty=\count351
+\c@lownamepenalty=\count352
+\c@maxparens=\count353
+\c@parenlevel=\count354
+\blx@tempcnta=\count355
+\blx@tempcntb=\count356
+\blx@tempcntc=\count357
+\c@blx@maxsection=\count358
+\blx@maxsegment@0=\count359
+\blx@notetype=\count360
+\blx@parenlevel@text=\count361
+\blx@parenlevel@foot=\count362
+\blx@sectionciteorder@0=\count363
+\blx@sectionciteorderinternal@0=\count364
+\blx@entrysetcounter=\count365
+\blx@biblioinstance=\count366
+\labelnumberwidth=\skip108
+\labelalphawidth=\skip109
+\biblabelsep=\skip110
+\bibitemsep=\skip111
+\bibnamesep=\skip112
+\bibinitsep=\skip113
+\bibparsep=\skip114
+\bibhang=\skip115
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language90
+\c@mincomprange=\count367
+\c@maxcomprange=\count368
+\c@mincompwidth=\count369
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'gost-numeric.dbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/gost-numeric.dbx
+File: gost-numeric.dbx 2023/04/25 v1.24 biblatex-gost data model
+Package biblatex Info: Trying to load biblatex-gost data model...
+Package biblatex Info: ... file 'biblatex-gost.dbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.dbx
+File: biblatex-gost.dbx 2023/04/25 v1.24 biblatex-gost data model
+))
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count370
+\c@savedafterword=\count371
+\c@annotator=\count372
+\c@savedannotator=\count373
+\c@author=\count374
+\c@savedauthor=\count375
+\c@bookauthor=\count376
+\c@savedbookauthor=\count377
+\c@commentator=\count378
+\c@savedcommentator=\count379
+\c@editor=\count380
+\c@savededitor=\count381
+\c@editora=\count382
+\c@savededitora=\count383
+\c@editorb=\count384
+\c@savededitorb=\count385
+\c@editorc=\count386
+\c@savededitorc=\count387
+\c@foreword=\count388
+\c@savedforeword=\count389
+\c@holder=\count390
+\c@savedholder=\count391
+\c@introduction=\count392
+\c@savedintroduction=\count393
+\c@namea=\count394
+\c@savednamea=\count395
+\c@nameb=\count396
+\c@savednameb=\count397
+\c@namec=\count398
+\c@savednamec=\count399
+\c@translator=\count400
+\c@savedtranslator=\count401
+\c@shortauthor=\count402
+\c@savedshortauthor=\count403
+\c@shorteditor=\count404
+\c@savedshorteditor=\count405
+\c@booktranslator=\count406
+\c@savedbooktranslator=\count407
+\c@bookcommentator=\count408
+\c@savedbookcommentator=\count409
+\c@bookannotator=\count410
+\c@savedbookannotator=\count411
+\c@bookintroduction=\count412
+\c@savedbookintroduction=\count413
+\c@bookforeword=\count414
+\c@savedbookforeword=\count415
+\c@bookafterword=\count416
+\c@savedbookafterword=\count417
+\c@labelname=\count418
+\c@savedlabelname=\count419
+\c@institution=\count420
+\c@savedinstitution=\count421
+\c@lista=\count422
+\c@savedlista=\count423
+\c@listb=\count424
+\c@savedlistb=\count425
+\c@listc=\count426
+\c@savedlistc=\count427
+\c@listd=\count428
+\c@savedlistd=\count429
+\c@liste=\count430
+\c@savedliste=\count431
+\c@listf=\count432
+\c@savedlistf=\count433
+\c@location=\count434
+\c@savedlocation=\count435
+\c@organization=\count436
+\c@savedorganization=\count437
+\c@origlocation=\count438
+\c@savedoriglocation=\count439
+\c@origpublisher=\count440
+\c@savedorigpublisher=\count441
+\c@publisher=\count442
+\c@savedpublisher=\count443
+\c@language=\count444
+\c@savedlanguage=\count445
+\c@origlanguage=\count446
+\c@savedoriglanguage=\count447
+\c@bookoriglanguage=\count448
+\c@savedbookoriglanguage=\count449
+\c@specdata=\count450
+\c@savedspecdata=\count451
+\c@credits=\count452
+\c@savedcredits=\count453
+\c@bookcredits=\count454
+\c@savedbookcredits=\count455
+\c@editioncredits=\count456
+\c@savededitioncredits=\count457
+\c@pageref=\count458
+\c@savedpageref=\count459
+\shorthandwidth=\skip116
+\shortjournalwidth=\skip117
+\shortserieswidth=\skip118
+\shorttitlewidth=\skip119
+\shortauthorwidth=\skip120
+\shorteditorwidth=\skip121
+\locallabelnumberwidth=\skip122
+\locallabelalphawidth=\skip123
+\localshorthandwidth=\skip124
+\localshortjournalwidth=\skip125
+\localshortserieswidth=\skip126
+\localshorttitlewidth=\skip127
+\localshortauthorwidth=\skip128
+\localshorteditorwidth=\skip129
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count460
+\c@textcitetotal=\count461
+\c@textcitemaxnames=\count462
+\c@biburlbigbreakpenalty=\count463
+\c@biburlbreakpenalty=\count464
+\c@biburlnumpenalty=\count465
+\c@biburlucpenalty=\count466
+\c@biburllcpenalty=\count467
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count468
+)
+Package biblatex Info: Trying to load bibliography style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.bbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/gost-numeric.bbx
+File: gost-numeric.bbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load bibliography style 'gost-standard'...
+Package biblatex Info: ... file 'gost-standard.bbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/gost-standard.bbx
+File: gost-standard.bbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load biblatex-gost generic definitions...
+Package biblatex Info: ... file 'biblatex-gost.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.def
+File: biblatex-gost.def 2023/04/25 v1.24 biblatex-gost styles
+)
+\c@blx@gost@pointer=\count469
+\c@bbx:relatedcount=\count470
+\c@bbx:relatedtotal=\count471
+Package biblatex Info: Redefining autocite command 'footnote'.
+Package biblatex Info: Redefining autocite command 'superscript'.
+))
+Package biblatex Info: Trying to load citation style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.cbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/gost-numeric.cbx
+File: gost-numeric.cbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count472
+\c@cbx@tempcntb=\count473
+\c@cbx@tempcntc=\count474
+\c@cbx@tempcntd=\count475
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count476
+\lst@gtempboxa=\box64
+\lst@token=\toks28
+\lst@length=\count477
+\lst@currlwidth=\dimen198
+\lst@column=\count478
+\lst@pos=\count479
+\lst@lostspace=\dimen199
+\lst@width=\dimen256
+\lst@newlines=\count480
+\lst@lineno=\count481
+\lst@maxwidth=\dimen257
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count482
+\lst@skipnumbers=\count483
+\lst@framebox=\box65
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip130
+\enit@outerparindent=\dimen258
+\enit@toks=\toks29
+\enit@inbox=\box66
+\enit@count@id=\count484
+\enitdp@description=\count485
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count486
+\float@exts=\toks30
+\float@box=\box67
+\@float@everytoks=\toks31
+\@floatcapt=\box68
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count487
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count488
+)
+\@quotelevel=\count489
+\@quotereset=\count490
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(1)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Ligatures=TeX,Ligatures=TeX,BoldFont = Times New Roman
+(fontspec)             Bold,ItalicFont = Times New Roman Italic,BoldItalicFont
+(fontspec)             = Times New Roman Bold Italic,Script=Cyrillic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New Roman
+(fontspec)             Bold/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New Roman
+(fontspec)             Italic/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman Bold
+(fontspec)             Italic/OT:script=cyrl;language=dflt;mapping=tex-text;"
+
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 147.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 147.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 147.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 147.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 147.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 147.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 147.
+LaTeX Font Info:    Redeclaring math accent \check on input line 147.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 147.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 147.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 147.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 147.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 147.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
+47.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 147.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+147.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+147.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 147
+.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 147.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 147
+.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 469.47049pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47049pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-54.36449pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=14.0pt
+* \footskip=30.0pt
+* \marginparwidth=15.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 147.
+
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+Package biblatex Info: Trying to load language 'american' -> 'american-gost'...
+
+Package biblatex Info: ... file 'american-gost.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/american-gost.lbx
+File: american-gost.lbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english' -> 'english-gost'...
+Package biblatex Info: ... file 'english-gost.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/english-gost.lbx
+File: english-gost.lbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)))
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english' -> 'english-gost'...
+Package biblatex Info: ... file 'english-gost.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/english-gost.lbx
+File: english-gost.lbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))))
+Package biblatex Info: Trying to load language 'russian' -> 'russian-gost'...
+Package biblatex Info: ... file 'russian-gost.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-gost/russian-gost.lbx
+File: russian-gost.lbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load language 'russian'...
+Package biblatex Info: ... file 'russian.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
+File: russian.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'russian'...
+Package biblatex Info: ... file 'russian.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
+File: russian.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+
+(./main.bbl)
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
+\c@lstlisting=\count491
+LaTeX Font Info:    Trying to load font information for U+msa on input line 171
+.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 171
+.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (25.2974pt too wide) in paragraph at lines 170--177
+[] 
+ []
+
+
+
+[1
+
+] (./main.toc
+
+[2])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+[3]
+Overfull \hbox (15.99048pt too wide) in paragraph at lines 195--203
+\TU/TimesNewRoman(1)/m/n/14.4 ровании ресурсов. Классические статистические мод
+ели (ARIMA, ETS, Prophet)
+ []
+
+
+Overfull \hbox (6.12206pt too wide) in paragraph at lines 204--211
+\TU/TimesNewRoman(1)/m/n/14.4 используются данные соревнований M3 и M4, а в кач
+естве моделей — ARIMA,
+ []
+
+
+
+[4] (./chapters/chapter1.tex
+Overfull \hbox (9.75372pt too wide) in paragraph at lines 26--36
+\TU/TimesNewRoman(1)/m/n/14.4 набора $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 y[
+]; y[]; [] ; y[]\OMS/cmsy/m/n/14.4 g$ \TU/TimesNewRoman(1)/m/n/14.4 не изменяет
+ся при сдвиге всех индексов на одну и ту же
+ []
+
+
+
+[5]
+Overfull \hbox (34.91322pt too wide) in paragraph at lines 68--72
+\TU/TimesNewRoman(1)/m/n/14.4 ровать следующим образом. Пусть дана история набл
+юдений $[][] \OT1/cmr/m/n/14.4 = (\OML/cmm/m/it/14.4 y[]; y[]; [] ; y[]\OT1/cmr
+/m/n/14.4 )$\TU/TimesNewRoman(1)/m/n/14.4 ,
+ []
+
+
+Overfull \hbox (9.2724pt too wide) in paragraph at lines 76--81
+\TU/TimesNewRoman(1)/m/n/14.4 минимизирующее некоторую функцию потерь между про
+гнозом $[]$ и ре-
+ []
+
+
+Overfull \hbox (4.80211pt too wide) in paragraph at lines 76--81
+\TU/TimesNewRoman(1)/m/n/14.4 альными будущими значениями $[][]$, где $\OML/cmm
+/m/it/14.4 H$ \TU/TimesNewRoman(1)/m/n/14.4 — горизонт прогноза (forecast
+ []
+
+
+Overfull \hbox (11.3786pt too wide) in paragraph at lines 102--104
+[]\TU/TimesNewRoman(1)/m/n/14.4 Для сравнения прогнозных моделей применяют ряд 
+метрик, каждая из ко-
+ []
+
+
+
+[6]
+Overfull \hbox (10.2676pt too wide) in paragraph at lines 113--114
+[]\TU/TimesNewRoman(1)/b/n/14.4 Среднеквадратическая ошибка \TU/TimesNewRoman(1
+)/m/n/14.4 (MSE) и её квадратный корень (RMSE): 
+ []
+
+
+Overfull \hbox (5.66025pt too wide) in paragraph at lines 149--158
+\TU/TimesNewRoman(1)/m/n/14.4 масштабно-инвариантная альтернатива MAPE и sMAPE.
+ Её знаменатель пред-
+ []
+
+
+
+[7]
+Overfull \hbox (3.28717pt too wide) in paragraph at lines 196--199
+[]\TU/TimesNewRoman(1)/m/n/14.4 Объединяя оба процесса, получают модель ARMA($\
+OML/cmm/m/it/14.4 p$\TU/TimesNewRoman(1)/m/n/14.4 ,$\OML/cmm/m/it/14.4 q$\TU/Ti
+mesNewRoman(1)/m/n/14.4 ), а применяя к ис-
+ []
+
+
+
+[8]
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
+(Font)              scaled to size 12.24008pt on input line 220.
+
+
+! Package polyglossia Error: The current main monospace font, Courier New,
+(polyglossia)                does not contain the "Cyrillic" script!
+(polyglossia)                Please define \cyrillicfonttt with
+(polyglossia)                \newfontfamily command
+
+Type <return> to continue.
+ ...                                              
+                                                  
+l.220 алгоритм \texttt{auto\_arima}
+                                   , реализованный в~пакете \texttt{forecast}
+
+LaTeX does not know anything more about this error, sorry.
+
+Try typing <return> to proceed.
+If that doesn't work, type X <return> to quit.
+
+
+
+! Package polyglossia Error: The current main monospace font, Courier New,
+(polyglossia)                does not contain the "Cyrillic" script!
+(polyglossia)                Please define \cyrillicfonttt with
+(polyglossia)                \newfontfamily command
+
+Type <return> to continue.
+ ...                                              
+                                                  
+l.220 ... реализованный в~пакете \texttt{forecast}
+                                                  
+
+LaTeX does not know anything more about this error, sorry.
+
+Try typing <return> to proceed.
+If that doesn't work, type X <return> to quit.
+
+
+
+! Package polyglossia Error: The current main monospace font, Courier New,
+(polyglossia)                does not contain the "Cyrillic" script!
+(polyglossia)                Please define \cyrillicfonttt with
+(polyglossia)                \newfontfamily command
+
+Type <return> to continue.
+ ...                                              
+                                                  
+l.221 для R и в~библиотеке \texttt{pmdarima}
+                                             для Python, осуществляет
+
+LaTeX does not know anything more about this error, sorry.
+
+Try typing <return> to proceed.
+If that doesn't work, type X <return> to quit.
+
+
+
+
+[9]
+
+[10]
+Overfull \hbox (6.0641pt too wide) in paragraph at lines 341--350
+[]\TU/TimesNewRoman(1)/m/n/14.4 Prophet привлекателен простотой использования и
+ устойчивостью к про-
+ []
+
+
+
+[11]
+Overfull \hbox (18.64297pt too wide) in paragraph at lines 387--396
+[]\TU/TimesNewRoman(1)/m/n/14.4 Ещё один класс фиксированных базисных функций п
+редставляют вейвлет-
+ []
+
+
+Overfull \hbox (35.73308pt too wide) in paragraph at lines 387--396
+\TU/TimesNewRoman(1)/m/n/14.4 преобразования. В частности, максимально перекрыв
+ающееся дискретное вейвлет-
+ []
+
+
+
+[12]
+
+[13]
+Overfull \hbox (19.38486pt too wide) in paragraph at lines 434--439
+[]\TU/TimesNewRoman(1)/m/n/14.4 Архитектура Autoformer [[][][][]\TU/TimesNewRom
+an(0)/m/n/14.4 23[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] вводит \TU/TimesNewRom
+an(1)/m/it/14.4 прогрессивную декомпозицию\TU/TimesNewRoman(1)/m/n/14.4 : на ка
+ж-
+ []
+
+
+Overfull \hbox (20.51846pt too wide) in paragraph at lines 440--445
+\TU/TimesNewRoman(1)/m/n/14.4 внимания работают с подмножеством частот Фурье ил
+и вейвлет-коэффициентов,
+ []
+
+
+Overfull \hbox (11.92282pt too wide) in paragraph at lines 454--462
+\TU/TimesNewRoman(1)/m/n/14.4 менных рядов прослеживается общая тенденция: деко
+мпозиция перестаёт быть
+ []
+
+
+
+[14]
+Overfull \hbox (28.49968pt too wide) in paragraph at lines 498--503
+[]\TU/TimesNewRoman(1)/m/n/14.4 Полный блок трансформера включает многоголовое 
+внимание, позиционно-
+ []
+
+
+Overfull \hbox (4.52953pt too wide) in paragraph at lines 511--522
+\TU/TimesNewRoman(1)/m/n/14.4 реженным вниманием. Informer [[][][][]\TU/TimesNe
+wRoman(0)/m/n/14.4 30[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] использует механиз
+м ProbSparse attention,
+ []
+
+
+Overfull \hbox (3.53801pt too wide) in paragraph at lines 511--522
+\TU/TimesNewRoman(1)/m/n/14.4 дому элементу обращаться лишь к экспоненциально у
+далённым предшествен-
+ []
+
+
+
+[15]
+Overfull \hbox (1.72864pt too wide) in paragraph at lines 534--538
+\TU/TimesNewRoman(1)/m/n/14.4 длинных временных рядов и отличается от стандартн
+ого трансформера в двух
+ []
+
+
+Overfull \hbox (4.52473pt too wide) in paragraph at lines 548--552
+\TU/TimesNewRoman(1)/m/n/14.4 На каждом слое промежуточное представление повтор
+но разделяется на тренд
+ []
+
+
+Overfull \hbox (3.1794pt too wide) in paragraph at lines 553--556
+\TU/TimesNewRoman(1)/m/n/14.4 числением автокорреляций на основе быстрого преоб
+разования Фурье (БПФ): 
+ []
+
+
+
+[16]
+
+[17]
+Overfull \hbox (0.20033pt too wide) in paragraph at lines 620--623
+[]\TU/TimesNewRoman(1)/m/n/14.4 Патчирование заключается в разбиении входного р
+яда длины $\OML/cmm/m/it/14.4 L$ \TU/TimesNewRoman(1)/m/n/14.4 на непе-
+ []
+
+
+
+[18]
+Overfull \hbox (34.00223pt too wide) in paragraph at lines 697--706
+\TU/TimesNewRoman(1)/m/n/14.4 енную на принципе \TU/TimesNewRoman(1)/m/it/14.4 
+обучаемого базисного разложения\TU/TimesNewRoman(1)/m/n/14.4 . Модель состоит и
+з несколь-
+ []
+
+
+
+[19]
+Overfull \hbox (8.04619pt too wide) in paragraph at lines 756--762
+\TU/TimesNewRoman(1)/m/n/14.4 где $[]\OT1/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^A\
+OT1/cmr/m/n/14.4 )$ \TU/TimesNewRoman(1)/m/n/14.4 — амплитудный спектр, $[]\OT1
+/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^A\OT1/cmr/m/n/14.4 )$ \TU/TimesNewRoman(1)/
+m/n/14.4 — усреднение по каналам, а $[]$ —
+ []
+
+
+Overfull \hbox (11.38751pt too wide) in paragraph at lines 763--772
+\TU/TimesNewRoman(1)/m/n/14.4 ки этой матрицы соответствуют последовательным «ц
+иклам» длины $\OML/cmm/m/it/14.4 p[]$\TU/TimesNewRoman(1)/m/n/14.4 , а столб-
+ []
+
+
+Overfull \hbox (65.78798pt too wide) in paragraph at lines 763--772
+\TU/TimesNewRoman(1)/m/n/14.4 стандартные двумерные свёрточные операции (авторы
+ используют блоки Inception [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 25[][][][]\T
+U/TimesNewRoman(1)/m/n/14.4 ]),
+ []
+
+
+Overfull \hbox (11.39893pt too wide) in paragraph at lines 763--772
+\TU/TimesNewRoman(1)/m/n/14.4 которые одновременно моделируют \TU/TimesNewRoman
+(1)/m/it/14.4 внутрипериодные \TU/TimesNewRoman(1)/m/n/14.4 (вдоль столбцов) и 
+\TU/TimesNewRoman(1)/m/it/14.4 меж-
+ []
+
+
+
+[20]
+
+[21]
+Overfull \hbox (25.14987pt too wide) in paragraph at lines 824--832
+\TU/TimesNewRoman(1)/m/it/14.4 ных отклонений \TU/TimesNewRoman(1)/m/n/14.4 от 
+базового прогноза. Это контрастирует с подходами Autoformer
+ []
+
+
+Overfull \hbox (17.65749pt too wide) in paragraph at lines 845--849
+[]\TU/TimesNewRoman(1)/m/n/14.4 Серия соревнований M-Competition, организованна
+я Макридакисом и кол-
+ []
+
+
+Overfull \hbox (3.91025pt too wide) in paragraph at lines 857--864
+[]\TU/TimesNewRoman(1)/m/n/14.4 Главный результат M3 состоял в том, что простые
+ методы — ETS с демп-
+ []
+
+
+Overfull \hbox (14.26784pt too wide) in paragraph at lines 865--874
+\TU/TimesNewRoman(1)/m/n/14.4 стот (от часовых до годовых). Победителем стал ги
+бридный метод ES-RNN [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 15[][][][]\TU/Times
+NewRoman(1)/m/n/14.4 ],
+ []
+
+
+
+[22]
+Overfull \hbox (3.14311pt too wide) in paragraph at lines 879--881
+[]\TU/TimesNewRoman(1)/m/n/14.4 Гибридные подходы, сочетающие статистическую де
+композицию с ней-
+ []
+
+
+Overfull \hbox (5.71419pt too wide) in paragraph at lines 881--883
+[]\TU/TimesNewRoman(1)/m/n/14.4 Комбинирование (ансамблирование) прогнозов неск
+ольких методов, как
+ []
+
+
+Overfull \hbox (2.64923pt too wide) in paragraph at lines 887--890
+[]\TU/TimesNewRoman(1)/m/n/14.4 Эти наблюдения непосредственно мотивируют поста
+новку эксперимен-
+ []
+
+
+Overfull \hbox (17.99028pt too wide) in paragraph at lines 899--902
+[]\TU/TimesNewRoman(1)/m/n/14.4 Во-первых, декомпозиция временного ряда на комп
+оненты является сквоз-
+ []
+
+
+Overfull \hbox (3.4747pt too wide) in paragraph at lines 907--909
+[]\TU/TimesNewRoman(1)/m/n/14.4 в DLinear и Autoformer декомпозиция осуществляе
+тся скользящим сред-
+ []
+
+
+
+[23]
+
+[24]) (./chapters/chapter2.tex
+
+[25]
+Overfull \hbox (0.10112pt too wide) in paragraph at lines 9--16
+\TU/TimesNewRoman(1)/m/n/14.4 гнозирования временных рядов. Последовательно изл
+ожены: постановка экс-
+ []
+
+
+Overfull \hbox (15.20174pt too wide) in paragraph at lines 24--27
+\TU/TimesNewRoman(1)/m/n/14.4 ритетных набора данных для одномерного прогнозиро
+вания: M3 Competition [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 2[][][][]\TU/Times
+NewRoman(1)/m/n/14.4 ]
+ []
+
+
+
+[26]
+
+[27]
+
+[28]
+Overfull \hbox (2.19225pt too wide) in paragraph at lines 186--189
+[]\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]3[][] дополняет картину метрикой MA
+SE, нечувствительной к мас-
+ []
+
+
+
+[29]
+Overfull \hbox (5.97874pt too wide) in paragraph at lines 226--240
+[]\TU/TimesNewRoman(1)/m/it/14.4 Зависимость от частоты. \TU/TimesNewRoman(1)/m
+/n/14.4 На годовых рядах (самые короткие, 14–47 то-
+ []
+
+File: figures/bar_m3_by_freq.png Graphic file (type bmp)
+<figures/bar_m3_by_freq.png>
+
+Overfull \hbox (117.87697pt too wide) in paragraph at lines 254--258
+\TU/TimesNewRoman(1)/m/n/14.4 ям. Четко видна закономерность: по мере увеличени
+я длины рядов (yearly $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(1)/m/n/14.4 quar
+terly $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(1)/m/n/14.4 monthly)
+ []
+
+
+
+[30]
+File: figures/m3_yearly_T612_median.png Graphic file (type bmp)
+<figures/m3_yearly_T612_median.png>
+File: figures/m3_quarterly_T239_median.png Graphic file (type bmp)
+<figures/m3_quarterly_T239_median.png>
+File: figures/m3_monthly_T616_median.png Graphic file (type bmp)
+<figures/m3_monthly_T616_median.png>
+
+
+[31]
+Overfull \hbox (0.82582pt too wide) in paragraph at lines 315--324
+[]\TU/TimesNewRoman(1)/m/n/14.4 На M4 наблюдается более выраженное превосходств
+о классических мо-
+ []
+
+
+
+[32]
+File: figures/bar_m4_daily_full.png Graphic file (type bmp)
+<figures/bar_m4_daily_full.png>
+
+Overfull \hbox (16.11763pt too wide) in paragraph at lines 359--368
+[]\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
+ежает ETS (2.46) и Auto-
+ []
+
+
+Overfull \hbox (2.36978pt too wide) in paragraph at lines 359--368
+\TU/TimesNewRoman(1)/m/n/14.4 стрирует конкурентоспособный результат, занимая ч
+етвёртое место. TimesNet
+ []
+
+
+Overfull \hbox (43.36078pt too wide) in paragraph at lines 359--368
+\TU/TimesNewRoman(1)/m/n/14.4 новятся полностью конкурентоспособными с классиче
+скими подходами. Autoformer
+ []
+
+
+
+[33]
+File: figures/m4_quarterly_Q18256_median.png Graphic file (type bmp)
+<figures/m4_quarterly_Q18256_median.png>
+File: figures/m4_monthly_M27091_median.png Graphic file (type bmp)
+<figures/m4_monthly_M27091_median.png>
+File: figures/m4_daily_D2163_median.png Graphic file (type bmp)
+<figures/m4_daily_D2163_median.png>
+
+
+[34]
+
+[35]
+File: figures/heatmap_smape.png Graphic file (type bmp)
+<figures/heatmap_smape.png>
+File: figures/heatmap_rank.png Graphic file (type bmp)
+<figures/heatmap_rank.png>
+
+
+[36]
+Overfull \hbox (10.0419pt too wide) in paragraph at lines 488--495
+\TU/TimesNewRoman(1)/m/n/14.4 TimesNet (обучаемая 2D-декомпозиция) показывает р
+езультаты на уровне клас-
+ []
+
+
+Overfull \hbox (0.18173pt too wide) in paragraph at lines 488--495
+\TU/TimesNewRoman(1)/m/n/14.4 нительно подтверждает эффективность декомпозиции 
+при наличии выражен-
+ []
+
+
+
+[37]
+Overfull \hbox (26.29889pt too wide) in paragraph at lines 570--574
+[]\TU/TimesNewRoman(1)/m/n/14.4 На M4 Helformer (12.71 overall) располагается м
+ежду ETS (11.53) и TimesNet
+ []
+
+
+Overfull \hbox (9.70915pt too wide) in paragraph at lines 570--574
+\TU/TimesNewRoman(1)/m/n/14.4 (16.36), проигрывая ETS на quarterly (17.38 vs. 1
+6.72) и monthly (18.09 vs. 15.40),
+ []
+
+
+
+[38]
+Overfull \hbox (32.81622pt too wide) in paragraph at lines 575--582
+\TU/TimesNewRoman(1)/m/n/14.4 бильный базовый прогноз, который нейросетевая ком
+понента дополняет, но не раз-
+ []
+
+
+Overfull \hbox (14.60005pt too wide) in paragraph at lines 623--632
+[]\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
+ к переходу на rollout:
+ []
+
+
+Overfull \hbox (6.77399pt too wide) in paragraph at lines 623--632
+\TU/TimesNewRoman(1)/m/n/14.4 делению строятся итеративно), а ETS даже незначит
+ельно улучшается ($\OMS/cmsy/m/n/14.4 ^^@$\TU/TimesNewRoman(1)/m/n/14.4 0.28).
+ []
+
+
+Overfull \hbox (16.5669pt too wide) in paragraph at lines 623--632
+\TU/TimesNewRoman(1)/m/n/14.4 Среди нейросетевых моделей наибольшая деградация 
+наблюдается у FEDformer
+ []
+
+
+
+[39]
+Overfull \hbox (1.30092pt too wide) in paragraph at lines 667--675
+\TU/TimesNewRoman(1)/m/n/14.4 обучаемой декомпозицией (FEDformer, TimesNet) нак
+апливают ошибки быст-
+ []
+
+
+
+[40]
+Overfull \hbox (10.622pt too wide) in paragraph at lines 710--717
+\TU/TimesNewRoman(1)/m/n/14.4 опережает Autoformer from-scratch (16.67) и прибл
+ижается к уровню ETS (21.04
+ []
+
+
+
+[41]
+Overfull \hbox (3.85518pt too wide) in paragraph at lines 741--749
+[]\TU/TimesNewRoman(1)/b/n/14.4 RQ1: Когда обучаемая декомпозиция эффективнее ф
+иксированной?
+ []
+
+
+Overfull \hbox (2.53851pt too wide) in paragraph at lines 751--757
+\TU/TimesNewRoman(1)/m/n/14.4 грессионные модели (ARIMA) остаются наиболее эффе
+ктивными. Среди ней-
+ []
+
+
+Overfull \hbox (2.89229pt too wide) in paragraph at lines 751--757
+\TU/TimesNewRoman(1)/m/n/14.4 росетевых архитектур TimesNet с 2D-свертками и N-
+BEATS с residual-стеками
+ []
+
+
+Overfull \hbox (0.4276pt too wide) in paragraph at lines 758--767
+[]\TU/TimesNewRoman(1)/b/n/14.4 RQ3: Оправдана ли сложность трансформерных архи
+тектур? \TU/TimesNewRoman(1)/m/n/14.4 В per-
+ []
+
+
+Overfull \hbox (7.27765pt too wide) in paragraph at lines 758--767
+\TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.50). Однако гибридный Helformer (ранг 2.0
+0) демонстрирует, что транс-
+ []
+
+
+
+[42]
+Overfull \hbox (6.74779pt too wide) in paragraph at lines 802--809
+\TU/TimesNewRoman(1)/m/n/14.4 ные, проектируются для глобального обучения на бо
+льших корпусах [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 23[][][][];
+ []
+
+
+Overfull \hbox (4.65593pt too wide) in paragraph at lines 810--815
+\TU/TimesNewRoman(1)/m/n/14.4 мость дополнительного исследования устойчивости H
+W-декомпозиции. 
+ []
+
+
+Overfull \hbox (21.76549pt too wide) in paragraph at lines 816--820
+[]\TU/TimesNewRoman(1)/m/it/14.4 Вычислительные ограничения. \TU/TimesNewRoman(
+1)/m/n/14.4 Autoformer и FEDformer обучались с 30 эпо-
+ []
+
+
+
+[43]) (./chapters/conclusion.tex
+
+[44]
+Overfull \hbox (2.70245pt too wide) in paragraph at lines 21--29
+\TU/TimesNewRoman(1)/m/n/14.4 ETS с автоматическим подбором параметров показал 
+лучший средний sMAPE
+ []
+
+
+Overfull \hbox (1.81003pt too wide) in paragraph at lines 31--38
+\TU/TimesNewRoman(1)/m/n/14.4 DLinear (2.43%) показал лучший результат среди вс
+ех моделей, включая клас-
+ []
+
+
+Overfull \hbox (4.46501pt too wide) in paragraph at lines 39--48
+\TU/TimesNewRoman(1)/m/n/14.4 и 8.50), однако при предобучении на корпусе рядов
+ продемонстрировали улуч-
+ []
+
+
+
+[45]
+Overfull \hbox (36.0083pt too wide) in paragraph at lines 77--80
+\TU/TimesNewRoman(1)/m/n/14.4 вать предпочтение моделям без сложной обучаемой д
+екомпозиции (PatchTST,
+ []
+
+
+
+[46]
+Overfull \hbox (69.35983pt too wide) in paragraph at lines 95--98
+[]\TU/TimesNewRoman(1)/m/n/14.4 расширение модельного набора за счет современны
+х архитектур (iTransformer [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 40[][][][]\TU
+/TimesNewRoman(1)/m/n/14.4 ],
+ []
+
+)
+
+[47]
+
+[48]
+Overfull \hbox (22.83644pt too wide) in paragraph at lines 227--227
+[]\TU/TimesNewRoman(0)/m/n/14.4 A State Space Framework for Automatic Forecasti
+ng Using Exponential Smooth-
+ []
+
+
+
+[49]
+
+[50]
+Overfull \hbox (7.09712pt too wide) in paragraph at lines 227--227
+[]\TU/TimesNewRoman(0)/m/n/14.4 Informer: Beyond Efficient Transformer for Long
+ Sequence Time-Series Fore-
+ []
+
+
+Overfull \hbox (20.00163pt too wide) in paragraph at lines 227--227
+\TU/TimesNewRoman(0)/m/n/14.4 tions. — 2023. — URL: [][]$[][][][][] [] [] [] []
+[][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][][]$[]
+[].[] 
+ []
+
+
+
+[51]
+Overfull \hbox (15.45717pt too wide) in paragraph at lines 227--227
+\TU/TimesNewRoman(0)/m/n/14.4 tions. — 2024. — URL: [][]$[][][][][] [] [] [] []
+[][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][]$[][]
+ ;
+ []
+
+
+
+[52] (./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 60701B36F98A656B8F4BF2CB579CC25F;10185.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 26444 strings out of 473832
+ 527753 string characters out of 5729482
+ 1622129 words of memory out of 5000000
+ 49109 multiletter control sequences out of 15000+600000
+ 570359 words of font info for 142 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 79i,12n,93p,693b,7707s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (52 pages).
