@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  4 APR 2026 12:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  9 APR 2026 06:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -116,7 +116,7 @@ Package fontspec Info:
 (fontspec)             Font family 'CourierNew(0)' created for font 'Courier
 (fontspec)             New' with options
 (fontspec)             [Ligatures=TeX,WordSpace={1,0,0},HyphenChar=None,Punctua
-tionSpace=WordSpace,Scale=0.85,Script=Latin].
+tionSpace=WordSpace,Scale=0.85,Script=Latin,Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -130,6 +130,42 @@ tionSpace=WordSpace,Scale=0.85,Script=Latin].
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->s*[0.85]"Courier
 (fontspec)             New/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             PT Mono scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "PT Mono/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             PT Mono scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             PT Mono/B scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             PT Mono/BI scale = 0.85.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'PTMono(0)' created for font 'PT Mono' with
+(fontspec)             options [Ligatures=TeX,Scale=0.85].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[0.85]"PT
+(fontspec)             Mono/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[0.85]"PT
+(fontspec)             Mono/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[0.85]"PT
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;mapping=tex-text;"
 
 
 Package fontspec Info: 
@@ -946,26 +982,26 @@ Package fontspec Info:
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -973,65 +1009,65 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 147.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 147.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 147.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 147.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 147.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 147.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 147.
-LaTeX Font Info:    Redeclaring math accent \check on input line 147.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 147.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 147.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 147.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 147.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 147.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 148.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 148.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 148.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 148.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 148.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 148.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 148.
+LaTeX Font Info:    Redeclaring math accent \check on input line 148.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 148.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 148.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 148.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 148.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 147.
+(Font)              `operators' in the math version `normal' on input line 148.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-47.
+48.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 147.
+(Font)              `operators' in the math version `bold' on input line 148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-147.
+148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 147.
+input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 147.
+ 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
-147.
+148.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 147.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 147
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 148
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
-input line 147.
+input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
-e 147.
+e 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 147.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 147
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 148
 .
 
 *geometry* driver: auto-detecting
@@ -1087,7 +1123,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 147.
+Package hyperref Info: Link coloring ON on input line 148.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1158,55 +1194,44 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 147.
-Package biblatex Info: Reference segment=0 on input line 147.
+Package biblatex Info: Reference section=0 on input line 148.
+Package biblatex Info: Reference segment=0 on input line 148.
 \c@lstlisting=\count491
-LaTeX Font Info:    Trying to load font information for U+msa on input line 171
-.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (./main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 171
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (25.2974pt too wide) in paragraph at lines 170--177
-[] 
- []
-
-
 
 [1
 
-] (./main.toc
-
-[2])
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 
-[3]
-Overfull \hbox (15.99048pt too wide) in paragraph at lines 195--203
+[2]
+Overfull \hbox (15.99048pt too wide) in paragraph at lines 160--168
 \TU/TimesNewRoman(1)/m/n/14.4 ровании ресурсов. Классические статистические мод
 ели (ARIMA, ETS, Prophet)
  []
 
 
-Overfull \hbox (6.12206pt too wide) in paragraph at lines 204--211
-\TU/TimesNewRoman(1)/m/n/14.4 используются данные соревнований M3 и M4, а в кач
-естве моделей — ARIMA,
- []
 
+[3] (./chapters/chapter1.tex
 
-
-[4] (./chapters/chapter1.tex
-Overfull \hbox (9.75372pt too wide) in paragraph at lines 26--36
-\TU/TimesNewRoman(1)/m/n/14.4 набора $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 y[
-]; y[]; [] ; y[]\OMS/cmsy/m/n/14.4 g$ \TU/TimesNewRoman(1)/m/n/14.4 не изменяет
-ся при сдвиге всех индексов на одну и ту же
+[4]
+Overfull \hbox (57.23221pt too wide) in paragraph at lines 26--36
+\TU/TimesNewRoman(1)/m/it/14.4 ционарным\TU/TimesNewRoman(1)/m/n/14.4 , если со
+вместное распределение любого конечного набора $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/
+it/14.4 y[]; y[]; [] ; y[]\OMS/cmsy/m/n/14.4 g$
  []
 
 
@@ -1219,19 +1244,13 @@ Overfull \hbox (34.91322pt too wide) in paragraph at lines 68--72
  []
 
 
-Overfull \hbox (9.2724pt too wide) in paragraph at lines 76--81
+Overfull \hbox (9.2724pt too wide) in paragraph at lines 76--80
 \TU/TimesNewRoman(1)/m/n/14.4 минимизирующее некоторую функцию потерь между про
 гнозом $[]$ и ре-
  []
 
 
-Overfull \hbox (4.80211pt too wide) in paragraph at lines 76--81
-\TU/TimesNewRoman(1)/m/n/14.4 альными будущими значениями $[][]$, где $\OML/cmm
-/m/it/14.4 H$ \TU/TimesNewRoman(1)/m/n/14.4 — горизонт прогноза (forecast
- []
-
-
-Overfull \hbox (11.3786pt too wide) in paragraph at lines 102--104
+Overfull \hbox (11.3786pt too wide) in paragraph at lines 101--103
 []\TU/TimesNewRoman(1)/m/n/14.4 Для сравнения прогнозных моделей применяют ряд 
 метрик, каждая из ко-
  []
@@ -1239,13 +1258,13 @@ Overfull \hbox (11.3786pt too wide) in paragraph at lines 102--104
 
 
 [6]
-Overfull \hbox (10.2676pt too wide) in paragraph at lines 113--114
+Overfull \hbox (10.2676pt too wide) in paragraph at lines 112--113
 []\TU/TimesNewRoman(1)/b/n/14.4 Среднеквадратическая ошибка \TU/TimesNewRoman(1
 )/m/n/14.4 (MSE) и её квадратный корень (RMSE): 
  []
 
 
-Overfull \hbox (5.66025pt too wide) in paragraph at lines 149--158
+Overfull \hbox (5.66025pt too wide) in paragraph at lines 148--157
 \TU/TimesNewRoman(1)/m/n/14.4 масштабно-инвариантная альтернатива MAPE и sMAPE.
  Её знаменатель пред-
  []
@@ -1253,7 +1272,41 @@ Overfull \hbox (5.66025pt too wide) in paragraph at lines 149--158
 
 
 [7]
-Overfull \hbox (3.28717pt too wide) in paragraph at lines 196--199
+Overfull \hbox (14.54156pt too wide) in paragraph at lines 170--183
+[]\TU/TimesNewRoman(1)/b/n/14.4 Множественная сезонность. \TU/TimesNewRoman(1)/
+m/n/14.4 Многие временные ряды содержат несколь-
+ []
+
+
+Overfull \hbox (3.83066pt too wide) in paragraph at lines 184--197
+[]\TU/TimesNewRoman(1)/b/n/14.4 Структурные изменения и ломка тренда. \TU/Times
+NewRoman(1)/m/n/14.4 Реальные ряды нередко под-
+ []
+
+
+
+[8]
+Overfull \hbox (7.74637pt too wide) in paragraph at lines 198--212
+\TU/TimesNewRoman(1)/m/n/14.4 ционарности, на практике часто нарушается. Финанс
+овые ряды являются клас-
+ []
+
+
+Overfull \hbox (4.70872pt too wide) in paragraph at lines 213--224
+\TU/TimesNewRoman(1)/m/n/14.4 дисперсия —создают стресс-тест для допущений, зал
+оженных в каждый класс
+ []
+
+
+Overfull \hbox (4.27519pt too wide) in paragraph at lines 213--224
+\TU/TimesNewRoman(1)/m/n/14.4 метных областей (макроэкономика, финансы, промышл
+енность, демография),
+ []
+
+
+
+[9]
+Overfull \hbox (3.28717pt too wide) in paragraph at lines 262--265
 []\TU/TimesNewRoman(1)/m/n/14.4 Объединяя оба процесса, получают модель ARMA($\
 OML/cmm/m/it/14.4 p$\TU/TimesNewRoman(1)/m/n/14.4 ,$\OML/cmm/m/it/14.4 q$\TU/Ti
 mesNewRoman(1)/m/n/14.4 ), а применяя к ис-
@@ -1261,200 +1314,132 @@ mesNewRoman(1)/m/n/14.4 ), а применяя к ис-
 
 
 
-[8]
-LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
-(Font)              scaled to size 12.24008pt on input line 220.
-
-
-! Package polyglossia Error: The current main monospace font, Courier New,
-(polyglossia)                does not contain the "Cyrillic" script!
-(polyglossia)                Please define \cyrillicfonttt with
-(polyglossia)                \newfontfamily command
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.220 алгоритм \texttt{auto\_arima}
-                                   , реализованный в~пакете \texttt{forecast}
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-
-
-! Package polyglossia Error: The current main monospace font, Courier New,
-(polyglossia)                does not contain the "Cyrillic" script!
-(polyglossia)                Please define \cyrillicfonttt with
-(polyglossia)                \newfontfamily command
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.220 ... реализованный в~пакете \texttt{forecast}
-                                                  
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-
-
-! Package polyglossia Error: The current main monospace font, Courier New,
-(polyglossia)                does not contain the "Cyrillic" script!
-(polyglossia)                Please define \cyrillicfonttt with
-(polyglossia)                \newfontfamily command
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.221 для R и в~библиотеке \texttt{pmdarima}
-                                             для Python, осуществляет
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-
-
-
-[9]
-
 [10]
-Overfull \hbox (6.0641pt too wide) in paragraph at lines 341--350
+LaTeX Font Info:    Font shape `TU/PTMono(0)/m/n' will be
+(Font)              scaled to size 12.24008pt on input line 286.
+
+
+[11]
+
+[12]
+Overfull \hbox (6.0641pt too wide) in paragraph at lines 407--416
 []\TU/TimesNewRoman(1)/m/n/14.4 Prophet привлекателен простотой использования и
  устойчивостью к про-
  []
 
 
 
-[11]
-Overfull \hbox (18.64297pt too wide) in paragraph at lines 387--396
+[13]
+Overfull \hbox (18.64297pt too wide) in paragraph at lines 453--462
 []\TU/TimesNewRoman(1)/m/n/14.4 Ещё один класс фиксированных базисных функций п
 редставляют вейвлет-
  []
 
 
-Overfull \hbox (35.73308pt too wide) in paragraph at lines 387--396
+Overfull \hbox (35.73308pt too wide) in paragraph at lines 453--462
 \TU/TimesNewRoman(1)/m/n/14.4 преобразования. В частности, максимально перекрыв
 ающееся дискретное вейвлет-
  []
 
 
+Overfull \hbox (0.96692pt too wide) in paragraph at lines 463--469
+\TU/TimesNewRoman(1)/m/n/14.4 такого подхода —интерпретируемость и устойчивость
+ при малом объёме дан-
+ []
 
-[12]
 
-[13]
-Overfull \hbox (19.38486pt too wide) in paragraph at lines 434--439
+
+[14]
+Overfull \hbox (19.38486pt too wide) in paragraph at lines 500--505
 []\TU/TimesNewRoman(1)/m/n/14.4 Архитектура Autoformer [[][][][]\TU/TimesNewRom
-an(0)/m/n/14.4 23[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] вводит \TU/TimesNewRom
+an(0)/m/n/14.4 24[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] вводит \TU/TimesNewRom
 an(1)/m/it/14.4 прогрессивную декомпозицию\TU/TimesNewRoman(1)/m/n/14.4 : на ка
 ж-
  []
 
 
-Overfull \hbox (20.51846pt too wide) in paragraph at lines 440--445
+Overfull \hbox (20.51846pt too wide) in paragraph at lines 506--511
 \TU/TimesNewRoman(1)/m/n/14.4 внимания работают с подмножеством частот Фурье ил
 и вейвлет-коэффициентов,
  []
 
 
-Overfull \hbox (11.92282pt too wide) in paragraph at lines 454--462
+
+[15]
+Overfull \hbox (11.92282pt too wide) in paragraph at lines 520--528
 \TU/TimesNewRoman(1)/m/n/14.4 менных рядов прослеживается общая тенденция: деко
 мпозиция перестаёт быть
  []
 
 
 
-[14]
-Overfull \hbox (28.49968pt too wide) in paragraph at lines 498--503
+[16]
+Overfull \hbox (13.93427pt too wide) in paragraph at lines 544--550
+\U/msb/m/n/14.4 R[]$ \TU/TimesNewRoman(1)/m/n/14.4 —матрица значений, а $\OML/c
+mm/m/it/14.4 d[]$ \TU/TimesNewRoman(1)/m/n/14.4 —размерность ключей. Деление на
+ $[]$ предот-
+ []
+
+
+Overfull \hbox (28.49968pt too wide) in paragraph at lines 564--569
 []\TU/TimesNewRoman(1)/m/n/14.4 Полный блок трансформера включает многоголовое 
 внимание, позиционно-
  []
 
 
-Overfull \hbox (4.52953pt too wide) in paragraph at lines 511--522
+
+[17]
+Overfull \hbox (4.52953pt too wide) in paragraph at lines 582--600
 \TU/TimesNewRoman(1)/m/n/14.4 реженным вниманием. Informer [[][][][]\TU/TimesNe
-wRoman(0)/m/n/14.4 30[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] использует механиз
+wRoman(0)/m/n/14.4 31[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] использует механиз
 м ProbSparse attention,
  []
 
 
-Overfull \hbox (3.53801pt too wide) in paragraph at lines 511--522
+Overfull \hbox (3.53801pt too wide) in paragraph at lines 582--600
 \TU/TimesNewRoman(1)/m/n/14.4 дому элементу обращаться лишь к экспоненциально у
 далённым предшествен-
  []
 
 
+Overfull \hbox (8.03215pt too wide) in paragraph at lines 582--600
+\TU/TimesNewRoman(1)/m/n/14.4 ствам ряда, что позволяет учитывать нестационарно
+сть непосредственно внут-
+ []
 
-[15]
-Overfull \hbox (1.72864pt too wide) in paragraph at lines 534--538
+
+Overfull \hbox (7.02097pt too wide) in paragraph at lines 582--600
+\TU/TimesNewRoman(1)/m/n/14.4 дов. Отдельно следует выделить архитектуру Tempor
+al Fusion Transformer [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 34[][][][]\TU/Time
+sNewRoman(1)/m/n/14.4 ],
+ []
+
+
+Overfull \hbox (1.72864pt too wide) in paragraph at lines 618--622
 \TU/TimesNewRoman(1)/m/n/14.4 длинных временных рядов и отличается от стандартн
 ого трансформера в двух
  []
 
 
-Overfull \hbox (4.52473pt too wide) in paragraph at lines 548--552
+
+[18]
+Overfull \hbox (4.52473pt too wide) in paragraph at lines 632--636
 \TU/TimesNewRoman(1)/m/n/14.4 На каждом слое промежуточное представление повтор
 но разделяется на тренд
  []
 
 
-Overfull \hbox (3.1794pt too wide) in paragraph at lines 553--556
+Overfull \hbox (3.1794pt too wide) in paragraph at lines 637--640
 \TU/TimesNewRoman(1)/m/n/14.4 числением автокорреляций на основе быстрого преоб
 разования Фурье (БПФ): 
  []
 
 
 
-[16]
-
-[17]
-Overfull \hbox (0.20033pt too wide) in paragraph at lines 620--623
+[19]
+Overfull \hbox (0.20033pt too wide) in paragraph at lines 704--707
 []\TU/TimesNewRoman(1)/m/n/14.4 Патчирование заключается в разбиении входного р
 яда длины $\OML/cmm/m/it/14.4 L$ \TU/TimesNewRoman(1)/m/n/14.4 на непе-
- []
-
-
-
-[18]
-Overfull \hbox (34.00223pt too wide) in paragraph at lines 697--706
-\TU/TimesNewRoman(1)/m/n/14.4 енную на принципе \TU/TimesNewRoman(1)/m/it/14.4 
-обучаемого базисного разложения\TU/TimesNewRoman(1)/m/n/14.4 . Модель состоит и
-з несколь-
- []
-
-
-
-[19]
-Overfull \hbox (8.04619pt too wide) in paragraph at lines 756--762
-\TU/TimesNewRoman(1)/m/n/14.4 где $[]\OT1/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^A\
-OT1/cmr/m/n/14.4 )$ \TU/TimesNewRoman(1)/m/n/14.4 — амплитудный спектр, $[]\OT1
-/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^A\OT1/cmr/m/n/14.4 )$ \TU/TimesNewRoman(1)/
-m/n/14.4 — усреднение по каналам, а $[]$ —
- []
-
-
-Overfull \hbox (11.38751pt too wide) in paragraph at lines 763--772
-\TU/TimesNewRoman(1)/m/n/14.4 ки этой матрицы соответствуют последовательным «ц
-иклам» длины $\OML/cmm/m/it/14.4 p[]$\TU/TimesNewRoman(1)/m/n/14.4 , а столб-
- []
-
-
-Overfull \hbox (65.78798pt too wide) in paragraph at lines 763--772
-\TU/TimesNewRoman(1)/m/n/14.4 стандартные двумерные свёрточные операции (авторы
- используют блоки Inception [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 25[][][][]\T
-U/TimesNewRoman(1)/m/n/14.4 ]),
- []
-
-
-Overfull \hbox (11.39893pt too wide) in paragraph at lines 763--772
-\TU/TimesNewRoman(1)/m/n/14.4 которые одновременно моделируют \TU/TimesNewRoman
-(1)/m/it/14.4 внутрипериодные \TU/TimesNewRoman(1)/m/n/14.4 (вдоль столбцов) и 
-\TU/TimesNewRoman(1)/m/it/14.4 меж-
  []
 
 
@@ -1462,75 +1447,815 @@ Overfull \hbox (11.39893pt too wide) in paragraph at lines 763--772
 [20]
 
 [21]
-Overfull \hbox (25.14987pt too wide) in paragraph at lines 824--832
-\TU/TimesNewRoman(1)/m/it/14.4 ных отклонений \TU/TimesNewRoman(1)/m/n/14.4 от 
-базового прогноза. Это контрастирует с подходами Autoformer
- []
-
-
-Overfull \hbox (17.65749pt too wide) in paragraph at lines 845--849
-[]\TU/TimesNewRoman(1)/m/n/14.4 Серия соревнований M-Competition, организованна
-я Макридакисом и кол-
- []
-
-
-Overfull \hbox (3.91025pt too wide) in paragraph at lines 857--864
-[]\TU/TimesNewRoman(1)/m/n/14.4 Главный результат M3 состоял в том, что простые
- методы — ETS с демп-
- []
-
-
-Overfull \hbox (14.26784pt too wide) in paragraph at lines 865--874
-\TU/TimesNewRoman(1)/m/n/14.4 стот (от часовых до годовых). Победителем стал ги
-бридный метод ES-RNN [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 15[][][][]\TU/Times
-NewRoman(1)/m/n/14.4 ],
+Overfull \hbox (34.00223pt too wide) in paragraph at lines 781--790
+\TU/TimesNewRoman(1)/m/n/14.4 енную на принципе \TU/TimesNewRoman(1)/m/it/14.4 
+обучаемого базисного разложения\TU/TimesNewRoman(1)/m/n/14.4 . Модель состоит и
+з несколь-
  []
 
 
 
 [22]
-Overfull \hbox (3.14311pt too wide) in paragraph at lines 879--881
+Overfull \hbox (11.38751pt too wide) in paragraph at lines 847--856
+\TU/TimesNewRoman(1)/m/n/14.4 ки этой матрицы соответствуют последовательным «ц
+иклам» длины $\OML/cmm/m/it/14.4 p[]$\TU/TimesNewRoman(1)/m/n/14.4 , а столб-
+ []
+
+
+Overfull \hbox (7.11238pt too wide) in paragraph at lines 847--856
+\TU/TimesNewRoman(1)/m/n/14.4 цы —позициям внутри цикла. Такое представление по
+зволяет применить стан-
+ []
+
+
+Overfull \hbox (38.83018pt too wide) in paragraph at lines 847--856
+\TU/TimesNewRoman(1)/m/n/14.4 дартные двумерные свёрточные операции (авторы исп
+ользуют блоки Inception [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 12[][][][]\TU/Ti
+mesNewRoman(1)/m/n/14.4 ]),
+ []
+
+
+Overfull \hbox (11.39893pt too wide) in paragraph at lines 847--856
+\TU/TimesNewRoman(1)/m/n/14.4 которые одновременно моделируют \TU/TimesNewRoman
+(1)/m/it/14.4 внутрипериодные \TU/TimesNewRoman(1)/m/n/14.4 (вдоль столбцов) и 
+\TU/TimesNewRoman(1)/m/it/14.4 меж-
+ []
+
+
+
+[23]
+Overfull \hbox (25.14987pt too wide) in paragraph at lines 908--916
+\TU/TimesNewRoman(1)/m/it/14.4 ных отклонений \TU/TimesNewRoman(1)/m/n/14.4 от 
+базового прогноза. Это контрастирует с подходами Autoformer
+ []
+
+
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+[]|\TU/TimesNewRoman(1)/b/n/10 Тип де-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 947--947
+[]|\TU/TimesNewRoman(1)/b/n/10 Сильные сто-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 953--953
+[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
+[]|\TU/TimesNewRoman(1)/m/n/10 Авторегрессия
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
+\TU/TimesNewRoman(1)/m/n/10 + скользящее
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 954--954
+\TU/TimesNewRoman(1)/m/n/10 среднее + раз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+[]|\TU/TimesNewRoman(1)/m/n/10 Обоснованная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+\TU/TimesNewRoman(1)/m/n/10 теория; мало
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+\TU/TimesNewRoman(1)/m/n/10 параметров;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+\TU/TimesNewRoman(1)/m/n/10 интерпретируе-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
+[]|\TU/TimesNewRoman(1)/m/n/10 Линейность;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
+\TU/TimesNewRoman(1)/m/n/10 один сезонный
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 956--956
+\TU/TimesNewRoman(1)/m/n/10 период; ручной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--958
+\TU/TimesNewRoman(1)/m/n/10 ционарной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 961--961
+[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
+ []
+
+
+Overfull \hbox (12.54852pt too wide) in paragraph at lines 962--962
+[]|\TU/TimesNewRoman(1)/m/n/10 Экспоненциальное
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
+\TU/TimesNewRoman(1)/m/n/10 сглаживание
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
+\TU/TimesNewRoman(1)/m/n/10 (уровень,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
+\TU/TimesNewRoman(1)/m/n/10 тренд, сезон-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 963--963
+[]|\TU/TimesNewRoman(1)/m/n/10 Автоматический
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 963--963
+\TU/TimesNewRoman(1)/m/n/10 выбор модели;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 963--963
+\TU/TimesNewRoman(1)/m/n/10 устойчивость;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 963--963
+\TU/TimesNewRoman(1)/m/n/10 демпфирование
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 964--964
+[]|\TU/TimesNewRoman(1)/m/n/10 Один сезонный
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 964--964
+\TU/TimesNewRoman(1)/m/n/10 период; ограни-
+ []
+
+
+Underfull \hbox (badness 4316) in paragraph at lines 965--966
+[]|\TU/TimesNewRoman(1)/m/n/10 Короткие ряды;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
+\TU/TimesNewRoman(1)/m/n/10 массовое про-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 969--969
+[]|\TU/TimesNewRoman(1)/m/n/10 Полу-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 969--969
+\TU/TimesNewRoman(1)/m/n/10 фиксиро-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
+[]|\TU/TimesNewRoman(1)/m/n/10 Аддитивная:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
+\TU/TimesNewRoman(1)/m/n/10 тренд + ряд
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--971
+[]|\TU/TimesNewRoman(1)/m/n/10 Множественная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--971
+\TU/TimesNewRoman(1)/m/n/10 сезонность; ав-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--971
+\TU/TimesNewRoman(1)/m/n/10 тообнаружение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+[]|\TU/TimesNewRoman(1)/m/n/10 Завышенная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+\TU/TimesNewRoman(1)/m/n/10 гибкость; риск
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+\TU/TimesNewRoman(1)/m/n/10 переобучения;
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 972--972
+\TU/TimesNewRoman(1)/m/n/10 слабая теорети-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 973--974
+\TU/TimesNewRoman(1)/m/n/10 кими сезонами
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 973--974
+\TU/TimesNewRoman(1)/m/n/10 и известными
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 977--977
+[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 978--978
+[]|\TU/TimesNewRoman(1)/m/n/10 Скользящее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 978--978
+\TU/TimesNewRoman(1)/m/n/10 среднее $\OMS/cmsy/m/n/10 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 978--978
+\TU/TimesNewRoman(1)/m/n/10 две линейные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--979
+[]|\TU/TimesNewRoman(1)/m/n/10 Минимальная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--979
+\TU/TimesNewRoman(1)/m/n/10 сложность;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--979
+\TU/TimesNewRoman(1)/m/n/10 быстрое обуче-
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 979--979
+\TU/TimesNewRoman(1)/m/n/10 ние; конкурент-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 980--980
+[]|\TU/TimesNewRoman(1)/m/n/10 Линейность;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 980--980
+\TU/TimesNewRoman(1)/m/n/10 отсутствие вза-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 980--980
+\TU/TimesNewRoman(1)/m/n/10 имодействия
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
+\TU/TimesNewRoman(1)/m/n/10 ные ряды;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
+\TU/TimesNewRoman(1)/m/n/10 базовая линия
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--985
+[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--986
+[]|\TU/TimesNewRoman(1)/m/n/10 Стек полно-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--986
+\TU/TimesNewRoman(1)/m/n/10 + базисное
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--986
+\TU/TimesNewRoman(1)/m/n/10 разложение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--986
+\TU/TimesNewRoman(1)/m/n/10 (тренд, сезон-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--987
+[]|\TU/TimesNewRoman(1)/m/n/10 Двойной оста-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--987
+\TU/TimesNewRoman(1)/m/n/10 ток; аналити-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--987
+\TU/TimesNewRoman(1)/m/n/10 ческие базисы;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--987
+\TU/TimesNewRoman(1)/m/n/10 интерпретируе-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 988--988
+[]|\TU/TimesNewRoman(1)/m/n/10 Большое число
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 988--988
+\TU/TimesNewRoman(1)/m/n/10 параметров;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 988--988
+\TU/TimesNewRoman(1)/m/n/10 ном ряду —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
+\TU/TimesNewRoman(1)/m/n/10 ные ряды при
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
+\TU/TimesNewRoman(1)/m/n/10 достаточном
+ []
+
+
+Overfull \hbox (1.68245pt too wide) in paragraph at lines 992--992
+[]|\TU/TimesNewRoman(1)/m/n/10 Autoformer| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--993
+[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+ []
+
+
+Overfull \hbox (6.3814pt too wide) in paragraph at lines 993--993
+\TU/TimesNewRoman(1)/m/n/10 (прогрессив-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 994--994
+[]|\TU/TimesNewRoman(1)/m/n/10 Скользящее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 994--994
+\TU/TimesNewRoman(1)/m/n/10 дом слое +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--995
+[]|\TU/TimesNewRoman(1)/m/n/10 Послойное вы-
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 995--995
+\TU/TimesNewRoman(1)/m/n/10 деление тренда;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--995
+\TU/TimesNewRoman(1)/m/n/10 подсерийная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--996
+[]|\TU/TimesNewRoman(1)/m/n/10 Сложная ар-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--996
+\TU/TimesNewRoman(1)/m/n/10 хитектура;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--996
+\TU/TimesNewRoman(1)/m/n/10 нестабильность
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--996
+\TU/TimesNewRoman(1)/m/n/10 на коротких
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ряды
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+\TU/TimesNewRoman(1)/m/n/10 с выражен-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+\TU/TimesNewRoman(1)/m/n/10 ной трендовой
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
+\TU/TimesNewRoman(1)/m/n/10 и сезонной
+ []
+
+
+Overfull \hbox (0.57405pt too wide) in paragraph at lines 1000--1000
+[]|\TU/TimesNewRoman(1)/m/n/10 FEDformer| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
+[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
+\TU/TimesNewRoman(1)/m/n/10 (частот-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+[]|\TU/TimesNewRoman(1)/m/n/10 Прогрессивная
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 1002--1002
+\TU/TimesNewRoman(1)/m/n/10 случайный вы-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1004
+[]|\TU/TimesNewRoman(1)/m/n/10 Зависимость
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1004
+\TU/TimesNewRoman(1)/m/n/10 от выбора ча-
+ []
+
+
+Underfull \hbox (badness 8019) in paragraph at lines 1004--1004
+\TU/TimesNewRoman(1)/m/n/10 сложная реали-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ря-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+\TU/TimesNewRoman(1)/m/n/10 ды с богатой
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+\TU/TimesNewRoman(1)/m/n/10 частотной
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 1010--1010
+\TU/TimesNewRoman(1)/m/n/10 ный трансфор-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1010
+\TU/TimesNewRoman(1)/m/n/10 мер (channel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
+[]|\TU/TimesNewRoman(1)/m/n/10 Локальная се-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
+\TU/TimesNewRoman(1)/m/n/10 масштабируе-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1012
+[]|\TU/TimesNewRoman(1)/m/n/10 Отсутствие
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1012
+\TU/TimesNewRoman(1)/m/n/10 декомпозиции;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1012
+\TU/TimesNewRoman(1)/m/n/10 зависимость
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 1013--1014
+[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ряды;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1014
+\TU/TimesNewRoman(1)/m/n/10 многоканальные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
+[]|\TU/TimesNewRoman(1)/m/n/10 Неявная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
+\TU/TimesNewRoman(1)/m/n/10 (много-
+ []
+
+
+Overfull \hbox (6.20561pt too wide) in paragraph at lines 1017--1017
+\TU/TimesNewRoman(1)/m/n/10 масштабная)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+[]|\TU/TimesNewRoman(1)/m/n/10 Адаптивные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+\TU/TimesNewRoman(1)/m/n/10 периоды $\OMS/cmsy/m/n/10 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+\TU/TimesNewRoman(1)/m/n/10 2D-тензоры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+\OMS/cmsy/m/n/10 !$ \TU/TimesNewRoman(1)/m/n/10 свёртки
+ []
+
+
+Overfull \hbox (8.01851pt too wide) in paragraph at lines 1019--1019
+[]|\TU/TimesNewRoman(1)/m/n/10 Многомасштабная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
+\TU/TimesNewRoman(1)/m/n/10 адаптивность;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
+\TU/TimesNewRoman(1)/m/n/10 универсаль-
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 1020--1020
+\TU/TimesNewRoman(1)/m/n/10 стоимость; кос-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
+\TU/TimesNewRoman(1)/m/n/10 венная интер-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
+\TU/TimesNewRoman(1)/m/n/10 кими периода-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
+\TU/TimesNewRoman(1)/m/n/10 вычислитель-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1025
+[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1025
+\TU/TimesNewRoman(1)/m/n/10 ванная +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+[]|\TU/TimesNewRoman(1)/m/n/10 Декомпозиция
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+\TU/TimesNewRoman(1)/m/n/10 Холта–
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+\TU/TimesNewRoman(1)/m/n/10 Уинтерса +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+\TU/TimesNewRoman(1)/m/n/10 внимание +
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 1026--1026
+\TU/TimesNewRoman(1)/m/n/10 LSTM над от-
+ []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 1027--1027
+[]|\TU/TimesNewRoman(1)/m/n/10 Устойчивый ба-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+\TU/TimesNewRoman(1)/m/n/10 зовый прогноз;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+\TU/TimesNewRoman(1)/m/n/10 нейросете-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+\TU/TimesNewRoman(1)/m/n/10 вая коррекция
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+[]|\TU/TimesNewRoman(1)/m/n/10 Зависимость
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 1028--1028
+\TU/TimesNewRoman(1)/m/n/10 прогноза; муль-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+\TU/TimesNewRoman(1)/m/n/10 типликативные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+[]|\TU/TimesNewRoman(1)/m/n/10 Ряды с ясной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+\TU/TimesNewRoman(1)/m/n/10 трендово-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+\TU/TimesNewRoman(1)/m/n/10 сезонной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+\TU/TimesNewRoman(1)/m/n/10 структурой;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+\TU/TimesNewRoman(1)/m/n/10 ограниченные
+ []
+
+
+Overfull \hbox (9.47824pt too wide) in paragraph at lines 1060--1070
+\TU/TimesNewRoman(1)/m/n/14.4 и автокорреляции —выявить нетривиальные долгосроч
+ные зависимости, недо-
+ []
+
+
+
+[25]
+
+[26]
+
+[27]
+Overfull \hbox (17.65749pt too wide) in paragraph at lines 1085--1089
+[]\TU/TimesNewRoman(1)/m/n/14.4 Серия соревнований M-Competition, организованна
+я Макридакисом и кол-
+ []
+
+
+Overfull \hbox (1.51024pt too wide) in paragraph at lines 1097--1104
+[]\TU/TimesNewRoman(1)/m/n/14.4 Главный результат M3 состоял в том, что простые
+ методы —ETS с демп-
+ []
+
+
+Overfull \hbox (14.26784pt too wide) in paragraph at lines 1105--1114
+\TU/TimesNewRoman(1)/m/n/14.4 стот (от часовых до годовых). Победителем стал ги
+бридный метод ES-RNN [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 17[][][][]\TU/Times
+NewRoman(1)/m/n/14.4 ],
+ []
+
+
+Overfull \hbox (3.14311pt too wide) in paragraph at lines 1119--1121
 []\TU/TimesNewRoman(1)/m/n/14.4 Гибридные подходы, сочетающие статистическую де
 композицию с ней-
  []
 
 
-Overfull \hbox (5.71419pt too wide) in paragraph at lines 881--883
+Overfull \hbox (5.71419pt too wide) in paragraph at lines 1121--1123
 []\TU/TimesNewRoman(1)/m/n/14.4 Комбинирование (ансамблирование) прогнозов неск
 ольких методов, как
  []
 
 
-Overfull \hbox (2.64923pt too wide) in paragraph at lines 887--890
+
+[28]
+Overfull \hbox (63.76532pt too wide) in paragraph at lines 1135--1142
+\TU/TimesNewRoman(1)/m/n/14.4 нения методов стал Monash Time Series Forecasting
+ Archive [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 45[][][][]\TU/TimesNewRoman(1)/
+m/n/14.4 ] —систематизированный
+ []
+
+
+Overfull \hbox (2.64923pt too wide) in paragraph at lines 1143--1146
 []\TU/TimesNewRoman(1)/m/n/14.4 Эти наблюдения непосредственно мотивируют поста
 новку эксперимен-
  []
 
 
-Overfull \hbox (17.99028pt too wide) in paragraph at lines 899--902
+
+[29]
+Overfull \hbox (17.99028pt too wide) in paragraph at lines 1155--1158
 []\TU/TimesNewRoman(1)/m/n/14.4 Во-первых, декомпозиция временного ряда на комп
 оненты является сквоз-
  []
 
 
-Overfull \hbox (3.4747pt too wide) in paragraph at lines 907--909
+Overfull \hbox (3.4747pt too wide) in paragraph at lines 1163--1165
 []\TU/TimesNewRoman(1)/m/n/14.4 в DLinear и Autoformer декомпозиция осуществляе
 тся скользящим сред-
  []
 
 
 
-[23]
+[30]) (./chapters/chapter2.tex
 
-[24]) (./chapters/chapter2.tex
-
-[25]
+[31]
 Overfull \hbox (0.10112pt too wide) in paragraph at lines 9--15
 \TU/TimesNewRoman(1)/m/n/14.4 гнозирования временных рядов. Последовательно изл
 ожены: постановка экс-
  []
 
 
+
+[32]
 Overfull \hbox (15.20174pt too wide) in paragraph at lines 23--26
 \TU/TimesNewRoman(1)/m/n/14.4 ритетных набора данных для одномерного прогнозиро
 вания: M3 Competition [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 2[][][][]\TU/Times
@@ -1539,11 +2264,11 @@ NewRoman(1)/m/n/14.4 ]
 
 
 
-[26]
+[33]
 
-[27]
+[34]
 
-[28]
+[35]
 Overfull \hbox (17.84904pt too wide) in paragraph at lines 192--202
 \TU/TimesNewRoman(1)/m/n/14.4 сированной HW-декомпозиции. Примечательна катастр
 офическая ошибка Auto-
@@ -1563,19 +2288,22 @@ File: figures/synth_complex.png Graphic file (type bmp)
 <figures/synth_complex.png>
 
 
-[29]
+[36]
 
-[30]
-Overfull \hbox (2.19225pt too wide) in paragraph at lines 259--262
-[]\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]4[][] дополняет картину метрикой MA
+[37]
+Overfull \hbox (2.19225pt too wide) in paragraph at lines 257--260
+[]\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]5[][] дополняет картину метрикой MA
 SE, нечувствительной к мас-
  []
 
 
 
-[31]
+[38]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
+
+
+[39]
 File: figures/m3_yearly_T352.png Graphic file (type bmp)
 <figures/m3_yearly_T352.png>
 File: figures/m3_quarterly_T478.png Graphic file (type bmp)
@@ -1584,26 +2312,37 @@ File: figures/m3_monthly_T779.png Graphic file (type bmp)
 <figures/m3_monthly_T779.png>
 
 
-[32]
+[40]
 
-[33]
-Overfull \hbox (0.82582pt too wide) in paragraph at lines 380--386
+[41]
+
+[42]
+Overfull \hbox (21.39038pt too wide) in paragraph at lines 461--469
+\TU/TimesNewRoman(1)/m/n/14.4 ний) нейросетевые модели становятся конкурентоспо
+собными: N-BEATS (20.58)
+ []
+
+
+
+[43]
+Overfull \hbox (0.82582pt too wide) in paragraph at lines 502--508
 []\TU/TimesNewRoman(1)/m/n/14.4 На M4 наблюдается более выраженное превосходств
 о классических мо-
  []
 
 
-Overfull \hbox (5.15993pt too wide) in paragraph at lines 380--386
+Overfull \hbox (5.15993pt too wide) in paragraph at lines 502--508
 \TU/TimesNewRoman(1)/m/n/14.4 следние позиции; причины рассмотрены в кросс-дата
-сетном анализе (п. [][]2.2.4[][]). 
+сетном анализе (п. [][]2.2.6[][]). 
  []
 
+
+
+[44]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
-
-[34]
-Overfull \hbox (16.11763pt too wide) in paragraph at lines 421--427
+Overfull \hbox (16.11763pt too wide) in paragraph at lines 543--549
 []\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
 ежает ETS (2.46) и Auto-
  []
@@ -1616,54 +2355,75 @@ File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
-[35]
+[45]
 
-[36]
+[46]
+Overfull \hbox (21.41618pt too wide) in paragraph at lines 606--613
+\TU/TimesNewRoman(1)/m/n/14.4 ские модели сохраняют преимущество: Auto-ARIMA (1
+5.39) лидирует по sMAPE
+ []
+
+
+
+[47]
+Overfull \hbox (15.13023pt too wide) in paragraph at lines 640--648
+\TU/TimesNewRoman(1)/m/n/14.4 дирует (15.40 sMAPE, 0.76 MASE, 720.21 RMSE), зна
+чительно опережая осталь-
+ []
+
+
+Overfull \hbox (0.75255pt too wide) in paragraph at lines 640--648
+\TU/TimesNewRoman(1)/m/n/14.4 нейросетевые модели существенно проигрывают: лучш
+ая из них — N-BEATS
+ []
+
+
+
+[48]
+
+[49]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
-
-
-[37]
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
-Overfull \hbox (10.0419pt too wide) in paragraph at lines 544--551
+
+[50]
+Overfull \hbox (10.0419pt too wide) in paragraph at lines 777--784
 \TU/TimesNewRoman(1)/m/n/14.4 TimesNet (обучаемая 2D-декомпозиция) показывает р
 езультаты на уровне клас-
  []
 
 
-Overfull \hbox (0.18173pt too wide) in paragraph at lines 544--551
+Overfull \hbox (0.18173pt too wide) in paragraph at lines 777--784
 \TU/TimesNewRoman(1)/m/n/14.4 нительно подтверждает эффективность декомпозиции 
 при наличии выражен-
  []
 
 
 
-[38]
-
-[39]
-Overfull \hbox (14.60005pt too wide) in paragraph at lines 603--612
+[51]
+Overfull \hbox (14.60005pt too wide) in paragraph at lines 836--845
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу на rollout:
  []
 
 
-Overfull \hbox (6.77399pt too wide) in paragraph at lines 603--612
+Overfull \hbox (6.77399pt too wide) in paragraph at lines 836--845
 \TU/TimesNewRoman(1)/m/n/14.4 делению строятся итеративно), а ETS даже незначит
 ельно улучшается ($\OMS/cmsy/m/n/14.4 ^^@$\TU/TimesNewRoman(1)/m/n/14.4 0.28).
  []
 
 
-Overfull \hbox (16.5669pt too wide) in paragraph at lines 603--612
+Overfull \hbox (16.5669pt too wide) in paragraph at lines 836--845
 \TU/TimesNewRoman(1)/m/n/14.4 Среди нейросетевых моделей наибольшая деградация 
 наблюдается у FEDformer
  []
 
 
 
-[40]
-Overfull \hbox (1.30092pt too wide) in paragraph at lines 647--655
+[52]
+Overfull \hbox (1.30092pt too wide) in paragraph at lines 880--888
 \TU/TimesNewRoman(1)/m/n/14.4 обучаемой декомпозицией (FEDformer, TimesNet) нак
 апливают ошибки быст-
  []
@@ -1674,138 +2434,154 @@ File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
-[41]
-Overfull \hbox (10.622pt too wide) in paragraph at lines 704--711
+[53]
+
+[54]
+Overfull \hbox (10.622pt too wide) in paragraph at lines 937--944
 \TU/TimesNewRoman(1)/m/n/14.4 опережает Autoformer from-scratch (16.67) и прибл
 ижается к уровню ETS (21.04
  []
 
 
 
-[42]
+[55]
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
 File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_autoformer_T779.png>
 
 
-[43]
-Overfull \hbox (3.85518pt too wide) in paragraph at lines 749--757
-[]\TU/TimesNewRoman(1)/b/n/14.4 RQ1: Когда обучаемая декомпозиция эффективнее ф
-иксированной?
+[56]
+Overfull \hbox (6.47238pt too wide) in paragraph at lines 983--992
+\TU/TimesNewRoman(1)/m/n/14.4 рентоспособной при длине ряда свыше 80–100 наблюд
+ений (M3 monthly,
  []
 
 
-Overfull \hbox (2.53851pt too wide) in paragraph at lines 759--765
-\TU/TimesNewRoman(1)/m/n/14.4 грессионные модели (ARIMA) остаются наиболее эффе
-ктивными. Среди ней-
+Overfull \hbox (2.74475pt too wide) in paragraph at lines 983--992
+\TU/TimesNewRoman(1)/m/n/14.4 M4 daily), но не превосходит гибридный подход Hel
+former даже на длин-
  []
 
 
-Overfull \hbox (2.89229pt too wide) in paragraph at lines 759--765
-\TU/TimesNewRoman(1)/m/n/14.4 росетевых архитектур TimesNet с 2D-свертками и N-
-BEATS с residual-стеками
+Overfull \hbox (8.74591pt too wide) in paragraph at lines 983--992
+\TU/TimesNewRoman(1)/m/n/14.4 ных рядах. Обучаемая декомпозиция трансформерного
+ типа (Autoformer,
  []
 
 
-Overfull \hbox (0.4276pt too wide) in paragraph at lines 766--775
-[]\TU/TimesNewRoman(1)/b/n/14.4 RQ3: Оправдана ли сложность трансформерных архи
-тектур? \TU/TimesNewRoman(1)/m/n/14.4 В per-
+Overfull \hbox (1.99161pt too wide) in paragraph at lines 983--992
+\TU/TimesNewRoman(1)/m/n/14.4 FEDformer) показывает улучшение только при предоб
+учении (+7–11%). 
  []
 
 
-Overfull \hbox (7.27765pt too wide) in paragraph at lines 766--775
-\TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.50). Однако гибридный Helformer (ранг 2.0
-0) демонстрирует, что транс-
+Overfull \hbox (33.72665pt too wide) in paragraph at lines 993--1001
+\TU/TimesNewRoman(1)/m/n/14.4 сто нейросетевых архитектур TimesNet с 2D-свертка
+ми и N-BEATS с residual-
  []
 
 
-Overfull \hbox (59.75285pt too wide) in paragraph at lines 776--781
-\TU/TimesNewRoman(1)/m/n/14.4 композиция проигрывает фиксированной; на кварталь
-ных обучаемая 2D-декомпозиция
+Overfull \hbox (4.68997pt too wide) in paragraph at lines 993--1001
+\TU/TimesNewRoman(1)/m/n/14.4 стеками показывают лучшие результаты, значительно
+ превосходя транс-
  []
 
 
-
-[44]
-Overfull \hbox (6.74779pt too wide) in paragraph at lines 808--815
-\TU/TimesNewRoman(1)/m/n/14.4 ные, проектируются для глобального обучения на бо
-льших корпусах [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 23[][][][];
+Overfull \hbox (6.00008pt too wide) in paragraph at lines 1002--1010
+\TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 9.50) проигрывают более простым N
+-BEATS (ранг 6.67)
  []
 
 
-Overfull \hbox (4.65593pt too wide) in paragraph at lines 816--821
-\TU/TimesNewRoman(1)/m/n/14.4 мость дополнительного исследования устойчивости H
-W-декомпозиции. 
- []
-
-
-Overfull \hbox (21.76549pt too wide) in paragraph at lines 822--826
-[]\TU/TimesNewRoman(1)/m/it/14.4 Вычислительные ограничения. \TU/TimesNewRoman(
-1)/m/n/14.4 Autoformer и FEDformer обучались с 30 эпо-
+Overfull \hbox (10.92953pt too wide) in paragraph at lines 1002--1010
+\TU/TimesNewRoman(1)/m/n/14.4 на 7–11% при предобучении свидетельствует о том, 
+что сложность транс-
  []
 
 
 
-[45]) (./chapters/conclusion.tex
+[57]) (./chapters/conclusion.tex
 
-[46]
-Overfull \hbox (2.70245pt too wide) in paragraph at lines 21--29
-\TU/TimesNewRoman(1)/m/n/14.4 ETS с автоматическим подбором параметров показал 
-лучший средний sMAPE
+[58]
+Overfull \hbox (11.6375pt too wide) in paragraph at lines 21--30
+\TU/TimesNewRoman(1)/m/n/14.4 у TimesNet (17.87% на M3). Разрыв между Helformer
+ и ETS составляет 3.28 п.п.,
  []
 
 
-Overfull \hbox (1.81003pt too wide) in paragraph at lines 31--38
+Overfull \hbox (1.81003pt too wide) in paragraph at lines 32--39
 \TU/TimesNewRoman(1)/m/n/14.4 DLinear (2.43%) показал лучший результат среди вс
 ех моделей, включая клас-
  []
 
 
-Overfull \hbox (4.46501pt too wide) in paragraph at lines 39--48
+Overfull \hbox (4.46501pt too wide) in paragraph at lines 40--49
 \TU/TimesNewRoman(1)/m/n/14.4 и 8.50), однако при предобучении на корпусе рядов
  продемонстрировали улуч-
  []
 
 
 
-[47]
-Overfull \hbox (36.0083pt too wide) in paragraph at lines 77--80
+[59]
+Overfull \hbox (10.49545pt too wide) in paragraph at lines 51--60
+\TU/TimesNewRoman(1)/m/n/14.4 FEDformer), где нейросеть должна одновременно выд
+елять компоненты и стро-
+ []
+
+
+Overfull \hbox (1.90439pt too wide) in paragraph at lines 73--77
+\TU/TimesNewRoman(1)/m/n/14.4 Helformer (фиксированная декомпозиция + нейросете
+вая коррекция) яв-
+ []
+
+
+Overfull \hbox (36.0083pt too wide) in paragraph at lines 81--84
 \TU/TimesNewRoman(1)/m/n/14.4 вать предпочтение моделям без сложной обучаемой д
 екомпозиции (PatchTST,
  []
 
 
 
-[48]
-Overfull \hbox (69.35983pt too wide) in paragraph at lines 95--98
-[]\TU/TimesNewRoman(1)/m/n/14.4 расширение модельного набора за счет современны
-х архитектур (iTransformer [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 40[][][][]\TU
-/TimesNewRoman(1)/m/n/14.4 ],
- []
+[60])
 
-)
+[61]
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
+(Font)              scaled to size 12.24008pt on input line 192.
 
-[49]
 
-[50]
-Overfull \hbox (22.83644pt too wide) in paragraph at lines 227--227
+[62]
+Overfull \hbox (22.83644pt too wide) in paragraph at lines 192--192
 []\TU/TimesNewRoman(0)/m/n/14.4 A State Space Framework for Automatic Forecasti
 ng Using Exponential Smooth-
  []
 
 
 
-[51]
+[63]
 
-[52]
-Overfull \hbox (7.09712pt too wide) in paragraph at lines 227--227
+[64]
+Overfull \hbox (3.63539pt too wide) in paragraph at lines 192--192
+[]\TU/TimesNewRoman(0)/m/n/14.4 DeepAR: Probabilistic Forecasting with Autoregr
+essive Recurrent Networks /
+ []
+
+
+Overfull \hbox (7.09712pt too wide) in paragraph at lines 192--192
 []\TU/TimesNewRoman(0)/m/n/14.4 Informer: Beyond Efficient Transformer for Long
  Sequence Time-Series Fore-
  []
 
 
-Overfull \hbox (20.00163pt too wide) in paragraph at lines 227--227
+Overfull \hbox (4.45848pt too wide) in paragraph at lines 192--192
+\TU/TimesNewRoman(0)/m/n/14.4 Forecasting / B. Lim [et al.] [] International Jo
+urnal of Forecasting. — 2021. —
+ []
+
+
+
+[65]
+Overfull \hbox (20.00163pt too wide) in paragraph at lines 192--192
 \TU/TimesNewRoman(0)/m/n/14.4 tions. — 2023. — URL: [][]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][][]$[]
 [].[] 
@@ -1813,8 +2589,8 @@ Overfull \hbox (20.00163pt too wide) in paragraph at lines 227--227
 
 
 
-[53]
-Overfull \hbox (15.45717pt too wide) in paragraph at lines 227--227
+[66]
+Overfull \hbox (15.45717pt too wide) in paragraph at lines 192--192
 \TU/TimesNewRoman(0)/m/n/14.4 tions. — 2024. — URL: [][]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][]$[][]
  ;
@@ -1822,24 +2598,24 @@ Overfull \hbox (15.45717pt too wide) in paragraph at lines 227--227
 
 
 
-[54] (./main.aux)
+[67] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BB6C861A8A604F6DC5E092068182F562;10121.
+(rerunfilecheck)             Checksum: 25279E405256F8C4E4A9A916AD54DCD3;10882.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26515 strings out of 473832
- 530077 string characters out of 5729482
- 1624519 words of memory out of 5000000
- 49172 multiletter control sequences out of 15000+600000
- 570367 words of font info for 143 fonts, out of 8000000 for 9000
+ 26576 strings out of 473832
+ 532307 string characters out of 5729482
+ 1635178 words of memory out of 5000000
+ 49222 multiletter control sequences out of 15000+600000
+ 570415 words of font info for 149 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,12n,93p,693b,7707s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,96p,693b,7618s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (54 pages).
+Output written on main.pdf (67 pages).
