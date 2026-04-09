@@ -79,7 +79,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{The {M3}-Competition: Results, Conclusions and Implications}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2000}
+      \field{urldateera}{ce}
       \field{number}{4}
       \range{number}{1}
       \field{pages}{451\bibrangedash 476}
@@ -88,6 +92,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/S0169-2070(00)00057-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0169-2070(00)00057-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0169-2070(00)00057-1
       \endverb
     \endentry
     \entry{makridakis2020m4}{article}{}{}
@@ -125,7 +135,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{The {M4} Competition: 100,000 Time Series and 61 Forecasting Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{54\bibrangedash 74}
@@ -134,6 +148,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2019.04.014
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.04.014
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.04.014
       \endverb
     \endentry
     \entry{box1970time}{book}{}{}
@@ -200,7 +220,11 @@
       \field{journaltitle}{Journal of Monetary Economics}
       \field{langid}{english}
       \field{title}{A New Approach to Decomposition of Economic Time Series into Permanent and Transitory Components with Particular Attention to Measurement of the ``Business Cycle''}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{1981}
+      \field{urldateera}{ce}
       \field{number}{2}
       \range{number}{1}
       \field{pages}{151\bibrangedash 174}
@@ -209,6 +233,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/0304-3932(81)90040-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0304-3932(81)90040-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0304-3932(81)90040-4
       \endverb
     \endentry
     \entry{wold1938study}{book}{}{}
@@ -276,7 +306,11 @@
       \field{isbn}{978-0-9875071-3-6}
       \field{langid}{english}
       \field{title}{Forecasting: Principles and Practice}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://otexts.com/fpp3/
       \endverb
@@ -360,7 +394,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{Another Look at Measures of Forecast Accuracy}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2006}
+      \field{urldateera}{ce}
       \field{number}{4}
       \range{number}{1}
       \field{pages}{679\bibrangedash 688}
@@ -369,6 +407,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2006.03.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2006.03.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2006.03.001
       \endverb
     \endentry
     \entry{hyndman2008expsmoothing}{book}{useauthor=false}{}
@@ -441,7 +485,11 @@
       \field{langid}{english}
       \field{note}{Reprint of the 1957 ONR Memorandum No.~52}
       \field{title}{Forecasting Seasonals and Trends by Exponentially Weighted Moving Averages}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2004}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{5\bibrangedash 10}
@@ -450,6 +498,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2003.09.015
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2003.09.015
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2003.09.015
       \endverb
     \endentry
     \entry{winters1960forecasting}{article}{}{}
@@ -476,7 +530,11 @@
       \field{journaltitle}{Management Science}
       \field{langid}{english}
       \field{title}{Forecasting Sales by Exponentially Weighted Moving Averages}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{1960}
+      \field{urldateera}{ce}
       \field{number}{3}
       \range{number}{1}
       \field{pages}{324\bibrangedash 342}
@@ -485,6 +543,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1287/mnsc.6.3.324
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1287/mnsc.6.3.324
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1287/mnsc.6.3.324
       \endverb
     \endentry
     \entry{hyndman2002ets}{article}{useauthor=false}{}
@@ -521,7 +585,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{A State Space Framework for Automatic Forecasting Using Exponential Smoothing Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2002}
+      \field{urldateera}{ce}
       \field{number}{3}
       \range{number}{1}
       \field{pages}{439\bibrangedash 454}
@@ -530,6 +598,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/S0169-2070(01)00110-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0169-2070(01)00110-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0169-2070(01)00110-8
       \endverb
     \endentry
     \entry{delivera2011tbats}{article}{}{}
@@ -566,7 +640,11 @@
       \field{journaltitle}{Journal of the American Statistical Association}
       \field{langid}{english}
       \field{title}{Forecasting Time Series with Complex Seasonal Patterns Using Exponential Smoothing}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2011}
+      \field{urldateera}{ce}
       \field{number}{496}
       \range{number}{1}
       \field{pages}{1513\bibrangedash 1527}
@@ -575,6 +653,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1198/jasa.2011.tm09771
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1198/jasa.2011.tm09771
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1198/jasa.2011.tm09771
       \endverb
     \endentry
     \entry{smyl2020hybrid}{article}{}{}
@@ -602,7 +686,11 @@
       \field{langid}{english}
       \field{note}{Winner of the M4 Competition}
       \field{title}{A Hybrid Method of Exponential Smoothing and Recurrent Neural Networks for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{75\bibrangedash 85}
@@ -611,6 +699,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2019.03.017
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.03.017
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.03.017
       \endverb
     \endentry
     \entry{taylor2018prophet}{article}{}{}
@@ -642,7 +736,11 @@
       \field{journaltitle}{The American Statistician}
       \field{langid}{english}
       \field{title}{Forecasting at Scale}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2018}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{37\bibrangedash 45}
@@ -651,6 +749,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1080/00031305.2017.1380080
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/00031305.2017.1380080
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/00031305.2017.1380080
       \endverb
     \endentry
     \entry{aivazyan1998statistics}{book}{}{}
@@ -722,13 +826,23 @@
       \field{journaltitle}{Journal of Official Statistics}
       \field{langid}{english}
       \field{title}{{STL}: A Seasonal-Trend Decomposition Procedure Based on Loess}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{1990}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{3\bibrangedash 33}
       \range{pages}{31}
       \field{volume}{6}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/stl-a-seasonal-trend-decomposition-procedure-based-on-loess.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/stl-a-seasonal-trend-decomposition-procedure-based-on-loess.pdf
+      \endverb
     \endentry
     \entry{percival2000wavelet}{book}{}{}
       \name{author}{2}{}{%
@@ -794,7 +908,11 @@
       \field{journaltitle}{Biometrika}
       \field{langid}{english}
       \field{title}{On Estimation of the Wavelet Variance}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{1995}
+      \field{urldateera}{ce}
       \field{number}{3}
       \range{number}{1}
       \field{pages}{619\bibrangedash 631}
@@ -803,6 +921,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1093/biomet/82.3.619
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/biomet/82.3.619
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/biomet/82.3.619
       \endverb
     \endentry
     \entry{zeng2023transformers}{inproceedings}{useauthor=false}{}
@@ -839,7 +963,11 @@
       \field{internalsortvolume}{37}
       \field{langid}{english}
       \field{title}{Are Transformers Effective for Time Series Forecasting?}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \field{number}{9}
       \range{number}{1}
       \field{pages}{11121\bibrangedash 11128}
@@ -848,6 +976,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1609/aaai.v37i9.26317
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1609/aaai.v37i9.26317
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1609/aaai.v37i9.26317
       \endverb
     \endentry
     \entry{oreshkin2020nbeats}{inproceedings}{useauthor=false}{}
@@ -883,7 +1017,11 @@
       \field{booktitle}{International Conference on Learning Representations}
       \field{langid}{english}
       \field{title}{{N-BEATS}: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://openreview.net/forum?id=r1ecqn4YwB
       \endverb
@@ -925,9 +1063,19 @@
       \field{internalsortvolume}{34}
       \field{langid}{english}
       \field{title}{Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{volume}{34}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2021/hash/bcc0d400288793e8bdcd7c19a8ac0f2b-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2021/hash/bcc0d400288793e8bdcd7c19a8ac0f2b-Abstract.html
+      \endverb
     \endentry
     \entry{zhou2022fedformer}{inproceedings}{useauthor=false}{}
       \name{author}{6}{}{%
@@ -977,11 +1125,21 @@
       \field{langid}{english}
       \field{series}{Proceedings of Machine Learning Research}
       \field{title}{{FEDformer}: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \field{pages}{27268\bibrangedash 27286}
       \range{pages}{19}
       \field{volume}{162}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v162/zhou22g.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v162/zhou22g.html
+      \endverb
     \endentry
     \entry{wu2023timesnet}{inproceedings}{useauthor=false}{}
       \name{author}{6}{}{%
@@ -1026,7 +1184,11 @@
       \field{booktitle}{International Conference on Learning Representations}
       \field{langid}{english}
       \field{title}{{TimesNet}: Temporal {2D}-Variation Modeling for General Time Series Analysis}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://openreview.net/forum?id=ju_Uqw384Oq
       \endverb
@@ -1088,11 +1250,21 @@
       \field{internalsortvolume}{30}
       \field{langid}{english}
       \field{title}{Attention Is All You Need}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \field{pages}{5998\bibrangedash 6008}
       \range{pages}{11}
       \field{volume}{30}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+      \endverb
     \endentry
     \entry{he2016resnet}{inproceedings}{useauthor=false}{}
       \name{author}{4}{}{%
@@ -1127,11 +1299,21 @@
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}
       \field{langid}{english}
       \field{title}{Deep Residual Learning for Image Recognition}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2016}
+      \field{urldateera}{ce}
       \field{pages}{770\bibrangedash 778}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1109/CVPR.2016.90
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/CVPR.2016.90
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/CVPR.2016.90
       \endverb
     \endentry
     \entry{ba2016layernorm}{article}{}{}
@@ -1167,7 +1349,17 @@
       \field{journaltitle}{arXiv preprint arXiv:1607.06450}
       \field{langid}{english}
       \field{title}{Layer Normalization}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1607.06450
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1607.06450
+      \endverb
     \endentry
     \entry{hochreiter1997lstm}{article}{}{}
       \name{author}{2}{}{%
@@ -1198,7 +1390,11 @@
       \field{journaltitle}{Neural Computation}
       \field{langid}{english}
       \field{title}{Long Short-Term Memory}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{1997}
+      \field{urldateera}{ce}
       \field{number}{8}
       \range{number}{1}
       \field{pages}{1735\bibrangedash 1780}
@@ -1207,6 +1403,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1162/neco.1997.9.8.1735
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1162/neco.1997.9.8.1735
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1162/neco.1997.9.8.1735
       \endverb
     \endentry
     \entry{salinas2020deepar}{article}{useauthor=false}{}
@@ -1243,7 +1445,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{{DeepAR}: Probabilistic Forecasting with Autoregressive Recurrent Networks}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{number}{3}
       \range{number}{1}
       \field{pages}{1181\bibrangedash 1191}
@@ -1252,6 +1458,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2019.07.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.07.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.07.001
       \endverb
     \endentry
     \entry{zhou2021informer}{inproceedings}{useauthor=false}{}
@@ -1304,7 +1516,11 @@
       \field{langid}{english}
       \field{note}{AAAI 2021 Best Paper}
       \field{title}{Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{number}{12}
       \range{number}{1}
       \field{pages}{11106\bibrangedash 11115}
@@ -1313,6 +1529,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1609/aaai.v35i12.17325
+      \endverb
+      \verb{urlraw}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
+      \endverb
+      \verb{url}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
       \endverb
     \endentry
     \entry{li2019enhancing}{inproceedings}{useauthor=false}{}
@@ -1364,9 +1586,19 @@
       \field{internalsortvolume}{32}
       \field{langid}{english}
       \field{title}{Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2019}
+      \field{urldateera}{ce}
       \field{volume}{32}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2019/hash/6775a0635c302542da2c32aa19d86be0-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2019/hash/6775a0635c302542da2c32aa19d86be0-Abstract.html
+      \endverb
     \endentry
     \entry{liu2022nonstationary}{inproceedings}{useauthor=false}{}
       \name{author}{4}{}{%
@@ -1402,9 +1634,19 @@
       \field{internalsortvolume}{35}
       \field{langid}{english}
       \field{title}{Non-stationary Transformers: Exploring the Stationarity in Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \field{volume}{35}
       \range{volume}{1}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=ucNDIDRNjjv
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=ucNDIDRNjjv
+      \endverb
     \endentry
     \entry{lim2021temporal}{article}{useauthor=false}{}
       \name{author}{4}{}{%
@@ -1440,7 +1682,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{number}{4}
       \range{number}{1}
       \field{pages}{1748\bibrangedash 1764}
@@ -1449,6 +1695,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2021.03.012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
       \endverb
     \endentry
     \entry{wen2023transformers}{inproceedings}{useauthor=false}{}
@@ -1499,11 +1751,21 @@
       \field{booktitle}{Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence}
       \field{langid}{english}
       \field{title}{Transformers in Time Series: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \field{pages}{6778\bibrangedash 6786}
       \range{pages}{9}
       \verb{doi}
       \verb 10.24963/ijcai.2023/759
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.24963/ijcai.2023/759
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.24963/ijcai.2023/759
       \endverb
     \endentry
     \entry{lim2021survey}{article}{}{}
@@ -1535,7 +1797,11 @@
       \field{journaltitle}{Philosophical Transactions of the Royal Society~A}
       \field{langid}{english}
       \field{title}{Time-Series Forecasting with Deep Learning: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{number}{2194}
       \range{number}{1}
       \field{pages}{20200209}
@@ -1544,6 +1810,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1098/rsta.2020.0209
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rsta.2020.0209
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rsta.2020.0209
       \endverb
     \endentry
     \entry{torres2021deep}{article}{useauthor=false}{}
@@ -1585,7 +1857,11 @@
       \field{journaltitle}{Big Data}
       \field{langid}{english}
       \field{title}{Deep Learning for Time Series Forecasting: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{3\bibrangedash 21}
@@ -1594,6 +1870,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1089/big.2020.0159
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1089/big.2020.0159
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1089/big.2020.0159
       \endverb
     \endentry
     \entry{benidis2022deep}{article}{useauthor=false}{}
@@ -1675,7 +1957,11 @@
       \field{journaltitle}{ACM Computing Surveys}
       \field{langid}{english}
       \field{title}{Deep Learning for Time Series Forecasting: Tutorial and Literature Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \field{number}{6}
       \range{number}{1}
       \field{pages}{1\bibrangedash 36}
@@ -1684,6 +1970,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1145/3533382
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3533382
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3533382
       \endverb
     \endentry
     \entry{hewamalage2021recurrent}{article}{}{}
@@ -1720,7 +2012,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{Recurrent Neural Networks for Time Series Forecasting: Current Status and Future Directions}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{388\bibrangedash 427}
@@ -1729,6 +2025,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2020.06.008
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2020.06.008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2020.06.008
       \endverb
     \endentry
     \entry{nie2023patchtst}{inproceedings}{useauthor=false}{}
@@ -1764,7 +2066,11 @@
       \field{booktitle}{International Conference on Learning Representations}
       \field{langid}{english}
       \field{title}{A Time Series is Worth 64 Words: Long-term Forecasting with Transformers}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://openreview.net/forum?id=Jbdc0vTOcol
       \endverb
@@ -1816,7 +2122,11 @@
       \field{internalsortvolume}{37}
       \field{langid}{english}
       \field{title}{{NHITS}: Neural Hierarchical Interpolation for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \field{number}{6}
       \range{number}{1}
       \field{pages}{6989\bibrangedash 6997}
@@ -1825,6 +2135,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1609/aaai.v37i6.25854
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1609/aaai.v37i6.25854
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1609/aaai.v37i6.25854
       \endverb
     \endentry
     \entry{kehinde2025helformer}{article}{}{}
@@ -1861,13 +2177,23 @@
       \field{journaltitle}{Journal of Big Data}
       \field{langid}{english}
       \field{title}{Helformer: An Attention-Based Deep Learning Model for Cryptocurrency Price Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \field{pages}{81}
       \range{pages}{1}
       \field{volume}{12}
       \range{volume}{1}
       \verb{doi}
       \verb 10.1186/s40537-025-01135-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s40537-025-01135-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s40537-025-01135-4
       \endverb
     \endentry
     \entry{monteromanso2020fforma}{article}{useauthor=false}{}
@@ -1904,7 +2230,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{{FFORMA}: Feature-Based Forecast Model Averaging}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{number}{1}
       \range{number}{1}
       \field{pages}{86\bibrangedash 92}
@@ -1913,6 +2243,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2019.02.011
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.02.011
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.02.011
       \endverb
     \endentry
     \entry{makridakis2022m5}{article}{}{}
@@ -1950,7 +2286,11 @@
       \field{journaltitle}{International Journal of Forecasting}
       \field{langid}{english}
       \field{title}{{M5} Accuracy Competition: Results, Findings, and Conclusions}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \field{number}{4}
       \range{number}{1}
       \field{pages}{1346\bibrangedash 1364}
@@ -1959,6 +2299,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.ijforecast.2021.11.013
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.11.013
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.11.013
       \endverb
     \endentry
     \entry{godahewa2021monash}{inproceedings}{useauthor=false}{}
@@ -1999,7 +2345,17 @@
       \field{booktitle}{Neural Information Processing Systems Track on Datasets and Benchmarks}
       \field{langid}{english}
       \field{title}{Monash Time Series Forecasting Archive}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=wEc1mgAjU-
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=wEc1mgAjU-
+      \endverb
     \endentry
     \entry{bandara2020forecasting}{article}{}{}
       \name{author}{3}{}{%
@@ -2035,13 +2391,23 @@
       \field{journaltitle}{Expert Systems with Applications}
       \field{langid}{english}
       \field{title}{Forecasting Across Time Series Databases Using Recurrent Neural Networks on Groups of Similar Series: A Clustering Approach}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{pages}{112896}
       \range{pages}{1}
       \field{volume}{140}
       \range{volume}{1}
       \verb{doi}
       \verb 10.1016/j.eswa.2019.112896
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.eswa.2019.112896
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.eswa.2019.112896
       \endverb
     \endentry
     \entry{kingma2015adam}{inproceedings}{}{}
@@ -2072,7 +2438,17 @@
       \field{booktitle}{International Conference on Learning Representations}
       \field{langid}{english}
       \field{title}{Adam: A Method for Stochastic Optimization}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
     \endentry
     \entry{cerqueira2020evaluating}{article}{}{}
       \name{author}{3}{}{%
@@ -2108,7 +2484,11 @@
       \field{journaltitle}{Machine Learning}
       \field{langid}{english}
       \field{title}{Evaluating Time Series Forecasting Models: An Empirical Study on Performance Estimation Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{number}{11}
       \range{number}{1}
       \field{pages}{1997\bibrangedash 2028}
@@ -2117,6 +2497,12 @@
       \range{volume}{1}
       \verb{doi}
       \verb 10.1007/s10994-020-05910-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10994-020-05910-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10994-020-05910-7
       \endverb
     \endentry
     \entry{liu2024itransformer}{inproceedings}{useauthor=false}{}
@@ -2168,7 +2554,11 @@
       \field{langid}{english}
       \field{note}{ICLR 2024 Spotlight}
       \field{title}{{iTransformer}: Inverted Transformers Are Effective for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://openreview.net/forum?id=JePfAI8fah
       \endverb

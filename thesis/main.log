@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  9 APR 2026 06:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  9 APR 2026 07:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,8 +1228,6 @@ Overfull \hbox (15.99048pt too wide) in paragraph at lines 166--174
 
 
 [3] (./chapters/chapter1.tex
-
-[4]
 Overfull \hbox (57.23221pt too wide) in paragraph at lines 26--36
 \TU/TimesNewRoman(1)/m/it/14.4 ционарным\TU/TimesNewRoman(1)/m/n/14.4 , если со
 вместное распределение любого конечного набора $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/
@@ -1238,7 +1236,7 @@ it/14.4 y[]; y[]; [] ; y[]\OMS/cmsy/m/n/14.4 g$
 
 
 
-[5]
+[4]
 Overfull \hbox (34.91322pt too wide) in paragraph at lines 68--72
 \TU/TimesNewRoman(1)/m/n/14.4 ровать следующим образом. Пусть дана история набл
 юдений $[][] \OT1/cmr/m/n/14.4 = (\OML/cmm/m/it/14.4 y[]; y[]; [] ; y[]\OT1/cmr
@@ -1259,13 +1257,15 @@ Overfull \hbox (11.3786pt too wide) in paragraph at lines 101--103
 
 
 
-[6]
+[5]
 Overfull \hbox (10.2676pt too wide) in paragraph at lines 112--113
 []\TU/TimesNewRoman(1)/b/n/14.4 Среднеквадратическая ошибка \TU/TimesNewRoman(1
 )/m/n/14.4 (MSE) и её квадратный корень (RMSE): 
  []
 
 
+
+[6]
 Overfull \hbox (5.66025pt too wide) in paragraph at lines 148--157
 \TU/TimesNewRoman(1)/m/n/14.4 масштабно-инвариантная альтернатива MAPE и sMAPE.
  Её знаменатель пред-
@@ -1274,24 +1274,21 @@ Overfull \hbox (5.66025pt too wide) in paragraph at lines 148--157
 
 
 [7]
-
-[8]
 Overfull \hbox (3.28717pt too wide) in paragraph at lines 196--199
 []\TU/TimesNewRoman(1)/m/n/14.4 Объединяя оба процесса, получают модель ARMA($\
 OML/cmm/m/it/14.4 p$\TU/TimesNewRoman(1)/m/n/14.4 ,$\OML/cmm/m/it/14.4 q$\TU/Ti
 mesNewRoman(1)/m/n/14.4 ), а применяя к ис-
  []
 
-
-
-[9]
 LaTeX Font Info:    Font shape `TU/PTMono(0)/m/n' will be
 (Font)              scaled to size 12.24008pt on input line 220.
 
 
-[10]
+[8]
 
-[11]
+[9]
+
+[10]
 Overfull \hbox (6.0641pt too wide) in paragraph at lines 341--350
 []\TU/TimesNewRoman(1)/m/n/14.4 Prophet привлекателен простотой использования и
  устойчивостью к про-
@@ -1299,7 +1296,7 @@ Overfull \hbox (6.0641pt too wide) in paragraph at lines 341--350
 
 
 
-[12]
+[11]
 Overfull \hbox (18.64297pt too wide) in paragraph at lines 387--396
 []\TU/TimesNewRoman(1)/m/n/14.4 Ещё один класс фиксированных базисных функций п
 редставляют вейвлет-
@@ -1313,7 +1310,7 @@ Overfull \hbox (35.73308pt too wide) in paragraph at lines 387--396
 
 
 
-[13]
+[12]
 Overfull \hbox (19.38486pt too wide) in paragraph at lines 434--439
 []\TU/TimesNewRoman(1)/m/n/14.4 Архитектура Autoformer [[][][][]\TU/TimesNewRom
 an(0)/m/n/14.4 23[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] вводит \TU/TimesNewRom
@@ -1328,8 +1325,6 @@ Overfull \hbox (20.51846pt too wide) in paragraph at lines 440--445
  []
 
 
-
-[14]
 Overfull \hbox (11.92282pt too wide) in paragraph at lines 454--462
 \TU/TimesNewRoman(1)/m/n/14.4 менных рядов прослеживается общая тенденция: деко
 мпозиция перестаёт быть
@@ -1337,7 +1332,7 @@ Overfull \hbox (11.92282pt too wide) in paragraph at lines 454--462
 
 
 
-[15]
+[13]
 Overfull \hbox (28.49968pt too wide) in paragraph at lines 498--503
 []\TU/TimesNewRoman(1)/m/n/14.4 Полный блок трансформера включает многоголовое 
 внимание, позиционно-
@@ -1345,7 +1340,7 @@ Overfull \hbox (28.49968pt too wide) in paragraph at lines 498--503
 
 
 
-[16]
+[14]
 Overfull \hbox (4.52953pt too wide) in paragraph at lines 516--534
 \TU/TimesNewRoman(1)/m/n/14.4 реженным вниманием. Informer [[][][][]\TU/TimesNe
 wRoman(0)/m/n/14.4 31[][][][]\TU/TimesNewRoman(1)/m/n/14.4 ] использует механиз
@@ -1379,7 +1374,7 @@ Overfull \hbox (1.72864pt too wide) in paragraph at lines 552--556
 
 
 
-[17]
+[15]
 Overfull \hbox (4.52473pt too wide) in paragraph at lines 566--570
 \TU/TimesNewRoman(1)/m/n/14.4 На каждом слое промежуточное представление повтор
 но разделяется на тренд
@@ -1393,7 +1388,7 @@ Overfull \hbox (3.1794pt too wide) in paragraph at lines 571--574
 
 
 
-[18]
+[16]
 Overfull \hbox (0.20033pt too wide) in paragraph at lines 638--641
 []\TU/TimesNewRoman(1)/m/n/14.4 Патчирование заключается в разбиении входного р
 яда длины $\OML/cmm/m/it/14.4 L$ \TU/TimesNewRoman(1)/m/n/14.4 на непе-
@@ -1401,9 +1396,9 @@ Overfull \hbox (0.20033pt too wide) in paragraph at lines 638--641
 
 
 
-[19]
+[17]
 
-[20]
+[18]
 Overfull \hbox (34.00223pt too wide) in paragraph at lines 715--724
 \TU/TimesNewRoman(1)/m/n/14.4 енную на принципе \TU/TimesNewRoman(1)/m/it/14.4 
 обучаемого базисного разложения\TU/TimesNewRoman(1)/m/n/14.4 . Модель состоит и
@@ -1412,7 +1407,7 @@ Overfull \hbox (34.00223pt too wide) in paragraph at lines 715--724
 
 
 
-[21]
+[19]
 Overfull \hbox (8.04619pt too wide) in paragraph at lines 774--780
 \TU/TimesNewRoman(1)/m/n/14.4 где $[]\OT1/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^A\
 OT1/cmr/m/n/14.4 )$ \TU/TimesNewRoman(1)/m/n/14.4 — амплитудный спектр, $[]\OT1
@@ -1442,7 +1437,7 @@ Overfull \hbox (11.39893pt too wide) in paragraph at lines 781--790
 
 
 
-[22]
+[20]
 Overfull \hbox (25.14987pt too wide) in paragraph at lines 842--850
 \TU/TimesNewRoman(1)/m/it/14.4 ных отклонений \TU/TimesNewRoman(1)/m/n/14.4 от 
 базового прогноза. Это контрастирует с подходами Autoformer
@@ -1450,677 +1445,374 @@ Overfull \hbox (25.14987pt too wide) in paragraph at lines 842--850
 
 
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 879--879
-[]|\TU/TimesNewRoman(1)/b/n/10 Тип де-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 881--881
-[]|\TU/TimesNewRoman(1)/b/n/10 Сильные сто-
- []
-
-
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 887--887
-[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
+[]|\TU/TimesNewRoman(1)/m/n/8 Фиксиро-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
-[]|\TU/TimesNewRoman(1)/m/n/10 Авторегрессия
+Underfull \hbox (badness 4441) in paragraph at lines 889--889
+[]|\TU/TimesNewRoman(1)/m/n/8 Обоснованная теория;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
-\TU/TimesNewRoman(1)/m/n/10 + скользящее
+Underfull \hbox (badness 3009) in paragraph at lines 889--889
+\TU/TimesNewRoman(1)/m/n/8 мало параметров; ин-
  []
 
 
-Underfull \hbox (badness 3108) in paragraph at lines 888--888
-\TU/TimesNewRoman(1)/m/n/10 среднее + раз-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
-[]|\TU/TimesNewRoman(1)/m/n/10 Обоснованная
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
-\TU/TimesNewRoman(1)/m/n/10 теория; мало
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
-\TU/TimesNewRoman(1)/m/n/10 параметров;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
-\TU/TimesNewRoman(1)/m/n/10 интерпретируе-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 890--890
-[]|\TU/TimesNewRoman(1)/m/n/10 Линейность;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 890--890
-\TU/TimesNewRoman(1)/m/n/10 один сезонный
- []
-
-
-Underfull \hbox (badness 7613) in paragraph at lines 890--890
-\TU/TimesNewRoman(1)/m/n/10 период; ручной
+Underfull \hbox (badness 2941) in paragraph at lines 890--890
+[]|\TU/TimesNewRoman(1)/m/n/8 Линейность; один се-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 891--892
-\TU/TimesNewRoman(1)/m/n/10 ционарной
+[]|\TU/TimesNewRoman(1)/m/n/8 Короткие и средние
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 895--895
-[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
- []
-
-
-Overfull \hbox (12.54852pt too wide) in paragraph at lines 896--896
-[]|\TU/TimesNewRoman(1)/m/n/10 Экспоненциальное
+[]|\TU/TimesNewRoman(1)/m/n/8 Фиксиро-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 896--896
-\TU/TimesNewRoman(1)/m/n/10 сглаживание
+[]|\TU/TimesNewRoman(1)/m/n/8 Экспоненциальное
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
-\TU/TimesNewRoman(1)/m/n/10 (уровень,
+Underfull \hbox (badness 1917) in paragraph at lines 896--896
+\TU/TimesNewRoman(1)/m/n/8 сглаживание (уровень,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
-\TU/TimesNewRoman(1)/m/n/10 тренд, сезон-
+Underfull \hbox (badness 1286) in paragraph at lines 897--897
+\TU/TimesNewRoman(1)/m/n/8 модели; устойчивость;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--897
-[]|\TU/TimesNewRoman(1)/m/n/10 Автоматический
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 897--897
-\TU/TimesNewRoman(1)/m/n/10 выбор модели;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 897--897
-\TU/TimesNewRoman(1)/m/n/10 устойчивость;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 897--897
-\TU/TimesNewRoman(1)/m/n/10 демпфирование
- []
-
-
-Underfull \hbox (badness 6252) in paragraph at lines 898--898
-[]|\TU/TimesNewRoman(1)/m/n/10 Один сезонный
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 898--898
-\TU/TimesNewRoman(1)/m/n/10 период; ограни-
- []
-
-
-Underfull \hbox (badness 4316) in paragraph at lines 899--900
-[]|\TU/TimesNewRoman(1)/m/n/10 Короткие ряды;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 899--900
-\TU/TimesNewRoman(1)/m/n/10 массовое про-
+Underfull \hbox (badness 2635) in paragraph at lines 898--898
+[]|\TU/TimesNewRoman(1)/m/n/8 Один сезонный пери-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 903--903
-[]|\TU/TimesNewRoman(1)/m/n/10 Полу-
+[]|\TU/TimesNewRoman(1)/m/n/8 Полу-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 903--903
-\TU/TimesNewRoman(1)/m/n/10 фиксиро-
+\TU/TimesNewRoman(1)/m/n/8 фиксиро-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--904
-[]|\TU/TimesNewRoman(1)/m/n/10 Аддитивная:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 904--904
-\TU/TimesNewRoman(1)/m/n/10 тренд + ряд
+Underfull \hbox (badness 6775) in paragraph at lines 904--904
+[]|\TU/TimesNewRoman(1)/m/n/8 Аддитивная: тренд +
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 905--905
-[]|\TU/TimesNewRoman(1)/m/n/10 Множественная
+\TU/TimesNewRoman(1)/m/n/8 ность; автообнаруже-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--905
-\TU/TimesNewRoman(1)/m/n/10 сезонность; ав-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 905--905
-\TU/TimesNewRoman(1)/m/n/10 тообнаружение
+Underfull \hbox (badness 3343) in paragraph at lines 906--906
+[]|\TU/TimesNewRoman(1)/m/n/8 Завышенная гибкость;
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 906--906
-[]|\TU/TimesNewRoman(1)/m/n/10 Завышенная
+\TU/TimesNewRoman(1)/m/n/8 риск переобучения;
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 906--906
-\TU/TimesNewRoman(1)/m/n/10 гибкость; риск
+\TU/TimesNewRoman(1)/m/n/8 чувствительность
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--906
-\TU/TimesNewRoman(1)/m/n/10 переобучения;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 906--906
-\TU/TimesNewRoman(1)/m/n/10 чувствитель-
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 906--906
-\TU/TimesNewRoman(1)/m/n/10 ность к выбору
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
-\TU/TimesNewRoman(1)/m/n/10 кими сезонами
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
-\TU/TimesNewRoman(1)/m/n/10 и известными
+Underfull \hbox (badness 2875) in paragraph at lines 907--908
+\TU/TimesNewRoman(1)/m/n/8 зонами и известными
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 911--911
-[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+[]|\TU/TimesNewRoman(1)/m/n/8 Обучаемая
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 912--912
-[]|\TU/TimesNewRoman(1)/m/n/10 Скользящее
+[]|\TU/TimesNewRoman(1)/m/n/8 Скользящее среднее,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 912--912
-\TU/TimesNewRoman(1)/m/n/10 среднее, затем
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 912--912
-\TU/TimesNewRoman(1)/m/n/10 две линейные
+\TU/TimesNewRoman(1)/m/n/8 затем две линейные
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 913--913
-[]|\TU/TimesNewRoman(1)/m/n/10 Минимальная
+[]|\TU/TimesNewRoman(1)/m/n/8 Минимальная слож-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 913--913
-\TU/TimesNewRoman(1)/m/n/10 сложность;
+\TU/TimesNewRoman(1)/m/n/8 ность; быстрое обу-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 913--913
-\TU/TimesNewRoman(1)/m/n/10 быстрое обуче-
- []
-
-
-Underfull \hbox (badness 2790) in paragraph at lines 913--913
-\TU/TimesNewRoman(1)/m/n/10 ние; конкурент-
+\TU/TimesNewRoman(1)/m/n/8 чение; конкурентная
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 914--914
-[]|\TU/TimesNewRoman(1)/m/n/10 Линейность;
+[]|\TU/TimesNewRoman(1)/m/n/8 Линейность; отсут-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 914--914
-\TU/TimesNewRoman(1)/m/n/10 отсутствие вза-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 914--914
-\TU/TimesNewRoman(1)/m/n/10 имодействия
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-\TU/TimesNewRoman(1)/m/n/10 ные ряды;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-\TU/TimesNewRoman(1)/m/n/10 базовая линия
+\TU/TimesNewRoman(1)/m/n/8 ствие взаимодействия
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 919--919
-[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+[]|\TU/TimesNewRoman(1)/m/n/8 Обучаемая
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 920--920
-[]|\TU/TimesNewRoman(1)/m/n/10 Стек полно-
+[]|\TU/TimesNewRoman(1)/m/n/8 Стек полносвязных
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 920--920
-\TU/TimesNewRoman(1)/m/n/10 + базисное
+\TU/TimesNewRoman(1)/m/n/8 блоков + базисное
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 920--920
-\TU/TimesNewRoman(1)/m/n/10 разложение
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--920
-\TU/TimesNewRoman(1)/m/n/10 (тренд, сезон-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
-[]|\TU/TimesNewRoman(1)/m/n/10 Двойной оста-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
-\TU/TimesNewRoman(1)/m/n/10 ток; аналити-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
-\TU/TimesNewRoman(1)/m/n/10 ческие базисы;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
-\TU/TimesNewRoman(1)/m/n/10 интерпретируе-
+\TU/TimesNewRoman(1)/m/n/8 разложение (тренд,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 922--922
-[]|\TU/TimesNewRoman(1)/m/n/10 Большое число
+[]|\TU/TimesNewRoman(1)/m/n/8 Большое число па-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 922--922
-\TU/TimesNewRoman(1)/m/n/10 параметров;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 922--922
-\TU/TimesNewRoman(1)/m/n/10 ном ряду —
+\TU/TimesNewRoman(1)/m/n/8 раметров; обучение
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 923--924
-\TU/TimesNewRoman(1)/m/n/10 ные ряды при
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
-\TU/TimesNewRoman(1)/m/n/10 достаточном
- []
-
-
-Overfull \hbox (1.68245pt too wide) in paragraph at lines 926--926
-[]|\TU/TimesNewRoman(1)/m/n/10 Autoformer| 
+[]|\TU/TimesNewRoman(1)/m/n/8 Средние и длинные
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 927--927
-[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+[]|\TU/TimesNewRoman(1)/m/n/8 Обучаемая
  []
 
 
-Overfull \hbox (6.3814pt too wide) in paragraph at lines 927--927
-\TU/TimesNewRoman(1)/m/n/10 (прогрессив-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
-[]|\TU/TimesNewRoman(1)/m/n/10 Скользящее
+Underfull \hbox (badness 10000) in paragraph at lines 927--927
+\TU/TimesNewRoman(1)/m/n/8 (прогрессив-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 928--928
-\TU/TimesNewRoman(1)/m/n/10 дом слое +
+[]|\TU/TimesNewRoman(1)/m/n/8 Скользящее среднее
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 929--929
+[]|\TU/TimesNewRoman(1)/m/n/8 Послойное выделение
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 929--929
-[]|\TU/TimesNewRoman(1)/m/n/10 Послойное вы-
+\TU/TimesNewRoman(1)/m/n/8 тренда; подсерийная
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 929--929
-\TU/TimesNewRoman(1)/m/n/10 деление тренда;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 929--929
-\TU/TimesNewRoman(1)/m/n/10 подсерийная
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--930
-[]|\TU/TimesNewRoman(1)/m/n/10 Сложная ар-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--930
-\TU/TimesNewRoman(1)/m/n/10 хитектура;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--930
-\TU/TimesNewRoman(1)/m/n/10 нестабильность
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--930
-\TU/TimesNewRoman(1)/m/n/10 на коротких
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ряды
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-\TU/TimesNewRoman(1)/m/n/10 с выражен-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-\TU/TimesNewRoman(1)/m/n/10 ной трендовой
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-\TU/TimesNewRoman(1)/m/n/10 и сезонной
- []
-
-
-Overfull \hbox (0.57405pt too wide) in paragraph at lines 934--934
-[]|\TU/TimesNewRoman(1)/m/n/10 FEDformer| 
+Underfull \hbox (badness 4954) in paragraph at lines 930--930
+[]|\TU/TimesNewRoman(1)/m/n/8 Сложная архитектура;
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 935--935
-[]|\TU/TimesNewRoman(1)/m/n/10 Обучаемая
+[]|\TU/TimesNewRoman(1)/m/n/8 Обучаемая
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--935
-\TU/TimesNewRoman(1)/m/n/10 (частот-
+Underfull \hbox (badness 4316) in paragraph at lines 936--936
+[]|\TU/TimesNewRoman(1)/m/n/8 Прогрессивная деком-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--936
-[]|\TU/TimesNewRoman(1)/m/n/10 Прогрессивная
+Underfull \hbox (badness 2503) in paragraph at lines 936--936
+\TU/TimesNewRoman(1)/m/n/8 позиция + случайный
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 936--936
-\TU/TimesNewRoman(1)/m/n/10 случайный вы-
+Underfull \hbox (badness 10000) in paragraph at lines 937--937
+[]|\TU/TimesNewRoman(1)/m/n/8 Линейная сложность;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--938
-[]|\TU/TimesNewRoman(1)/m/n/10 Зависимость
+Underfull \hbox (badness 10000) in paragraph at lines 937--937
+\TU/TimesNewRoman(1)/m/n/8 частотная селекция;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--938
-\TU/TimesNewRoman(1)/m/n/10 от выбора ча-
+Underfull \hbox (badness 1546) in paragraph at lines 938--938
+[]|\TU/TimesNewRoman(1)/m/n/8 Зависимость от выбо-
  []
 
 
-Underfull \hbox (badness 8019) in paragraph at lines 938--938
-\TU/TimesNewRoman(1)/m/n/10 сложная реали-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 939--940
-[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ря-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 939--940
-\TU/TimesNewRoman(1)/m/n/10 ды с богатой
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 939--940
-\TU/TimesNewRoman(1)/m/n/10 частотной
- []
-
-
-Underfull \hbox (badness 5345) in paragraph at lines 944--944
-\TU/TimesNewRoman(1)/m/n/10 ный трансфор-
+Underfull \hbox (badness 3209) in paragraph at lines 938--938
+\TU/TimesNewRoman(1)/m/n/8 ра частотного базиса;
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 944--944
-\TU/TimesNewRoman(1)/m/n/10 мер (channel-
+[]|\TU/TimesNewRoman(1)/m/n/8 Патчи + ванильный
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 944--944
+\TU/TimesNewRoman(1)/m/n/8 трансформер (channel-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 945--945
-[]|\TU/TimesNewRoman(1)/m/n/10 Локальная се-
+[]|\TU/TimesNewRoman(1)/m/n/8 Локальная семантика
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 945--945
-\TU/TimesNewRoman(1)/m/n/10 масштабируе-
+\TU/TimesNewRoman(1)/m/n/8 патчей; масштабируе-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 946--946
-[]|\TU/TimesNewRoman(1)/m/n/10 Отсутствие
+[]|\TU/TimesNewRoman(1)/m/n/8 Отсутствие декомпо-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 946--946
-\TU/TimesNewRoman(1)/m/n/10 декомпозиции;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
-\TU/TimesNewRoman(1)/m/n/10 зависимость
- []
-
-
-Underfull \hbox (badness 8151) in paragraph at lines 947--948
-[]|\TU/TimesNewRoman(1)/m/n/10 Длинные ряды;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 947--948
-\TU/TimesNewRoman(1)/m/n/10 многоканальные
+\TU/TimesNewRoman(1)/m/n/8 зиции; зависимость
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 951--951
-[]|\TU/TimesNewRoman(1)/m/n/10 Неявная
+[]|\TU/TimesNewRoman(1)/m/n/8 Неявная
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 951--951
-\TU/TimesNewRoman(1)/m/n/10 (много-
- []
-
-
-Overfull \hbox (6.20561pt too wide) in paragraph at lines 951--951
-\TU/TimesNewRoman(1)/m/n/10 масштабная)| 
+\TU/TimesNewRoman(1)/m/n/8 (много-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 952--952
-\TU/TimesNewRoman(1)/m/n/10 риоды, преоб-
+[]|\TU/TimesNewRoman(1)/m/n/8 Адаптивные перио-
  []
 
 
-Overfull \hbox (8.01851pt too wide) in paragraph at lines 953--953
-[]|\TU/TimesNewRoman(1)/m/n/10 Многомасштабная
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 953--953
-\TU/TimesNewRoman(1)/m/n/10 адаптивность;
+Underfull \hbox (badness 10000) in paragraph at lines 952--952
+\TU/TimesNewRoman(1)/m/n/8 ды, преобразование
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 953--953
-\TU/TimesNewRoman(1)/m/n/10 универсаль-
+[]|\TU/TimesNewRoman(1)/m/n/8 Многомасштабная
  []
 
 
-Underfull \hbox (badness 4660) in paragraph at lines 954--954
-\TU/TimesNewRoman(1)/m/n/10 стоимость; кос-
+Underfull \hbox (badness 2318) in paragraph at lines 953--953
+\TU/TimesNewRoman(1)/m/n/8 адаптивность; универ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 954--954
-\TU/TimesNewRoman(1)/m/n/10 венная интер-
+Underfull \hbox (badness 2057) in paragraph at lines 954--954
+[]|\TU/TimesNewRoman(1)/m/n/8 Вычислительная стои-
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 954--954
+\TU/TimesNewRoman(1)/m/n/8 мость; косвенная ин-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 955--956
-\TU/TimesNewRoman(1)/m/n/10 кими периода-
+[]|\TU/TimesNewRoman(1)/m/n/8 Ряды с несколькими
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 955--956
-\TU/TimesNewRoman(1)/m/n/10 вычислитель-
+\TU/TimesNewRoman(1)/m/n/8 периодами; достаточ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
+\TU/TimesNewRoman(1)/m/n/8 ные вычислительные
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 959--959
-[]|\TU/TimesNewRoman(1)/m/n/10 Фиксиро-
+[]|\TU/TimesNewRoman(1)/m/n/8 Фиксиро-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 959--959
-\TU/TimesNewRoman(1)/m/n/10 ванная +
+\TU/TimesNewRoman(1)/m/n/8 ванная +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 960--960
-[]|\TU/TimesNewRoman(1)/m/n/10 Декомпозиция
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 960--960
-\TU/TimesNewRoman(1)/m/n/10 Холта–
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 960--960
-\TU/TimesNewRoman(1)/m/n/10 Уинтерса +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 960--960
-\TU/TimesNewRoman(1)/m/n/10 внимание +
- []
-
-
-Underfull \hbox (badness 4927) in paragraph at lines 960--960
-\TU/TimesNewRoman(1)/m/n/10 LSTM над от-
- []
-
-
-Underfull \hbox (badness 2582) in paragraph at lines 961--961
-[]|\TU/TimesNewRoman(1)/m/n/10 Устойчивый ба-
+Underfull \hbox (badness 5924) in paragraph at lines 960--960
+[]|\TU/TimesNewRoman(1)/m/n/8 Декомпозиция Холта–
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 961--961
-\TU/TimesNewRoman(1)/m/n/10 зовый прогноз;
+[]|\TU/TimesNewRoman(1)/m/n/8 Устойчивый базовый
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--961
-\TU/TimesNewRoman(1)/m/n/10 нейросете-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 961--961
-\TU/TimesNewRoman(1)/m/n/10 вая коррекция
+Underfull \hbox (badness 2626) in paragraph at lines 961--961
+\TU/TimesNewRoman(1)/m/n/8 прогноз; нейросетевая
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 962--962
-[]|\TU/TimesNewRoman(1)/m/n/10 Зависимость
- []
-
-
-Underfull \hbox (badness 2990) in paragraph at lines 962--962
-\TU/TimesNewRoman(1)/m/n/10 прогноза; муль-
+[]|\TU/TimesNewRoman(1)/m/n/8 Зависимость от ка-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 962--962
-\TU/TimesNewRoman(1)/m/n/10 типликативные
+\TU/TimesNewRoman(1)/m/n/8 чества HW-прогноза;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
+\TU/TimesNewRoman(1)/m/n/8 мультипликативные
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 963--964
-[]|\TU/TimesNewRoman(1)/m/n/10 Ряды с ясной
+\TU/TimesNewRoman(1)/m/n/8 сезонной структурой;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-\TU/TimesNewRoman(1)/m/n/10 трендово-
+Overfull \hbox (12.20438pt too wide) in paragraph at lines 876--967
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-\TU/TimesNewRoman(1)/m/n/10 сезонной
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-\TU/TimesNewRoman(1)/m/n/10 структурой;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-\TU/TimesNewRoman(1)/m/n/10 ограниченные
- []
-
-
+[22]
 Overfull \hbox (11.87825pt too wide) in paragraph at lines 994--1004
 \TU/TimesNewRoman(1)/m/n/14.4 и автокорреляции — выявить нетривиальные долгосро
 чные зависимости, недо-
@@ -2128,11 +1820,7 @@ Overfull \hbox (11.87825pt too wide) in paragraph at lines 994--1004
 
 
 
-[24]
-
-[25]
-
-[26]
+[23]
 Overfull \hbox (17.65749pt too wide) in paragraph at lines 1019--1023
 []\TU/TimesNewRoman(1)/m/n/14.4 Серия соревнований M-Competition, организованна
 я Макридакисом и кол-
@@ -2165,15 +1853,13 @@ Overfull \hbox (5.71419pt too wide) in paragraph at lines 1055--1057
 
 
 
-[27]
+[24]
 Overfull \hbox (2.64923pt too wide) in paragraph at lines 1077--1080
 []\TU/TimesNewRoman(1)/m/n/14.4 Эти наблюдения непосредственно мотивируют поста
 новку эксперимен-
  []
 
 
-
-[28]
 Overfull \hbox (17.99028pt too wide) in paragraph at lines 1089--1092
 []\TU/TimesNewRoman(1)/m/n/14.4 Во-первых, декомпозиция временного ряда на комп
 оненты является сквоз-
@@ -2187,17 +1873,17 @@ Overfull \hbox (3.4747pt too wide) in paragraph at lines 1097--1099
 
 
 
-[29]) (./chapters/chapter2.tex
+[25]
 
-[30]
+[26]) (./chapters/chapter2.tex
+
+[27]
 Overfull \hbox (0.10112pt too wide) in paragraph at lines 9--15
 \TU/TimesNewRoman(1)/m/n/14.4 гнозирования временных рядов. Последовательно изл
 ожены: постановка экс-
  []
 
 
-
-[31]
 Overfull \hbox (15.20174pt too wide) in paragraph at lines 23--26
 \TU/TimesNewRoman(1)/m/n/14.4 ритетных набора данных для одномерного прогнозиро
 вания: M3 Competition [[][][][]\TU/TimesNewRoman(0)/m/n/14.4 2[][][][]\TU/Times
@@ -2206,11 +1892,11 @@ NewRoman(1)/m/n/14.4 ]
 
 
 
-[32]
+[28]
 
-[33]
+[29]
 
-[34]
+[30]
 Overfull \hbox (17.84904pt too wide) in paragraph at lines 192--202
 \TU/TimesNewRoman(1)/m/n/14.4 сированной HW-декомпозиции. Примечательна катастр
 офическая ошибка Auto-
@@ -2230,9 +1916,9 @@ File: figures/synth_complex.png Graphic file (type bmp)
 <figures/synth_complex.png>
 
 
-[35]
+[31]
 
-[36]
+[32]
 Overfull \hbox (2.19225pt too wide) in paragraph at lines 257--260
 []\TU/TimesNewRoman(1)/m/n/14.4 Таблица [][]5[][] дополняет картину метрикой MA
 SE, нечувствительной к мас-
@@ -2240,12 +1926,12 @@ SE, нечувствительной к мас-
 
 
 
-[37]
+[33]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
 
 
-[38]
+[34]
 File: figures/m3_yearly_T352.png Graphic file (type bmp)
 <figures/m3_yearly_T352.png>
 File: figures/m3_quarterly_T478.png Graphic file (type bmp)
@@ -2254,11 +1940,11 @@ File: figures/m3_monthly_T779.png Graphic file (type bmp)
 <figures/m3_monthly_T779.png>
 
 
-[39]
+[35]
 
-[40]
+[36]
 
-[41]
+[37]
 Overfull \hbox (21.39038pt too wide) in paragraph at lines 461--469
 \TU/TimesNewRoman(1)/m/n/14.4 ний) нейросетевые модели становятся конкурентоспо
 собными: N-BEATS (20.58)
@@ -2266,7 +1952,7 @@ Overfull \hbox (21.39038pt too wide) in paragraph at lines 461--469
 
 
 
-[42]
+[38]
 Overfull \hbox (0.82582pt too wide) in paragraph at lines 502--508
 []\TU/TimesNewRoman(1)/m/n/14.4 На M4 наблюдается более выраженное превосходств
 о классических мо-
@@ -2280,7 +1966,7 @@ Overfull \hbox (5.15993pt too wide) in paragraph at lines 502--508
 
 
 
-[43]
+[39]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
@@ -2297,9 +1983,9 @@ File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
-[44]
+[40]
 
-[45]
+[41]
 Overfull \hbox (21.41618pt too wide) in paragraph at lines 606--613
 \TU/TimesNewRoman(1)/m/n/14.4 ские модели сохраняют преимущество: Auto-ARIMA (1
 5.39) лидирует по sMAPE
@@ -2307,7 +1993,7 @@ Overfull \hbox (21.41618pt too wide) in paragraph at lines 606--613
 
 
 
-[46]
+[42]
 Overfull \hbox (15.13023pt too wide) in paragraph at lines 640--648
 \TU/TimesNewRoman(1)/m/n/14.4 дирует (15.40 sMAPE, 0.76 MASE, 720.21 RMSE), зна
 чительно опережая осталь-
@@ -2321,16 +2007,16 @@ Overfull \hbox (0.75255pt too wide) in paragraph at lines 640--648
 
 
 
-[47]
+[43]
 
-[48]
+[44]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
 
-[49]
+[45]
 Overfull \hbox (10.0419pt too wide) in paragraph at lines 777--784
 \TU/TimesNewRoman(1)/m/n/14.4 TimesNet (обучаемая 2D-декомпозиция) показывает р
 езультаты на уровне клас-
@@ -2344,7 +2030,7 @@ Overfull \hbox (0.18173pt too wide) in paragraph at lines 777--784
 
 
 
-[50]
+[46]
 Overfull \hbox (14.60005pt too wide) in paragraph at lines 836--845
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу на rollout:
@@ -2364,7 +2050,7 @@ Overfull \hbox (16.5669pt too wide) in paragraph at lines 836--845
 
 
 
-[51]
+[47]
 Overfull \hbox (1.30092pt too wide) in paragraph at lines 880--888
 \TU/TimesNewRoman(1)/m/n/14.4 обучаемой декомпозицией (FEDformer, TimesNet) нак
 апливают ошибки быст-
@@ -2376,24 +2062,19 @@ File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
-[52]
+[48]
 
-[53]
+[49]
 Overfull \hbox (10.622pt too wide) in paragraph at lines 937--944
 \TU/TimesNewRoman(1)/m/n/14.4 опережает Autoformer from-scratch (16.67) и прибл
 ижается к уровню ETS (21.04
  []
 
-
-
-[54]
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
 File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_autoformer_T779.png>
 
-
-[55]
 Overfull \hbox (6.47238pt too wide) in paragraph at lines 983--992
 \TU/TimesNewRoman(1)/m/n/14.4 рентоспособной при длине ряда свыше 80–100 наблюд
 ений (M3 monthly,
@@ -2418,6 +2099,10 @@ Overfull \hbox (1.99161pt too wide) in paragraph at lines 983--992
  []
 
 
+
+[50]
+
+[51]
 Overfull \hbox (33.72665pt too wide) in paragraph at lines 993--1001
 \TU/TimesNewRoman(1)/m/n/14.4 сто нейросетевых архитектур TimesNet с 2D-свертка
 ми и N-BEATS с residual-
@@ -2441,11 +2126,9 @@ Overfull \hbox (10.92953pt too wide) in paragraph at lines 1002--1010
 что сложность транс-
  []
 
+) (./chapters/conclusion.tex
 
-
-[56]) (./chapters/conclusion.tex
-
-[57]
+[52]
 Overfull \hbox (11.6375pt too wide) in paragraph at lines 21--30
 \TU/TimesNewRoman(1)/m/n/14.4 у TimesNet (17.87% на M3). Разрыв между Helformer
  и ETS составляет 3.28 п.п.,
@@ -2465,7 +2148,7 @@ Overfull \hbox (4.46501pt too wide) in paragraph at lines 40--49
 
 
 
-[58]
+[53]
 Overfull \hbox (10.49545pt too wide) in paragraph at lines 51--60
 \TU/TimesNewRoman(1)/m/n/14.4 FEDformer), где нейросеть должна одновременно выд
 елять компоненты и стро-
@@ -2485,14 +2168,14 @@ Overfull \hbox (36.0083pt too wide) in paragraph at lines 81--84
 
 
 
-[59])
+[54])
 
-[60]
+[55]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 12.24008pt on input line 198.
 
 
-[61]
+[56]
 Overfull \hbox (22.83644pt too wide) in paragraph at lines 198--198
 []\TU/TimesNewRoman(0)/m/n/14.4 A State Space Framework for Automatic Forecasti
 ng Using Exponential Smooth-
@@ -2500,18 +2183,46 @@ ng Using Exponential Smooth-
 
 
 
-[62]
+[57]
+Overfull \hbox (146.94453pt too wide) in paragraph at lines 198--198
+\TU/TimesNewRoman(0)/m/n/14.4 P. 3–33. — URL: [][]$[][][][][] [] [] [] [][][] [
+] [][][] [] [][] [] [][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][] []
+ []
 
-[63]
+
+Overfull \hbox (4.14423pt too wide) in paragraph at lines 198--198
+[][][][][][][] [] [][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][] [][]
+ []
+
+
+
+[58]
+Overfull \hbox (151.04913pt too wide) in paragraph at lines 198--198
+[][]$[][][][][] [] [] [] [][][][][][][][][][][] [] [][][][][][][] [] [][] [] []
+[][][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][] [][]
+ []
+
+
 Overfull \hbox (3.63539pt too wide) in paragraph at lines 198--198
 []\TU/TimesNewRoman(0)/m/n/14.4 DeepAR: Probabilistic Forecasting with Autoregr
 essive Recurrent Networks /
  []
 
 
+
+[59]
 Overfull \hbox (7.09712pt too wide) in paragraph at lines 198--198
 []\TU/TimesNewRoman(0)/m/n/14.4 Informer: Beyond Efficient Transformer for Long
  Sequence Time-Series Fore-
+ []
+
+
+Overfull \hbox (4.14423pt too wide) in paragraph at lines 198--198
+[][][][][][][] [] [][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][] [][]
  []
 
 
@@ -2522,25 +2233,25 @@ urnal of Forecasting. — 2021. —
 
 
 
-[64]
-Overfull \hbox (20.00163pt too wide) in paragraph at lines 198--198
+[60]
+Overfull \hbox (16.40163pt too wide) in paragraph at lines 198--198
 \TU/TimesNewRoman(0)/m/n/14.4 tions. — 2023. — URL: [][]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][][]$[]
-[].[] 
+[]
  []
 
 
 
-[65]
-Overfull \hbox (15.45717pt too wide) in paragraph at lines 198--198
+[61]
+Overfull \hbox (9.05638pt too wide) in paragraph at lines 198--198
 \TU/TimesNewRoman(0)/m/n/14.4 tions. — 2024. — URL: [][]$[][][][][] [] [] [] []
 [][][][][][][][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][]$[][]
- ;
+
  []
 
 
 
-[66] (./main.aux)
+[62] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2552,12 +2263,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26576 strings out of 473832
- 532297 string characters out of 5729482
- 1634782 words of memory out of 5000000
- 49222 multiletter control sequences out of 15000+600000
- 570415 words of font info for 149 fonts, out of 8000000 for 9000
+ 26580 strings out of 473832
+ 532476 string characters out of 5729482
+ 1634777 words of memory out of 5000000
+ 49224 multiletter control sequences out of 15000+600000
+ 570431 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,12n,96p,693b,7618s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,96p,693b,7619s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (66 pages).
+Output written on main.pdf (62 pages).
