@@ -130,10 +130,19 @@
   backend  = biber,
   style    = gost-numeric,
   sorting  = none,
-  language = auto,
+  language = russian,
   autolang = other,
 ]{biblatex}
 \addbibresource{references.bib}
+
+% Русификация biblatex-gost
+\DefineBibliographyStrings{russian}{%
+  urlfrom  = {Режим доступа\addcolon},
+  urlseen  = {дата обращения},
+}
+% Заменить «URL:» на «Режим доступа:» в выводе
+\DeclareFieldFormat{url}{Режим доступа\addcolon\space\url{#1}}
+\DeclareFieldFormat{urldate}{\mkbibparens{\bibstring{urlseen}\space#1}}
 
 % ---- Листинги кода (если потребуется) -------------------------------------
 \usepackage{listings}
@@ -154,7 +163,7 @@
 \begin{document}
 
 % ------- Оглавление --------------------------------------------------------
-\renewcommand{\contentsname}{Оглавление}
+\renewcommand{\contentsname}{\hfill Оглавление \hfill}
 \thispagestyle{empty}
 \tableofcontents
 \newpage
