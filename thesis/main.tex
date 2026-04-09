@@ -82,6 +82,12 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftsecfont}{\bfseries}
+% --- Префикс «Глава» в оглавлении для нумерованных разделов ---
+\renewcommand{\cftsecpresnum}{Глава\space}
+\renewcommand{\cftsecaftersnum}{.}
+\newlength{\mychapnumwidth}
+\settowidth{\mychapnumwidth}{\cftsecfont Глава 0.\space}
+\setlength{\cftsecnumwidth}{\mychapnumwidth}
 
 % ---- Подписи к рисункам и таблицам (ГОСТ) --------------------------------
 \usepackage{caption}

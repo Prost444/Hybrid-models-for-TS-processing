@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1775306898.82377 "main.bcf" "main.bbl" "main" 1775307054.50854 0
-  "main.bcf" 1775307051.87467 161545 7bd917fc81e4646fc63c02dc51311028 "xelatex"
+["biber main"] 1775705551.92014 "main.bcf" "main.bbl" "main" 1775705564.71362 0
+  "main.bcf" 1775705562.09619 163076 96218d0678180820fc539996384c2fa2 "xelatex"
   "references.bib" 1775274861.12787 23130 f6e54f9314c79003df4c10c3399229cb ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1775307051.98019 "main.xdv" "main.pdf" "main" 1775307054.50994 0
-  "main.xdv" 1775307051.87577 842712 59510830c4d79e40fbe6bd4ebc918f76 "xelatex"
+["xdvipdfmx"] 1775705562.18885 "main.xdv" "main.pdf" "main" 1775705564.71501 0
+  "main.xdv" 1775705562.09731 1058204 4cc39da6bb7f24bb7953ff1e4ba2f23b "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1775307046.04209 "/Applications/forvscode/BachelorFinal/Hybrid-models-for-TS-processing/thesis/main.tex" "main.xdv" "main" 1775307054.50862 0
-  "/Applications/forvscode/BachelorFinal/Hybrid-models-for-TS-processing/thesis/main.tex" 1775307044.02775 8686 5b87b75974e2275bd646ea33d12ccc0c ""
+["xelatex"] 1775705555.84686 "/Applications/forvscode/BachelorFinal/Hybrid-models-for-TS-processing/thesis/main.tex" "main.xdv" "main" 1775705564.71367 0
+  "/Applications/forvscode/BachelorFinal/Hybrid-models-for-TS-processing/thesis/main.tex" 1775704450.10063 8697 5a800543b10131d382fc3c98cf29cd15 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -150,8 +150,8 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1741450550 5639796 b6822fbf027c6598cec2e241e0925725 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "chapters/chapter1.tex" 1775306217.90976 71912 0120722da1c6d82a784bca4ac2becf75 ""
-  "chapters/chapter2.tex" 1775305465.63449 45288 0bc0ac010e750787166775eff732bba2 ""
+  "chapters/chapter1.tex" 1775704824.74401 93853 03855382c21772cbe76fe87608c043bc ""
+  "chapters/chapter2.tex" 1775704605.54337 56168 6a89c1ff6f73be4d61995c2024261b22 ""
   "chapters/conclusion.tex" 1775305183.9048 8440 ab3ff1620754820e41a7cb7701fcee9b ""
   "figures/bar_m3_by_freq.png" 1775285437.70013 49056 b900790fa95024f129248fd12b87f341 ""
   "figures/bar_m4_daily_full.png" 1775285437.70122 24702 f59a626e5e1ad1d37a7b4b5d706858fe ""
@@ -170,12 +170,12 @@
   "figures/synth_complex.png" 1775293311.05251 181412 bbe44aae80efa8259cf7b4ed5397c7d7 ""
   "figures/synth_seasonal.png" 1775293311.056 186543 1a807a285816a351005856459b996eeb ""
   "figures/synth_trend_seasonal.png" 1775293311.05713 161046 ce61deb543f36b86e397593ddea7c3ac ""
-  "main.aux" 1775307051.86622 44805 90ce7ad9d7263b9d2d86c2b21d42be6b "xelatex"
-  "main.bbl" 1775306900.53228 69993 b694b1ebbc811e452de309fe59f1f6ea "biber main"
-  "main.out" 1775307051.87342 9550 bf3e11b6cc884eb7d095090db01bf066 "xelatex"
-  "main.run.xml" 1775307051.87542 2673 294d1d227c28d3d49861ef042cf5da15 "xelatex"
-  "main.tex" 1775307044.02775 8686 5b87b75974e2275bd646ea33d12ccc0c ""
-  "main.toc" 1775307051.87569 9831 ac6f9b315a3f0e2195dfdf70d5258489 "xelatex"
+  "main.aux" 1775705562.08566 54487 fb23259b5b758ab0423d13f6f5dd7e17 "xelatex"
+  "main.bbl" 1775705555.81327 87392 0e2392e5a64c41003a25e3c07aa21a13 "biber main"
+  "main.out" 1775705562.09486 10882 25279e405256f8c4e4a9a916ad54dcd3 "xelatex"
+  "main.run.xml" 1775705562.09707 2673 294d1d227c28d3d49861ef042cf5da15 "xelatex"
+  "main.tex" 1775704450.10063 8697 5a800543b10131d382fc3c98cf29cd15 ""
+  "main.toc" 1775705562.09723 12177 555c4cc2c4345261ff5ef7619514c3c3 "xelatex"
   (generated)
   "main.aux"
   "main.bcf"
