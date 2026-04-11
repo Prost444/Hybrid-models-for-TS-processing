@@ -1,0 +1,12 @@
+{
+    "pretrain_category": "daily",
+    "pretrain_dataset": "m4",
+    "eval_n": 30,
+    "seed": 42,
+    "pretrain_epochs": 30,
+    "finetune_epochs": 20,
+    "pretrain_models": ["dlinear", "nbeats", "timesnet", "autoformer", "fedformer", "patchtst", "helformer"],
+    "batch_size": 512,
+    "device": "cuda",
+    "out_dir": "src/outputs/pretrain_m4_daily"
+}

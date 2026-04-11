@@ -86,10 +86,11 @@ def run_pretrain_benchmark(
     seed: int = 42,
     pretrain_epochs: int = 50,
     finetune_epochs: int = 20,
-    pretrain_models: Sequence[str] = ("autoformer", "fedformer", "patchtst"),
+    pretrain_models: Sequence[str] = ("dlinear", "nbeats", "timesnet", "autoformer", "fedformer", "patchtst", "helformer"),
     batch_size: int = 256,
     device: str = "cuda",
     out_dir: str | Path | None = None,
+    max_pretrain_series: int = 0,
 ) -> pd.DataFrame:
     """Run a pre-train / fine-tune benchmark.
 
@@ -125,6 +126,9 @@ def run_pretrain_benchmark(
         PyTorch device.
     out_dir : Path
         Output directory.
+    max_pretrain_series : int
+        If >0, subsample the pre-training set to at most this many series
+        (useful for large datasets like M4). 0 means use all.
 
     Returns
     -------
@@ -174,6 +178,13 @@ def run_pretrain_benchmark(
     L_avg = max(L_avg, H + 1)  # safety floor
     print(f"[pretrain] L_avg={L_avg} (min={min(L_values)}, max={max(L_values)})")
 
+    # 2b. Optionally subsample pre-training series
+    if max_pretrain_series > 0 and len(all_y_tr) > max_pretrain_series:
+        rng_sub = np.random.default_rng(seed)
+        sub_idx = rng_sub.choice(len(all_y_tr), size=max_pretrain_series, replace=False)
+        all_y_tr = [all_y_tr[i] for i in sorted(sub_idx)]
+        print(f"[pretrain] subsampled to {len(all_y_tr)} series for pretrain")
+
     # 3. Create MultiSeriesWindowDataset
     print(f"[pretrain] building multi-series dataset from {len(all_y_tr)} series...")
     multi_ds = MultiSeriesWindowDataset(all_y_tr, lookback=L_avg, horizon=H)
@@ -214,16 +225,24 @@ def run_pretrain_benchmark(
     for model_name in _progress(pretrain_models, desc="Models"):
         print(f"\n[pretrain] pre-training {model_name} for {pretrain_epochs} epochs...")
 
+        # Special handling for Helformer (single-step model)
+        is_helformer = model_name == "helformer"
+        pretrain_horizon = 1 if is_helformer else H
+
         # Create model and pre-train on multi-series data
         pretrain_cfg = TrainConfig(
-            lookback=L_avg, horizon=H, epochs=pretrain_epochs,
+            lookback=L_avg, horizon=pretrain_horizon, epochs=pretrain_epochs,
             batch_size=batch_size, lr=1e-3, weight_decay=1e-4,
             clip=1.0, device=device,
         )
 
         try:
             pretrained_model = make_model(model_name, pretrain_cfg)
-            train_model(pretrained_model, multi_ds, pretrain_cfg)
+            if is_helformer:
+                multi_ds_hf = MultiSeriesWindowDataset(all_y_tr, lookback=L_avg, horizon=1)
+                train_model(pretrained_model, multi_ds_hf, pretrain_cfg)
+            else:
+                train_model(pretrained_model, multi_ds, pretrain_cfg)
         except Exception as exc:
             print(f"[pretrain] {model_name} pre-training failed: {exc}")
             continue
@@ -246,8 +265,9 @@ def run_pretrain_benchmark(
                 }
                 try:
                     # Create fresh model, load pretrained weights
+                    ft_horizon = 1 if is_helformer else H
                     ft_cfg = TrainConfig(
-                        lookback=L_avg, horizon=H, epochs=finetune_epochs,
+                        lookback=L_avg, horizon=ft_horizon, epochs=finetune_epochs,
                         batch_size=32, lr=5e-4, weight_decay=1e-4,
                         clip=1.0, device=device,
                     )
@@ -256,20 +276,28 @@ def run_pretrain_benchmark(
 
                     # Per-series dataset using L_avg for dimension compatibility
                     # Pad y_tr if shorter than L_avg
-                    if len(y_tr) < L_avg + H:
+                    ft_ds_horizon = 1 if is_helformer else H
+                    if len(y_tr) < L_avg + ft_ds_horizon:
                         pad_val = y_tr[0] if len(y_tr) > 0 else 0.0
                         y_tr_padded = np.concatenate([
-                            np.full(L_avg + H - len(y_tr), pad_val), y_tr
+                            np.full(L_avg + ft_ds_horizon - len(y_tr), pad_val), y_tr
                         ])
                     else:
                         y_tr_padded = y_tr
 
-                    ft_ds = WindowDatasetStd(y_tr_padded, L_avg, H)
+                    ft_ds = WindowDatasetStd(y_tr_padded, L_avg, ft_ds_horizon)
 
                     if len(ft_ds) >= 1:
                         train_model(ft_model, ft_ds, ft_cfg)
-                        mu, sd = ft_ds.scaler
-                        pred = _forecast_from_model(ft_model, y_tr, L_avg, H, mu, sd, device)
+                        if is_helformer:
+                            from ..models.helformer_pt import helformer_forecast_pt
+                            pred = helformer_forecast_pt(
+                                y_tr, H, ft_model, lookback=L_avg,
+                                seasonal_period=P, use_hw=True, device=device,
+                            )
+                        else:
+                            mu, sd = ft_ds.scaler
+                            pred = _forecast_from_model(ft_model, y_tr, L_avg, H, mu, sd, device)
                         pred = np.asarray(pred, float).ravel()[:H]
                         metrics = _compute_metrics(y_te, pred, y_tr, P)
                         for mk, mv in metrics.items():
@@ -294,29 +322,37 @@ def run_pretrain_benchmark(
                 }
                 try:
                     scratch_epochs = pretrain_epochs + finetune_epochs  # fair comparison
+                    scratch_horizon = 1 if is_helformer else H
                     scratch_cfg = TrainConfig(
-                        lookback=L_avg, horizon=H, epochs=scratch_epochs,
+                        lookback=L_avg, horizon=scratch_horizon, epochs=scratch_epochs,
                         batch_size=32, lr=1e-3, weight_decay=1e-4,
                         clip=1.0, device=device,
                     )
                     scratch_model = make_model(model_name, scratch_cfg)
 
-                    if len(y_tr) < L_avg + H:
+                    if len(y_tr) < L_avg + scratch_horizon:
                         pad_val = y_tr[0] if len(y_tr) > 0 else 0.0
                         y_tr_padded = np.concatenate([
-                            np.full(L_avg + H - len(y_tr), pad_val), y_tr
+                            np.full(L_avg + scratch_horizon - len(y_tr), pad_val), y_tr
                         ])
                     else:
                         y_tr_padded = y_tr
 
-                    scratch_ds = WindowDatasetStd(y_tr_padded, L_avg, H)
+                    scratch_ds = WindowDatasetStd(y_tr_padded, L_avg, scratch_horizon)
 
                     if len(scratch_ds) >= 1:
                         train_model(scratch_model, scratch_ds, scratch_cfg)
-                        mu, sd = scratch_ds.scaler
-                        pred = _forecast_from_model(
-                            scratch_model, y_tr, L_avg, H, mu, sd, device,
-                        )
+                        if is_helformer:
+                            from ..models.helformer_pt import helformer_forecast_pt
+                            pred = helformer_forecast_pt(
+                                y_tr, H, scratch_model, lookback=L_avg,
+                                seasonal_period=P, use_hw=True, device=device,
+                            )
+                        else:
+                            mu, sd = scratch_ds.scaler
+                            pred = _forecast_from_model(
+                                scratch_model, y_tr, L_avg, H, mu, sd, device,
+                            )
                         pred = np.asarray(pred, float).ravel()[:H]
                         metrics = _compute_metrics(y_te, pred, y_tr, P)
                         for mk, mv in metrics.items():
