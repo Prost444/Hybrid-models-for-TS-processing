@@ -1,0 +1,13 @@
+{
+    "pretrain_category": "daily",
+    "pretrain_dataset": "m5",
+    "eval_n": 100,
+    "seed": 42,
+    "pretrain_epochs": 20,
+    "finetune_epochs": 10,
+    "pretrain_models": ["dlinear", "nbeats", "timesnet", "autoformer", "fedformer", "patchtst", "helformer"],
+    "batch_size": 512,
+    "device": "cuda",
+    "max_pretrain_series": 5000,
+    "out_dir": "src/outputs/pretrain_m5_daily"
+}

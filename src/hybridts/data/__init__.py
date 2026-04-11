@@ -17,6 +17,7 @@ from .m3 import (
     r2_score,
 )
 from .m4 import M4_H, M4_P, ensure_m4_csv, load_m4_train_test
+from .m5 import M5_H, M5_P, load_m5_train_test
 
 __all__ = [
     "M3_H",
@@ -28,6 +29,9 @@ __all__ = [
     "ensure_m4_csv",
     "load_train_tsts",
     "load_m4_train_test",
+    "M5_H",
+    "M5_P",
+    "load_m5_train_test",
     "plot_forecast",
     "plot_forecast_test_only",
     "seasonal_naive",

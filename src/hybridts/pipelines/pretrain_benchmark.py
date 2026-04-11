@@ -22,9 +22,10 @@ except Exception:
 
 from ..config.settings import settings
 from ..data import (
-    M3_H, M3_P, M4_H, M4_P, best_L,
+    M3_H, M3_P, M4_H, M4_P, M5_H, M5_P, best_L,
     ensure_m3_csv, load_train_tsts,
     ensure_m4_csv, load_m4_train_test,
+    load_m5_train_test,
     seasonal_naive,
     smape, mape, mse, rmse, mae, mase,
 )
@@ -149,6 +150,10 @@ def run_pretrain_benchmark(
         ensure_m4_csv(categories=(pretrain_category,))
         H_MAP, P_MAP = M4_H, M4_P
         load_fn = load_m4_train_test
+    elif pretrain_dataset == "m5":
+        H_MAP = {"daily": M5_H}
+        P_MAP = {"daily": M5_P}
+        load_fn = lambda cat: load_m5_train_test(max_series=max_pretrain_series or 0)
     else:
         raise ValueError(f"Unknown dataset: {pretrain_dataset}")
 
