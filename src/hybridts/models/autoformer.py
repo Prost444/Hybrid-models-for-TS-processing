@@ -83,15 +83,18 @@ class AutoCorrelation(nn.Module):
         topk_vals, topk_idx = torch.topk(corr_mean, k, dim=-1)  # (B,H,k)
         weights = F.softmax(topk_vals, dim=-1)  # (B,H,k)
 
-        # Roll V by top-k delays and aggregate
+        # Roll V by top-k delays and aggregate (fully vectorized)
         out = torch.zeros_like(V)
+        # Create index tensor for gather-based roll (no Python loops)
+        arange = torch.arange(L, device=V.device).view(1, 1, L, 1)  # (1,1,L,1)
         for i in range(k):
-            delay = topk_idx[:, :, i]  # (B,H)
+            delay = topk_idx[:, :, i].unsqueeze(-1).unsqueeze(-1)  # (B,H,1,1)
             w = weights[:, :, i].unsqueeze(-1).unsqueeze(-1)  # (B,H,1,1)
-            # Broadcast roll per batch & head
-            for b in range(B):
-                for h in range(H):
-                    out[b, h] += w[b, h] * V[b, h].roll(delay[b, h].item(), dims=0)
+            # Compute rolled indices: (idx - delay) % L
+            rolled_idx = (arange - delay) % L  # (B,H,L,1)
+            rolled_idx = rolled_idx.expand(-1, -1, -1, d)  # (B,H,L,d)
+            rolled_V = torch.gather(V, 2, rolled_idx)  # (B,H,L,d)
+            out = out + w * rolled_V
 
         out = out.permute(0, 2, 1, 3).contiguous().view(B, L, -1)
         return self.dropout(self.Wo(out))
