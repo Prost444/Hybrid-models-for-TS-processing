@@ -62,7 +62,7 @@ Competition, эксперименты с~итеративным прогнози
 
 \begin{table}[H]
 \centering
-\caption{Обзор моделей эксперимента}
+\caption{Обзор 11 моделей эксперимента: тип архитектуры, механизм декомпозиции и~ключевые гиперпараметры}
 \label{tab:model-overview}
 \small
 \begin{tabular}{@{}llll@{}}
@@ -166,7 +166,7 @@ TimesNet, Helformer; lr=0.0001 для трансформерных моделе�
 
 \begin{table}[H]
 \centering
-\caption{sMAPE~(\%) на~синтетических профилях ($H{=}24$, $P{=}12$)}
+\caption{Результаты диагностики на~синтетических профилях: sMAPE~(\%) для 11 моделей на~6 профилях ($H{=}24$, входное окно $P{=}12$)}
 \label{tab:synth-smape}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -203,21 +203,21 @@ TimesNet выделяется лучшим результатом на~changepoi
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_seasonal.png}
-\caption{Прогноз на~синтетическом ряде с~чистой сезонностью}
+\caption{Предсказания 11 моделей на~синтетическом ряде с~чистой сезонностью (200 наблюдений, $H{=}24$)}
 \label{fig:synth-seasonal}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_trend_seasonal.png}
-\caption{Прогноз на~синтетическом ряде с~трендом и~сезонностью}
+\caption{Предсказания 11 моделей на~синтетическом ряде с~трендом и~сезонностью (200 наблюдений, $H{=}24$)}
 \label{fig:synth-trend-seasonal}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_complex.png}
-\caption{Прогноз на~сложном синтетическом ряде (тренд + сезонность + шум + выброс)}
+\caption{Предсказания 11 моделей на~сложном синтетическом ряде с~трендом, сезонностью, шумом и~выбросом (200 наблюдений, $H{=}24$)}
 \label{fig:synth-complex}
 \end{figure}
 
@@ -230,7 +230,7 @@ TimesNet выделяется лучшим результатом на~changepoi
 
 \begin{table}[H]
 \centering
-\caption{sMAPE (\%) на~M3 Competition: средние по~категориям (30 рядов на~категорию)}
+\caption{Результаты прямого прогнозирования на~подвыборке M3 Competition: средние значения sMAPE~(\%) по~категориям для 11 моделей (30 рядов на~категорию)}
 \label{tab:m3-smape}
 \small
 \begin{tabular}{@{}lcccc@{}}
@@ -260,7 +260,7 @@ PatchTST       & 30.02 & 11.29 & 23.72 & 21.68 \\
 
 \begin{table}[H]
 \centering
-\caption{MASE на~M3 Competition: среднее по~категориям (меньше --- лучше)}
+\caption{Средние значения MASE на~подвыборке M3 Competition для 11 моделей (меньшее значение соответствует лучшему качеству прогноза)}
 \label{tab:m3-mase}
 \small
 \begin{tabular}{@{}lc@{}}
@@ -324,7 +324,7 @@ ETS (21.04), демонстрируя эффективность обучаем�
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{bar_m3_by_freq.png}
-\caption{sMAPE по~категориям M3 Competition для всех моделей}
+\caption{Распределение sMAPE~(\%) по~частотным категориям M3 Competition для 11 моделей (подвыборка 30 рядов на~категорию)}
 \label{fig:bar-m3-freq}
 \end{figure}
 
@@ -335,7 +335,7 @@ sMAPE по~категориям.
 
 \begin{table}[H]
 \centering
-\caption{sMAPE (\%) на полном M3 Competition (2829 рядов, 11 моделей)}
+\caption{Результаты прямого прогнозирования на~полном M3 Competition: средние значения sMAPE~(\%) для 11 моделей (2829 рядов, параллелизация на~16 ядрах)}
 \label{tab:m3-full}
 \small
 \begin{tabular}{@{}lcccc@{}}
@@ -362,7 +362,7 @@ DLinear & 45.23 & 25.55 & 23.30 & 28.90 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/bar_m3_full.png}
-\caption{Среднее sMAPE на полном M3 Competition (2829 рядов, 11 моделей)}
+\caption{Среднее sMAPE~(\%) по~частотным категориям на~полном M3 Competition для 11 моделей (2829 рядов)}
 \label{fig:bar-m3-full}
 \end{figure}
 
@@ -372,21 +372,21 @@ DLinear & 45.23 & 25.55 & 23.30 & 28.90 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_yearly_T352.png}
-\caption{Пример прогноза на~годовом ряде T352 набора M3}
+\caption{Предсказания 11 моделей на~годовом ряде T352 набора M3 Competition (горизонт $H{=}6$)}
 \label{fig:forecast-m3-yearly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_quarterly_T478.png}
-\caption{Пример прогноза на~квартальном ряде T478 набора M3}
+\caption{Предсказания 11 моделей на~квартальном ряде T478 набора M3 Competition (горизонт $H{=}8$)}
 \label{fig:forecast-m3-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_monthly_T779.png}
-\caption{Пример прогноза на~месячном ряде T779 набора M3}
+\caption{Предсказания 11 моделей на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
 \label{fig:forecast-m3-monthly}
 \end{figure}
 
@@ -403,7 +403,7 @@ DLinear & 45.23 & 25.55 & 23.30 & 28.90 \\
 
 \begin{table}[H]
 \centering
-\caption{M3 Yearly: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}6$)}
+\caption{Детальные метрики на~годовых рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}6$)}
 \label{tab:m3-yearly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -439,7 +439,7 @@ DLinear (37.64) демонстрирует катастрофическую ош
 
 \begin{table}[H]
 \centering
-\caption{M3 Quarterly: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}8$)}
+\caption{Детальные метрики на~квартальных рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}8$)}
 \label{tab:m3-quarterly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -472,7 +472,7 @@ Helformer лидирует по~sMAPE (7.10) и~RMSE (431.06) с~покрыти�
 
 \begin{table}[H]
 \centering
-\caption{M3 Monthly: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}18$)}
+\caption{Детальные метрики на~месячных рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}18$)}
 \label{tab:m3-monthly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -511,7 +511,7 @@ Helformer сохраняет лидерство (16.12 sMAPE, 0.79 MASE),
 
 \begin{table}[H]
 \centering
-\caption{sMAPE (\%) на~M4 Competition: квартальные и~месячные ряды}
+\caption{Результаты прямого прогнозирования на~квартальных и~месячных рядах M4 Competition: средние значения sMAPE~(\%) для 11 моделей (30 рядов на~категорию)}
 \label{tab:m4qm-smape}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -547,7 +547,7 @@ ETS сохраняет лидерство (16.06), а~Helformer (17.73) зани
 
 \begin{table}[H]
 \centering
-\caption{sMAPE (\%) на~M4 Competition: ежедневные ряды (30 рядов)}
+\caption{Результаты прямого прогнозирования на~ежедневных рядах M4 Competition: sMAPE~(\%) и~MASE для 11 моделей (30 рядов, горизонт $H{=}14$)}
 \label{tab:m4d-smape}
 \small
 \begin{tabular}{@{}lcc@{}}
@@ -572,7 +572,7 @@ Prophet        & 10.86 & 3.72 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{bar_m4_daily_full.png}
-\caption{sMAPE на~ежедневных рядах M4 для всех моделей}
+\caption{Распределение sMAPE~(\%) на~ежедневных рядах M4 Competition для 11 моделей (30 рядов, горизонт $H{=}14$)}
 \label{fig:bar-m4-daily}
 \end{figure}
 
@@ -589,21 +589,21 @@ Prophet        & 10.86 & 3.72 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_quarterly_Q2061.png}
-\caption{Пример прогноза на~квартальном ряде Q2061 набора M4}
+\caption{Предсказания 11 моделей на~квартальном ряде Q2061 набора M4 Competition (горизонт $H{=}8$)}
 \label{fig:forecast-m4-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_monthly_M4124.png}
-\caption{Пример прогноза на~месячном ряде M4124 набора M4}
+\caption{Предсказания 11 моделей на~месячном ряде M4124 набора M4 Competition (горизонт $H{=}18$)}
 \label{fig:forecast-m4-monthly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_daily_D362.png}
-\caption{Пример прогноза на~ежедневном ряде D362 набора M4}
+\caption{Предсказания 11 моделей на~ежедневном ряде D362 набора M4 Competition (горизонт $H{=}14$)}
 \label{fig:forecast-m4-daily}
 \end{figure}
 
@@ -617,7 +617,7 @@ Prophet        & 10.86 & 3.72 \\
 
 \begin{table}[H]
 \centering
-\caption{M4 Quarterly: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}8$)}
+\caption{Детальные метрики на~квартальных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}8$)}
 \label{tab:m4-quarterly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -651,7 +651,7 @@ Autoformer (34.17) и~FEDformer (37.00) демонстрируют значит�
 
 \begin{table}[H]
 \centering
-\caption{M4 Monthly: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}18$)}
+\caption{Детальные метрики на~месячных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}18$)}
 \label{tab:m4-monthly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -686,7 +686,7 @@ Autoformer     & 33.86 & 2.05 & 1919.28 \\
 
 \begin{table}[H]
 \centering
-\caption{M4 Daily: 11 моделей $\times$ 3 метрики (30 рядов, $H{=}14$)}
+\caption{Детальные метрики на~ежедневных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}14$)}
 \label{tab:m4-daily-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -726,7 +726,7 @@ sMAPE по~всем шести экспериментальным категор
 
 \begin{table}[H]
 \centering
-\caption{Кросс-датасетный sMAPE (\%): 11 моделей $\times$ 6 категорий}
+\caption{Сводное сравнение sMAPE~(\%) по~всем шести частотным категориям M3 и~M4 Competition для 11 моделей (прямое прогнозирование)}
 \label{tab:cross-smape}
 \small
 \begin{tabular}{@{}lcccccc|c@{}}
@@ -754,7 +754,7 @@ FEDformer      & 27.75 & 16.91 & 26.64 & 37.00 & 29.94 &  3.43 & 23.61 \\
 
 \begin{table}[H]
 \centering
-\caption{Средний ранг моделей по~шести категориям (sMAPE, меньше --- лучше)}
+\caption{Средний ранг 11 моделей по~шести частотным категориям M3 и~M4 Competition (по sMAPE, меньший ранг соответствует лучшему качеству)}
 \label{tab:mean-rank}
 \small
 \begin{tabular}{@{}lc@{}}
@@ -778,14 +778,14 @@ FEDformer      & 9.50 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{heatmap_smape.png}
-\caption{Тепловая карта sMAPE: модели $\times$ категории}
+\caption{Тепловая карта sMAPE~(\%) для 11 моделей по~шести частотным категориям M3 и~M4 Competition}
 \label{fig:heatmap-smape}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{heatmap_rank.png}
-\caption{Тепловая карта рангов: модели $\times$ категории}
+\caption{Тепловая карта рангов 11 моделей по~шести частотным категориям M3 и~M4 Competition (ранг~1 соответствует лучшему sMAPE)}
 \label{fig:heatmap-rank}
 \end{figure}
 
@@ -847,7 +847,7 @@ PatchTST, отказавшийся от~явной декомпозиции в~�
 
 \begin{table}[H]
 \centering
-\caption{Прямой vs итеративный прогноз на~M3: sMAPE (\%)}
+\caption{Сравнение прямого и~итеративного прогнозирования на~M3 Competition: sMAPE~(\%) и~деградация $\Delta$ для 9 моделей (92 ряда)}
 \label{tab:rollout-m3}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -883,7 +883,7 @@ Autoformer (+4.94) и~TimesNet (+4.28). PatchTST демонстрирует
 
 \begin{table}[H]
 \centering
-\caption{Прямой vs итеративный прогноз на~M4: sMAPE (\%)}
+\caption{Сравнение прямого и~итеративного прогнозирования на~M4 Competition: sMAPE~(\%) и~деградация $\Delta$ для 9 моделей (90 рядов)}
 \label{tab:rollout-m4}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -925,14 +925,14 @@ PatchTST, работающий непосредственно с~патчами 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_quarterly_T478.png}
-\caption{Сравнение прямого и~итеративного прогнозов на~квартальном ряде T478}
+\caption{Сравнение прямого и~итеративного прогноза нейросетевых моделей на~квартальном ряде T478 набора M3 Competition (горизонт $H{=}8$)}
 \label{fig:rollout-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_monthly_T779.png}
-\caption{Сравнение прямого и~итеративного прогнозов на~месячном ряде T779}
+\caption{Сравнение прямого и~итеративного прогноза нейросетевых моделей на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
 \label{fig:rollout-monthly}
 \end{figure}
 
@@ -966,7 +966,7 @@ M4~quarterly и~M4~monthly.
 
 \begin{table}[H]
 \centering
-\caption{Эффект предобучения: улучшение sMAPE (\%) по~частотам и~моделям}
+\caption{Сводный эффект предобучения: относительное улучшение sMAPE~(\%) для 7 нейросетевых моделей по~пяти частотным категориям (положительные значения означают снижение sMAPE)}
 \label{tab:pretrain-all}
 \small
 \begin{tabular}{@{}lcccccc@{}}
@@ -995,7 +995,7 @@ TimesNet & $-$52.6 & $-$25.5 & +13.0 & $-$16.9 & +14.6 & $-$13.5 \\
 
 \begin{table}[H]
 \centering
-\caption{Предобучение на~M3 Yearly: абсолютные sMAPE~(\%)}
+\caption{Результаты предобучения на~годовых рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}6$)}
 \label{tab:pretrain-m3y}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1013,6 +1013,8 @@ Helformer  & 27.59 & 29.80 & $-$8.0 \\
 \end{tabular}
 \end{table}
 
+% TODO: добавить график прогноза pretrain vs from-scratch для M3 yearly
+
 На~годовых рядах предобучение приводит к~выравниванию результатов
 нейросетевых моделей в~узком коридоре 22.8--25.1\,\%. Трансформерные
 модели (FEDformer, Autoformer, PatchTST) существенно улучшаются,
@@ -1024,7 +1026,7 @@ Helformer  & 27.59 & 29.80 & $-$8.0 \\
 
 \begin{table}[H]
 \centering
-\caption{Предобучение на~M3 Quarterly: абсолютные sMAPE~(\%)}
+\caption{Результаты предобучения на~квартальных рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}8$)}
 \label{tab:pretrain-m3q}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1042,6 +1044,8 @@ Helformer  & 28.55 & 21.42 & +25.0 \\
 \end{tabular}
 \end{table}
 
+% TODO: добавить график прогноза pretrain vs from-scratch для M3 quarterly
+
 На~квартальных рядах наблюдается выраженная дивергенция: DLinear
 получает максимальное улучшение (+50.8\,\%), тогда как TimesNet и~N-BEATS,
 эффективные при per-series обучении, ухудшаются. Лучший абсолютный
@@ -1052,7 +1056,7 @@ Helformer  & 28.55 & 21.42 & +25.0 \\
 
 \begin{table}[H]
 \centering
-\caption{Предобучение на~M3 Monthly: абсолютные sMAPE~(\%)}
+\caption{Результаты предобучения на~месячных рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}18$)}
 \label{tab:pretrain-m3m}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1081,7 +1085,7 @@ residual-архитектура уже эффективно специализи
 
 \begin{table}[H]
 \centering
-\caption{Предобучение на~M4 Quarterly: абсолютные sMAPE~(\%)}
+\caption{Результаты предобучения на~квартальных рядах M4 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}8$)}
 \label{tab:pretrain-m4q}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1099,6 +1103,8 @@ TimesNet   & 19.26 & 22.52 & $-$16.9 \\
 \end{tabular}
 \end{table}
 
+% TODO: добавить график прогноза pretrain vs from-scratch для M4 quarterly
+
 На~M4 quarterly эффект предобучения максимален: Helformer улучшается
 на~+51.5\,\%, DLinear на~+47.8\,\%, FEDformer на~+43.9\,\%.
 Предобучение на~5000~рядах формирует устойчивые сезонные паттерны,
@@ -1111,7 +1117,7 @@ TimesNet вновь демонстрирует ухудшение ($-$16.9\,\%),
 
 \begin{table}[H]
 \centering
-\caption{Предобучение на~M4 Monthly: абсолютные sMAPE~(\%)}
+\caption{Результаты предобучения на~месячных рядах M4 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}18$)}
 \label{tab:pretrain-m4m}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1128,6 +1134,8 @@ Helformer  & 55.32 & 46.32 & +16.3 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+% TODO: добавить график прогноза pretrain vs from-scratch для M4 monthly
 
 На~месячных рядах M4 все семь моделей улучшаются с~предобучением,
 причём Autoformer (+36.4\,\%) и~DLinear (+37.2\,\%) показывают
@@ -1175,7 +1183,7 @@ TimesNet, получают существенный выигрыш.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_effect_all.png}
-\caption{Эффект предобучения: относительное улучшение sMAPE (\%) по частотам и моделям}
+\caption{Эффект предобучения: относительное улучшение sMAPE~(\%) для 7 нейросетевых моделей по~пяти частотным категориям M3 и~M4 Competition}
 \label{fig:pretrain-effect}
 \end{figure}
 
@@ -1236,14 +1244,14 @@ N-BEATS с~архитектурой residual-стеков~\cite{oreshkin2020nbea
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_patchtst_T779.png}
-\caption{PatchTST: прогноз с~предобучением и~без на~ряде T779}
+\caption{Предсказания PatchTST с~предобучением и~без на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
 \label{fig:pretrain-patchtst}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_autoformer_T779.png}
-\caption{Autoformer: прогноз с~предобучением и~без на~ряде T779}
+\caption{Предсказания Autoformer с~предобучением и~без на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
 \label{fig:pretrain-autoformer}
 \end{figure}
 

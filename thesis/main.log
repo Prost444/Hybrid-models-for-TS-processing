@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 04:53
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 05:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,36 +342,6 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count287
 \c@continuedfloat=\count288
 )
-! Undefined control sequence.
-l.106 \numberwithin
-                   {table}{section}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \numberwithin{t
-                     able}{section}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-l.107 \numberwithin
-                   {figure}{section}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -1014,26 +984,26 @@ Package fontspec Info:
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1041,65 +1011,65 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 171.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 171.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 171.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 171.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 171.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 171.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 171.
-LaTeX Font Info:    Redeclaring math accent \check on input line 171.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 171.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 171.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 171.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 171.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 171.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 169.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 169.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 169.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 169.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 169.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 169.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 169.
+LaTeX Font Info:    Redeclaring math accent \check on input line 169.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 169.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 169.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 169.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 169.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 171.
+(Font)              `operators' in the math version `normal' on input line 169.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-71.
+69.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 171.
+(Font)              `operators' in the math version `bold' on input line 169.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-171.
+169.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 171.
+input line 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 171.
+ 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
-171.
+169.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 171.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 171
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 169
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
-input line 171.
+input line 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
-e 171.
+e 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 171.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 169.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 171
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 169
 .
 
 *geometry* driver: auto-detecting
@@ -1155,7 +1125,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 171.
+Package hyperref Info: Link coloring ON on input line 169.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1226,8 +1196,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 171.
-Package biblatex Info: Reference segment=0 on input line 171.
+Package biblatex Info: Reference section=0 on input line 169.
+Package biblatex Info: Reference segment=0 on input line 169.
 \c@lstlisting=\count491
  (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
@@ -1239,18 +1209,15 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+
+[2
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
-Overfull \vbox (240.1317pt too high) has occurred while \output is active []
-
-
-
-[2
-
-]
 
 [3]
 
@@ -2490,6 +2457,8 @@ File: figures/m3_monthly_T779.png Graphic file (type bmp)
 [41]
 
 [42]
+
+[43]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
@@ -2502,38 +2471,42 @@ File: figures/m4_quarterly_Q2061.png Graphic file (type bmp)
 <figures/m4_quarterly_Q2061.png>
 
 
-[43]
+[44]
 File: figures/m4_monthly_M4124.png Graphic file (type bmp)
 <figures/m4_monthly_M4124.png>
 File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
-[44]
-
 [45]
 
 [46]
 
 [47]
+
+[48]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
+
+
+[49]
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
 
-[48]
-
-LaTeX Warning: Citation 'zeng2023transformers' on page 49 undefined on input li
+LaTeX Warning: Citation 'zeng2023transformers' on page 50 undefined on input li
 ne 811.
 
 
-LaTeX Warning: Citation 'cerqueira2020evaluating' on page 49 undefined on input
+
+[50]
+
+LaTeX Warning: Citation 'cerqueira2020evaluating' on page 51 undefined on input
  line 842.
 
 
 
-[49]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 872--881
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу
@@ -2541,114 +2514,112 @@ Underfull \hbox (badness 10000) in paragraph at lines 872--881
 
 
 
-[50]
+[52]
 File: figures/rollout_m3_quarterly_T478.png Graphic file (type bmp)
 <figures/rollout_m3_quarterly_T478.png>
-
-
-[51]
 File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
-LaTeX Warning: Citation 'bandara2020forecasting' on page 52 undefined on input 
+[53]
+
+LaTeX Warning: Citation 'bandara2020forecasting' on page 54 undefined on input 
 line 960.
 
 
 
-[52]
-
-[53]
-
 [54]
 
 [55]
-Overfull \hbox (7.59341pt too wide) in paragraph at lines 1145--1151
+
+[56]
+
+[57]
+Overfull \hbox (7.59341pt too wide) in paragraph at lines 1153--1159
 []\TU/TimesNewRoman(1)/m/it/14.4 TimesNet с предобучением (13.68) превосходит E
 TS (17.42) на M3 monthly.
  []
 
-
-
-[56]
 File: figures/pretrain_effect_all.png Graphic file (type bmp)
 <figures/pretrain_effect_all.png>
 
 
-[57]
+[58]
 
-LaTeX Warning: Citation 'wu2023timesnet' on page 58 undefined on input line 121
-3.
-
-
-LaTeX Warning: Citation 'oreshkin2020nbeats' on page 58 undefined on input line
- 1220.
+LaTeX Warning: Citation 'wu2023timesnet' on page 59 undefined on input line 122
+1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1225
+
+[59]
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 60 undefined on input line
+ 1228.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1233
 \TU/TimesNewRoman(1)/m/n/14.4 стеков [[]] демонстрирует среднее улучшение лишь
  []
 
 
-LaTeX Warning: Citation 'nie2023patchtst' on page 58 undefined on input line 12
-34.
+LaTeX Warning: Citation 'nie2023patchtst' on page 60 undefined on input line 12
+42.
 
 
-LaTeX Warning: Citation 'liu2024itransformer' on page 58 undefined on input lin
-e 1234.
+LaTeX Warning: Citation 'liu2024itransformer' on page 60 undefined on input lin
+e 1242.
 
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
-
-
-[58]
 File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_autoformer_T779.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1268
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1266--1276
 \TU/TimesNewRoman(1)/m/n/14.4 показала лучшие метрики на подвыборке M3 (sMAPE 1
 0.61,
  []
 
 
-
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1287
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
 \TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 9.50) проигрывают более простым N
 -BEATS
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 1278--1287
+Underfull \hbox (badness 2096) in paragraph at lines 1286--1295
 \TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.67) и TimesNet (ранг 6.50). Однако гибрид
 ный Helformer
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 1278--1287
+Underfull \hbox (badness 2065) in paragraph at lines 1286--1295
 \TU/TimesNewRoman(1)/m/n/14.4 быть эффективной при наличии качественной фиксиро
 ванной де-
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 1278--1287
+Underfull \hbox (badness 2564) in paragraph at lines 1286--1295
 \TU/TimesNewRoman(1)/m/n/14.4 композиции. Масштабный эксперимент с предобучение
 м на пяти
  []
 
 
 
-[60]) (./chapters/conclusion.tex
-
-[61]
+[61]) (./chapters/conclusion.tex
 
 [62]
 
-[63])
+[63]
 
 [64]
 
-LaTeX Warning: Empty bibliography on input line 216.
+[65])
+
+[66]
+
+LaTeX Warning: Empty bibliography on input line 214.
 
 (./main.aux)
  ***********
@@ -2673,10 +2644,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  26406 strings out of 473832
  524137 string characters out of 5729482
- 1633243 words of memory out of 5000000
+ 1636980 words of memory out of 5000000
  49052 multiletter control sequences out of 15000+600000
  570407 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,12n,96p,693b,5468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (63 pages).
+Output written on main.pdf (65 pages).
