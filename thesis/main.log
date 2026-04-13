@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 05:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 05:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2342,6 +2342,14 @@ Underfull \hbox (badness 7238) in paragraph at lines 23--26
 зирования: M3
  []
 
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
 
 LaTeX Warning: Citation 'makridakis2000m3' on page 30 undefined on input line 5
 4.
@@ -2414,19 +2422,25 @@ File: figures/synth_complex.png Graphic file (type bmp)
 
 [35]
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 36 undefined on input line 3
-03.
+LaTeX Warning: Citation 'makridakis2000m3' on page 36 undefined on input line 2
+92.
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 300--307
-[]\TU/TimesNewRoman(1)/m/it/14.4 ETS — лучшая чисто статистическая модель. \TU/
-TimesNewRoman(1)/m/n/14.4 Среди моделей
+Underfull \hbox (badness 8113) in paragraph at lines 289--296
+[]\TU/TimesNewRoman(1)/m/it/14.4 Классические модели лидируют на полном M3. \TU
+/TimesNewRoman(1)/m/n/14.4 Seasonal Naive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--307
-\TU/TimesNewRoman(1)/m/n/14.4 sMAPE, 1.47 MASE), что согласуется с результатами
- соревнований
+Underfull \hbox (badness 2310) in paragraph at lines 289--296
+\TU/TimesNewRoman(1)/m/n/14.4 (15.74), ETS (16.04) и Auto-ARIMA (16.14) занимаю
+т три первых ме-
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 289--296
+\TU/TimesNewRoman(1)/m/n/14.4 ста по общему sMAPE, что согласуется с результата
+ми соревнований
  []
 
 
@@ -2434,35 +2448,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--307
 [36]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
+File: figures/m3_yearly_T352.png Graphic file (type bmp)
+<figures/m3_yearly_T352.png>
+File: figures/m3_quarterly_T478.png Graphic file (type bmp)
+<figures/m3_quarterly_T478.png>
 
 
 [37]
-File: figures/bar_m3_full.png Graphic file (type bmp)
-<figures/bar_m3_full.png>
-File: figures/m3_yearly_T352.png Graphic file (type bmp)
-<figures/m3_yearly_T352.png>
-
-
-[38]
-File: figures/m3_quarterly_T478.png Graphic file (type bmp)
-<figures/m3_quarterly_T478.png>
 File: figures/m3_monthly_T779.png Graphic file (type bmp)
 <figures/m3_monthly_T779.png>
 
+
+[38]
 
 [39]
 
 [40]
 
 [41]
-
-[42]
-
-[43]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--585
+Underfull \hbox (badness 10000) in paragraph at lines 534--540
 []\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
 ежает ETS
  []
@@ -2471,71 +2478,94 @@ File: figures/m4_quarterly_Q2061.png Graphic file (type bmp)
 <figures/m4_quarterly_Q2061.png>
 
 
-[44]
+[42]
 File: figures/m4_monthly_M4124.png Graphic file (type bmp)
 <figures/m4_monthly_M4124.png>
 File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
+[43]
+
+[44]
+
 [45]
 
 [46]
-
-[47]
-
-[48]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
 
 
-[49]
+[47]
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
 
-LaTeX Warning: Citation 'zeng2023transformers' on page 50 undefined on input li
-ne 811.
+LaTeX Warning: Citation 'zeng2023transformers' on page 48 undefined on input li
+ne 764.
 
 
 
-[50]
+[48]
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
+Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=cyr
+l;language=dflt;mapping=tex-text;!
 
-LaTeX Warning: Citation 'cerqueira2020evaluating' on page 51 undefined on input
- line 842.
+LaTeX Warning: Citation 'cerqueira2020evaluating' on page 49 undefined on input
+ line 795.
 
 
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 872--881
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 825--834
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу
  []
 
 
 
-[52]
+[50]
 File: figures/rollout_m3_quarterly_T478.png Graphic file (type bmp)
 <figures/rollout_m3_quarterly_T478.png>
 File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
+[51]
+
+LaTeX Warning: Citation 'bandara2020forecasting' on page 52 undefined on input 
+line 913.
+
+
+
+[52]
+File: figures/pretrain_bars_m3_yearly.png Graphic file (type bmp)
+<figures/pretrain_bars_m3_yearly.png>
+
+
 [53]
-
-LaTeX Warning: Citation 'bandara2020forecasting' on page 54 undefined on input 
-line 960.
-
+File: figures/pretrain_bars_m3_quarterly.png Graphic file (type bmp)
+<figures/pretrain_bars_m3_quarterly.png>
 
 
 [54]
+File: figures/pretrain_bars_m3_monthly.png Graphic file (type bmp)
+<figures/pretrain_bars_m3_monthly.png>
+
 
 [55]
+File: figures/pretrain_bars_m4_quarterly.png Graphic file (type bmp)
+<figures/pretrain_bars_m4_quarterly.png>
+
 
 [56]
+File: figures/pretrain_bars_m4_monthly.png Graphic file (type bmp)
+<figures/pretrain_bars_m4_monthly.png>
+
 
 [57]
-Overfull \hbox (7.59341pt too wide) in paragraph at lines 1153--1159
+Overfull \hbox (7.59341pt too wide) in paragraph at lines 1133--1139
 []\TU/TimesNewRoman(1)/m/it/14.4 TimesNet с предобучением (13.68) превосходит E
 TS (17.42) на M3 monthly.
  []
@@ -2546,7 +2576,7 @@ File: figures/pretrain_effect_all.png Graphic file (type bmp)
 
 [58]
 
-LaTeX Warning: Citation 'wu2023timesnet' on page 59 undefined on input line 122
+LaTeX Warning: Citation 'wu2023timesnet' on page 59 undefined on input line 120
 1.
 
 
@@ -2554,20 +2584,20 @@ LaTeX Warning: Citation 'wu2023timesnet' on page 59 undefined on input line 122
 [59]
 
 LaTeX Warning: Citation 'oreshkin2020nbeats' on page 60 undefined on input line
- 1228.
+ 1208.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1233
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1213
 \TU/TimesNewRoman(1)/m/n/14.4 стеков [[]] демонстрирует среднее улучшение лишь
  []
 
 
 LaTeX Warning: Citation 'nie2023patchtst' on page 60 undefined on input line 12
-42.
+22.
 
 
 LaTeX Warning: Citation 'liu2024itransformer' on page 60 undefined on input lin
-e 1242.
+e 1222.
 
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
@@ -2576,31 +2606,25 @@ File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 
 
 [60]
-Underfull \hbox (badness 10000) in paragraph at lines 1266--1276
-\TU/TimesNewRoman(1)/m/n/14.4 показала лучшие метрики на подвыборке M3 (sMAPE 1
-0.61,
+Underfull \hbox (badness 7907) in paragraph at lines 1264--1273
+\TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 10.17) проигрывают более простым 
+N-BEATS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
-\TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 9.50) проигрывают более простым N
--BEATS
- []
-
-
-Underfull \hbox (badness 2096) in paragraph at lines 1286--1295
-\TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.67) и TimesNet (ранг 6.50). Однако гибрид
+Underfull \hbox (badness 2096) in paragraph at lines 1264--1273
+\TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.67) и TimesNet (ранг 5.50). Однако гибрид
 ный Helformer
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 1286--1295
+Underfull \hbox (badness 2065) in paragraph at lines 1264--1273
 \TU/TimesNewRoman(1)/m/n/14.4 быть эффективной при наличии качественной фиксиро
 ванной де-
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 1286--1295
+Underfull \hbox (badness 2564) in paragraph at lines 1264--1273
 \TU/TimesNewRoman(1)/m/n/14.4 композиции. Масштабный эксперимент с предобучение
 м на пяти
  []
@@ -2613,11 +2637,9 @@ Underfull \hbox (badness 2564) in paragraph at lines 1286--1295
 
 [63]
 
-[64]
+[64])
 
-[65])
-
-[66]
+[65]
 
 LaTeX Warning: Empty bibliography on input line 214.
 
@@ -2642,12 +2664,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26406 strings out of 473832
- 524137 string characters out of 5729482
- 1636980 words of memory out of 5000000
- 49052 multiletter control sequences out of 15000+600000
+ 26445 strings out of 473832
+ 525822 string characters out of 5729482
+ 1637234 words of memory out of 5000000
+ 49087 multiletter control sequences out of 15000+600000
  570407 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,12n,96p,693b,5468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (65 pages).
+Output written on main.pdf (64 pages).

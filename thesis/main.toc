@@ -32,23 +32,23 @@
 \contentsline {subsection}{\numberline {2.2}Прямое сравнение моделей}{32}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Диагностика на~синтетических рядах}{32}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Результаты на~M3 Competition}{35}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Анализ по~частотным категориям M3}{40}{subsubsection.2.2.3}%
-\contentsline {paragraph}{Годовые ряды (Yearly).}{40}{paragraph*.15}%
-\contentsline {paragraph}{Квартальные ряды (Quarterly).}{41}{paragraph*.17}%
-\contentsline {paragraph}{Месячные ряды (Monthly).}{42}{paragraph*.19}%
-\contentsline {subsubsection}{\numberline {2.2.4}Результаты на~M4 Competition}{42}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Анализ по~частотным категориям M4}{46}{subsubsection.2.2.5}%
-\contentsline {paragraph}{Квартальные ряды M4 (Quarterly).}{46}{paragraph*.27}%
-\contentsline {paragraph}{Месячные ряды M4 (Monthly).}{47}{paragraph*.29}%
-\contentsline {paragraph}{Ежедневные ряды M4 (Daily).}{48}{paragraph*.31}%
-\contentsline {subsubsection}{\numberline {2.2.6}Кросс-датасетный анализ}{48}{subsubsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.3}Итеративное прогнозирование}{51}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Предобучение трансформерных моделей}{54}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Детальные результаты предобучения по частотам}{55}{subsubsection.2.4.1}%
-\contentsline {paragraph}{M3 Yearly ($H{=}6$, 30 рядов).}{55}{paragraph*.42}%
-\contentsline {paragraph}{M3 Quarterly ($H{=}8$, 30 рядов).}{56}{paragraph*.44}%
-\contentsline {paragraph}{M3 Monthly ($H{=}18$, 30 рядов).}{56}{paragraph*.46}%
-\contentsline {paragraph}{M4 Quarterly ($H{=}8$, 30 рядов).}{57}{paragraph*.48}%
-\contentsline {paragraph}{M4 Monthly ($H{=}18$, 30 рядов).}{57}{paragraph*.50}%
+\contentsline {subsubsection}{\numberline {2.2.3}Анализ по~частотным категориям M3}{38}{subsubsection.2.2.3}%
+\contentsline {paragraph}{Годовые ряды (Yearly).}{39}{paragraph*.13}%
+\contentsline {paragraph}{Квартальные ряды (Quarterly).}{40}{paragraph*.15}%
+\contentsline {paragraph}{Месячные ряды (Monthly).}{40}{paragraph*.17}%
+\contentsline {subsubsection}{\numberline {2.2.4}Результаты на~M4 Competition}{41}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Анализ по~частотным категориям M4}{44}{subsubsection.2.2.5}%
+\contentsline {paragraph}{Квартальные ряды M4 (Quarterly).}{44}{paragraph*.25}%
+\contentsline {paragraph}{Месячные ряды M4 (Monthly).}{45}{paragraph*.27}%
+\contentsline {paragraph}{Ежедневные ряды M4 (Daily).}{46}{paragraph*.29}%
+\contentsline {subsubsection}{\numberline {2.2.6}Кросс-датасетный анализ}{46}{subsubsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.3}Итеративное прогнозирование}{49}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Предобучение трансформерных моделей}{52}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Детальные результаты предобучения по частотам}{53}{subsubsection.2.4.1}%
+\contentsline {paragraph}{M3 Yearly ($H{=}6$, 30 рядов).}{53}{paragraph*.40}%
+\contentsline {paragraph}{M3 Quarterly ($H{=}8$, 30 рядов).}{54}{paragraph*.43}%
+\contentsline {paragraph}{M3 Monthly ($H{=}18$, 30 рядов).}{55}{paragraph*.46}%
+\contentsline {paragraph}{M4 Quarterly ($H{=}8$, 30 рядов).}{56}{paragraph*.49}%
+\contentsline {paragraph}{M4 Monthly ($H{=}18$, 30 рядов).}{57}{paragraph*.52}%
 \contentsline {subsection}{\numberline {2.5}Выводы}{61}{subsection.2.5}%
-\contentsline {section}{Заключение}{64}{subsection.2.5}%
+\contentsline {section}{Заключение}{63}{subsection.2.5}%
