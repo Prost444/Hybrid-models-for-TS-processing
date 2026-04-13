@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  9 APR 2026 07:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 04:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,6 +342,36 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count287
 \c@continuedfloat=\count288
 )
+! Undefined control sequence.
+l.106 \numberwithin
+                   {table}{section}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \numberwithin{t
+                     able}{section}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.107 \numberwithin
+                   {figure}{section}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -984,26 +1014,26 @@ Package fontspec Info:
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1011,65 +1041,65 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 168.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 168.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 168.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 168.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 168.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 168.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 168.
-LaTeX Font Info:    Redeclaring math accent \check on input line 168.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 168.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 168.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 168.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 168.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 171.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 171.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 171.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 171.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 171.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 171.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 171.
+LaTeX Font Info:    Redeclaring math accent \check on input line 171.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 171.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 171.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 171.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 171.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 168.
+(Font)              `operators' in the math version `normal' on input line 171.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-68.
+71.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 168.
+(Font)              `operators' in the math version `bold' on input line 171.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-168.
+171.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 168.
+input line 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 168.
+ 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
-168.
+171.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 168.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 168
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 171
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
-input line 168.
+input line 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
-e 168.
+e 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 168.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 171.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 168
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 171
 .
 
 *geometry* driver: auto-detecting
@@ -1125,7 +1155,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 168.
+Package hyperref Info: Link coloring ON on input line 171.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1196,8 +1226,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 168.
-Package biblatex Info: Reference segment=0 on input line 168.
+Package biblatex Info: Reference section=0 on input line 171.
+Package biblatex Info: Reference segment=0 on input line 171.
 \c@lstlisting=\count491
  (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
@@ -1209,25 +1239,65 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[1
-
-])
+))
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
+Overfull \vbox (254.5317pt too high) has occurred while \output is active []
 
-[2]
+
+
+[2
+
+]
 
 [3] (./chapters/chapter1.tex
 
+LaTeX Warning: Citation 'hamilton1994time' on page 4 undefined on input line 17
+.
+
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 4 undefined on input line 24
+.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 4 undefined on input line 24
+.
+
+
+LaTeX Warning: Citation 'box1970time' on page 4 undefined on input line 44.
+
+
+
 [4]
+
+LaTeX Warning: Citation 'box1970time' on page 5 undefined on input line 57.
+
+
+LaTeX Warning: Citation 'beveridge1981decomposition' on page 5 undefined on inp
+ut line 61.
+
+
+LaTeX Warning: Citation 'wold1938study' on page 5 undefined on input line 63.
+
+
 Underfull \hbox (badness 2050) in paragraph at lines 69--73
 []\TU/TimesNewRoman(1)/m/n/14.4 Задачу точечного прогнозирования временного ряд
 а можно сфор-
  []
+
+
+LaTeX Warning: Citation 'hyndman2021forecasting' on page 5 undefined on input l
+ine 80.
+
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 5 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 5 undefined on input line 86
+.
 
 
 
@@ -1238,12 +1308,76 @@ Underfull \hbox (badness 4254) in paragraph at lines 113--114
  []
 
 
+LaTeX Warning: Citation 'goodfellow2016deep' on page 6 undefined on input line 
+121.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+\TU/TimesNewRoman(1)/m/n/14.4 MSE штрафует большие отклонения сильнее, чем MAE,
+ и широ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+\TU/TimesNewRoman(1)/m/n/14.4 ко используется как функция потерь при обучении н
+ейронных се-
+ []
+
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 6 undefined on input line 13
+9.
+
+
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 6 undefined on input line
+ 142.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--143
+\TU/TimesNewRoman(1)/m/n/14.4 sMAPE была выбрана в качестве основной метрики со
+ревнования
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--143
+\TU/TimesNewRoman(1)/m/n/14.4 M3 [[]] благодаря симметрии относительно знака
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--143
+\TU/TimesNewRoman(1)/m/n/14.4 ошибки и ограниченности сверху величиной 200%. Те
+м не менее
+ []
+
+
 
 [6]
-Overfull \hbox (0.20633pt too wide) in paragraph at lines 149--158
-\TU/TimesNewRoman(1)/m/n/14.4 и sMAPE используются совместно для обеспечения со
-поставимости с резуль-
+
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 7 undefined on input line
+ 152.
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 149--158
+\TU/TimesNewRoman(1)/m/n/14.4 ром [[]] как масштабно-инвариантная альтернатива
  []
+
+
+LaTeX Warning: Citation 'box1970time' on page 7 undefined on input line 170.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--173
+\TU/TimesNewRoman(1)/m/n/14.4 Построение модели осуществляется в рамках методол
+огии Бокса–
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 168--173
+\TU/TimesNewRoman(1)/m/n/14.4 Дженкинса, включающей три этапа: идентификацию по
+рядков, оценку
+ []
+
+
+LaTeX Warning: Citation 'hamilton1994time' on page 7 undefined on input line 18
+5.
 
 
 
@@ -1254,33 +1388,229 @@ OML/cmm/m/it/14.4 p$\TU/TimesNewRoman(1)/m/n/14.4 ,$\OML/cmm/m/it/14.4 q$\TU/Ti
 mesNewRoman(1)/m/n/14.4 ), а приме-
  []
 
+
+LaTeX Warning: Citation 'box1970time' on page 8 undefined on input line 215.
+
 LaTeX Font Info:    Font shape `TU/PTMono(0)/m/n' will be
 (Font)              scaled to size 12.24008pt on input line 221.
+
+LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 8 undefined on input 
+line 224.
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 217--226
+\TU/TimesNewRoman(1)/m/n/14.4 функций, однако для массового прогнозирования сот
+ен и тысяч ря-
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 217--226
+\TU/TimesNewRoman(1)/m/n/14.4 томатический алгоритм \TU/PTMono(0)/m/n/14.4 auto
+_arima\TU/TimesNewRoman(1)/m/n/14.4 , реализованный в пакете \TU/PTMono(0)/m/n/
+14.4 forecast
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 217--226
+\TU/TimesNewRoman(1)/m/n/14.4 для R и в библиотеке \TU/PTMono(0)/m/n/14.4 pmdar
+ima \TU/TimesNewRoman(1)/m/n/14.4 для Python, осуществляет последова-
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 217--226
+\TU/TimesNewRoman(1)/m/n/14.4 тельный перебор моделей с минимизацией информацио
+нного критерия
+ []
+
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 8 undefined on input line 22
+7.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 8 undefined on input line 22
+8.
+
+
+Overfull \hbox (37.22423pt too wide) in paragraph at lines 227--237
+[]\TU/TimesNewRoman(1)/m/n/14.4 Результаты соревнований M3 [[]] и M4 [[]]
+ []
+
 
 
 [8]
 
+LaTeX Warning: Citation 'holt2004forecasting' on page 9 undefined on input line
+ 243.
+
+
+LaTeX Warning: Citation 'winters1960forecasting' on page 9 undefined on input l
+ine 244.
+
+
+LaTeX Warning: Citation 'hyndman2002ets' on page 9 undefined on input line 276.
+
+
+
+LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 9 undefined on input 
+line 284.
+
+
+
 [9]
 
+LaTeX Warning: Citation 'delivera2011tbats' on page 10 undefined on input line 
+291.
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 286--295
+\TU/TimesNewRoman(1)/m/n/14.4 пе спецификации модели. Это делает ETS формой \TU
+/TimesNewRoman(1)/m/it/14.4 фиксированной де-
+ []
+
+
+Underfull \hbox (badness 3158) in paragraph at lines 286--295
+\TU/TimesNewRoman(1)/m/it/14.4 композиции\TU/TimesNewRoman(1)/m/n/14.4 : структ
+ура компонент (аддитивная или мультипликативная)
+ []
+
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 10 undefined on input line 2
+97.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 10 undefined on input line 2
+99.
+
+
+LaTeX Warning: Citation 'smyl2020hybrid' on page 10 undefined on input line 301
+.
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 296--305
+\TU/TimesNewRoman(1)/m/n/14.4 а победитель (ES-RNN) [[]] объединил экспоненциал
+ьное
+ []
+
+
+LaTeX Warning: Citation 'taylor2018prophet' on page 10 undefined on input line 
+310.
+
+
+Overfull \hbox (13.15749pt too wide) in paragraph at lines 310--312
+[]\TU/TimesNewRoman(1)/m/n/14.4 Модель Prophet, разработанная Тейлором и Летамо
+м [[]],
+ []
+
+
+
 [10]
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 11 undefined on input line 3
+45.
+
+
 Underfull \hbox (badness 2582) in paragraph at lines 342--351
 []\TU/TimesNewRoman(1)/m/n/14.4 Prophet привлекателен простотой использования и
  устойчивостью
  []
 
 
+LaTeX Warning: Citation 'aivazyan1998statistics' on page 11 undefined on input 
+line 362.
+
+
+LaTeX Warning: Citation 'cleveland1990stl' on page 11 undefined on input line 3
+74.
+
+
 
 [11]
 
-[12]
-Underfull \hbox (badness 7326) in paragraph at lines 441--446
-[]\TU/TimesNewRoman(1)/m/n/14.4 FEDformer [[][][]24[][][]] переносит декомпозиц
-ию в частотную область:
+LaTeX Warning: Citation 'percival2000wavelet' on page 12 undefined on input lin
+e 390.
+
+
+LaTeX Warning: Citation 'percival1995wavelet' on page 12 undefined on input lin
+e 394.
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 388--397
+[]\TU/TimesNewRoman(1)/m/n/14.4 Ещё один класс фиксированных базисных функций п
+редставля-
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 388--397
+\TU/TimesNewRoman(1)/m/n/14.4 ся дискретное вейвлет-преобразование (MODWT) [[]]
+
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 388--397
+\TU/TimesNewRoman(1)/m/n/14.4 ет определённому диапазону частот. Вейвлет-коэффи
+циенты различных
+ []
+
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 12 undefined on input li
+ne 415.
+
+
+Overfull \hbox (5.92577pt too wide) in paragraph at lines 415--418
+[]\TU/TimesNewRoman(1)/m/n/14.4 Простейшим примером служит модель DLinear [[]],
+
  []
 
 
 
+[12]
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 13 undefined on input line
+ 428.
+
+
+Overfull \hbox (63.1086pt too wide) in paragraph at lines 428--434
+[]\TU/TimesNewRoman(1)/m/n/14.4 Более развитый подход реализован в архитектуре 
+N-BEATS [[]],
+ []
+
+
+LaTeX Warning: Citation 'wu2021autoformer' on page 13 undefined on input line 4
+35.
+
+
+LaTeX Warning: Citation 'zhou2022fedformer' on page 13 undefined on input line 
+441.
+
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 13 undefined on input line 447
+.
+
+
+
 [13]
+
+LaTeX Warning: Citation 'vaswani2017attention' on page 14 undefined on input li
+ne 473.
+
+
+Overfull \hbox (44.34106pt too wide) in paragraph at lines 472--476
+[]\TU/TimesNewRoman(1)/m/n/14.4 Архитектура Transformer, предложенная Васвани и
+ др. [[]],
+ []
+
+
+LaTeX Warning: Citation 'vaswani2017attention' on page 14 undefined on input li
+ne 497.
+
+
+LaTeX Warning: Citation 'he2016resnet' on page 14 undefined on input line 501.
+
+
+LaTeX Warning: Citation 'ba2016layernorm' on page 14 undefined on input line 50
+2.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 499--504
 []\TU/TimesNewRoman(1)/m/n/14.4 Полный блок трансформера включает многоголовое 
 внимание,
@@ -1293,28 +1623,200 @@ Underfull \hbox (badness 4024) in paragraph at lines 499--504
  []
 
 
+LaTeX Warning: Citation 'hochreiter1997lstm' on page 14 undefined on input line
+ 507.
+
+
+LaTeX Warning: Citation 'salinas2020deepar' on page 14 undefined on input line 
+513.
+
+
 
 [14]
 
+LaTeX Warning: Citation 'zhou2021informer' on page 15 undefined on input line 5
+20.
+
+
+LaTeX Warning: Citation 'li2019enhancing' on page 15 undefined on input line 52
+3.
+
+
+LaTeX Warning: Citation 'liu2022nonstationary' on page 15 undefined on input li
+ne 526.
+
+
+LaTeX Warning: Citation 'lim2021temporal' on page 15 undefined on input line 53
+2.
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 517--535
+[]\TU/TimesNewRoman(1)/m/n/14.4 Однако стандартный механизм внимания имеет вычи
+слительную
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 517--535
+\TU/TimesNewRoman(1)/m/n/14.4 пользует механизм ProbSparse attention, выбирающи
+й наиболее инфор-
+ []
+
+
+LaTeX Warning: Citation 'wen2023transformers' on page 15 undefined on input lin
+e 538.
+
+
+LaTeX Warning: Citation 'lim2021survey' on page 15 undefined on input line 544.
+
+
+
+LaTeX Warning: Citation 'torres2021deep' on page 15 undefined on input line 544
+.
+
+
+LaTeX Warning: Citation 'benidis2022deep' on page 15 undefined on input line 54
+4.
+
+
+LaTeX Warning: Citation 'wen2023transformers' on page 15 undefined on input lin
+e 544.
+
+
+LaTeX Warning: Citation 'hewamalage2021recurrent' on page 15 undefined on input
+ line 544.
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 536--548
+[]\TU/TimesNewRoman(1)/m/n/14.4 Важно подчеркнуть, что успешность трансформеров
+ в обработке
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 536--548
+\TU/TimesNewRoman(1)/m/n/14.4 естественного языка не гарантирует аналогичных ре
+зультатов для вре-
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 536--548
+[]\TU/TimesNewRoman(1)/m/n/14.4 ; []], охватывая как рекур-
+ []
+
+
+
 [15]
+
+LaTeX Warning: Citation 'wu2021autoformer' on page 16 undefined on input line 5
+53.
+
+
 Underfull \hbox (badness 5985) in paragraph at lines 567--571
 \TU/TimesNewRoman(1)/m/n/14.4 На каждом слое промежуточное представление повтор
 но разделяется
  []
 
 
+LaTeX Warning: Citation 'wu2021autoformer' on page 16 undefined on input line 5
+85.
+
+
+LaTeX Warning: Citation 'zhou2022fedformer' on page 16 undefined on input line 
+594.
+
+
 
 [16]
 
+LaTeX Warning: Citation 'percival2000wavelet' on page 17 undefined on input lin
+e 627.
+
+
+LaTeX Warning: Citation 'nie2023patchtst' on page 17 undefined on input line 63
+4.
+
+
+Underfull \hbox (badness 4981) in paragraph at lines 634--638
+[]\TU/TimesNewRoman(1)/m/n/14.4 Архитектура PatchTST [[]] предлагает иной подхо
+д
+ []
+
+
+
 [17]
+
+LaTeX Warning: Citation 'nie2023patchtst' on page 18 undefined on input line 66
+1.
+
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 18 undefined on input li
+ne 675.
+
+
 
 [18]
 
+LaTeX Warning: Citation 'wen2023transformers' on page 19 undefined on input lin
+e 702.
+
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 19 undefined on input line
+ 716.
+
+
+LaTeX Warning: Citation 'he2016resnet' on page 19 undefined on input line 724.
+
+
+
 [19]
+
+LaTeX Warning: Citation 'smyl2020hybrid' on page 20 undefined on input line 754
+.
+
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 20 undefined on input line
+ 756.
+
+
+LaTeX Warning: Citation 'challu2023nhits' on page 20 undefined on input line 75
+7.
+
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 20 undefined on input line 764
+.
+
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 20 undefined on input line 788
+.
+
+
 
 [20]
 
+LaTeX Warning: Citation 'percival2000wavelet' on page 21 undefined on input lin
+e 805.
+
+
+LaTeX Warning: Citation 'kehinde2025helformer' on page 21 undefined on input li
+ne 812.
+
+
+LaTeX Warning: Citation 'hochreiter1997lstm' on page 21 undefined on input line
+ 832.
+
+
+
 [21]
+
+LaTeX Warning: Citation 'kehinde2025helformer' on page 22 undefined on input li
+ne 852.
+
+
+Overfull \hbox (25.06839pt too wide) in paragraph at lines 852--858
+[]\TU/TimesNewRoman(1)/m/n/14.4 Следует отметить, что в оригинальной публикации
+ [[]]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 880--880
 []|\TU/TimesNewRoman(1)/b/n/8 Тип де-
  []
@@ -1735,7 +2237,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
 [23]
 
+LaTeX Warning: Citation 'makridakis2000m3' on page 24 undefined on input line 1
+001.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 24 undefined on input line 1
+001.
+
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 24 undefined on input li
+ne 1002.
+
+
+
 [24]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 25 undefined on input line 1
+025.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 25 undefined on input line 1
+040.
+
+
+LaTeX Warning: Citation 'smyl2020hybrid' on page 25 undefined on input line 104
+2.
+
+
+LaTeX Warning: Citation 'monteromanso2020fforma' on page 25 undefined on input 
+line 1045.
+
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 25 undefined on input line
+ 1047.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1049
+[]\TU/TimesNewRoman(1)/b/n/14.4 M4 Competition \TU/TimesNewRoman(1)/m/n/14.4 [[
+]] масштабировало задачу
+ []
+
+
 Underfull \hbox (badness 7099) in paragraph at lines 1054--1056
 []\TU/TimesNewRoman(1)/m/n/14.4 Гибридные подходы, сочетающие статистическую де
 композицию
@@ -1745,9 +2287,81 @@ Underfull \hbox (badness 7099) in paragraph at lines 1054--1056
 
 [25]
 
-[26]) (./chapters/chapter2.tex
+LaTeX Warning: Citation 'makridakis2022m5' on page 26 undefined on input line 1
+063.
 
-[27]
+
+Overfull \hbox (57.03828pt too wide) in paragraph at lines 1062--1069
+[]\TU/TimesNewRoman(1)/m/n/14.4 Серия M-Competition была продолжена соревновани
+ем \TU/TimesNewRoman(1)/b/n/14.4 M5 \TU/TimesNewRoman(1)/m/n/14.4 [[]],
+ []
+
+
+LaTeX Warning: Citation 'godahewa2021monash' on page 26 undefined on input line
+ 1072.
+
+
+Overfull \hbox (51.99501pt too wide) in paragraph at lines 1070--1077
+\TU/TimesNewRoman(1)/m/n/14.4 нения методов стал Monash Time Series Forecasting
+ Archive [[]] —
+ []
+
+
+
+[26]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 27 undefined on input line 1
+113.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 27 undefined on input line 1
+113.
+
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 27 undefined on input li
+ne 1114.
+
+
+LaTeX Warning: Citation 'godahewa2021monash' on page 27 undefined on input line
+ 1123.
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 1118--1126
+[]\TU/TimesNewRoman(1)/m/n/14.4 В-третьих, существует пробел в систематическом 
+сравнении раз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1118--1126
+\TU/TimesNewRoman(1)/m/n/14.4 ных экспериментальных условиях, особенно при обуч
+ении моделей
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1118--1126
+\TU/TimesNewRoman(1)/m/n/14.4 дартизованных архивов, таких как Monash Time Seri
+es Forecasting
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 1118--1126
+\TU/TimesNewRoman(1)/m/n/14.4 Archive [[]], создаёт необходимую инфраструктуру
+ []
+
+
+
+[27]) (./chapters/chapter2.tex
+
+[28]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 29 undefined on input line 2
+4.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 29 undefined on input line 2
+5.
+
+
 Underfull \hbox (badness 4634) in paragraph at lines 23--26
 []\TU/TimesNewRoman(1)/m/n/14.4 В качестве экспериментальной базы используются 
 два наиболее
@@ -1760,12 +2374,51 @@ Underfull \hbox (badness 7238) in paragraph at lines 23--26
  []
 
 
+LaTeX Warning: Citation 'makridakis2000m3' on page 29 undefined on input line 5
+4.
 
-[28]
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 29 undefined on input line 5
+4.
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 51--56
+[]\TU/TimesNewRoman(1)/b/n/14.4 Разбиение. \TU/TimesNewRoman(1)/m/n/14.4 Для ка
+ждого ряда последние $\OML/cmm/m/it/14.4 H$ \TU/TimesNewRoman(1)/m/n/14.4 значе
+ний выделяют-
+ []
+
+
 
 [29]
 
+LaTeX Warning: Citation 'bandara2020forecasting' on page 30 undefined on input 
+line 94.
+
+
+LaTeX Warning: Citation 'kingma2015adam' on page 30 undefined on input line 102
+.
+
+
+
 [30]
+
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 31 undefined on input lin
+e 132.
+
+
+Overfull \hbox (32.3766pt too wide) in paragraph at lines 131--133
+[]\TU/TimesNewRoman(1)/m/n/14.4 sMAPE — основная метрика соревнований M3/M4 [[]
+]; 
+ []
+
+
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 31 undefined on input lin
+e 137.
+
+
+
+[31]
 Underfull \hbox (badness 2726) in paragraph at lines 192--202
 \TU/TimesNewRoman(1)/m/n/14.4 сированной HW-декомпозиции. Примечательна катастр
 офическая ошиб-
@@ -1779,235 +2432,230 @@ Underfull \hbox (badness 2503) in paragraph at lines 192--202
 
 File: figures/synth_seasonal.png Graphic file (type bmp)
 <figures/synth_seasonal.png>
+
+
+[32]
 File: figures/synth_trend_seasonal.png Graphic file (type bmp)
 <figures/synth_trend_seasonal.png>
 File: figures/synth_complex.png Graphic file (type bmp)
 <figures/synth_complex.png>
 
 
-[31]
-
-[32]
-
 [33]
+
+[34]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 35 undefined on input line 3
+03.
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 300--307
+[]\TU/TimesNewRoman(1)/m/it/14.4 ETS — лучшая чисто статистическая модель. \TU/
+TimesNewRoman(1)/m/n/14.4 Среди моделей
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--307
+\TU/TimesNewRoman(1)/m/n/14.4 sMAPE, 1.47 MASE), что согласуется с результатами
+ соревнований
+ []
+
+
+
+[35]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
 
 
-[34]
+[36]
 File: figures/m3_yearly_T352.png Graphic file (type bmp)
 <figures/m3_yearly_T352.png>
 File: figures/m3_quarterly_T478.png Graphic file (type bmp)
 <figures/m3_quarterly_T478.png>
+
+
+[37]
 File: figures/m3_monthly_T779.png Graphic file (type bmp)
 <figures/m3_monthly_T779.png>
 
 
-[35]
-
-[36]
-
-[37]
-
 [38]
 
 [39]
+
+[40]
+
+[41]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--549
+Underfull \hbox (badness 10000) in paragraph at lines 572--578
 []\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
 ежает ETS
  []
 
 File: figures/m4_quarterly_Q2061.png Graphic file (type bmp)
 <figures/m4_quarterly_Q2061.png>
+
+
+[42]
 File: figures/m4_monthly_M4124.png Graphic file (type bmp)
 <figures/m4_monthly_M4124.png>
 File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
-[40]
-
-[41]
-
-[42]
-
 [43]
 
 [44]
+
+[45]
+
+[46]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
 
-[45]
+[47]
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 836--845
+LaTeX Warning: Citation 'zeng2023transformers' on page 48 undefined on input li
+ne 804.
+
+
+LaTeX Warning: Citation 'cerqueira2020evaluating' on page 48 undefined on input
+ line 835.
+
+
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 865--874
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу
  []
 
 
 
-[47]
+[49]
 File: figures/rollout_m3_quarterly_T478.png Graphic file (type bmp)
 <figures/rollout_m3_quarterly_T478.png>
+
+
+[50]
 File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
-[48]
+LaTeX Warning: Citation 'bandara2020forecasting' on page 51 undefined on input 
+line 953.
 
-[49]
+
+
+[51]
+
+[52]
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 53 undefined on input line 101
+1.
+
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 53 undefined on input line
+ 1018.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1023
+\TU/TimesNewRoman(1)/m/n/14.4 стеков [[]] демонстрирует среднее улучшение лишь
+ []
+
+
+LaTeX Warning: Citation 'nie2023patchtst' on page 53 undefined on input line 10
+32.
+
+
+LaTeX Warning: Citation 'liu2024itransformer' on page 53 undefined on input lin
+e 1032.
+
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
+
+
+[53]
 File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_autoformer_T779.png>
 
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1066
+\TU/TimesNewRoman(1)/m/n/14.4 показала лучшие метрики на подвыборке M3 (sMAPE 1
+0.61,
+ []
 
-[50]
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 1002--1010
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1085
 \TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 9.50) проигрывают более простым N
 -BEATS
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 1002--1010
+Underfull \hbox (badness 2096) in paragraph at lines 1076--1085
 \TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.67) и TimesNet (ранг 6.50). Однако гибрид
 ный Helformer
  []
 
 
+Underfull \hbox (badness 2065) in paragraph at lines 1076--1085
+\TU/TimesNewRoman(1)/m/n/14.4 быть эффективной при наличии качественной фиксиро
+ванной де-
+ []
 
-[52]) (./chapters/conclusion.tex
 
-[53]
+Underfull \hbox (badness 2564) in paragraph at lines 1076--1085
+\TU/TimesNewRoman(1)/m/n/14.4 композиции. Масштабный эксперимент с предобучение
+м на пяти
+ []
 
-[54]
 
-[55])
+
+[55]) (./chapters/conclusion.tex
 
 [56]
-Underfull \hbox (badness 2564) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/it/14.4 Makridakis S.\TU/TimesNewRoman(1)/m/n/14.4 , \
-TU/TimesNewRoman(1)/m/it/14.4 Spiliotis E.\TU/TimesNewRoman(1)/m/n/14.4 , \TU/T
-imesNewRoman(1)/m/it/14.4 Assimakopoulos V. \TU/TimesNewRoman(1)/m/n/14.4 The M
-4 Competition:
- []
-
-
 
 [57]
-Underfull \hbox (badness 3713) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/it/14.4 Winters P. R. \TU/TimesNewRoman(1)/m/n/14.4 Fo
-recasting Sales by Exponentially Weighted Moving
- []
 
-
-Underfull \hbox (badness 2469) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/it/14.4 Smyl S. \TU/TimesNewRoman(1)/m/n/14.4 A Hybrid
- Method of Exponential Smoothing and Recurrent
- []
-
-
-
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/n/14.4 Autoformer: Decomposition Transformers with Aut
-o-Correlation for
- []
-
-
-Underfull \hbox (badness 3158) in paragraph at lines 212--212
-\TU/TimesNewRoman(1)/m/n/14.4 Information Processing Systems. Т. 34. — 2021. — 
-Режим досту-
- []
-
-
+[58])
 
 [59]
-Underfull \hbox (badness 2735) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/n/14.4 TimesNet: Temporal 2D-Variation Modeling for Ge
-neral Time Series
- []
 
+LaTeX Warning: Empty bibliography on input line 216.
 
-Underfull \hbox (badness 4205) in paragraph at lines 212--212
-\TU/TimesNewRoman(1)/m/n/14.4 Analysis / H. Wu [и др.] [] International Confere
-nce on Learning
- []
-
-
-Underfull \hbox (badness 4518) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/it/14.4 Hochreiter S.\TU/TimesNewRoman(1)/m/n/14.4 , \
-TU/TimesNewRoman(1)/m/it/14.4 Schmidhuber J. \TU/TimesNewRoman(1)/m/n/14.4 Long
- Short-Term Memory [] Neural
- []
-
-
-
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/n/14.4 DeepAR: Probabilistic Forecasting with Autoregr
-essive Recurrent
- []
-
-
-Underfull \hbox (badness 3138) in paragraph at lines 212--212
-\TU/TimesNewRoman(1)/m/n/14.4 on Time Series Forecasting / S. Li [и др.] [] Adv
-ances in Neural
- []
-
-
-Underfull \hbox (badness 3158) in paragraph at lines 212--212
-\TU/TimesNewRoman(1)/m/n/14.4 Information Processing Systems. Т. 32. — 2019. — 
-Режим досту-
- []
-
-
-
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/n/14.4 A Time Series is Worth 64 Words: Long-term Fore
-casting with
- []
-
-
-
-[62]
-Underfull \hbox (badness 6775) in paragraph at lines 212--212
-[]\TU/TimesNewRoman(1)/m/n/14.4 iTransformer: Inverted Transformers Are Effecti
-ve for Time Series
- []
-
-
-
-[63]
-
-[64] (./main.aux)
+(./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E6D1A8D69755A414961C1322A8800D0C;10558.
+(rerunfilecheck)             Checksum: 61FF897DF996DF4E55A9956F8EE6C019;10376.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26571 strings out of 473832
- 532140 string characters out of 5729482
- 1631879 words of memory out of 5000000
- 49219 multiletter control sequences out of 15000+600000
+ 26380 strings out of 473832
+ 523427 string characters out of 5729482
+ 1633145 words of memory out of 5000000
+ 49028 multiletter control sequences out of 15000+600000
  570407 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,12n,96p,693b,7599s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,96p,693b,5468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (64 pages).
+Output written on main.pdf (58 pages).

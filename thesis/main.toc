@@ -3,349 +3,46 @@
 \contentsline {section}{\numberline {1}Обзор подходов к прогнозированию временных рядов}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Временные ряды и задача прогнозирования}{4}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}Основные определения}{4}{subsubsection.1.1.1}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.1.2}Постановка задачи прогнозирования}{5}{subsubsection.1.1.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.1.3}Метрики качества прогноза}{6}{subsubsection.1.1.3}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsection}{\numberline {1.2}Классические статистические модели}{7}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Модели ARIMA и SARIMA}{7}{subsubsection.1.2.1}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.2.2}Модели экспоненциального сглаживания (ETS)}{9}{subsubsection.1.2.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.2.3}Модель Prophet}{10}{subsubsection.1.2.3}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsection}{\numberline {1.3}Декомпозиция временных рядов}{11}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Фиксированная декомпозиция}{11}{subsubsection.1.3.1}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.3.2}Обучаемая декомпозиция}{12}{subsubsection.1.3.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsection}{\numberline {1.4}Нейросетевые модели для временных рядов}{14}{subsection.1.4}%
 \contentsline {subsubsection}{\numberline {1.4.1}Механизм внимания и архитектура трансформера}{14}{subsubsection.1.4.1}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {1.4.2}Autoformer}{15}{subsubsection.1.4.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {1.4.3}FEDformer}{16}{subsubsection.1.4.3}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
+\contentsline {subsubsection}{\numberline {1.4.2}Autoformer}{16}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}FEDformer}{17}{subsubsection.1.4.3}%
 \contentsline {subsubsection}{\numberline {1.4.4}PatchTST}{17}{subsubsection.1.4.4}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.4.5}DLinear}{18}{subsubsection.1.4.5}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.4.6}N-BEATS}{19}{subsubsection.1.4.6}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.4.7}TimesNet}{20}{subsubsection.1.4.7}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.4.8}Helformer}{21}{subsubsection.1.4.8}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
 \contentsline {subsubsection}{\numberline {1.4.9}Итоги сравнительного анализа моделей}{22}{subsubsection.1.4.9}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {1.5}Соревнования по прогнозированию временных рядов}{24}{subsection.1.5}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
+\contentsline {subsection}{\numberline {1.5}Соревнования по прогнозированию временных рядов}{25}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}Выводы по обзору и обоснование структуры эксперимента}{26}{subsection.1.6}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {section}{\numberline {2}Экспериментальное исследование}{28}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Постановка эксперимента}{28}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Данные}{28}{subsubsection.2.1.1}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {2.1.2}Модели и~их конфигурация}{29}{subsubsection.2.1.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {2.1.3}Протокол оценки}{30}{subsubsection.2.1.3}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.2}Прямое сравнение моделей}{30}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Диагностика на~синтетических рядах}{30}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Результаты на~M3 Competition}{31}{subsubsection.2.2.2}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsubsection}{\numberline {2.2.3}Анализ по~частотным категориям M3}{35}{subsubsection.2.2.3}%
-\contentsline {paragraph}{Годовые ряды (Yearly).}{37}{paragraph*.13}%
-\contentsline {paragraph}{Квартальные ряды (Quarterly).}{38}{paragraph*.15}%
-\contentsline {paragraph}{Месячные ряды (Monthly).}{38}{paragraph*.17}%
-\contentsline {subsubsection}{\numberline {2.2.4}Результаты на~M4 Competition}{39}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Анализ по~частотным категориям M4}{42}{subsubsection.2.2.5}%
-\contentsline {paragraph}{Квартальные ряды M4 (Quarterly).}{42}{paragraph*.25}%
-\contentsline {paragraph}{Месячные ряды M4 (Monthly).}{43}{paragraph*.27}%
-\contentsline {paragraph}{Ежедневные ряды M4 (Daily).}{43}{paragraph*.29}%
-\contentsline {subsubsection}{\numberline {2.2.6}Кросс-датасетный анализ}{44}{subsubsection.2.2.6}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.3}Итеративное прогнозирование}{46}{subsection.2.3}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.4}Предобучение трансформерных моделей}{48}{subsection.2.4}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\contentsline {subsection}{\numberline {2.5}Выводы}{50}{subsection.2.5}%
-\contentsline {section}{Заключение}{54}{subsection.2.5}%
-\contentsline {section}{Список литературы}{57}{section*.42}%
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
-\xpg@aux {}{russian}
+\contentsline {section}{\numberline {2}Экспериментальное исследование}{29}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Постановка эксперимента}{29}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Данные}{29}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Модели и~их конфигурация}{30}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Протокол оценки}{31}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Прямое сравнение моделей}{31}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Диагностика на~синтетических рядах}{31}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Результаты на~M3 Competition}{34}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Анализ по~частотным категориям M3}{38}{subsubsection.2.2.3}%
+\contentsline {paragraph}{Годовые ряды (Yearly).}{39}{paragraph*.14}%
+\contentsline {paragraph}{Квартальные ряды (Quarterly).}{40}{paragraph*.16}%
+\contentsline {paragraph}{Месячные ряды (Monthly).}{40}{paragraph*.18}%
+\contentsline {subsubsection}{\numberline {2.2.4}Результаты на~M4 Competition}{41}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Анализ по~частотным категориям M4}{44}{subsubsection.2.2.5}%
+\contentsline {paragraph}{Квартальные ряды M4 (Quarterly).}{44}{paragraph*.26}%
+\contentsline {paragraph}{Месячные ряды M4 (Monthly).}{45}{paragraph*.28}%
+\contentsline {paragraph}{Ежедневные ряды M4 (Daily).}{45}{paragraph*.30}%
+\contentsline {subsubsection}{\numberline {2.2.6}Кросс-датасетный анализ}{46}{subsubsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.3}Итеративное прогнозирование}{48}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Предобучение трансформерных моделей}{51}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Выводы}{54}{subsection.2.5}%
+\contentsline {section}{Заключение}{57}{subsection.2.5}%

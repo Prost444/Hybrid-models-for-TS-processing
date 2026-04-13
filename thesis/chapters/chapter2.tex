@@ -200,21 +200,21 @@ TimesNet выделяется лучшим результатом на~changepoi
 демонстрируя способность двумерной декомпозиции адаптироваться к~смене
 структуры ряда.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_seasonal.png}
 \caption{Прогноз на~синтетическом ряде с~чистой сезонностью}
 \label{fig:synth-seasonal}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_trend_seasonal.png}
 \caption{Прогноз на~синтетическом ряде с~трендом и~сезонностью}
 \label{fig:synth-trend-seasonal}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_complex.png}
 \caption{Прогноз на~сложном синтетическом ряде (тренд + сезонность + шум + выброс)}
@@ -362,21 +362,21 @@ DLinear & 45.23 & 25.55 & 23.30 & 28.90 \\
 Рисунки~\ref{fig:forecast-m3-yearly}--\ref{fig:forecast-m3-monthly}
 иллюстрируют типичные прогнозы на~конкретных рядах каждой категории M3.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_yearly_T352.png}
 \caption{Пример прогноза на~годовом ряде T352 набора M3}
 \label{fig:forecast-m3-yearly}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_quarterly_T478.png}
 \caption{Пример прогноза на~квартальном ряде T478 набора M3}
 \label{fig:forecast-m3-quarterly}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_monthly_T779.png}
 \caption{Пример прогноза на~месячном ряде T779 набора M3}
@@ -579,21 +579,21 @@ Prophet        & 10.86 & 3.72 \\
 Рисунки~\ref{fig:forecast-m4-quarterly}--\ref{fig:forecast-m4-daily}
 иллюстрируют типичные прогнозы на~конкретных рядах каждой категории M4.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_quarterly_Q2061.png}
 \caption{Пример прогноза на~квартальном ряде Q2061 набора M4}
 \label{fig:forecast-m4-quarterly}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_monthly_M4124.png}
 \caption{Пример прогноза на~месячном ряде M4124 набора M4}
 \label{fig:forecast-m4-monthly}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_daily_D362.png}
 \caption{Пример прогноза на~ежедневном ряде D362 набора M4}
@@ -915,14 +915,14 @@ Autoformer~$+4.62$, N-BEATS~$+3.86$, PatchTST~$+2.18$, DLinear~$-0.05$.
 PatchTST, работающий непосредственно с~патчами входного ряда без
 явной декомпозиции, оказывается наиболее робастным.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_quarterly_T478.png}
 \caption{Сравнение прямого и~итеративного прогнозов на~квартальном ряде T478}
 \label{fig:rollout-quarterly}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_monthly_T779.png}
 \caption{Сравнение прямого и~итеративного прогнозов на~месячном ряде T779}
@@ -1031,14 +1031,14 @@ N-BEATS с~архитектурой residual-стеков~\cite{oreshkin2020nbea
 подходами --- и~даже превзойти их, как продемонстрировано
 в~ряде недавних работ~\cite{nie2023patchtst, liu2024itransformer}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_patchtst_T779.png}
 \caption{PatchTST: прогноз с~предобучением и~без на~ряде T779}
 \label{fig:pretrain-patchtst}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_autoformer_T779.png}
 \caption{Autoformer: прогноз с~предобучением и~без на~ряде T779}
