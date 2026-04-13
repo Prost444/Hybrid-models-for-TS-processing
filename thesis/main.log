@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 04:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  13 APR 2026 04:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1244,7 +1244,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `main.toc'.
 
 
-Overfull \vbox (254.5317pt too high) has occurred while \output is active []
+Overfull \vbox (240.1317pt too high) has occurred while \output is active []
 
 
 
@@ -1252,34 +1252,36 @@ Overfull \vbox (254.5317pt too high) has occurred while \output is active []
 
 ]
 
-[3] (./chapters/chapter1.tex
+[3]
 
-LaTeX Warning: Citation 'hamilton1994time' on page 4 undefined on input line 17
+[4] (./chapters/chapter1.tex
+
+LaTeX Warning: Citation 'hamilton1994time' on page 5 undefined on input line 17
 .
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 4 undefined on input line 24
+LaTeX Warning: Citation 'makridakis2000m3' on page 5 undefined on input line 24
 .
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 4 undefined on input line 24
+LaTeX Warning: Citation 'makridakis2020m4' on page 5 undefined on input line 24
 .
 
 
-LaTeX Warning: Citation 'box1970time' on page 4 undefined on input line 44.
+LaTeX Warning: Citation 'box1970time' on page 5 undefined on input line 44.
 
 
 
-[4]
+[5]
 
-LaTeX Warning: Citation 'box1970time' on page 5 undefined on input line 57.
+LaTeX Warning: Citation 'box1970time' on page 6 undefined on input line 57.
 
 
-LaTeX Warning: Citation 'beveridge1981decomposition' on page 5 undefined on inp
+LaTeX Warning: Citation 'beveridge1981decomposition' on page 6 undefined on inp
 ut line 61.
 
 
-LaTeX Warning: Citation 'wold1938study' on page 5 undefined on input line 63.
+LaTeX Warning: Citation 'wold1938study' on page 6 undefined on input line 63.
 
 
 Underfull \hbox (badness 2050) in paragraph at lines 69--73
@@ -1288,27 +1290,27 @@ Underfull \hbox (badness 2050) in paragraph at lines 69--73
  []
 
 
-LaTeX Warning: Citation 'hyndman2021forecasting' on page 5 undefined on input l
+LaTeX Warning: Citation 'hyndman2021forecasting' on page 6 undefined on input l
 ine 80.
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 5 undefined on input line 85
+LaTeX Warning: Citation 'makridakis2000m3' on page 6 undefined on input line 85
 .
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 5 undefined on input line 86
+LaTeX Warning: Citation 'makridakis2020m4' on page 6 undefined on input line 86
 .
 
 
 
-[5]
+[6]
 Underfull \hbox (badness 4254) in paragraph at lines 113--114
 []\TU/TimesNewRoman(1)/b/n/14.4 Среднеквадратическая ошибка \TU/TimesNewRoman(1
 )/m/n/14.4 (MSE) и её квадратный корень
  []
 
 
-LaTeX Warning: Citation 'goodfellow2016deep' on page 6 undefined on input line 
+LaTeX Warning: Citation 'goodfellow2016deep' on page 7 undefined on input line 
 121.
 
 
@@ -1324,11 +1326,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--122
  []
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 6 undefined on input line 13
+LaTeX Warning: Citation 'makridakis2000m3' on page 7 undefined on input line 13
 9.
 
 
-LaTeX Warning: Citation 'hyndman2006accuracy' on page 6 undefined on input line
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 7 undefined on input line
  142.
 
 
@@ -1350,9 +1352,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--143
 
 
 
-[6]
+[7]
 
-LaTeX Warning: Citation 'hyndman2006accuracy' on page 7 undefined on input line
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 8 undefined on input line
  152.
 
 
@@ -1361,7 +1363,7 @@ Underfull \hbox (badness 2903) in paragraph at lines 149--158
  []
 
 
-LaTeX Warning: Citation 'box1970time' on page 7 undefined on input line 170.
+LaTeX Warning: Citation 'box1970time' on page 8 undefined on input line 170.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 168--173
@@ -1376,12 +1378,12 @@ Underfull \hbox (badness 3029) in paragraph at lines 168--173
  []
 
 
-LaTeX Warning: Citation 'hamilton1994time' on page 7 undefined on input line 18
+LaTeX Warning: Citation 'hamilton1994time' on page 8 undefined on input line 18
 5.
 
 
 
-[7]
+[8]
 Underfull \hbox (badness 2165) in paragraph at lines 197--200
 []\TU/TimesNewRoman(1)/m/n/14.4 Объединяя оба процесса, получают модель ARMA($\
 OML/cmm/m/it/14.4 p$\TU/TimesNewRoman(1)/m/n/14.4 ,$\OML/cmm/m/it/14.4 q$\TU/Ti
@@ -1389,12 +1391,12 @@ mesNewRoman(1)/m/n/14.4 ), а приме-
  []
 
 
-LaTeX Warning: Citation 'box1970time' on page 8 undefined on input line 215.
+LaTeX Warning: Citation 'box1970time' on page 9 undefined on input line 215.
 
 LaTeX Font Info:    Font shape `TU/PTMono(0)/m/n' will be
 (Font)              scaled to size 12.24008pt on input line 221.
 
-LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 8 undefined on input 
+LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 9 undefined on input 
 line 224.
 
 
@@ -1423,11 +1425,11 @@ Underfull \hbox (badness 2261) in paragraph at lines 217--226
  []
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 8 undefined on input line 22
+LaTeX Warning: Citation 'makridakis2000m3' on page 9 undefined on input line 22
 7.
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 8 undefined on input line 22
+LaTeX Warning: Citation 'makridakis2020m4' on page 9 undefined on input line 22
 8.
 
 
@@ -1437,28 +1439,28 @@ Overfull \hbox (37.22423pt too wide) in paragraph at lines 227--237
 
 
 
-[8]
-
-LaTeX Warning: Citation 'holt2004forecasting' on page 9 undefined on input line
- 243.
-
-
-LaTeX Warning: Citation 'winters1960forecasting' on page 9 undefined on input l
-ine 244.
-
-
-LaTeX Warning: Citation 'hyndman2002ets' on page 9 undefined on input line 276.
-
-
-
-LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 9 undefined on input 
-line 284.
-
-
-
 [9]
 
-LaTeX Warning: Citation 'delivera2011tbats' on page 10 undefined on input line 
+LaTeX Warning: Citation 'holt2004forecasting' on page 10 undefined on input lin
+e 243.
+
+
+LaTeX Warning: Citation 'winters1960forecasting' on page 10 undefined on input 
+line 244.
+
+
+LaTeX Warning: Citation 'hyndman2002ets' on page 10 undefined on input line 276
+.
+
+
+LaTeX Warning: Citation 'hyndman2008expsmoothing' on page 10 undefined on input
+ line 284.
+
+
+
+[10]
+
+LaTeX Warning: Citation 'delivera2011tbats' on page 11 undefined on input line 
 291.
 
 
@@ -1474,15 +1476,15 @@ Underfull \hbox (badness 3158) in paragraph at lines 286--295
  []
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 10 undefined on input line 2
+LaTeX Warning: Citation 'makridakis2000m3' on page 11 undefined on input line 2
 97.
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 10 undefined on input line 2
+LaTeX Warning: Citation 'makridakis2020m4' on page 11 undefined on input line 2
 99.
 
 
-LaTeX Warning: Citation 'smyl2020hybrid' on page 10 undefined on input line 301
+LaTeX Warning: Citation 'smyl2020hybrid' on page 11 undefined on input line 301
 .
 
 
@@ -1492,7 +1494,7 @@ Underfull \hbox (badness 2529) in paragraph at lines 296--305
  []
 
 
-LaTeX Warning: Citation 'taylor2018prophet' on page 10 undefined on input line 
+LaTeX Warning: Citation 'taylor2018prophet' on page 11 undefined on input line 
 310.
 
 
@@ -1503,9 +1505,9 @@ Overfull \hbox (13.15749pt too wide) in paragraph at lines 310--312
 
 
 
-[10]
+[11]
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 11 undefined on input line 3
+LaTeX Warning: Citation 'makridakis2020m4' on page 12 undefined on input line 3
 45.
 
 
@@ -1515,22 +1517,22 @@ Underfull \hbox (badness 2582) in paragraph at lines 342--351
  []
 
 
-LaTeX Warning: Citation 'aivazyan1998statistics' on page 11 undefined on input 
+LaTeX Warning: Citation 'aivazyan1998statistics' on page 12 undefined on input 
 line 362.
 
 
-LaTeX Warning: Citation 'cleveland1990stl' on page 11 undefined on input line 3
+LaTeX Warning: Citation 'cleveland1990stl' on page 12 undefined on input line 3
 74.
 
 
 
-[11]
+[12]
 
-LaTeX Warning: Citation 'percival2000wavelet' on page 12 undefined on input lin
+LaTeX Warning: Citation 'percival2000wavelet' on page 13 undefined on input lin
 e 390.
 
 
-LaTeX Warning: Citation 'percival1995wavelet' on page 12 undefined on input lin
+LaTeX Warning: Citation 'percival1995wavelet' on page 13 undefined on input lin
 e 394.
 
 
@@ -1552,7 +1554,7 @@ Underfull \hbox (badness 2707) in paragraph at lines 388--397
  []
 
 
-LaTeX Warning: Citation 'zeng2023transformers' on page 12 undefined on input li
+LaTeX Warning: Citation 'zeng2023transformers' on page 13 undefined on input li
 ne 415.
 
 
@@ -1563,9 +1565,9 @@ Overfull \hbox (5.92577pt too wide) in paragraph at lines 415--418
 
 
 
-[12]
+[13]
 
-LaTeX Warning: Citation 'oreshkin2020nbeats' on page 13 undefined on input line
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 14 undefined on input line
  428.
 
 
@@ -1575,22 +1577,22 @@ N-BEATS [[]],
  []
 
 
-LaTeX Warning: Citation 'wu2021autoformer' on page 13 undefined on input line 4
+LaTeX Warning: Citation 'wu2021autoformer' on page 14 undefined on input line 4
 35.
 
 
-LaTeX Warning: Citation 'zhou2022fedformer' on page 13 undefined on input line 
+LaTeX Warning: Citation 'zhou2022fedformer' on page 14 undefined on input line 
 441.
 
 
-LaTeX Warning: Citation 'wu2023timesnet' on page 13 undefined on input line 447
+LaTeX Warning: Citation 'wu2023timesnet' on page 14 undefined on input line 447
 .
 
 
 
-[13]
+[14]
 
-LaTeX Warning: Citation 'vaswani2017attention' on page 14 undefined on input li
+LaTeX Warning: Citation 'vaswani2017attention' on page 15 undefined on input li
 ne 473.
 
 
@@ -1600,14 +1602,14 @@ Overfull \hbox (44.34106pt too wide) in paragraph at lines 472--476
  []
 
 
-LaTeX Warning: Citation 'vaswani2017attention' on page 14 undefined on input li
+LaTeX Warning: Citation 'vaswani2017attention' on page 15 undefined on input li
 ne 497.
 
 
-LaTeX Warning: Citation 'he2016resnet' on page 14 undefined on input line 501.
+LaTeX Warning: Citation 'he2016resnet' on page 15 undefined on input line 501.
 
 
-LaTeX Warning: Citation 'ba2016layernorm' on page 14 undefined on input line 50
+LaTeX Warning: Citation 'ba2016layernorm' on page 15 undefined on input line 50
 2.
 
 
@@ -1623,30 +1625,30 @@ Underfull \hbox (badness 4024) in paragraph at lines 499--504
  []
 
 
-LaTeX Warning: Citation 'hochreiter1997lstm' on page 14 undefined on input line
+LaTeX Warning: Citation 'hochreiter1997lstm' on page 15 undefined on input line
  507.
 
 
-LaTeX Warning: Citation 'salinas2020deepar' on page 14 undefined on input line 
+LaTeX Warning: Citation 'salinas2020deepar' on page 15 undefined on input line 
 513.
 
 
 
-[14]
+[15]
 
-LaTeX Warning: Citation 'zhou2021informer' on page 15 undefined on input line 5
+LaTeX Warning: Citation 'zhou2021informer' on page 16 undefined on input line 5
 20.
 
 
-LaTeX Warning: Citation 'li2019enhancing' on page 15 undefined on input line 52
+LaTeX Warning: Citation 'li2019enhancing' on page 16 undefined on input line 52
 3.
 
 
-LaTeX Warning: Citation 'liu2022nonstationary' on page 15 undefined on input li
+LaTeX Warning: Citation 'liu2022nonstationary' on page 16 undefined on input li
 ne 526.
 
 
-LaTeX Warning: Citation 'lim2021temporal' on page 15 undefined on input line 53
+LaTeX Warning: Citation 'lim2021temporal' on page 16 undefined on input line 53
 2.
 
 
@@ -1662,27 +1664,27 @@ Underfull \hbox (badness 3009) in paragraph at lines 517--535
  []
 
 
-LaTeX Warning: Citation 'wen2023transformers' on page 15 undefined on input lin
+LaTeX Warning: Citation 'wen2023transformers' on page 16 undefined on input lin
 e 538.
 
 
-LaTeX Warning: Citation 'lim2021survey' on page 15 undefined on input line 544.
+LaTeX Warning: Citation 'lim2021survey' on page 16 undefined on input line 544.
 
 
 
-LaTeX Warning: Citation 'torres2021deep' on page 15 undefined on input line 544
+LaTeX Warning: Citation 'torres2021deep' on page 16 undefined on input line 544
 .
 
 
-LaTeX Warning: Citation 'benidis2022deep' on page 15 undefined on input line 54
+LaTeX Warning: Citation 'benidis2022deep' on page 16 undefined on input line 54
 4.
 
 
-LaTeX Warning: Citation 'wen2023transformers' on page 15 undefined on input lin
+LaTeX Warning: Citation 'wen2023transformers' on page 16 undefined on input lin
 e 544.
 
 
-LaTeX Warning: Citation 'hewamalage2021recurrent' on page 15 undefined on input
+LaTeX Warning: Citation 'hewamalage2021recurrent' on page 16 undefined on input
  line 544.
 
 
@@ -1704,9 +1706,9 @@ Underfull \hbox (badness 3179) in paragraph at lines 536--548
 
 
 
-[15]
+[16]
 
-LaTeX Warning: Citation 'wu2021autoformer' on page 16 undefined on input line 5
+LaTeX Warning: Citation 'wu2021autoformer' on page 17 undefined on input line 5
 53.
 
 
@@ -1716,22 +1718,22 @@ Underfull \hbox (badness 5985) in paragraph at lines 567--571
  []
 
 
-LaTeX Warning: Citation 'wu2021autoformer' on page 16 undefined on input line 5
+LaTeX Warning: Citation 'wu2021autoformer' on page 17 undefined on input line 5
 85.
 
 
-LaTeX Warning: Citation 'zhou2022fedformer' on page 16 undefined on input line 
+LaTeX Warning: Citation 'zhou2022fedformer' on page 17 undefined on input line 
 594.
 
 
 
-[16]
+[17]
 
-LaTeX Warning: Citation 'percival2000wavelet' on page 17 undefined on input lin
+LaTeX Warning: Citation 'percival2000wavelet' on page 18 undefined on input lin
 e 627.
 
 
-LaTeX Warning: Citation 'nie2023patchtst' on page 17 undefined on input line 63
+LaTeX Warning: Citation 'nie2023patchtst' on page 18 undefined on input line 63
 4.
 
 
@@ -1742,72 +1744,72 @@ Underfull \hbox (badness 4981) in paragraph at lines 634--638
 
 
 
-[17]
+[18]
 
-LaTeX Warning: Citation 'nie2023patchtst' on page 18 undefined on input line 66
+LaTeX Warning: Citation 'nie2023patchtst' on page 19 undefined on input line 66
 1.
 
 
-LaTeX Warning: Citation 'zeng2023transformers' on page 18 undefined on input li
+LaTeX Warning: Citation 'zeng2023transformers' on page 19 undefined on input li
 ne 675.
-
-
-
-[18]
-
-LaTeX Warning: Citation 'wen2023transformers' on page 19 undefined on input lin
-e 702.
-
-
-LaTeX Warning: Citation 'oreshkin2020nbeats' on page 19 undefined on input line
- 716.
-
-
-LaTeX Warning: Citation 'he2016resnet' on page 19 undefined on input line 724.
 
 
 
 [19]
 
-LaTeX Warning: Citation 'smyl2020hybrid' on page 20 undefined on input line 754
-.
+LaTeX Warning: Citation 'wen2023transformers' on page 20 undefined on input lin
+e 702.
 
 
 LaTeX Warning: Citation 'oreshkin2020nbeats' on page 20 undefined on input line
- 756.
+ 716.
 
 
-LaTeX Warning: Citation 'challu2023nhits' on page 20 undefined on input line 75
-7.
-
-
-LaTeX Warning: Citation 'wu2023timesnet' on page 20 undefined on input line 764
-.
-
-
-LaTeX Warning: Citation 'wu2023timesnet' on page 20 undefined on input line 788
-.
+LaTeX Warning: Citation 'he2016resnet' on page 20 undefined on input line 724.
 
 
 
 [20]
 
-LaTeX Warning: Citation 'percival2000wavelet' on page 21 undefined on input lin
-e 805.
+LaTeX Warning: Citation 'smyl2020hybrid' on page 21 undefined on input line 754
+.
 
 
-LaTeX Warning: Citation 'kehinde2025helformer' on page 21 undefined on input li
-ne 812.
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 21 undefined on input line
+ 756.
 
 
-LaTeX Warning: Citation 'hochreiter1997lstm' on page 21 undefined on input line
- 832.
+LaTeX Warning: Citation 'challu2023nhits' on page 21 undefined on input line 75
+7.
+
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 21 undefined on input line 764
+.
+
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 21 undefined on input line 788
+.
 
 
 
 [21]
 
+LaTeX Warning: Citation 'percival2000wavelet' on page 22 undefined on input lin
+e 805.
+
+
 LaTeX Warning: Citation 'kehinde2025helformer' on page 22 undefined on input li
+ne 812.
+
+
+LaTeX Warning: Citation 'hochreiter1997lstm' on page 22 undefined on input line
+ 832.
+
+
+
+[22]
+
+LaTeX Warning: Citation 'kehinde2025helformer' on page 23 undefined on input li
 ne 852.
 
 
@@ -2233,42 +2235,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
 
 
-[22]
-
 [23]
-
-LaTeX Warning: Citation 'makridakis2000m3' on page 24 undefined on input line 1
-001.
-
-
-LaTeX Warning: Citation 'makridakis2020m4' on page 24 undefined on input line 1
-001.
-
-
-LaTeX Warning: Citation 'zeng2023transformers' on page 24 undefined on input li
-ne 1002.
-
-
 
 [24]
 
 LaTeX Warning: Citation 'makridakis2000m3' on page 25 undefined on input line 1
-025.
+001.
 
 
 LaTeX Warning: Citation 'makridakis2020m4' on page 25 undefined on input line 1
+001.
+
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 25 undefined on input li
+ne 1002.
+
+
+
+[25]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 26 undefined on input line 1
+025.
+
+
+LaTeX Warning: Citation 'makridakis2020m4' on page 26 undefined on input line 1
 040.
 
 
-LaTeX Warning: Citation 'smyl2020hybrid' on page 25 undefined on input line 104
+LaTeX Warning: Citation 'smyl2020hybrid' on page 26 undefined on input line 104
 2.
 
 
-LaTeX Warning: Citation 'monteromanso2020fforma' on page 25 undefined on input 
+LaTeX Warning: Citation 'monteromanso2020fforma' on page 26 undefined on input 
 line 1045.
 
 
-LaTeX Warning: Citation 'oreshkin2020nbeats' on page 25 undefined on input line
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 26 undefined on input line
  1047.
 
 
@@ -2285,9 +2287,9 @@ Underfull \hbox (badness 7099) in paragraph at lines 1054--1056
 
 
 
-[25]
+[26]
 
-LaTeX Warning: Citation 'makridakis2022m5' on page 26 undefined on input line 1
+LaTeX Warning: Citation 'makridakis2022m5' on page 27 undefined on input line 1
 063.
 
 
@@ -2297,7 +2299,7 @@ Overfull \hbox (57.03828pt too wide) in paragraph at lines 1062--1069
  []
 
 
-LaTeX Warning: Citation 'godahewa2021monash' on page 26 undefined on input line
+LaTeX Warning: Citation 'godahewa2021monash' on page 27 undefined on input line
  1072.
 
 
@@ -2308,21 +2310,21 @@ Overfull \hbox (51.99501pt too wide) in paragraph at lines 1070--1077
 
 
 
-[26]
+[27]
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 27 undefined on input line 1
+LaTeX Warning: Citation 'makridakis2000m3' on page 28 undefined on input line 1
 113.
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 27 undefined on input line 1
+LaTeX Warning: Citation 'makridakis2020m4' on page 28 undefined on input line 1
 113.
 
 
-LaTeX Warning: Citation 'zeng2023transformers' on page 27 undefined on input li
+LaTeX Warning: Citation 'zeng2023transformers' on page 28 undefined on input li
 ne 1114.
 
 
-LaTeX Warning: Citation 'godahewa2021monash' on page 27 undefined on input line
+LaTeX Warning: Citation 'godahewa2021monash' on page 28 undefined on input line
  1123.
 
 
@@ -2350,15 +2352,15 @@ Underfull \hbox (badness 6063) in paragraph at lines 1118--1126
 
 
 
-[27]) (./chapters/chapter2.tex
+[28]) (./chapters/chapter2.tex
 
-[28]
+[29]
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 29 undefined on input line 2
+LaTeX Warning: Citation 'makridakis2000m3' on page 30 undefined on input line 2
 4.
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 29 undefined on input line 2
+LaTeX Warning: Citation 'makridakis2020m4' on page 30 undefined on input line 2
 5.
 
 
@@ -2374,11 +2376,11 @@ Underfull \hbox (badness 7238) in paragraph at lines 23--26
  []
 
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 29 undefined on input line 5
+LaTeX Warning: Citation 'makridakis2000m3' on page 30 undefined on input line 5
 4.
 
 
-LaTeX Warning: Citation 'makridakis2020m4' on page 29 undefined on input line 5
+LaTeX Warning: Citation 'makridakis2020m4' on page 30 undefined on input line 5
 4.
 
 
@@ -2390,20 +2392,20 @@ Underfull \hbox (badness 2790) in paragraph at lines 51--56
 
 
 
-[29]
+[30]
 
-LaTeX Warning: Citation 'bandara2020forecasting' on page 30 undefined on input 
+LaTeX Warning: Citation 'bandara2020forecasting' on page 31 undefined on input 
 line 94.
 
 
-LaTeX Warning: Citation 'kingma2015adam' on page 30 undefined on input line 102
+LaTeX Warning: Citation 'kingma2015adam' on page 31 undefined on input line 102
 .
 
 
 
-[30]
+[31]
 
-LaTeX Warning: Citation 'hyndman2006accuracy' on page 31 undefined on input lin
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 32 undefined on input lin
 e 132.
 
 
@@ -2413,12 +2415,12 @@ Overfull \hbox (32.3766pt too wide) in paragraph at lines 131--133
  []
 
 
-LaTeX Warning: Citation 'hyndman2006accuracy' on page 31 undefined on input lin
+LaTeX Warning: Citation 'hyndman2006accuracy' on page 32 undefined on input lin
 e 137.
 
 
 
-[31]
+[32]
 Underfull \hbox (badness 2726) in paragraph at lines 192--202
 \TU/TimesNewRoman(1)/m/n/14.4 сированной HW-декомпозиции. Примечательна катастр
 офическая ошиб-
@@ -2434,18 +2436,18 @@ File: figures/synth_seasonal.png Graphic file (type bmp)
 <figures/synth_seasonal.png>
 
 
-[32]
+[33]
 File: figures/synth_trend_seasonal.png Graphic file (type bmp)
 <figures/synth_trend_seasonal.png>
 File: figures/synth_complex.png Graphic file (type bmp)
 <figures/synth_complex.png>
 
 
-[33]
-
 [34]
 
-LaTeX Warning: Citation 'makridakis2000m3' on page 35 undefined on input line 3
+[35]
+
+LaTeX Warning: Citation 'makridakis2000m3' on page 36 undefined on input line 3
 03.
 
 
@@ -2462,34 +2464,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--307
 
 
 
-[35]
+[36]
 File: figures/bar_m3_by_freq.png Graphic file (type bmp)
 <figures/bar_m3_by_freq.png>
 
 
-[36]
+[37]
+File: figures/bar_m3_full.png Graphic file (type bmp)
+<figures/bar_m3_full.png>
 File: figures/m3_yearly_T352.png Graphic file (type bmp)
 <figures/m3_yearly_T352.png>
-File: figures/m3_quarterly_T478.png Graphic file (type bmp)
-<figures/m3_quarterly_T478.png>
-
-
-[37]
-File: figures/m3_monthly_T779.png Graphic file (type bmp)
-<figures/m3_monthly_T779.png>
 
 
 [38]
+File: figures/m3_quarterly_T478.png Graphic file (type bmp)
+<figures/m3_quarterly_T478.png>
+File: figures/m3_monthly_T779.png Graphic file (type bmp)
+<figures/m3_monthly_T779.png>
+
 
 [39]
 
 [40]
 
 [41]
+
+[42]
 File: figures/bar_m4_daily_full.png Graphic file (type bmp)
 <figures/bar_m4_daily_full.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--578
+Underfull \hbox (badness 10000) in paragraph at lines 579--585
 []\TU/TimesNewRoman(1)/m/n/14.4 На ежедневных рядах DLinear (2.43) впервые опер
 ежает ETS
  []
@@ -2498,134 +2502,151 @@ File: figures/m4_quarterly_Q2061.png Graphic file (type bmp)
 <figures/m4_quarterly_Q2061.png>
 
 
-[42]
+[43]
 File: figures/m4_monthly_M4124.png Graphic file (type bmp)
 <figures/m4_monthly_M4124.png>
 File: figures/m4_daily_D362.png Graphic file (type bmp)
 <figures/m4_daily_D362.png>
 
 
-[43]
-
 [44]
 
 [45]
 
 [46]
+
+[47]
 File: figures/heatmap_smape.png Graphic file (type bmp)
 <figures/heatmap_smape.png>
 File: figures/heatmap_rank.png Graphic file (type bmp)
 <figures/heatmap_rank.png>
 
 
-[47]
-
-LaTeX Warning: Citation 'zeng2023transformers' on page 48 undefined on input li
-ne 804.
-
-
-LaTeX Warning: Citation 'cerqueira2020evaluating' on page 48 undefined on input
- line 835.
-
-
-
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 865--874
+
+LaTeX Warning: Citation 'zeng2023transformers' on page 49 undefined on input li
+ne 811.
+
+
+LaTeX Warning: Citation 'cerqueira2020evaluating' on page 49 undefined on input
+ line 842.
+
+
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 872--881
 []\TU/TimesNewRoman(1)/m/n/14.4 Классические модели практически нечувствительны
  к переходу
  []
 
 
 
-[49]
+[50]
 File: figures/rollout_m3_quarterly_T478.png Graphic file (type bmp)
 <figures/rollout_m3_quarterly_T478.png>
 
 
-[50]
+[51]
 File: figures/rollout_m3_monthly_T779.png Graphic file (type bmp)
 <figures/rollout_m3_monthly_T779.png>
 
 
-LaTeX Warning: Citation 'bandara2020forecasting' on page 51 undefined on input 
-line 953.
+LaTeX Warning: Citation 'bandara2020forecasting' on page 52 undefined on input 
+line 960.
 
 
-
-[51]
 
 [52]
 
-LaTeX Warning: Citation 'wu2023timesnet' on page 53 undefined on input line 101
-1.
+[53]
+
+[54]
+
+[55]
+Overfull \hbox (7.59341pt too wide) in paragraph at lines 1145--1151
+[]\TU/TimesNewRoman(1)/m/it/14.4 TimesNet с предобучением (13.68) превосходит E
+TS (17.42) на M3 monthly.
+ []
 
 
-LaTeX Warning: Citation 'oreshkin2020nbeats' on page 53 undefined on input line
- 1018.
+
+[56]
+File: figures/pretrain_effect_all.png Graphic file (type bmp)
+<figures/pretrain_effect_all.png>
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1023
+[57]
+
+LaTeX Warning: Citation 'wu2023timesnet' on page 58 undefined on input line 121
+3.
+
+
+LaTeX Warning: Citation 'oreshkin2020nbeats' on page 58 undefined on input line
+ 1220.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1225
 \TU/TimesNewRoman(1)/m/n/14.4 стеков [[]] демонстрирует среднее улучшение лишь
  []
 
 
-LaTeX Warning: Citation 'nie2023patchtst' on page 53 undefined on input line 10
-32.
+LaTeX Warning: Citation 'nie2023patchtst' on page 58 undefined on input line 12
+34.
 
 
-LaTeX Warning: Citation 'liu2024itransformer' on page 53 undefined on input lin
-e 1032.
+LaTeX Warning: Citation 'liu2024itransformer' on page 58 undefined on input lin
+e 1234.
 
 File: figures/pretrain_m3_monthly_patchtst_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_patchtst_T779.png>
 
 
-[53]
+[58]
 File: figures/pretrain_m3_monthly_autoformer_T779.png Graphic file (type bmp)
 <figures/pretrain_m3_monthly_autoformer_T779.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1268
 \TU/TimesNewRoman(1)/m/n/14.4 показала лучшие метрики на подвыборке M3 (sMAPE 1
 0.61,
  []
 
 
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1085
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 1278--1287
 \TU/TimesNewRoman(1)/m/n/14.4 FEDformer (ранг 9.50) проигрывают более простым N
 -BEATS
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 1076--1085
+Underfull \hbox (badness 2096) in paragraph at lines 1278--1287
 \TU/TimesNewRoman(1)/m/n/14.4 (ранг 6.67) и TimesNet (ранг 6.50). Однако гибрид
 ный Helformer
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 1076--1085
+Underfull \hbox (badness 2065) in paragraph at lines 1278--1287
 \TU/TimesNewRoman(1)/m/n/14.4 быть эффективной при наличии качественной фиксиро
 ванной де-
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 1076--1085
+Underfull \hbox (badness 2564) in paragraph at lines 1278--1287
 \TU/TimesNewRoman(1)/m/n/14.4 композиции. Масштабный эксперимент с предобучение
 м на пяти
  []
 
 
 
-[55]) (./chapters/conclusion.tex
+[60]) (./chapters/conclusion.tex
 
-[56]
+[61]
 
-[57]
+[62]
 
-[58])
+[63])
 
-[59]
+[64]
 
 LaTeX Warning: Empty bibliography on input line 216.
 
@@ -2639,7 +2660,7 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 61FF897DF996DF4E55A9956F8EE6C019;10376.
+(rerunfilecheck)             Checksum: B21F6544AE4D4F2A551F6FDBC92C4390;10804.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2650,12 +2671,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26380 strings out of 473832
- 523427 string characters out of 5729482
- 1633145 words of memory out of 5000000
- 49028 multiletter control sequences out of 15000+600000
+ 26406 strings out of 473832
+ 524137 string characters out of 5729482
+ 1633243 words of memory out of 5000000
+ 49052 multiletter control sequences out of 15000+600000
  570407 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,12n,96p,693b,5468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (58 pages).
+Output written on main.pdf (63 pages).
