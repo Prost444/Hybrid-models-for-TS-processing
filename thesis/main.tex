@@ -125,25 +125,10 @@
   bookmarks   = true,
 ]{hyperref}
 
-% ---- Библиография (biblatex-gost) ----------------------------------------
-%  Стиль gost-numeric — нумерованный список по ГОСТ Р 7.0.5-2008
-\usepackage[
-  backend  = biber,
-  style    = gost-numeric,
-  sorting  = none,
-  language = russian,
-  autolang = other,
-]{biblatex}
-\addbibresource{references.bib}
-
-% Русификация biblatex-gost
-\DefineBibliographyStrings{russian}{%
-  urlfrom  = {Режим доступа\addcolon},
-  urlseen  = {дата обращения},
-}
-% Заменить «URL:» на «Режим доступа:» в выводе
-\DeclareFieldFormat{url}{Режим доступа\addcolon\space\url{#1}}
-\DeclareFieldFormat{urldate}{\mkbibparens{\bibstring{urlseen}\space#1}}
+% ---- Библиография ---------------------------------------------------------
+%  Список литературы оформлен вручную (thebibliography) строго по образцу
+%  ГОСТ Р 7.0.5-2008, без biblatex/biber. См. блок \begin{thebibliography}
+%  в конце документа.
 
 % ---- Листинги кода (если потребуется) -------------------------------------
 \usepackage{listings}
@@ -211,6 +196,107 @@ ARIMA, ETS, Prophet, N-BEATS, DLinear, Autoformer, TimesNet и Helformer.
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Список литературы}
-\printbibliography[title={Список литературы}]
+\renewcommand{\refname}{Список литературы}
+\begin{thebibliography}{99}
+
+\bibitem{hamilton1994time} Hamilton J.D. Time Series Analysis / J.D.~Hamilton. − Princeton, NJ: Princeton University Press, 1994. − 799~p.
+
+\bibitem{makridakis2000m3} Makridakis S. The M3-Competition: Results, Conclusions and Implications / S.~Makridakis, M.~Hibon // International Journal of Forecasting. − 2000. − Vol.~16, no.~4. − P.~451−476. − DOI: 10.1016/S0169-2070(00)00057-1.
+
+\bibitem{makridakis2020m4} Makridakis S. The M4 Competition: 100,000 Time Series and 61 Forecasting Methods / S.~Makridakis, E.~Spiliotis, V.~Assimakopoulos // International Journal of Forecasting. − 2020. − Vol.~36, no.~1. − P.~54−74. − DOI: 10.1016/j.ijforecast.2019.04.014.
+
+\bibitem{box1970time} Box G.E.P. Time Series Analysis: Forecasting and Control / G.E.P.~Box, G.M.~Jenkins. − San Francisco: Holden-Day, 1970. − 553~p.
+
+\bibitem{beveridge1981decomposition} Beveridge S. A New Approach to Decomposition of Economic Time Series into Permanent and Transitory Components with Particular Attention to Measurement of the ``Business Cycle'' / S.~Beveridge, C.R.~Nelson // Journal of Monetary Economics. − 1981. − Vol.~7, no.~2. − P.~151−174. − DOI: 10.1016/0304-3932(81)90040-4.
+
+\bibitem{wold1938study} Wold H. A Study in the Analysis of Stationary Time Series / H.~Wold. − Uppsala: Almqvist \& Wiksells, 1938. − 214~p.
+
+\bibitem{hyndman2021forecasting} Hyndman R.J. Forecasting: Principles and Practice / R.J.~Hyndman, G.~Athanasopoulos. − 3rd ed. − Melbourne, Australia: OTexts, 2021. − 442~p.
+
+\bibitem{goodfellow2016deep} Goodfellow I. Deep Learning / I.~Goodfellow, Y.~Bengio, A.~Courville. − Cambridge, MA: MIT Press, 2016. − 775~p.
+
+\bibitem{hyndman2006accuracy} Hyndman R.J. Another Look at Measures of Forecast Accuracy / R.J.~Hyndman, A.B.~Koehler // International Journal of Forecasting. − 2006. − Vol.~22, no.~4. − P.~679−688. − DOI: 10.1016/j.ijforecast.2006.03.001.
+
+\bibitem{hyndman2008expsmoothing} Hyndman R.J. Forecasting with Exponential Smoothing: The State Space Approach / R.J.~Hyndman, A.B.~Koehler, J.K.~Ord, R.D.~Snyder. − Berlin, Heidelberg: Springer, 2008. − 362~p. − DOI: 10.1007/978-3-540-71918-2.
+
+\bibitem{holt2004forecasting} Holt C.C. Forecasting Seasonals and Trends by Exponentially Weighted Moving Averages / C.C.~Holt // International Journal of Forecasting. − 2004. − Vol.~20, no.~1. − P.~5−10. − DOI: 10.1016/j.ijforecast.2003.09.015.
+
+\bibitem{winters1960forecasting} Winters P.R. Forecasting Sales by Exponentially Weighted Moving Averages / P.R.~Winters // Management Science. − 1960. − Vol.~6, no.~3. − P.~324−342. − DOI: 10.1287/mnsc.6.3.324.
+
+\bibitem{hyndman2002ets} Hyndman R.J. A State Space Framework for Automatic Forecasting Using Exponential Smoothing Methods / R.J.~Hyndman, A.B.~Koehler, R.D.~Snyder, S.~Grose // International Journal of Forecasting. − 2002. − Vol.~18, no.~3. − P.~439−454. − DOI: 10.1016/S0169-2070(01)00110-8.
+
+\bibitem{delivera2011tbats} De Livera A.M. Forecasting Time Series with Complex Seasonal Patterns Using Exponential Smoothing / A.M.~De Livera, R.J.~Hyndman, R.D.~Snyder // Journal of the American Statistical Association. − 2011. − Vol.~106, no.~496. − P.~1513−1527. − DOI: 10.1198/jasa.2011.tm09771.
+
+\bibitem{smyl2020hybrid} Smyl S. A Hybrid Method of Exponential Smoothing and Recurrent Neural Networks for Time Series Forecasting / S.~Smyl // International Journal of Forecasting. − 2020. − Vol.~36, no.~1. − P.~75−85. − DOI: 10.1016/j.ijforecast.2019.03.017.
+
+\bibitem{taylor2018prophet} Taylor S.J. Forecasting at Scale / S.J.~Taylor, B.~Letham // The American Statistician. − 2018. − Vol.~72, no.~1. − P.~37−45. − DOI: 10.1080/00031305.2017.1380080.
+
+\bibitem{aivazyan1998statistics} Айвазян С.А. Прикладная статистика и основы эконометрики / С.А.~Айвазян, В.С.~Мхитарян. − Москва: ЮНИТИ-ДАНА, 1998.
+
+\bibitem{cleveland1990stl} Cleveland R.B. STL: A Seasonal-Trend Decomposition Procedure Based on Loess / R.B.~Cleveland, W.S.~Cleveland, J.E.~McRae, I.~Terpenning // Journal of Official Statistics. − 1990. − Vol.~6, no.~1. − P.~3−33.
+
+\bibitem{percival2000wavelet} Percival D.B. Wavelet Methods for Time Series Analysis / D.B.~Percival, A.T.~Walden. − Cambridge: Cambridge University Press, 2000. − 594~p. − DOI: 10.1017/CBO9780511841040.
+
+\bibitem{percival1995wavelet} Percival D.B. On Estimation of the Wavelet Variance / D.B.~Percival // Biometrika. − 1995. − Vol.~82, no.~3. − P.~619−631. − DOI: 10.1093/biomet/82.3.619.
+
+\bibitem{zeng2023transformers} Zeng A. Are Transformers Effective for Time Series Forecasting? / A.~Zeng, M.~Chen, L.~Zhang, Q.~Xu // Proceedings of the AAAI Conference on Artificial Intelligence. − 2023. − Vol.~37, no.~9. − P.~11121−11128. − DOI: 10.1609/aaai.v37i9.26317.
+
+\bibitem{oreshkin2020nbeats} Oreshkin B.N. N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting [Электронный ресурс] / B.N.~Oreshkin, D.~Carpov, N.~Chapados, Y.~Bengio. − 2020. − Режим доступа: https://openreview.net/forum?id=r1ecqn4YwB (дата обращения: 25.02.2026), свободный.
+
+\bibitem{wu2021autoformer} Wu H. Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting [Электронный ресурс] / H.~Wu, J.~Xu, J.~Wang, M.~Long. − 2021. − Режим доступа: https://proceedings.neurips.cc/paper/2021/hash/bcc0d400288793e8bdcd7c19a8ac0f2b-Abstract.html (дата обращения: 25.02.2026), свободный.
+
+\bibitem{zhou2022fedformer} Zhou T. FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting / T.~Zhou, Z.~Ma, Q.~Wen, X.~Wang, L.~Sun, R.~Jin // Proceedings of the 39th International Conference on Machine Learning. − 2022. − Vol.~162. − P.~27268−27286. − Режим доступа: https://proceedings.mlr.press/v162/zhou22g.html (дата обращения: 25.02.2026), свободный.
+
+\bibitem{wu2023timesnet} Wu H. TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis [Электронный ресурс] / H.~Wu, T.~Hu, Y.~Liu, H.~Zhou, J.~Wang, M.~Long. − 2023. − Режим доступа: https://openreview.net/forum?id=ju\_Uqw384Oq (дата обращения: 25.02.2026), свободный.
+
+\bibitem{vaswani2017attention} Vaswani A. Attention Is All You Need [Электронный ресурс] / A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.N.~Gomez, Ł.~Kaiser, I.~Polosukhin. − 2017. − Режим доступа: https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html (дата обращения: 25.02.2026), свободный.
+
+\bibitem{he2016resnet} He K. Deep Residual Learning for Image Recognition / K.~He, X.~Zhang, S.~Ren, J.~Sun // Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. − 2016. − P.~770−778. − DOI: 10.1109/CVPR.2016.90.
+
+\bibitem{ba2016layernorm} Ba J.L. Layer Normalization [Электронный ресурс] / J.L.~Ba, J.R.~Kiros, G.E.~Hinton. − 2016. − arXiv:1607.06450 [stat.ML]. − Режим доступа: https://arxiv.org/abs/1607.06450 (дата обращения: 25.02.2026), свободный.
+
+\bibitem{hochreiter1997lstm} Hochreiter S. Long Short-Term Memory / S.~Hochreiter, J.~Schmidhuber // Neural Computation. − 1997. − Vol.~9, no.~8. − P.~1735−1780. − DOI: 10.1162/neco.1997.9.8.1735.
+
+\bibitem{salinas2020deepar} Salinas D. DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks / D.~Salinas, V.~Flunkert, J.~Gasthaus, T.~Januschowski // International Journal of Forecasting. − 2020. − Vol.~36, no.~3. − P.~1181−1191. − DOI: 10.1016/j.ijforecast.2019.07.001.
+
+\bibitem{zhou2021informer} Zhou H. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting / H.~Zhou, S.~Zhang, J.~Peng, S.~Zhang, J.~Li, H.~Xiong, W.~Zhang // Proceedings of the AAAI Conference on Artificial Intelligence. − 2021. − Vol.~35, no.~12. − P.~11106−11115. − DOI: 10.1609/aaai.v35i12.17325.
+
+\bibitem{li2019enhancing} Li S. Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting [Электронный ресурс] / S.~Li, X.~Jin, Y.~Xuan, X.~Zhou, W.~Chen, Y.-X.~Wang, X.~Yan. − 2019. − Режим доступа: https://proceedings.neurips.cc/paper/2019/hash/6775a0635c302542da2c32aa19d86be0-Abstract.html (дата обращения: 25.02.2026), свободный.
+
+\bibitem{liu2022nonstationary} Liu Y. Non-stationary Transformers: Exploring the Stationarity in Time Series Forecasting [Электронный ресурс] / Y.~Liu, H.~Wu, J.~Wang, M.~Long. − 2022. − Режим доступа: https://openreview.net/forum?id=ucNDIDRNjjv (дата обращения: 25.02.2026), свободный.
+
+\bibitem{lim2021temporal} Lim B. Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting / B.~Lim, S.Ö.~Arık, N.~Loeff, T.~Pfister // International Journal of Forecasting. − 2021. − Vol.~37, no.~4. − P.~1748−1764. − DOI: 10.1016/j.ijforecast.2021.03.012.
+
+\bibitem{wen2023transformers} Wen Q. Transformers in Time Series: A Survey / Q.~Wen, T.~Zhou, C.~Zhang, W.~Chen, Z.~Ma, J.~Yan, L.~Sun // Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence. − 2023. − P.~6778−6786. − DOI: 10.24963/ijcai.2023/759.
+
+\bibitem{lim2021survey} Lim B. Time-Series Forecasting with Deep Learning: A Survey / B.~Lim, S.~Zohren // Philosophical Transactions of the Royal Society A. − 2021. − Vol.~379, no.~2194. − Art.~20200209. − DOI: 10.1098/rsta.2020.0209.
+
+\bibitem{torres2021deep} Torres J.F. Deep Learning for Time Series Forecasting: A Survey / J.F.~Torres, D.~Hadjout, A.~Sebaa, F.~Martínez-Álvarez, A.~Troncoso // Big Data. − 2021. − Vol.~9, no.~1. − P.~3−21. − DOI: 10.1089/big.2020.0159.
+
+\bibitem{benidis2022deep} Benidis K. Deep Learning for Time Series Forecasting: Tutorial and Literature Survey / K.~Benidis, S.S.~Rangapuram, V.~Flunkert, Y.~Wang, D.~Maddix, C.~Turkmen, J.~Gasthaus, M.~Bohlke-Schneider, D.~Salinas, L.~Stella, F.-X.~Aubet, L.~Callot, T.~Januschowski // ACM Computing Surveys. − 2022. − Vol.~55, no.~6. − P.~1−36. − DOI: 10.1145/3533382.
+
+\bibitem{hewamalage2021recurrent} Hewamalage H. Recurrent Neural Networks for Time Series Forecasting: Current Status and Future Directions / H.~Hewamalage, C.~Bergmeir, K.~Bandara // International Journal of Forecasting. − 2021. − Vol.~37, no.~1. − P.~388−427. − DOI: 10.1016/j.ijforecast.2020.06.008.
+
+\bibitem{nie2023patchtst} Nie Y. A Time Series is Worth 64 Words: Long-term Forecasting with Transformers [Электронный ресурс] / Y.~Nie, N.H.~Nguyen, P.~Sinthong, J.~Kalagnanam. − 2023. − Режим доступа: https://openreview.net/forum?id=Jbdc0vTOcol (дата обращения: 25.02.2026), свободный.
+
+\bibitem{challu2023nhits} Challu C. NHITS: Neural Hierarchical Interpolation for Time Series Forecasting / C.~Challu, K.G.~Olivares, B.N.~Oreshkin, F.~Garza Ramirez, M.~Mergenthaler Canseco, A.~Dubrawski // Proceedings of the AAAI Conference on Artificial Intelligence. − 2023. − Vol.~37, no.~6. − P.~6989−6997. − DOI: 10.1609/aaai.v37i6.25854.
+
+\bibitem{kehinde2025helformer} Kehinde T.O. Helformer: An Attention-Based Deep Learning Model for Cryptocurrency Price Forecasting / T.O.~Kehinde, O.J.~Adedokun, O.A.~Olanrewaju // Journal of Big Data. − 2025. − Vol.~12. − Art.~81. − DOI: 10.1186/s40537-025-01135-4.
+
+\bibitem{monteromanso2020fforma} Montero-Manso P. FFORMA: Feature-Based Forecast Model Averaging / P.~Montero-Manso, G.~Athanasopoulos, R.J.~Hyndman, T.S.~Talagala // International Journal of Forecasting. − 2020. − Vol.~36, no.~1. − P.~86−92. − DOI: 10.1016/j.ijforecast.2019.02.011.
+
+\bibitem{makridakis2022m5} Makridakis S. M5 Accuracy Competition: Results, Findings, and Conclusions / S.~Makridakis, E.~Spiliotis, V.~Assimakopoulos // International Journal of Forecasting. − 2022. − Vol.~38, no.~4. − P.~1346−1364. − DOI: 10.1016/j.ijforecast.2021.11.013.
+
+\bibitem{godahewa2021monash} Godahewa R. Monash Time Series Forecasting Archive [Электронный ресурс] / R.~Godahewa, C.~Bergmeir, G.I.~Webb, R.J.~Hyndman, P.~Montero-Manso. − 2021. − Режим доступа: https://openreview.net/forum?id=wEc1mgAjU- (дата обращения: 25.02.2026), свободный.
+
+\bibitem{bandara2020forecasting} Bandara K. Forecasting Across Time Series Databases Using Recurrent Neural Networks on Groups of Similar Series: A Clustering Approach / K.~Bandara, C.~Bergmeir, S.~Smyl // Expert Systems with Applications. − 2020. − Vol.~140. − Art.~112896. − DOI: 10.1016/j.eswa.2019.112896.
+
+\bibitem{kingma2015adam} Kingma D.P. Adam: A Method for Stochastic Optimization [Электронный ресурс] / D.P.~Kingma, J.~Ba. − 2015. − Режим доступа: https://arxiv.org/abs/1412.6980 (дата обращения: 25.02.2026), свободный.
+
+\bibitem{cerqueira2020evaluating} Cerqueira V. Evaluating Time Series Forecasting Models: An Empirical Study on Performance Estimation Methods / V.~Cerqueira, L.~Torgo, I.~Mozetič // Machine Learning. − 2020. − Vol.~109, no.~11. − P.~1997−2028. − DOI: 10.1007/s10994-020-05910-7.
+
+\bibitem{liu2024itransformer} Liu Y. iTransformer: Inverted Transformers Are Effective for Time Series Forecasting [Электронный ресурс] / Y.~Liu, T.~Hu, H.~Zhang, H.~Wu, S.~Wang, L.~Ma, M.~Long. − 2024. − Режим доступа: https://openreview.net/forum?id=JePfAI8fah (дата обращения: 25.02.2026), свободный.
+
+\end{thebibliography}
 
 \end{document}

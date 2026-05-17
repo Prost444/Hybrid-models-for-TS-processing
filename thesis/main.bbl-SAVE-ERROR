@@ -1,0 +1,2572 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{hamilton1994time}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1528bc518ebb8f6103311513805ac7d}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Princeton, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{fullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{fullhashraw}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{bibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorbibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authornamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorfullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorfullhashraw}{f1528bc518ebb8f6103311513805ac7d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-691-04289-3}
+      \field{langid}{english}
+      \field{title}{Time Series Analysis}
+      \field{year}{1994}
+    \endentry
+    \entry{makridakis2000m3}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ba8241955b5282793fdcf2d43c398cc6}{%
+           family={Makridakis},
+           familyi={M\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod}}}%
+        {{hash=37aac33dc02df49e4f6afce23b7f42f1}{%
+           family={Hibon},
+           familyi={H\bibinitperiod},
+           given={Michèle},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4122659aa88e8075ba99bb71531da445}
+      \strng{fullhash}{4122659aa88e8075ba99bb71531da445}
+      \strng{fullhashraw}{4122659aa88e8075ba99bb71531da445}
+      \strng{bibnamehash}{4122659aa88e8075ba99bb71531da445}
+      \strng{authorbibnamehash}{4122659aa88e8075ba99bb71531da445}
+      \strng{authornamehash}{4122659aa88e8075ba99bb71531da445}
+      \strng{authorfullhash}{4122659aa88e8075ba99bb71531da445}
+      \strng{authorfullhashraw}{4122659aa88e8075ba99bb71531da445}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{16}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{The {M3}-Competition: Results, Conclusions and Implications}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{number}{4}
+      \range{number}{1}
+      \field{pages}{451\bibrangedash 476}
+      \range{pages}{26}
+      \field{volume}{16}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/S0169-2070(00)00057-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0169-2070(00)00057-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0169-2070(00)00057-1
+      \endverb
+    \endentry
+    \entry{makridakis2020m4}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ba8241955b5282793fdcf2d43c398cc6}{%
+           family={Makridakis},
+           familyi={M\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1bbd058009b400578fd6334102fc8dec}{%
+           family={Spiliotis},
+           familyi={S\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c84a88720d8401a0259918f2eb3bec78}{%
+           family={Assimakopoulos},
+           familyi={A\bibinitperiod},
+           given={Vassilios},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bf970fecaabf41466b811e4f4ec2f47}
+      \strng{fullhash}{79b1cdab2388adc969bf628908c61838}
+      \strng{fullhashraw}{79b1cdab2388adc969bf628908c61838}
+      \strng{bibnamehash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authorbibnamehash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authornamehash}{2bf970fecaabf41466b811e4f4ec2f47}
+      \strng{authorfullhash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authorfullhashraw}{79b1cdab2388adc969bf628908c61838}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{36}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{The {M4} Competition: 100,000 Time Series and 61 Forecasting Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{54\bibrangedash 74}
+      \range{pages}{21}
+      \field{volume}{36}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2019.04.014
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.04.014
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.04.014
+      \endverb
+    \endentry
+    \entry{box1970time}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=d30289ba50f0f7219fb405bc35b8b71c}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=47888ee6b97a184c6a17093aeb509b29}{%
+           family={Jenkins},
+           familyi={J\bibinitperiod},
+           given={Gwilym\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco}%
+      }
+      \list{publisher}{1}{%
+        {Holden-Day}%
+      }
+      \strng{namehash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{fullhash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{fullhashraw}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{bibnamehash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{authorbibnamehash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{authornamehash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{authorfullhash}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \strng{authorfullhashraw}{6ffa05b065085a4d7d4d45f5e13bed2e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Time Series Analysis: Forecasting and Control}
+      \field{year}{1970}
+    \endentry
+    \entry{beveridge1981decomposition}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=46bb54f8f3b5ddd4b72952824ee08966}{%
+           family={Beveridge},
+           familyi={B\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9733acb14bd6e601bdaa41f7950ea01f}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{fullhash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{fullhashraw}{2a28c9db8817316502103d60c67cbd65}
+      \strng{bibnamehash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{authorbibnamehash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{authornamehash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{authorfullhash}{2a28c9db8817316502103d60c67cbd65}
+      \strng{authorfullhashraw}{2a28c9db8817316502103d60c67cbd65}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{7}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{langid}{english}
+      \field{title}{A New Approach to Decomposition of Economic Time Series into Permanent and Transitory Components with Particular Attention to Measurement of the ``Business Cycle''}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1981}
+      \field{urldateera}{ce}
+      \field{number}{2}
+      \range{number}{1}
+      \field{pages}{151\bibrangedash 174}
+      \range{pages}{24}
+      \field{volume}{7}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/0304-3932(81)90040-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0304-3932(81)90040-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0304-3932(81)90040-4
+      \endverb
+    \endentry
+    \entry{wold1938study}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c57b2e898fbf818a9d6cac52879f0ce6}{%
+           family={Wold},
+           familyi={W\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Uppsala}%
+      }
+      \list{publisher}{1}{%
+        {Almqvist \& Wiksells}%
+      }
+      \strng{namehash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{fullhash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{fullhashraw}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{bibnamehash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{authorbibnamehash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{authornamehash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{authorfullhash}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \strng{authorfullhashraw}{c57b2e898fbf818a9d6cac52879f0ce6}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{A Study in the Analysis of Stationary Time Series}
+      \field{year}{1938}
+    \endentry
+    \entry{hyndman2021forecasting}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=95cfbf5a8396e08b434cc6f7f5b18dc8}{%
+           family={Athanasopoulos},
+           familyi={A\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Melbourne, Australia}%
+      }
+      \list{publisher}{1}{%
+        {OTexts}%
+      }
+      \strng{namehash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{fullhash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{fullhashraw}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{bibnamehash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{authorbibnamehash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{authornamehash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{authorfullhash}{f5d192acd9066e5facaab32c8173f6d0}
+      \strng{authorfullhashraw}{f5d192acd9066e5facaab32c8173f6d0}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{978-0-9875071-3-6}
+      \field{langid}{english}
+      \field{title}{Forecasting: Principles and Practice}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://otexts.com/fpp3/
+      \endverb
+      \verb{url}
+      \verb https://otexts.com/fpp3/
+      \endverb
+    \endentry
+    \entry{goodfellow2016deep}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-262-03561-3}
+      \field{langid}{english}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.deeplearningbook.org
+      \endverb
+      \verb{url}
+      \verb https://www.deeplearningbook.org
+      \endverb
+    \endentry
+    \entry{hyndman2006accuracy}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{bibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorbibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authornamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{22}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{Another Look at Measures of Forecast Accuracy}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{number}{4}
+      \range{number}{1}
+      \field{pages}{679\bibrangedash 688}
+      \range{pages}{10}
+      \field{volume}{22}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2006.03.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2006.03.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2006.03.001
+      \endverb
+    \endentry
+    \entry{hyndman2008expsmoothing}{book}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ae51c0dce0efdd1a221f2ff255ea1d83}{%
+           family={Ord},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi Keith},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e2c7b0aa60e13c2d08ed61c493f59b0d}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Ralph\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{authorbibnamehash}{994617f1d6b88301e0de692e3e97afb0}
+      \strng{authornamehash}{ccc2789bf08f9c87acbe5bd693e108ea}
+      \strng{authorfullhash}{994617f1d6b88301e0de692e3e97afb0}
+      \strng{authorfullhashraw}{994617f1d6b88301e0de692e3e97afb0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-71918-2}
+      \field{langid}{english}
+      \field{series}{Springer Series in Statistics}
+      \field{title}{Forecasting with Exponential Smoothing: The State Space Approach}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-3-540-71918-2
+      \endverb
+    \endentry
+    \entry{holt2004forecasting}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=018dcfa294642ca1e0e51b140bf7683e}{%
+           family={Holt},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{fullhash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{fullhashraw}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{bibnamehash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{authorbibnamehash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{authornamehash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{authorfullhash}{018dcfa294642ca1e0e51b140bf7683e}
+      \strng{authorfullhashraw}{018dcfa294642ca1e0e51b140bf7683e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{20}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{note}{Reprint of the 1957 ONR Memorandum No.~52}
+      \field{title}{Forecasting Seasonals and Trends by Exponentially Weighted Moving Averages}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{5\bibrangedash 10}
+      \range{pages}{6}
+      \field{volume}{20}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2003.09.015
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2003.09.015
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2003.09.015
+      \endverb
+    \endentry
+    \entry{winters1960forecasting}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc347711a162c542123df450c84d3178}{%
+           family={Winters},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc347711a162c542123df450c84d3178}
+      \strng{fullhash}{dc347711a162c542123df450c84d3178}
+      \strng{fullhashraw}{dc347711a162c542123df450c84d3178}
+      \strng{bibnamehash}{dc347711a162c542123df450c84d3178}
+      \strng{authorbibnamehash}{dc347711a162c542123df450c84d3178}
+      \strng{authornamehash}{dc347711a162c542123df450c84d3178}
+      \strng{authorfullhash}{dc347711a162c542123df450c84d3178}
+      \strng{authorfullhashraw}{dc347711a162c542123df450c84d3178}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{6}
+      \field{journaltitle}{Management Science}
+      \field{langid}{english}
+      \field{title}{Forecasting Sales by Exponentially Weighted Moving Averages}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1960}
+      \field{urldateera}{ce}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{324\bibrangedash 342}
+      \range{pages}{19}
+      \field{volume}{6}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1287/mnsc.6.3.324
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1287/mnsc.6.3.324
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1287/mnsc.6.3.324
+      \endverb
+    \endentry
+    \entry{hyndman2002ets}{article}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=e2c7b0aa60e13c2d08ed61c493f59b0d}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Ralph\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=18bde17b6766e6ea2c78bbee17d9ce1e}{%
+           family={Grose},
+           familyi={G\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{b9c8713a69aa527824cec936822fbb4a}
+      \strng{authornamehash}{ccc2789bf08f9c87acbe5bd693e108ea}
+      \strng{authorfullhash}{b9c8713a69aa527824cec936822fbb4a}
+      \strng{authorfullhashraw}{b9c8713a69aa527824cec936822fbb4a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{18}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{A State Space Framework for Automatic Forecasting Using Exponential Smoothing Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{439\bibrangedash 454}
+      \range{pages}{16}
+      \field{volume}{18}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/S0169-2070(01)00110-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0169-2070(01)00110-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0169-2070(01)00110-8
+      \endverb
+    \endentry
+    \entry{delivera2011tbats}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2d11fb8e14f5a57ace7be680a2c26c7f}{%
+           family={De\bibnamedelima Livera},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Alysha\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e2c7b0aa60e13c2d08ed61c493f59b0d}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Ralph\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae344a8d639a4fd10637af5284810495}
+      \strng{fullhash}{96b3f60bfaf534ba2244164842762a6b}
+      \strng{fullhashraw}{96b3f60bfaf534ba2244164842762a6b}
+      \strng{bibnamehash}{96b3f60bfaf534ba2244164842762a6b}
+      \strng{authorbibnamehash}{96b3f60bfaf534ba2244164842762a6b}
+      \strng{authornamehash}{ae344a8d639a4fd10637af5284810495}
+      \strng{authorfullhash}{96b3f60bfaf534ba2244164842762a6b}
+      \strng{authorfullhashraw}{96b3f60bfaf534ba2244164842762a6b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{106}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{langid}{english}
+      \field{title}{Forecasting Time Series with Complex Seasonal Patterns Using Exponential Smoothing}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{number}{496}
+      \range{number}{1}
+      \field{pages}{1513\bibrangedash 1527}
+      \range{pages}{15}
+      \field{volume}{106}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1198/jasa.2011.tm09771
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1198/jasa.2011.tm09771
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1198/jasa.2011.tm09771
+      \endverb
+    \endentry
+    \entry{smyl2020hybrid}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ad34f3be33d03d8bc45f4a52a342e834}{%
+           family={Smyl},
+           familyi={S\bibinitperiod},
+           given={Slawek},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{fullhash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{fullhashraw}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{bibnamehash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{authorbibnamehash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{authornamehash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{authorfullhash}{ad34f3be33d03d8bc45f4a52a342e834}
+      \strng{authorfullhashraw}{ad34f3be33d03d8bc45f4a52a342e834}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{36}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{note}{Winner of the M4 Competition}
+      \field{title}{A Hybrid Method of Exponential Smoothing and Recurrent Neural Networks for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{75\bibrangedash 85}
+      \range{pages}{11}
+      \field{volume}{36}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2019.03.017
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.03.017
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.03.017
+      \endverb
+    \endentry
+    \entry{taylor2018prophet}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fbbb4a11ad0af3fa0efcac4d5b6bd293}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Sean\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a525646025b299bd9c5d7e38f7744f51}{%
+           family={Letham},
+           familyi={L\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{092b013303e7b549b663157b09187523}
+      \strng{fullhash}{092b013303e7b549b663157b09187523}
+      \strng{fullhashraw}{092b013303e7b549b663157b09187523}
+      \strng{bibnamehash}{092b013303e7b549b663157b09187523}
+      \strng{authorbibnamehash}{092b013303e7b549b663157b09187523}
+      \strng{authornamehash}{092b013303e7b549b663157b09187523}
+      \strng{authorfullhash}{092b013303e7b549b663157b09187523}
+      \strng{authorfullhashraw}{092b013303e7b549b663157b09187523}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{72}
+      \field{journaltitle}{The American Statistician}
+      \field{langid}{english}
+      \field{title}{Forecasting at Scale}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{37\bibrangedash 45}
+      \range{pages}{9}
+      \field{volume}{72}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1080/00031305.2017.1380080
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/00031305.2017.1380080
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/00031305.2017.1380080
+      \endverb
+    \endentry
+    \entry{aivazyan1998statistics}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=c266b0ce7626a9d1ea9119d626843b6f}{%
+           family={Айвазян},
+           familyi={А\bibinitperiod},
+           given={С.\bibnamedelimi А.},
+           giveni={С\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+        {{hash=7aed143814998563636126c5ab048738}{%
+           family={Мхитарян},
+           familyi={М\bibinitperiod},
+           given={В.\bibnamedelimi С.},
+           giveni={В\bibinitperiod\bibinitdelim С\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {ЮНИТИ-ДАНА}%
+      }
+      \strng{namehash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{fullhash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{fullhashraw}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{bibnamehash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{authorbibnamehash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{authornamehash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{authorfullhash}{6e70b7c48cff1a2b14d373278657aa5d}
+      \strng{authorfullhashraw}{6e70b7c48cff1a2b14d373278657aa5d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{russian}
+      \field{title}{Прикладная статистика и основы эконометрики}
+      \field{year}{1998}
+    \endentry
+    \entry{cleveland1990stl}{article}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=e58d19c416f3afbe072ffd9a35c88f4d}{%
+           family={Cleveland},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=891ad1f1560d4ca4d59acb11065fd649}{%
+           family={Cleveland},
+           familyi={C\bibinitperiod},
+           given={William\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d35b0481090d0e9f17cfadfebca2d698}{%
+           family={McRae},
+           familyi={M\bibinitperiod},
+           given={Jean\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=4a013ba542033dd5c4d9d3e0cc9f4f88}{%
+           family={Terpenning},
+           familyi={T\bibinitperiod},
+           given={Irma},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{4c0ad013553e13b2d976da797aeba5cf}
+      \strng{authornamehash}{1f043bbb356bc5beed8dbc573c06875e}
+      \strng{authorfullhash}{4c0ad013553e13b2d976da797aeba5cf}
+      \strng{authorfullhashraw}{4c0ad013553e13b2d976da797aeba5cf}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{6}
+      \field{journaltitle}{Journal of Official Statistics}
+      \field{langid}{english}
+      \field{title}{{STL}: A Seasonal-Trend Decomposition Procedure Based on Loess}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1990}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{3\bibrangedash 33}
+      \range{pages}{31}
+      \field{volume}{6}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/stl-a-seasonal-trend-decomposition-procedure-based-on-loess.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/stl-a-seasonal-trend-decomposition-procedure-based-on-loess.pdf
+      \endverb
+    \endentry
+    \entry{percival2000wavelet}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=9ef42946543fc33d0434bfdf76eaa47d}{%
+           family={Percival},
+           familyi={P\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7d3590ea5d91a36eda75eb9160eae686}{%
+           family={Walden},
+           familyi={W\bibinitperiod},
+           given={Andrew\bibnamedelima T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{fullhash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{fullhashraw}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{bibnamehash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{authorbibnamehash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{authornamehash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{authorfullhash}{b24b5e660b9674705626b4142a5e96c9}
+      \strng{authorfullhashraw}{b24b5e660b9674705626b4142a5e96c9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-64068-8}
+      \field{langid}{english}
+      \field{series}{Cambridge Series in Statistical and Probabilistic Mathematics}
+      \field{title}{Wavelet Methods for Time Series Analysis}
+      \field{year}{2000}
+      \verb{doi}
+      \verb 10.1017/CBO9780511841040
+      \endverb
+    \endentry
+    \entry{percival1995wavelet}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9ef42946543fc33d0434bfdf76eaa47d}{%
+           family={Percival},
+           familyi={P\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{fullhash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{fullhashraw}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{bibnamehash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{authorbibnamehash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{authornamehash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{authorfullhash}{9ef42946543fc33d0434bfdf76eaa47d}
+      \strng{authorfullhashraw}{9ef42946543fc33d0434bfdf76eaa47d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{82}
+      \field{journaltitle}{Biometrika}
+      \field{langid}{english}
+      \field{title}{On Estimation of the Wavelet Variance}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1995}
+      \field{urldateera}{ce}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{619\bibrangedash 631}
+      \range{pages}{13}
+      \field{volume}{82}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/biomet/82.3.619
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/biomet/82.3.619
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/biomet/82.3.619
+      \endverb
+    \endentry
+    \entry{zeng2023transformers}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=4cd02231d5accc3c282905f2cc208b6d}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Ailing},
+           giveni={A\bibinitperiod}}}%
+        {{hash=814235f06a36786f063769d5989aaa86}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Muxi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f4a4cbf770add19c206827116c68732e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6cacd034725d0431a7b1f3fd4a060c02}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{07917b1729d8e9e8052f63e608150bb7}
+      \strng{authornamehash}{1421b5d7ba9106fd2b798e476462b848}
+      \strng{authorfullhash}{07917b1729d8e9e8052f63e608150bb7}
+      \strng{authorfullhashraw}{07917b1729d8e9e8052f63e608150bb7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the AAAI Conference on Artificial Intelligence}
+      \field{internalsortvolume}{37}
+      \field{langid}{english}
+      \field{title}{Are Transformers Effective for Time Series Forecasting?}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{11121\bibrangedash 11128}
+      \range{pages}{8}
+      \field{volume}{37}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1609/aaai.v37i9.26317
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1609/aaai.v37i9.26317
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1609/aaai.v37i9.26317
+      \endverb
+    \endentry
+    \entry{oreshkin2020nbeats}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=ec512581d79ac7af6281fd4b72c40097}{%
+           family={Oreshkin},
+           familyi={O\bibinitperiod},
+           given={Boris\bibnamedelima N.},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=b9da3135b40d6af78eb42403404a5c11}{%
+           family={Carpov},
+           familyi={C\bibinitperiod},
+           given={Dmitri},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d87069194d85b18ffb5b74737da91a0d}{%
+           family={Chapados},
+           familyi={C\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{bc5c1ffccae8c6978ddc8357b7191b18}
+      \strng{authornamehash}{d1c4956fd77733347830355856686a73}
+      \strng{authorfullhash}{bc5c1ffccae8c6978ddc8357b7191b18}
+      \strng{authorfullhashraw}{bc5c1ffccae8c6978ddc8357b7191b18}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{langid}{english}
+      \field{title}{{N-BEATS}: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=r1ecqn4YwB
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=r1ecqn4YwB
+      \endverb
+    \endentry
+    \entry{wu2021autoformer}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=98dce96f41870f1bbabf03de06a05caa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Haixu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bf3bab790de4dc8bc6cfc53a67ae1d4b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jiehui},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5677a530ed74bcd73cbf45f8088a8418}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=867778fd4a7456937f929a855edfaf77}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Mingsheng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{09e3b37b89f35f1f152f3e8d8754e163}
+      \strng{authornamehash}{338d0f3691411e7dad093368d83de073}
+      \strng{authorfullhash}{09e3b37b89f35f1f152f3e8d8754e163}
+      \strng{authorfullhashraw}{09e3b37b89f35f1f152f3e8d8754e163}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{internalsortvolume}{34}
+      \field{langid}{english}
+      \field{title}{Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{volume}{34}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2021/hash/bcc0d400288793e8bdcd7c19a8ac0f2b-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2021/hash/bcc0d400288793e8bdcd7c19a8ac0f2b-Abstract.html
+      \endverb
+    \endentry
+    \entry{zhou2022fedformer}{inproceedings}{useauthor=false}{}
+      \name{author}{6}{}{%
+        {{hash=b7c580a66fa1a8e148a3650ea5ed0442}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a5a52820d7dcf4b185a5ad6a84710cf5}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ziqing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=42f489c44112b767da11a846147b8faf}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Qingsong},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=3c418d4a6595ce433287b71d6b8adbd3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod}}}%
+        {{hash=682cbdfdff39cd380a6fb32573c1ce7b}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1ec450ccbc283608eae1f75d15f46f63}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{authorbibnamehash}{80fbcfeee351e0c00291c18ea4cfdde5}
+      \strng{authornamehash}{18f7482e5c353b8366d8b8b487645ae0}
+      \strng{authorfullhash}{80fbcfeee351e0c00291c18ea4cfdde5}
+      \strng{authorfullhashraw}{80fbcfeee351e0c00291c18ea4cfdde5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 39th International Conference on Machine Learning}
+      \field{internalsortvolume}{162}
+      \field{langid}{english}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{{FEDformer}: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{27268\bibrangedash 27286}
+      \range{pages}{19}
+      \field{volume}{162}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v162/zhou22g.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v162/zhou22g.html
+      \endverb
+    \endentry
+    \entry{wu2023timesnet}{inproceedings}{useauthor=false}{}
+      \name{author}{6}{}{%
+        {{hash=98dce96f41870f1bbabf03de06a05caa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Haixu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1e8cc4324a833b03b5f60ededd557cdf}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Tengge},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bc6c6f66f139beef784a50d9f1485019}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0c3d4b55e7357f9926f171ace018696d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5677a530ed74bcd73cbf45f8088a8418}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=867778fd4a7456937f929a855edfaf77}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Mingsheng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{1e35b5f882adb96b5619c146ed038ee9}
+      \strng{authornamehash}{338d0f3691411e7dad093368d83de073}
+      \strng{authorfullhash}{1e35b5f882adb96b5619c146ed038ee9}
+      \strng{authorfullhashraw}{1e35b5f882adb96b5619c146ed038ee9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{langid}{english}
+      \field{title}{{TimesNet}: Temporal {2D}-Variation Modeling for General Time Series Analysis}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=ju_Uqw384Oq
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=ju_Uqw384Oq
+      \endverb
+    \endentry
+    \entry{vaswani2017attention}{inproceedings}{useauthor=false}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{internalsortvolume}{30}
+      \field{langid}{english}
+      \field{title}{Attention Is All You Need}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{5998\bibrangedash 6008}
+      \range{pages}{11}
+      \field{volume}{30}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+      \endverb
+    \endentry
+    \entry{he2016resnet}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5e72bc22dbcf0984c6d113d280e36990}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiangyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Shaoqing},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authornamehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{authorfullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authorfullhashraw}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{langid}{english}
+      \field{title}{Deep Residual Learning for Image Recognition}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{770\bibrangedash 778}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/CVPR.2016.90
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/CVPR.2016.90
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/CVPR.2016.90
+      \endverb
+    \endentry
+    \entry{ba2016layernorm}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=750bb29ebaf655e36626e464041edb6d}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy\bibnamedelima Lei},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9ce51427604561924b91aa544c9c1b2a}{%
+           family={Kiros},
+           familyi={K\bibinitperiod},
+           given={Jamie\bibnamedelima Ryan},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c9d3265b5af8088b0bec9949217b6eb}
+      \strng{fullhash}{059348b2d0b3fe9a67209502c14057d1}
+      \strng{fullhashraw}{059348b2d0b3fe9a67209502c14057d1}
+      \strng{bibnamehash}{059348b2d0b3fe9a67209502c14057d1}
+      \strng{authorbibnamehash}{059348b2d0b3fe9a67209502c14057d1}
+      \strng{authornamehash}{5c9d3265b5af8088b0bec9949217b6eb}
+      \strng{authorfullhash}{059348b2d0b3fe9a67209502c14057d1}
+      \strng{authorfullhashraw}{059348b2d0b3fe9a67209502c14057d1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1607.06450}
+      \field{langid}{english}
+      \field{title}{Layer Normalization}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1607.06450
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1607.06450
+      \endverb
+    \endentry
+    \entry{hochreiter1997lstm}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{bibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorbibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authornamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{9}
+      \field{journaltitle}{Neural Computation}
+      \field{langid}{english}
+      \field{title}{Long Short-Term Memory}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1997}
+      \field{urldateera}{ce}
+      \field{number}{8}
+      \range{number}{1}
+      \field{pages}{1735\bibrangedash 1780}
+      \range{pages}{46}
+      \field{volume}{9}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1162/neco.1997.9.8.1735
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1162/neco.1997.9.8.1735
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1162/neco.1997.9.8.1735
+      \endverb
+    \endentry
+    \entry{salinas2020deepar}{article}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=eada397e5f4a2602534e0917e03112c3}{%
+           family={Salinas},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f059e30caa4d74f8c23070b22386b22e}{%
+           family={Flunkert},
+           familyi={F\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b41e883686c590f0b90bb2f7d488f6cc}{%
+           family={Gasthaus},
+           familyi={G\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9e5ccec71d72e905905574627253f5f7}{%
+           family={Januschowski},
+           familyi={J\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{68946a04de6e65a97f0dcdabc6f45c3b}
+      \strng{authornamehash}{ed75b9e4b696240779be2c8470f12dbb}
+      \strng{authorfullhash}{68946a04de6e65a97f0dcdabc6f45c3b}
+      \strng{authorfullhashraw}{68946a04de6e65a97f0dcdabc6f45c3b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{36}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{{DeepAR}: Probabilistic Forecasting with Autoregressive Recurrent Networks}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{1181\bibrangedash 1191}
+      \range{pages}{11}
+      \field{volume}{36}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2019.07.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.07.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.07.001
+      \endverb
+    \endentry
+    \entry{zhou2021informer}{inproceedings}{useauthor=false}{}
+      \name{author}{7}{}{%
+        {{hash=c7def614c5b94aa5499428a9644f024d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Haoyi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=452a67ad1218340845acd7e598d57f19}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shanghang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=146dd5c72b5270e6c98219a385645574}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Jieqi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=53eda2415f95a1d1f76572f661905aab}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=221d23a1cc1702c31044af688c0b7c39}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jianxin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aa0c7ab0b9dad5902ab8fc501f57cd77}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d4d97ecef44bb5d1d6dab7f91276d649}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wancai},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{116045fd64aa9173a259ff5ef8541d4b}
+      \strng{authornamehash}{fd1f7c12e5bef04a5e71b623a18fadec}
+      \strng{authorfullhash}{116045fd64aa9173a259ff5ef8541d4b}
+      \strng{authorfullhashraw}{116045fd64aa9173a259ff5ef8541d4b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the AAAI Conference on Artificial Intelligence}
+      \field{internalsortvolume}{35}
+      \field{langid}{english}
+      \field{note}{AAAI 2021 Best Paper}
+      \field{title}{Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{number}{12}
+      \range{number}{1}
+      \field{pages}{11106\bibrangedash 11115}
+      \range{pages}{10}
+      \field{volume}{35}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1609/aaai.v35i12.17325
+      \endverb
+      \verb{urlraw}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
+      \endverb
+      \verb{url}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
+      \endverb
+    \endentry
+    \entry{li2019enhancing}{inproceedings}{useauthor=false}{}
+      \name{author}{7}{}{%
+        {{hash=bcc44b6aeced5b2076d121cd8e5200e6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shiyang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3b62776b6d9afd811f6aff1bb1dc4046}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Xiaoyong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a430b6345b89e8dd80bfb355c2297756}{%
+           family={Xuan},
+           familyi={X\bibinitperiod},
+           given={Yao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7bbc2baf8d3d9a9bdd839be6369e1a65}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiyou},
+           giveni={X\bibinitperiod}}}%
+        {{hash=63d99bafe6679fb5e11e960687f909b1}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wenhu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ee8c94532b654eef549c5252a0eab051}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu-Xiang},
+           giveni={Y\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=de67cfd03b40b1e1916d2d5b4761051b}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xifeng},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{39928837d930326d67fcb2c468944c16}
+      \strng{authornamehash}{7b1d2749afd7af0230fd8e20175f5c3f}
+      \strng{authorfullhash}{39928837d930326d67fcb2c468944c16}
+      \strng{authorfullhashraw}{39928837d930326d67fcb2c468944c16}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{internalsortvolume}{32}
+      \field{langid}{english}
+      \field{title}{Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{volume}{32}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper/2019/hash/6775a0635c302542da2c32aa19d86be0-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper/2019/hash/6775a0635c302542da2c32aa19d86be0-Abstract.html
+      \endverb
+    \endentry
+    \entry{liu2022nonstationary}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=bc6c6f66f139beef784a50d9f1485019}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=98dce96f41870f1bbabf03de06a05caa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Haixu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5677a530ed74bcd73cbf45f8088a8418}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=867778fd4a7456937f929a855edfaf77}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Mingsheng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{51a6ff12f2d3257d18c8edc52b24ac54}
+      \strng{authornamehash}{412b864aa3b1e9ea4dc53d3c2421cf2c}
+      \strng{authorfullhash}{51a6ff12f2d3257d18c8edc52b24ac54}
+      \strng{authorfullhashraw}{51a6ff12f2d3257d18c8edc52b24ac54}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{internalsortvolume}{35}
+      \field{langid}{english}
+      \field{title}{Non-stationary Transformers: Exploring the Stationarity in Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{volume}{35}
+      \range{volume}{1}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=ucNDIDRNjjv
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=ucNDIDRNjjv
+      \endverb
+    \endentry
+    \entry{lim2021temporal}{article}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=ae79ceb303df628c5461fb3fda3f01e2}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=39e278c8ef57240e0394f46448369296}{%
+           family={Ar{ı}k},
+           familyi={A\bibinitperiod},
+           given={Sercan\bibnamedelima Ö.},
+           giveni={S\bibinitperiod\bibinitdelim Ö\bibinitperiod}}}%
+        {{hash=6268f5aa3e045416a89804df1d8bef4d}{%
+           family={Loeff},
+           familyi={L\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f769e681ea0c0a3a6ba5a36ddd18c253}{%
+           family={Pfister},
+           familyi={P\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{c5a2af1517d19596ddb0aa39fd4610ad}
+      \strng{authornamehash}{91f35d17764be4acab630afb9a763287}
+      \strng{authorfullhash}{c5a2af1517d19596ddb0aa39fd4610ad}
+      \strng{authorfullhashraw}{c5a2af1517d19596ddb0aa39fd4610ad}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{37}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{number}{4}
+      \range{number}{1}
+      \field{pages}{1748\bibrangedash 1764}
+      \range{pages}{17}
+      \field{volume}{37}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2021.03.012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
+      \endverb
+    \endentry
+    \entry{wen2023transformers}{inproceedings}{useauthor=false}{}
+      \name{author}{7}{}{%
+        {{hash=42f489c44112b767da11a846147b8faf}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Qingsong},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b7c580a66fa1a8e148a3650ea5ed0442}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8a0735b3b651c352c4e59d218e1b71aa}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chaoli},
+           giveni={C\bibinitperiod}}}%
+        {{hash=60e89c08957c5f1016253ba3ee24f79c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Weiqi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a5a52820d7dcf4b185a5ad6a84710cf5}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ziqing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9a7a7c8d0b927c0b0f6c62cef2f118d5}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Junchi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=682cbdfdff39cd380a6fb32573c1ce7b}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{4bbd3cec9a79a08a24618a35ca0b0e57}
+      \strng{authornamehash}{027634cbc965faacd865d772c14b4f69}
+      \strng{authorfullhash}{4bbd3cec9a79a08a24618a35ca0b0e57}
+      \strng{authorfullhashraw}{4bbd3cec9a79a08a24618a35ca0b0e57}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence}
+      \field{langid}{english}
+      \field{title}{Transformers in Time Series: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{6778\bibrangedash 6786}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.24963/ijcai.2023/759
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.24963/ijcai.2023/759
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.24963/ijcai.2023/759
+      \endverb
+    \endentry
+    \entry{lim2021survey}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ae79ceb303df628c5461fb3fda3f01e2}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7bcfc3a5e6df217d673644bbe887698e}{%
+           family={Zohren},
+           familyi={Z\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{fullhash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{fullhashraw}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{bibnamehash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{authorbibnamehash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{authornamehash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{authorfullhash}{28accdf0073d8a3bb64dee034a5b894c}
+      \strng{authorfullhashraw}{28accdf0073d8a3bb64dee034a5b894c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{379}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society~A}
+      \field{langid}{english}
+      \field{title}{Time-Series Forecasting with Deep Learning: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{number}{2194}
+      \range{number}{1}
+      \field{pages}{20200209}
+      \range{pages}{1}
+      \field{volume}{379}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1098/rsta.2020.0209
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rsta.2020.0209
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rsta.2020.0209
+      \endverb
+    \endentry
+    \entry{torres2021deep}{article}{useauthor=false}{}
+      \name{author}{5}{}{%
+        {{hash=b1de88302022ad8472371920b2abe1c3}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={José\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d83d733af46b509ae8a17ac506ef491b}{%
+           family={Hadjout},
+           familyi={H\bibinitperiod},
+           given={Dalil},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0201a70fac320bc586743378d7adfcd9}{%
+           family={Sebaa},
+           familyi={S\bibinitperiod},
+           given={Abderrazak},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3e47500b242a6367248f8d136f24faae}{%
+           family={Martínez-Álvarez},
+           familyi={M\bibinithyphendelim Á\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3c768119597ab177854227fe13a1332b}{%
+           family={Troncoso},
+           familyi={T\bibinitperiod},
+           given={Alicia},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{0b279724df6acadf0e7c8feb6594f764}
+      \strng{authornamehash}{500e04845a4ccccf4332ea73df8b7e90}
+      \strng{authorfullhash}{0b279724df6acadf0e7c8feb6594f764}
+      \strng{authorfullhashraw}{0b279724df6acadf0e7c8feb6594f764}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{9}
+      \field{journaltitle}{Big Data}
+      \field{langid}{english}
+      \field{title}{Deep Learning for Time Series Forecasting: A Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{3\bibrangedash 21}
+      \range{pages}{19}
+      \field{volume}{9}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1089/big.2020.0159
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1089/big.2020.0159
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1089/big.2020.0159
+      \endverb
+    \endentry
+    \entry{benidis2022deep}{article}{useauthor=false}{}
+      \name{author}{13}{}{%
+        {{hash=d3095e65af4a4f40049359d3f9b83fff}{%
+           family={Benidis},
+           familyi={B\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a3edf426c05893fe420aba2808f54985}{%
+           family={Rangapuram},
+           familyi={R\bibinitperiod},
+           given={Syama\bibnamedelima Sundar},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f059e30caa4d74f8c23070b22386b22e}{%
+           family={Flunkert},
+           familyi={F\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a9292a8838878275e725f037bc757f7e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yuyang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=43bbf63315d5630595dc1194d118eab6}{%
+           family={Maddix},
+           familyi={M\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod}}}%
+        {{hash=453c44acc624f19e83afc64fc3f2c7d5}{%
+           family={Turkmen},
+           familyi={T\bibinitperiod},
+           given={Caner},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b41e883686c590f0b90bb2f7d488f6cc}{%
+           family={Gasthaus},
+           familyi={G\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=788936496107a6d83806631aa1d699c0}{%
+           family={Bohlke-Schneider},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eada397e5f4a2602534e0917e03112c3}{%
+           family={Salinas},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=83fc4e25ebfa5fbdb577e9666d000bab}{%
+           family={Stella},
+           familyi={S\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=92d8560e8044e162a770414977eca23c}{%
+           family={Aubet},
+           familyi={A\bibinitperiod},
+           given={François-Xavier},
+           giveni={F\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=65e80339cb84ccaf5a31062291aa2f85}{%
+           family={Callot},
+           familyi={C\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9e5ccec71d72e905905574627253f5f7}{%
+           family={Januschowski},
+           familyi={J\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{e1b7af6385412016b3f12bc8e3957067}
+      \strng{authornamehash}{60b63394194104334cde6fca763c3711}
+      \strng{authorfullhash}{e1b7af6385412016b3f12bc8e3957067}
+      \strng{authorfullhashraw}{e1b7af6385412016b3f12bc8e3957067}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{55}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{langid}{english}
+      \field{title}{Deep Learning for Time Series Forecasting: Tutorial and Literature Survey}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{number}{6}
+      \range{number}{1}
+      \field{pages}{1\bibrangedash 36}
+      \range{pages}{36}
+      \field{volume}{55}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1145/3533382
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3533382
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3533382
+      \endverb
+    \endentry
+    \entry{hewamalage2021recurrent}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=bcedb4c1d2a852d41022a05e63751bf9}{%
+           family={Hewamalage},
+           familyi={H\bibinitperiod},
+           given={Hansika},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fb7be81f0574878d688bb03f0abb8502}{%
+           family={Bergmeir},
+           familyi={B\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d2ea33f311ab7e75395d319cf5cb988d}{%
+           family={Bandara},
+           familyi={B\bibinitperiod},
+           given={Kasun},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc9e04859eb50a11cb46beca8be22c45}
+      \strng{fullhash}{29e798ed628767a2e5b0b45cb594e1c7}
+      \strng{fullhashraw}{29e798ed628767a2e5b0b45cb594e1c7}
+      \strng{bibnamehash}{29e798ed628767a2e5b0b45cb594e1c7}
+      \strng{authorbibnamehash}{29e798ed628767a2e5b0b45cb594e1c7}
+      \strng{authornamehash}{bc9e04859eb50a11cb46beca8be22c45}
+      \strng{authorfullhash}{29e798ed628767a2e5b0b45cb594e1c7}
+      \strng{authorfullhashraw}{29e798ed628767a2e5b0b45cb594e1c7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{37}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{Recurrent Neural Networks for Time Series Forecasting: Current Status and Future Directions}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{388\bibrangedash 427}
+      \range{pages}{40}
+      \field{volume}{37}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2020.06.008
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2020.06.008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2020.06.008
+      \endverb
+    \endentry
+    \entry{nie2023patchtst}{inproceedings}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=a15355c8729e3c717f7be125dfd1c99b}{%
+           family={Nie},
+           familyi={N\bibinitperiod},
+           given={Yuqi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=612f9b83cb994f945e67dd85173670ad}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Nam\bibnamedelima H.},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ff7e34b128e92cb56236e7b7c679c2d3}{%
+           family={Sinthong},
+           familyi={S\bibinitperiod},
+           given={Phanwadee},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c7a827c9952f35ee3dc2aa45280bf4a6}{%
+           family={Kalagnanam},
+           familyi={K\bibinitperiod},
+           given={Jayant},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{16c26622d4dcecc6081b44b436223d1b}
+      \strng{authornamehash}{3d1c620805148cd1766b8bf51af48276}
+      \strng{authorfullhash}{16c26622d4dcecc6081b44b436223d1b}
+      \strng{authorfullhashraw}{16c26622d4dcecc6081b44b436223d1b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{langid}{english}
+      \field{title}{A Time Series is Worth 64 Words: Long-term Forecasting with Transformers}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=Jbdc0vTOcol
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=Jbdc0vTOcol
+      \endverb
+    \endentry
+    \entry{challu2023nhits}{inproceedings}{useauthor=false}{}
+      \name{author}{6}{}{%
+        {{hash=b24b46be5d0e91bd40eb4cc4bb329471}{%
+           family={Challu},
+           familyi={C\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ee88da26b37ef56e671ac99c84299117}{%
+           family={Olivares},
+           familyi={O\bibinitperiod},
+           given={Kin\bibnamedelima G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ec512581d79ac7af6281fd4b72c40097}{%
+           family={Oreshkin},
+           familyi={O\bibinitperiod},
+           given={Boris\bibnamedelima N.},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=a3da1144390547aa04a589d73c352c9b}{%
+           family={Garza\bibnamedelima Ramirez},
+           familyi={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d30ec2779ed3b1df69fda04e818f48df}{%
+           family={Mergenthaler\bibnamedelima Canseco},
+           familyi={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b9bf2f57175122ccd8ede698750624e9}{%
+           family={Dubrawski},
+           familyi={D\bibinitperiod},
+           given={Artur},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{e395d9a6f11150d5102e8b4a4efe633f}
+      \strng{authornamehash}{3c9f6daa626a4218c3286eb01e4cd518}
+      \strng{authorfullhash}{e395d9a6f11150d5102e8b4a4efe633f}
+      \strng{authorfullhashraw}{e395d9a6f11150d5102e8b4a4efe633f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the AAAI Conference on Artificial Intelligence}
+      \field{internalsortvolume}{37}
+      \field{langid}{english}
+      \field{title}{{NHITS}: Neural Hierarchical Interpolation for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{number}{6}
+      \range{number}{1}
+      \field{pages}{6989\bibrangedash 6997}
+      \range{pages}{9}
+      \field{volume}{37}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1609/aaai.v37i6.25854
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1609/aaai.v37i6.25854
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1609/aaai.v37i6.25854
+      \endverb
+    \endentry
+    \entry{kehinde2025helformer}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=0d485210c9c37e4ef7cb44eb1c22a54e}{%
+           family={Kehinde},
+           familyi={K\bibinitperiod},
+           given={T.\bibnamedelimi O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=330fe9cbff5bcd60d5a8336f6c1260c1}{%
+           family={Adedokun},
+           familyi={A\bibinitperiod},
+           given={Oluyinka\bibnamedelima J.},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bebb4a69fc5f590c057725ebdbb9e1a2}{%
+           family={Olanrewaju},
+           familyi={O\bibinitperiod},
+           given={Oludolapo\bibnamedelima A.},
+           giveni={O\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{95f61e2354ef41e4bb3e983d41e54cbb}
+      \strng{fullhash}{8a4a5db2a70797139701f4ee22ee9c01}
+      \strng{fullhashraw}{8a4a5db2a70797139701f4ee22ee9c01}
+      \strng{bibnamehash}{8a4a5db2a70797139701f4ee22ee9c01}
+      \strng{authorbibnamehash}{8a4a5db2a70797139701f4ee22ee9c01}
+      \strng{authornamehash}{95f61e2354ef41e4bb3e983d41e54cbb}
+      \strng{authorfullhash}{8a4a5db2a70797139701f4ee22ee9c01}
+      \strng{authorfullhashraw}{8a4a5db2a70797139701f4ee22ee9c01}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{12}
+      \field{journaltitle}{Journal of Big Data}
+      \field{langid}{english}
+      \field{title}{Helformer: An Attention-Based Deep Learning Model for Cryptocurrency Price Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{81}
+      \range{pages}{1}
+      \field{volume}{12}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1186/s40537-025-01135-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s40537-025-01135-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s40537-025-01135-4
+      \endverb
+    \endentry
+    \entry{monteromanso2020fforma}{article}{useauthor=false}{}
+      \name{author}{4}{}{%
+        {{hash=7a04e9ade70a01d5159c482b28d53fcb}{%
+           family={Montero-Manso},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=95cfbf5a8396e08b434cc6f7f5b18dc8}{%
+           family={Athanasopoulos},
+           familyi={A\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=dfb2ec90ee536a5bce03e2cade7d40d6}{%
+           family={Talagala},
+           familyi={T\bibinitperiod},
+           given={Thiyanga\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{00cffdb0942b021de006f60748894cca}
+      \strng{authornamehash}{4c21fd495b88cc16dfcc22ca1b2beeed}
+      \strng{authorfullhash}{00cffdb0942b021de006f60748894cca}
+      \strng{authorfullhashraw}{00cffdb0942b021de006f60748894cca}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{36}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{{FFORMA}: Feature-Based Forecast Model Averaging}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{86\bibrangedash 92}
+      \range{pages}{7}
+      \field{volume}{36}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2019.02.011
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.02.011
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2019.02.011
+      \endverb
+    \endentry
+    \entry{makridakis2022m5}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ba8241955b5282793fdcf2d43c398cc6}{%
+           family={Makridakis},
+           familyi={M\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1bbd058009b400578fd6334102fc8dec}{%
+           family={Spiliotis},
+           familyi={S\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c84a88720d8401a0259918f2eb3bec78}{%
+           family={Assimakopoulos},
+           familyi={A\bibinitperiod},
+           given={Vassilios},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bf970fecaabf41466b811e4f4ec2f47}
+      \strng{fullhash}{79b1cdab2388adc969bf628908c61838}
+      \strng{fullhashraw}{79b1cdab2388adc969bf628908c61838}
+      \strng{bibnamehash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authorbibnamehash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authornamehash}{2bf970fecaabf41466b811e4f4ec2f47}
+      \strng{authorfullhash}{79b1cdab2388adc969bf628908c61838}
+      \strng{authorfullhashraw}{79b1cdab2388adc969bf628908c61838}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{38}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{langid}{english}
+      \field{title}{{M5} Accuracy Competition: Results, Findings, and Conclusions}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{number}{4}
+      \range{number}{1}
+      \field{pages}{1346\bibrangedash 1364}
+      \range{pages}{19}
+      \field{volume}{38}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2021.11.013
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.11.013
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.11.013
+      \endverb
+    \endentry
+    \entry{godahewa2021monash}{inproceedings}{useauthor=false}{}
+      \name{author}{5}{}{%
+        {{hash=823c47439cc1a1d6055de59fcb47c2e2}{%
+           family={Godahewa},
+           familyi={G\bibinitperiod},
+           given={Rakshitha},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fb7be81f0574878d688bb03f0abb8502}{%
+           family={Bergmeir},
+           familyi={B\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=021b501817a8d003c9b230aaed364b70}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Geoffrey\bibnamedelima I.},
+           giveni={G\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7a04e9ade70a01d5159c482b28d53fcb}{%
+           family={Montero-Manso},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{11b971be6aab26d964975e0bd715c4b6}
+      \strng{authornamehash}{75cabb24b48bbb4e9ded421409cdb96f}
+      \strng{authorfullhash}{11b971be6aab26d964975e0bd715c4b6}
+      \strng{authorfullhashraw}{11b971be6aab26d964975e0bd715c4b6}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Neural Information Processing Systems Track on Datasets and Benchmarks}
+      \field{langid}{english}
+      \field{title}{Monash Time Series Forecasting Archive}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=wEc1mgAjU-
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=wEc1mgAjU-
+      \endverb
+    \endentry
+    \entry{bandara2020forecasting}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=d2ea33f311ab7e75395d319cf5cb988d}{%
+           family={Bandara},
+           familyi={B\bibinitperiod},
+           given={Kasun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=fb7be81f0574878d688bb03f0abb8502}{%
+           family={Bergmeir},
+           familyi={B\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ad34f3be33d03d8bc45f4a52a342e834}{%
+           family={Smyl},
+           familyi={S\bibinitperiod},
+           given={Slawek},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7443c7c679963d5e14c60b0e29cb820}
+      \strng{fullhash}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \strng{fullhashraw}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \strng{bibnamehash}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \strng{authorbibnamehash}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \strng{authornamehash}{e7443c7c679963d5e14c60b0e29cb820}
+      \strng{authorfullhash}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \strng{authorfullhashraw}{f1df1b57614a3f5c78866dbcc7343d3d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{140}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{langid}{english}
+      \field{title}{Forecasting Across Time Series Databases Using Recurrent Neural Networks on Groups of Similar Series: A Clustering Approach}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{112896}
+      \range{pages}{1}
+      \field{volume}{140}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2019.112896
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.eswa.2019.112896
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.eswa.2019.112896
+      \endverb
+    \endentry
+    \entry{kingma2015adam}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhashraw}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhashraw}{a09df9f123146b8e2c7f1134c9496932}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{langid}{english}
+      \field{title}{Adam: A Method for Stochastic Optimization}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+    \endentry
+    \entry{cerqueira2020evaluating}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=37423bcada4a27bcd8e9e596adb305b4}{%
+           family={Cerqueira},
+           familyi={C\bibinitperiod},
+           given={Vitor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ade9e8b13149342c6e260928fd6b2d3a}{%
+           family={Torgo},
+           familyi={T\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=519e638a67898cd946a20920e71e41f3}{%
+           family={Mozetič},
+           familyi={M\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9c0b358dd8d79d29194c027342e524b}
+      \strng{fullhash}{8a1ea87509111da0a847a16567c7bda9}
+      \strng{fullhashraw}{8a1ea87509111da0a847a16567c7bda9}
+      \strng{bibnamehash}{8a1ea87509111da0a847a16567c7bda9}
+      \strng{authorbibnamehash}{8a1ea87509111da0a847a16567c7bda9}
+      \strng{authornamehash}{e9c0b358dd8d79d29194c027342e524b}
+      \strng{authorfullhash}{8a1ea87509111da0a847a16567c7bda9}
+      \strng{authorfullhashraw}{8a1ea87509111da0a847a16567c7bda9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{internalsortvolume}{109}
+      \field{journaltitle}{Machine Learning}
+      \field{langid}{english}
+      \field{title}{Evaluating Time Series Forecasting Models: An Empirical Study on Performance Estimation Methods}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{number}{11}
+      \range{number}{1}
+      \field{pages}{1997\bibrangedash 2028}
+      \range{pages}{32}
+      \field{volume}{109}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1007/s10994-020-05910-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10994-020-05910-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10994-020-05910-7
+      \endverb
+    \endentry
+    \entry{liu2024itransformer}{inproceedings}{useauthor=false}{}
+      \name{author}{7}{}{%
+        {{hash=bc6c6f66f139beef784a50d9f1485019}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1e8cc4324a833b03b5f60ededd557cdf}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Tengge},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7d602c606bbdac9b7503677f466b90bc}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Haoran},
+           giveni={H\bibinitperiod}}}%
+        {{hash=98dce96f41870f1bbabf03de06a05caa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Haixu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8c23fdbe9467d8a9fb05caa4b245e273}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shiyu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3307e9e3f72bae4785c2e86c048806e8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Lintao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=867778fd4a7456937f929a855edfaf77}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Mingsheng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{77bd26ccbf53984e09f69cbd09ca98df}
+      \strng{authornamehash}{412b864aa3b1e9ea4dc53d3c2421cf2c}
+      \strng{authorfullhash}{77bd26ccbf53984e09f69cbd09ca98df}
+      \strng{authorfullhashraw}{77bd26ccbf53984e09f69cbd09ca98df}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{langid}{english}
+      \field{note}{ICLR 2024 Spotlight}
+      \field{title}{{iTransformer}: Inverted Transformers Are Effective for Time Series Forecasting}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=JePfAI8fah
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=JePfAI8fah
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

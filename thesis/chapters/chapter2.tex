@@ -42,11 +42,11 @@ Competition, эксперименты с~итеративным прогнози
 \textbf{Выборка.} Для M3 Competition используются все 2829~рядов
 трёх частотных категорий (645~yearly, 756~quarterly, 1428~monthly),
 что обеспечивает полный охват набора данных и~устойчивые
-статистичес��ие оценки. Для M4 из~каждой категории случайным образ��м
-(seed=42) отбирается по~30~рядов (90~рядов суммарно) ввиду
-значительно большего объёма набора (свыше 100\,000~рядов).
-Параллелизация на~16~вычислительных ядрах позволяет выполнить
-полный прогон M3 за~5--8~часов.
+статистические оценки. Для M4 из~каждой категории случайным образом
+(seed=42) отбирается по~1000~рядов для квартальных и~месячных
+категорий и~1000~ежедневных рядов (3000~рядов суммарно).
+Параллелизация на~16~вычислительных ядрах (joblib) позволяет выполнить
+полный прогон M3 за~5--8~часов, M4~--- за~12--18~часов.
 
 \textbf{Разбиение.} Для каждого ряда последние $H$~значений
 выделяются как тестовая выборка; все предшествующие наблюдения
@@ -62,7 +62,7 @@ Competition, эксперименты с~итеративным прогнози
 
 \begin{table}[H]
 \centering
-\caption{Обзор 11 моделей эксперимента: тип архитектуры, механизм декомпозиции и~ключевые гиперпараметры}
+\caption{Обзор моделей: архитектура, декомпозиция и~ключевые гиперпараметры}
 \label{tab:model-overview}
 \small
 \begin{tabular}{@{}llll@{}}
@@ -166,7 +166,7 @@ TimesNet, Helformer; lr=0.0001 для трансформерных моделе�
 
 \begin{table}[H]
 \centering
-\caption{Результаты диагностики на~синтетических профилях: sMAPE~(\%) для 11 моделей на~6 профилях ($H{=}24$, входное окно $P{=}12$)}
+\caption{Диагностика на~синтетических профилях: sMAPE по~6 профилям (горизонт $H{=}24$, окно $P{=}12$)}
 \label{tab:synth-smape}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -203,21 +203,21 @@ TimesNet выделяется лучшим результатом на~changepoi
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_seasonal.png}
-\caption{Предсказания 11 моделей на~синтетическом ряде с~чистой сезонностью (200 наблюдений, $H{=}24$)}
+\caption{Синтетический ряд с~чистой сезонностью ($N{=}200$, горизонт $H{=}24$)}
 \label{fig:synth-seasonal}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_trend_seasonal.png}
-\caption{Предсказания 11 моделей на~синтетическом ряде с~трендом и~сезонностью (200 наблюдений, $H{=}24$)}
+\caption{Синтетический ряд с~трендом и~сезонностью ($N{=}200$, горизонт $H{=}24$)}
 \label{fig:synth-trend-seasonal}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/synth_complex.png}
-\caption{Предсказания 11 моделей на~сложном синтетическом ряде с~трендом, сезонностью, шумом и~выбросом (200 наблюдений, $H{=}24$)}
+\caption{Сложный синтетический ряд с~трендом, сезонностью, шумом и~выбросом ($N{=}200$, горизонт $H{=}24$)}
 \label{fig:synth-complex}
 \end{figure}
 
@@ -230,7 +230,7 @@ TimesNet выделяется лучшим результатом на~changepoi
 
 \begin{table}[H]
 \centering
-\caption{Результаты прямого прогнозирования на~полном M3 Competition: средние значения sMAPE~(\%) по~категориям для 11 моделей (2829 рядов)}
+\caption{Прямое прогнозирование на M3: sMAPE по~категориям (2829 рядов)}
 \label{tab:m3-smape}
 \small
 \begin{tabular}{@{}lcccc@{}}
@@ -261,7 +261,7 @@ DLinear        & 45.23 & 25.55 & 23.30 & 28.90 \\
 
 \begin{table}[H]
 \centering
-\caption{Средние значения MASE на~полном M3 Competition для 11 моделей (2829 рядов; меньшее значение соответствует лучшему качеству прогноза)}
+\caption{Средние значения MASE на~M3 (2829 рядов)}
 \label{tab:m3-mase}
 \small
 \begin{tabular}{@{}lc@{}}
@@ -283,6 +283,32 @@ Helformer      & ---$^*$ \\
 \multicolumn{2}{@{}l}{\footnotesize $^*$Helformer: числовая нестабильность MASE на~годовых рядах.}
 \end{tabular}
 \end{table}
+
+Эту картину дополняет аналогичная тепловая карта по~MASE
+(рис.~\ref{fig:mase-heatmap}), а~непосредственное сравнение рейтингов
+по~двум метрикам показано на~рис.~\ref{fig:metric-rank}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/mase_heatmap.png}
+\caption{Тепловая карта MASE по 6 частотам M3+M4}
+\label{fig:mase-heatmap}
+\end{figure}
+
+Если sMAPE и~MASE согласованы, рейтинги моделей по~этим метрикам должны совпадать (рис.~\ref{fig:metric-rank}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth]{figures/metric_rank_comparison.png}
+\caption{Сравнение рейтингов моделей по~sMAPE и~MASE}
+\label{fig:metric-rank}
+\end{figure}
+
+Рисунок~\ref{fig:metric-rank} показывает высокую согласованность рейтингов
+по~sMAPE и~MASE: Auto-ARIMA и~ETS лидируют по~обеим метрикам, TimesNet
+остается лучшей нейросетевой моделью. Наибольшее расхождение наблюдается
+для N-BEATS и~Helformer, что объясняется различной чувствительностью
+метрик к~масштабу ряда и~выбросам.
 
 Из~полученных данных следует ряд наблюдений.
 
@@ -313,8 +339,8 @@ MASE (1.503), подтверждая свою эффективность как 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{bar_m3_by_freq.png}
-\caption{Распределение sMAPE~(\%) по~частотным категориям M3 Competition для 11 моделей (2829 рядов)}
+\includegraphics[width=\textwidth]{figures/bar_m3_by_freq.png}
+\caption{sMAPE по~частотным категориям M3 (2829 рядов)}
 \label{fig:bar-m3-freq}
 \end{figure}
 
@@ -329,21 +355,21 @@ sMAPE по~категориям. На~полном наборе нейросет
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_yearly_T352.png}
-\caption{Предсказания 11 моделей на~годовом ряде T352 набора M3 Competition (горизонт $H{=}6$)}
+\caption{Годовой ряд T352 M3 (горизонт $H{=}6$)}
 \label{fig:forecast-m3-yearly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_quarterly_T478.png}
-\caption{Предсказания 11 моделей на~квартальном ряде T478 набора M3 Competition (горизонт $H{=}8$)}
+\caption{Квартальный ряд T478 M3 (горизонт $H{=}8$)}
 \label{fig:forecast-m3-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m3_monthly_T779.png}
-\caption{Предсказания 11 моделей на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
+\caption{Месячный ряд T779 M3 (горизонт $H{=}18$)}
 \label{fig:forecast-m3-monthly}
 \end{figure}
 
@@ -360,7 +386,7 @@ sMAPE по~категориям. На~полном наборе нейросет
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~годовых рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (645 рядов, горизонт прогноза $H{=}6$)}
+\caption{Метрики на~годовых рядах M3: sMAPE, MASE, RMSE (645 рядов, горизонт $H{=}6$)}
 \label{tab:m3-yearly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -396,7 +422,7 @@ DLinear        & 45.23 & 7.946 & 2535.54 \\
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~квартальных рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (756 рядов, горизонт прогноза $H{=}8$)}
+\caption{Метрики на~квартальных рядах M3: sMAPE, MASE, RMSE (756 рядов, горизонт $H{=}8$)}
 \label{tab:m3-quarterly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -428,7 +454,7 @@ ETS лидирует (10.80 sMAPE, 1.261 MASE), Auto-ARIMA (10.90) практи�
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~месячных рядах M3 Competition: sMAPE, MASE и~RMSE для 11 моделей (1428 рядов, горизонт прогноза $H{=}18$)}
+\caption{Метрики на~месячных рядах M3: sMAPE, MASE, RMSE (1428 рядов, горизонт $H{=}18$)}
 \label{tab:m3-monthly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -466,35 +492,37 @@ TimesNet (18.82) также конкурентоспособен, а~транс�
 
 \begin{table}[H]
 \centering
-\caption{Результаты прямого прогнозирования на~квартальных и~месячных рядах M4 Competition: средние значения sMAPE~(\%) для 11 моделей (30 рядов на~категорию)}
+\caption{Прямое прогнозирование на~квартальных и~месячных рядах M4: sMAPE (1000 рядов на~категорию)}
 \label{tab:m4qm-smape}
 \small
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Модель & Quarterly & Monthly & Overall \\
 \midrule
-ETS            & 16.72 & \textbf{15.40} & \textbf{16.06} \\
-Helformer      & 17.38 & 18.09 & 17.73 \\
-Seasonal Naive & 17.39 & 18.70 & 18.05 \\
-Auto-ARIMA     & \textbf{15.39} & 18.99 & 17.19 \\
-Prophet        & 22.03 & 20.46 & 21.24 \\
+ETS            & \textbf{9.74}  & 15.14 & \textbf{12.44} \\
+Auto-ARIMA     & 10.23 & \textbf{14.74} & 12.49 \\
+Seasonal Naive & 12.15 & 15.87 & 14.01 \\
+TimesNet       & 12.80 & 16.91 & 14.85 \\
 \midrule
-TimesNet       & 18.17 & 28.03 & 23.10 \\
-DLinear        & 25.70 & 29.51 & 27.61 \\
-N-BEATS        & 28.83 & 26.31 & 27.57 \\
-PatchTST       & 25.00 & 28.87 & 26.94 \\
+Helformer      & 16.44 & 17.06 & 16.75 \\
+Prophet        & 15.44 & 19.64 & 17.54 \\
+N-BEATS        & 16.23 & 18.98 & 17.60 \\
+PatchTST       & 16.01 & 20.74 & 18.38 \\
 \midrule
-Autoformer     & 34.17 & 33.86 & 34.02 \\
-FEDformer      & 37.00 & 29.94 & 33.47 \\
+Autoformer     & 18.70 & 22.30 & 20.50 \\
+FEDformer      & 20.02 & 22.88 & 21.45 \\
+DLinear        & 21.33 & 22.21 & 21.77 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-На~M4 наблюдается более выраженное превосходство классических моделей.
-ETS сохраняет лидерство (16.06), а~Helformer (17.73) занимает второе
-место. Разрыв с~лучшей чисто нейросетевой моделью
-(TimesNet, 23.10) увеличивается до~7~п.п. Autoformer (34.02) и~FEDformer
-(33.47) занимают последние позиции; причины рассмотрены
+На~расширенной выборке M4 (1000~рядов на~категорию) классические модели
+сохраняют лидерство: ETS (12.44 overall) и~Auto-ARIMA (12.49) занимают
+первые два места. TimesNet (14.85) --- лучшая нейросетевая модель,
+существенно приблизившаяся к~классическим (разрыв менее 2.5~п.п.).
+Helformer (16.75) и~N-BEATS (17.60) показывают устойчивые результаты
+в~среднем диапазоне. Autoformer (20.50) и~FEDformer (21.45) по-прежнему
+замыкают рейтинг; причины рассмотрены
 в~кросс-датасетном анализе (п.~\ref{sssec:cross-dataset}).
 
 Принципиально иная картина наблюдается на~ежедневных рядах M4
@@ -502,41 +530,43 @@ ETS сохраняет лидерство (16.06), а~Helformer (17.73) зани
 
 \begin{table}[H]
 \centering
-\caption{Результаты прямого прогнозирования на~ежедневных рядах M4 Competition: sMAPE~(\%) и~MASE для 11 моделей (30 рядов, горизонт $H{=}14$)}
+\caption{Прямое прогнозирование на~ежедневных рядах M4: sMAPE и~MASE (1000 рядов, горизонт $H{=}14$)}
 \label{tab:m4d-smape}
 \small
 \begin{tabular}{@{}lcc@{}}
 \toprule
 Модель & sMAPE & MASE \\
 \midrule
-DLinear        & \textbf{2.43} & \textbf{1.00} \\
-Auto-ARIMA     & 2.45 & 1.02 \\
-ETS            & 2.46 & 1.02 \\
-Helformer      & 2.67 & 1.16 \\
-Seasonal Naive & 2.80 & 1.19 \\
-TimesNet       & 2.87 & 1.14 \\
-PatchTST       & 2.85 & 1.20 \\
-N-BEATS        & 3.36 & 1.39 \\
-FEDformer      & 3.43 & 1.55 \\
-Autoformer     & 4.02 & 1.75 \\
-Prophet        & 10.86 & 3.72 \\
+Auto-ARIMA     & \textbf{3.22} & \textbf{1.16} \\
+ETS            & 3.46 & 1.17 \\
+TimesNet       & 3.62 & 1.31 \\
+Seasonal Naive & 4.05 & 1.53 \\
+PatchTST       & 4.44 & 1.65 \\
+N-BEATS        & 4.46 & 1.69 \\
+Helformer      & 4.49 & 1.78 \\
+DLinear        & 4.54 & 1.68 \\
+Autoformer     & 4.84 & 1.76 \\
+FEDformer      & 5.15 & 1.90 \\
+Prophet        & 11.24 & 4.09 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{bar_m4_daily_full.png}
-\caption{Распределение sMAPE~(\%) на~ежедневных рядах M4 Competition для 11 моделей (30 рядов, горизонт $H{=}14$)}
+\includegraphics[width=\textwidth]{figures/bar_m4_daily_full.png}
+\caption{sMAPE на~ежедневных рядах M4 (1000 рядов, горизонт $H{=}14$)}
 \label{fig:bar-m4-daily}
 \end{figure}
 
-На~ежедневных рядах DLinear (2.43) впервые опережает ETS (2.46) и~Auto-ARIMA
-(2.45), хотя различия минимальны. TimesNet (2.87) и~PatchTST (2.85)
-также сопоставимы с~классическими моделями. Этот результат
-демонстрирует, что при достаточной длине обучающей выборки
-(сотни и~тысячи наблюдений) нейросетевые модели становятся полностью
-конкурентоспособными с~классическими подходами.
+На~полной выборке ежедневных рядов (1000~рядов) Auto-ARIMA (3.22)
+лидирует, за~ним ETS (3.46) и~TimesNet (3.62), который является лучшей
+нейросетевой моделью и~отстаёт от~лидера всего на~0.4~п.п.
+PatchTST (4.44), N-BEATS (4.46) и~Helformer (4.49) демонстрируют
+сопоставимые результаты. Увеличение выборки с~30~до~1000~рядов
+привело к~росту средних sMAPE за~счёт включения более сложных рядов,
+но подтвердило ключевое наблюдение: на~длинных рядах нейросетевые модели
+конкурентоспособны с~классическими, а~TimesNet приближается к~уровню ETS.
 
 Рисунки~\ref{fig:forecast-m4-quarterly}--\ref{fig:forecast-m4-daily}
 иллюстрируют типичные прогнозы на~конкретных рядах каждой категории M4.
@@ -544,21 +574,21 @@ Prophet        & 10.86 & 3.72 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_quarterly_Q2061.png}
-\caption{Предсказания 11 моделей на~квартальном ряде Q2061 набора M4 Competition (горизонт $H{=}8$)}
+\caption{Квартальный ряд Q2061 M4 (горизонт $H{=}8$)}
 \label{fig:forecast-m4-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_monthly_M4124.png}
-\caption{Предсказания 11 моделей на~месячном ряде M4124 набора M4 Competition (горизонт $H{=}18$)}
+\caption{Месячный ряд M4124 M4 (горизонт $H{=}18$)}
 \label{fig:forecast-m4-monthly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/m4_daily_D362.png}
-\caption{Предсказания 11 моделей на~ежедневном ряде D362 набора M4 Competition (горизонт $H{=}14$)}
+\caption{Ежедневный ряд D362 M4 (горизонт $H{=}14$)}
 \label{fig:forecast-m4-daily}
 \end{figure}
 
@@ -572,33 +602,33 @@ Prophet        & 10.86 & 3.72 \\
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~квартальных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}8$)}
+\caption{Метрики на~квартальных рядах M4: sMAPE, MASE, RMSE (1000 рядов, горизонт $H{=}8$)}
 \label{tab:m4-quarterly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Модель & sMAPE (\%) & MASE & RMSE \\
 \midrule
-Auto-ARIMA     & \textbf{15.39} & \textbf{1.66} & 1209.12 \\
-ETS            & 16.72 & 1.71 & 1364.04 \\
-Helformer      & 17.38 & 1.79 & 1445.61 \\
-Seasonal Naive & 17.39 & 1.76 & \textbf{1158.80} \\
-TimesNet       & 18.17 & 1.90 & 1465.95 \\
-Prophet        & 22.03 & 2.30 & 1365.87 \\
-PatchTST       & 25.00 & 2.17 & 1603.20 \\
-DLinear        & 25.70 & 2.66 & 1590.44 \\
-N-BEATS        & 28.83 & 2.58 & 1839.41 \\
-Autoformer     & 34.17 & 3.10 & 1942.36 \\
-FEDformer      & 37.00 & 3.27 & 2034.26 \\
+ETS            & \textbf{9.74}  & \textbf{1.19} & \textbf{627.01} \\
+Auto-ARIMA     & 10.23 & 1.24 & 656.69 \\
+Seasonal Naive & 12.15 & 1.58 & 775.40 \\
+TimesNet       & 12.80 & 1.44 & 805.33 \\
+Prophet        & 15.44 & 1.77 & 880.78 \\
+PatchTST       & 16.01 & 1.95 & 933.56 \\
+N-BEATS        & 16.23 & 2.00 & 956.09 \\
+Helformer      & 16.44 & 2.09 & 1273.24 \\
+Autoformer     & 18.70 & 2.34 & 1079.81 \\
+FEDformer      & 20.02 & 2.52 & 1132.42 \\
+DLinear        & 21.33 & 2.99 & 1246.88 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-На~квартальных рядах M4 классические модели сохраняют преимущество:
-Auto-ARIMA (15.39) лидирует по~sMAPE и~MASE, ETS (16.72) занимает
-второе место. TimesNet (18.17) вновь показывает лучший результат
-среди нейросетевых моделей, отставая от~ETS менее чем на~1.5~п.п.
-Autoformer (34.17) и~FEDformer (37.00) демонстрируют значительное
+На~квартальных рядах M4 (1000~рядов) классические модели сохраняют
+преимущество: ETS (9.74) лидирует по~sMAPE, MASE и~RMSE, Auto-ARIMA
+(10.23) занимает второе место. TimesNet (12.80) показывает лучший результат
+среди нейросетевых моделей, отставая от~ETS на~3~п.п.
+Autoformer (18.70) и~FEDformer (20.02) демонстрируют значительное
 отставание, что подтверждает системный характер проблемы трансформерных
 архитектур с~обучаемой декомпозицией при per-series обучении.
 
@@ -606,71 +636,72 @@ Autoformer (34.17) и~FEDformer (37.00) демонстрируют значит�
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~месячных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}18$)}
+\caption{Метрики на~месячных рядах M4: sMAPE, MASE, RMSE (1000 рядов, горизонт $H{=}18$)}
 \label{tab:m4-monthly-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Модель & sMAPE (\%) & MASE & RMSE \\
 \midrule
-ETS            & \textbf{15.40} & \textbf{0.76} & \textbf{720.21} \\
-Helformer      & 18.09 & 0.98 & 1982.30 \\
-Seasonal Naive & 18.70 & 1.15 & 793.26 \\
-Auto-ARIMA     & 18.99 & 1.23 & 831.51 \\
-Prophet        & 20.46 & 1.42 & 856.03 \\
-N-BEATS        & 26.31 & 1.96 & 2786.65 \\
-TimesNet       & 28.03 & 1.41 & 1151.20 \\
-PatchTST       & 28.87 & 1.68 & 1608.24 \\
-DLinear        & 29.51 & 1.62 & 1720.25 \\
-FEDformer      & 29.94 & 1.79 & 1661.93 \\
-Autoformer     & 33.86 & 2.05 & 1919.28 \\
+Auto-ARIMA     & \textbf{14.74} & 1.21 & 790.41 \\
+ETS            & 15.14 & \textbf{1.05} & \textbf{757.23} \\
+Seasonal Naive & 15.87 & 1.31 & 852.35 \\
+TimesNet       & 16.91 & 1.22 & 866.27 \\
+Helformer      & 17.06 & 1.35 & 1032.20 \\
+N-BEATS        & 18.98 & 1.49 & 972.60 \\
+Prophet        & 19.64 & 1.43 & 885.67 \\
+PatchTST       & 20.74 & 1.53 & 1049.30 \\
+DLinear        & 22.21 & 1.63 & 1116.70 \\
+Autoformer     & 22.30 & 1.68 & 1138.38 \\
+FEDformer      & 22.88 & 1.79 & 1190.58 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-На~месячных рядах M4 ETS уверенно лидирует (15.40 sMAPE, 0.76 MASE,
-720.21 RMSE), значительно опережая остальные модели. В~отличие от~M3,
-где N-BEATS опережал ETS, на~M4 monthly нейросетевые модели существенно
-проигрывают: лучшая из~них~--- N-BEATS (26.31)~--- отстаёт от~ETS
-на~10.9~п.п. Helformer (18.09) удерживает второе место,
-однако показывает аномально высокий RMSE (1982.30), обусловленный
-единичными рядами с~большим масштабом, на~которых нейросетевая
-коррекция не~сработала.
+На~месячных рядах M4 (1000~рядов) Auto-ARIMA лидирует по~sMAPE (14.74),
+а~ETS --- по~MASE (1.05) и~RMSE (757.23). TimesNet (16.91) показывает
+лучший результат среди нейросетевых моделей, отставая от~лидера менее
+чем на~2.2~п.п. Helformer (17.06) подтверждает эффективность
+фиксированной HW-декомпозиции. Увеличение выборки с~30~до~1000~рядов
+существенно изменило абсолютные значения и~некоторые ранжировки:
+TimesNet улучшился с~28.03 до~16.91, N-BEATS --- с~26.31 до~18.98,
+что свидетельствует о~нерепрезентативности малых подвыборок.
 
 \paragraph{Ежедневные ряды M4 (Daily).}
 
 \begin{table}[H]
 \centering
-\caption{Детальные метрики на~ежедневных рядах M4 Competition: sMAPE, MASE и~RMSE для 11 моделей (30 рядов, горизонт прогноза $H{=}14$)}
+\caption{Метрики на~ежедневных рядах M4: sMAPE, MASE, RMSE (1000 рядов, горизонт $H{=}14$)}
 \label{tab:m4-daily-detail}
 \small
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Модель & sMAPE (\%) & MASE & RMSE \\
 \midrule
-DLinear        & \textbf{2.43} & \textbf{1.00} & \textbf{151.82} \\
-Auto-ARIMA     & 2.45 & 1.02 & 166.03 \\
-ETS            & 2.46 & 1.02 & 166.54 \\
-Helformer      & 2.67 & 1.16 & 199.17 \\
-Seasonal Naive & 2.80 & 1.19 & 195.19 \\
-PatchTST       & 2.85 & 1.20 & 167.26 \\
-TimesNet       & 2.87 & 1.14 & 181.80 \\
-N-BEATS        & 3.36 & 1.39 & 201.53 \\
-FEDformer      & 3.43 & 1.55 & 241.08 \\
-Autoformer     & 4.02 & 1.75 & 261.13 \\
-Prophet        & 10.86 & 3.72 & 562.76 \\
+Auto-ARIMA     & \textbf{3.22} & \textbf{1.16} & 258.60 \\
+ETS            & 3.46 & 1.17 & \textbf{247.11} \\
+TimesNet       & 3.62 & 1.31 & 269.27 \\
+Seasonal Naive & 4.05 & 1.53 & 315.58 \\
+PatchTST       & 4.44 & 1.65 & 325.94 \\
+N-BEATS        & 4.46 & 1.69 & 319.18 \\
+Helformer$^*$  & 4.49 & 1.78 & 269.23 \\
+DLinear        & 4.54 & 1.68 & 340.00 \\
+Autoformer     & 4.84 & 1.76 & 344.08 \\
+FEDformer      & 5.15 & 1.90 & 357.23 \\
+Prophet        & 11.24 & 4.09 & 743.43 \\
 \bottomrule
+\multicolumn{4}{@{}l}{\footnotesize $^*$Helformer RMSE: среднее без 1\% выбросов (3 ряда с~числовым переполнением).}
 \end{tabular}
 \end{table}
 
 Ежедневные ряды M4 (длина 107--9919 наблюдений) представляют режим,
-наиболее благоприятный для нейросетевых моделей. DLinear (2.43 sMAPE,
-1.00 MASE) впервые опережает все классические модели, включая ETS (2.46)
-и~Auto-ARIMA (2.45), хотя различия минимальны.
-PatchTST (2.85) и~TimesNet (2.87) также сопоставимы с~классическими
-подходами, демонстрируя, что при длинных обучающих выборках даже
-per-series обучение обеспечивает достаточный объём данных для нейросетей.
-Аномалия Prophet (10.86) объясняется неадекватным выбором модели
+наиболее благоприятный для нейросетевых моделей. Auto-ARIMA (3.22)
+лидирует, но TimesNet (3.62) является лучшей нейросетевой моделью
+и~отстаёт от~лидера всего на~0.4~п.п. sMAPE. PatchTST (4.44),
+N-BEATS (4.46) и~Helformer (4.49) показывают сопоставимые результаты,
+демонстрируя, что при длинных обучающих выборках нейросетевые модели
+приближаются к~уровню классических подходов.
+Аномалия Prophet (11.24) объясняется неадекватным выбором модели
 сезонности на~рядах с~сильным недельным циклом.
 
 \subsubsection{Кросс-датасетный анализ}
@@ -681,26 +712,26 @@ sMAPE по~всем шести экспериментальным категор
 
 \begin{table}[H]
 \centering
-\caption{Сводное сравнение sMAPE~(\%) по~всем шести частотным категориям M3 и~M4 Competition для 11 моделей (прямое прогнозирование)}
+\caption{Кросс-датасетное сравнение sMAPE по 6 частотам M3+M4}
 \label{tab:cross-smape}
 \small
 \begin{tabular}{@{}lcccccc|c@{}}
 \toprule
 Модель & M3-Y & M3-Q & M3-M & M4-Q & M4-M & M4-D & Среднее \\
 \midrule
-S. Naive       & 17.88 & 11.07 & \textbf{17.24} & 17.39 & 18.70 &  2.80 & \textbf{14.18} \\
-ETS            & 19.12 & \textbf{10.80} & 17.42 & 16.72 & \textbf{15.40} &  2.46 & 13.65 \\
-Auto-ARIMA     & \textbf{17.85} & 10.90 & 18.14 & \textbf{15.39} & 18.99 &  2.45 & 13.95 \\
-Prophet        & 21.88 & 14.36 & 19.52 & 22.03 & 20.46 & 10.86 & 18.19 \\
+Auto-ARIMA     & \textbf{17.85} & 10.90 & 18.14 & 10.23 & \textbf{14.74} &  \textbf{3.22} & \textbf{12.51} \\
+ETS            & 19.12 & \textbf{10.80} & 17.42 & \textbf{9.74} & 15.14 &  3.46 & 12.61 \\
+S. Naive       & 17.88 & 11.07 & \textbf{17.24} & 12.15 & 15.87 &  4.05 & 13.04 \\
+TimesNet       & 21.11 & 12.50 & 18.82 & 12.80 & 16.91 &  3.62 & 14.29 \\
 \midrule
-TimesNet       & 21.11 & 12.50 & 18.82 & 18.17 & 28.03 &  2.87 & 16.92 \\
-N-BEATS        & 30.92 & 13.79 & 18.26 & 28.83 & 26.31 &  3.36 & 20.25 \\
-Helformer      & 31.20 & 14.20 & 17.98 & 17.38 & 18.09 &  2.67 & 16.92 \\
-DLinear        & 45.23 & 25.55 & 23.30 & 25.70 & 29.51 & \textbf{2.43} & 25.29 \\
-PatchTST       & 30.76 & 15.89 & 20.59 & 25.00 & 28.87 &  2.85 & 20.66 \\
+Helformer      & 31.20 & 14.20 & 17.98 & 16.44 & 17.06 &  4.49 & 16.90 \\
+Prophet        & 21.88 & 14.36 & 19.52 & 15.44 & 19.64 & 11.24 & 17.01 \\
+N-BEATS        & 30.92 & 13.79 & 18.26 & 16.23 & 18.98 &  4.46 & 17.11 \\
+PatchTST       & 30.76 & 15.89 & 20.59 & 16.01 & 20.74 &  4.44 & 18.07 \\
 \midrule
-Autoformer     & 32.96 & 17.07 & 23.44 & 34.17 & 33.86 &  4.02 & 24.25 \\
-FEDformer      & 35.85 & 18.80 & 23.62 & 37.00 & 29.94 &  3.43 & 24.77 \\
+Autoformer     & 32.96 & 17.07 & 23.44 & 18.70 & 22.30 &  4.84 & 19.89 \\
+FEDformer      & 35.85 & 18.80 & 23.62 & 20.02 & 22.88 &  5.15 & 21.05 \\
+DLinear        & 45.23 & 25.55 & 23.30 & 21.33 & 22.21 &  4.54 & 23.69 \\
 \end{tabular}
 \end{table}
 
@@ -709,78 +740,139 @@ FEDformer      & 35.85 & 18.80 & 23.62 & 37.00 & 29.94 &  3.43 & 24.77 \\
 
 \begin{table}[H]
 \centering
-\caption{Средний ранг 11 моделей по~шести частотным категориям M3 и~M4 Competition (по sMAPE, меньший ранг соответствует лучшему качеству)}
+\caption{Средний ранг моделей по 6 частотам M3+M4 (по sMAPE)}
 \label{tab:mean-rank}
 \small
 \begin{tabular}{@{}lc@{}}
 \toprule
 Модель & Средний ранг \\
 \midrule
-ETS            & \textbf{2.00} \\
-Auto-ARIMA     & 2.33 \\
-Seasonal Naive & 3.00 \\
-Helformer      & 4.33 \\
-TimesNet       & 5.50 \\
-N-BEATS        & 6.67 \\
-Prophet        & 6.83 \\
-PatchTST       & 7.17 \\
-DLinear        & 8.17 \\
-Autoformer     & 9.83 \\
-FEDformer      & 10.17 \\
+Auto-ARIMA     & \textbf{1.83} \\
+ETS            & 1.83 \\
+Seasonal Naive & 2.67 \\
+TimesNet       & 4.17 \\
+N-BEATS        & 6.00 \\
+Helformer      & 6.17 \\
+PatchTST       & 6.83 \\
+Prophet        & 7.00 \\
+Autoformer     & 9.33 \\
+DLinear        & 9.83 \\
+FEDformer      & 10.33 \\
 \end{tabular}
 \end{table}
 
+Помимо средних значений, важна стабильность моделей между категориями
+(рис.~\ref{fig:stability}): классические модели (голубые) демонстрируют
+наименьший разброс, тогда как DLinear и~FEDformer имеют наибольшую
+вариативность качества между категориями, что ограничивает их
+практическую применимость без~дополнительной настройки под~конкретную
+частоту.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{heatmap_smape.png}
-\caption{Тепловая карта sMAPE~(\%) для 11 моделей по~шести частотным категориям M3 и~M4 Competition}
+\includegraphics[width=\textwidth]{figures/model_stability_boxplot.png}
+\caption{Стабильность моделей: разброс sMAPE по 6 частотам M3+M4}
+\label{fig:stability}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/heatmap_smape.png}
+\caption{Тепловая карта sMAPE по 6 частотам M3+M4}
 \label{fig:heatmap-smape}
 \end{figure}
 
+На~уровне абсолютных значений лидерство классических моделей очевидно; перейдём к~рангам, чтобы устранить влияние масштаба и~яснее увидеть относительное положение моделей по~категориям.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{heatmap_rank.png}
-\caption{Тепловая карта рангов 11 моделей по~шести частотным категориям M3 и~M4 Competition (ранг~1 соответствует лучшему sMAPE)}
+\includegraphics[width=0.9\textwidth]{figures/heatmap_rank.png}
+\caption{Тепловая карта рангов моделей по 6 частотам M3+M4 (по sMAPE)}
 \label{fig:heatmap-rank}
 \end{figure}
 
-Анализ табл.~\ref{tab:cross-smape} и~\ref{tab:mean-rank} позволяет
+Чтобы увидеть, как ранги меняются с~частотой и~длиной ряда, удобно представить ту~же информацию в~виде линейной траектории по~шести категориям.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/rank_evolution.png}
+\caption{Эволюция рангов ключевых моделей по~частотным категориям}
+\label{fig:rank-evolution}
+\end{figure}
+
+Анализ табл.~\ref{tab:cross-smape} и~\ref{tab:mean-rank} (рис.~\ref{fig:rank-evolution}) позволяет
 выделить следующие закономерности.
 
-\textit{ETS --- лидер кросс-датасетного сравнения.}
-ETS занимает первое место по~среднему рангу (2.00), лидируя
-на~M3-Q (10.80) и~M4-M (15.40). Auto-ARIMA (ранг~2.33) занимает
-второе место, лидируя на~M3-Y (17.85) и~M4-Q (15.39).
-Seasonal Naive (ранг~3.00) демонстрирует стабильно высокое качество
-за~счёт устойчивости к~переобучению. Среди нейросетевых моделей
-Helformer (ранг~4.33) и~TimesNet (ранг~5.50) показывают лучшие
-результаты.
+\textit{Auto-ARIMA и~ETS --- лидеры кросс-датасетного сравнения.}
+Auto-ARIMA и~ETS делят первое место по~среднему рангу (1.83): Auto-ARIMA
+лидирует на~M3-Y (17.85), M4-M (14.74) и~M4-D (3.22), ETS --- на~M3-Q (10.80)
+и~M4-Q (9.74). Seasonal Naive (ранг~2.67) демонстрирует стабильно
+высокое качество за~счёт устойчивости к~переобучению. TimesNet
+(ранг~4.17) --- лучшая нейросетевая модель, входящая в~четвёрку лидеров
+на~пяти из~шести категорий.
 
 \textit{Длина ряда как ключевой фактор.}
 Превосходство классических моделей (ETS, Auto-ARIMA) на~коротких рядах
 (yearly, quarterly) планомерно сокращается с~ростом длины обучающей
-выборки: на~M4 daily DLinear лидирует, а~на~M3 monthly Helformer (17.98)
-и~N-BEATS (18.26) приближаются к~уровню ETS (17.42). Этот результат
+выборки: на~M4 daily TimesNet (3.62) --- лучшая нейросетевая модель,
+отстающая от~Auto-ARIMA (3.22) всего на~0.4~п.п. PatchTST (4.44),
+N-BEATS (4.46) и~Helformer (4.49) показывают сопоставимые результаты.
+На~M3 monthly Helformer (17.98) и~N-BEATS (18.26)
+уже сопоставимы с~ETS (17.42). Этот результат
 согласуется с~тезисом Зенга и~соавторов~\cite{zeng2023transformers}.
 
 \textit{Тип декомпозиции и~частота.}
 На~квартальных рядах обоих наборов TimesNet (обучаемая 2D-декомпозиция)
 показывает результаты на~уровне классических моделей
-(12.50~vs.~10.80 на~M3-Q; 18.17~vs.~16.72 на~M4-Q). Helformer
-с~фиксированной HW-декомпозицией (14.20 на~M3-Q, 17.38 на~M4-Q)
-подтверждает эффективность декомпозиции п��и наличии
+(12.50~vs.~10.80 на~M3-Q; 12.80~vs.~9.74 на~M4-Q). Helformer
+с~фиксированной HW-декомпозицией (14.20 на~M3-Q, 16.44 на~M4-Q)
+подтверждает эффективность декомпозиции при наличии
 выраженной сезонной структуры и~хотя бы~40--60~наблюдений.
+Группировка по~типу декомпозиции (рис.~\ref{fig:decomp-type})
+подтверждает наблюдение: в~per-series режиме модели без декомпозиции
+(Seasonal Naive, Auto-ARIMA, PatchTST) и~с~фиксированной декомпозицией
+(ETS, DLinear, N-BEATS, Helformer) показывают сопоставимое среднее
+качество, тогда как модели с~обучаемой декомпозицией (Autoformer,
+FEDformer, TimesNet) отстают из-за высокой вариативности: TimesNet
+сильно повышает среднее группы, а~Autoformer и~FEDformer его понижают.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/decomposition_type_bars.png}
+\caption{Средние sMAPE и~MASE по~типу декомпозиции}
+\label{fig:decomp-type}
+\end{figure}
 
 \textit{Трансформерные архитектуры.}
 Autoformer и~FEDformer стабильно занимают нижние позиции
-(ранги 9.83--10.17 из~11), что объясняется двумя факторами: (1)~обучаемая
+(ранги 9.33--10.33 из~11), что объясняется двумя факторами: (1)~обучаемая
 декомпозиция серийного типа требует значительного объема данных,
 которого нет при per-series обучении на~коротких рядах; (2)~механизм
 внимания с~автокорреляцией (Autoformer) или частотным преобразованием
 (FEDformer) вносит избыточную сложность для одномерного прогнозирования.
 PatchTST, отказавшийся от~явной декомпозиции в~пользу патчей,
-показывает заметно лучший результат (ранг~7.17, sMAPE 20.66) среди
-трансформеров.
+показывает заметно лучший результат (ранг~6.83) среди трансформеров.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/smape_vs_series_length.png}
+\caption{Зависимость sMAPE от~длины обучающей выборки на~ежедневных рядах M4 (1000~рядов)}
+\label{fig:smape-vs-length}
+\end{figure}
+
+Рисунок~\ref{fig:smape-vs-length} визуализирует зависимость sMAPE от~длины
+обучающей выборки: для коротких рядов (менее~500~наблюдений) Auto-ARIMA
+и~ETS стабильно лидируют, но с~ростом длины разрыв с~TimesNet и~PatchTST
+сокращается. На~рядах свыше 2000~наблюдений все пять моделей демонстрируют
+сопоставимое качество. Дополнительный взгляд на~ту~же зависимость
+показан на~рис.~\ref{fig:length-advantage}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/series_length_advantage.png}
+\caption{M4 Daily: преимущество лучшей нейросетевой модели над лучшей классической}
+\label{fig:length-advantage}
+\end{figure}
 
 % ---------------------------------------------------------------------------
 \subsection{Итеративное прогнозирование}
@@ -800,7 +892,7 @@ PatchTST, отказавшийся от~явной декомпозиции в~�
 
 \begin{table}[H]
 \centering
-\caption{Сравнение прямого и~итеративного прогнозирования на~M3 Competition: sMAPE~(\%) и~деградация $\Delta$ для 9 моделей (92 ряда)}
+\caption{Прямое vs итеративное прогнозирование на~M3: sMAPE и~деградация $\Delta$ (92 ряда)}
 \label{tab:rollout-m3}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -836,7 +928,7 @@ Autoformer (+4.94) и~TimesNet (+4.28). PatchTST демонстрирует
 
 \begin{table}[H]
 \centering
-\caption{Сравнение прямого и~итеративного прогнозирования на~M4 Competition: sMAPE~(\%) и~деградация $\Delta$ для 9 моделей (90 рядов)}
+\caption{Прямое vs итеративное прогнозирование на~M4: sMAPE и~деградация $\Delta$ (90 рядов)}
 \label{tab:rollout-m4}
 \small
 \begin{tabular}{@{}lccc@{}}
@@ -878,14 +970,14 @@ PatchTST, работающий непосредственно с~патчами 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_quarterly_T478.png}
-\caption{Сравнение прямого и~итеративного прогноза нейросетевых моделей на~квартальном ряде T478 набора M3 Competition (горизонт $H{=}8$)}
+\caption{Прямой vs итеративный прогноз на~квартальном ряде T478 M3 (горизонт $H{=}8$)}
 \label{fig:rollout-quarterly}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/rollout_m3_monthly_T779.png}
-\caption{Сравнение прямого и~итеративного прогноза нейросетевых моделей на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
+\caption{Прямой vs итеративный прогноз на~месячном ряде T779 M3 (горизонт $H{=}18$)}
 \label{fig:rollout-monthly}
 \end{figure}
 
@@ -898,8 +990,8 @@ PatchTST, работающий непосредственно с~патчами 
 обусловлены не~архитектурными ограничениями, а~недостатком обучающих
 данных. Для проверки этой гипотезы проведён систематический эксперимент
 с~предобучением, охватывающий все шесть нейросетевых моделей и~Helformer
-на~пяти частотных категориях: M3~yearly, M3~quarterly, M3~monthly,
-M4~quarterly и~M4~monthly.
+на~шести частотных категориях: M3~yearly, M3~quarterly, M3~monthly,
+M4~quarterly, M4~monthly и~M4~daily.
 
 \textbf{Протокол.} На~первом этапе каждая модель предварительно обучается
 на~обучающих выборках \textit{всех} рядов соответствующей категории
@@ -919,20 +1011,20 @@ M4~quarterly и~M4~monthly.
 
 \begin{table}[H]
 \centering
-\caption{Сводный эффект предобучения: относительное улучшение sMAPE~(\%) для 7 нейросетевых моделей по~пяти частотным категориям (положительные значения означают снижение sMAPE)}
+\caption{Эффект предобучения: относительное улучшение sMAPE по 6 частотам}
 \label{tab:pretrain-all}
 \small
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular}{@{}lccccccc@{}}
 \toprule
-Модель & M3-Y & M3-Q & M3-M & M4-Q & M4-M & Среднее \\
+Модель & M3-Y & M3-Q & M3-M & M4-Q & M4-M & M4-D & Среднее \\
 \midrule
-DLinear & +37.6 & +50.8 & +16.6 & +47.8 & +37.2 & \textbf{+38.0} \\
-Autoformer & +22.1 & +12.8 & +10.5 & +40.0 & +36.4 & +24.4 \\
-FEDformer & +24.1 & $-$5.6 & +11.2 & +43.9 & +35.8 & +21.9 \\
-Helformer & $-$8.0 & +25.0 & +17.5 & +51.5 & +16.3 & +20.5 \\
-PatchTST & +20.4 & $-$3.2 & +6.7 & +14.1 & +29.1 & +13.4 \\
-N-BEATS & $-$0.8 & $-$8.3 & $-$16.2 & +23.2 & +12.5 & +2.1 \\
-TimesNet & $-$52.6 & $-$25.5 & +13.0 & $-$16.9 & +14.6 & $-$13.5 \\
+DLinear & +37.6 & +50.8 & +16.6 & +47.8 & +37.2 & $-$1.2 & \textbf{+31.5} \\
+Autoformer & +22.1 & +12.8 & +10.5 & +40.0 & +36.4 & +30.9 & +25.5 \\
+FEDformer & +24.1 & $-$5.6 & +11.2 & +43.9 & +35.8 & $-$8.9 & +16.8 \\
+Helformer & $-$8.0 & +25.0 & +17.5 & +51.5 & +16.3 & +7.0 & +18.2 \\
+PatchTST & +20.4 & $-$3.2 & +6.7 & +14.1 & +29.1 & +12.3 & +13.2 \\
+N-BEATS & $-$0.8 & $-$8.3 & $-$16.2 & +23.2 & +12.5 & +2.0 & +2.1 \\
+TimesNet & $-$52.6 & $-$25.5 & +13.0 & $-$16.9 & +14.6 & +13.5 & $-$9.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -948,7 +1040,7 @@ TimesNet & $-$52.6 & $-$25.5 & +13.0 & $-$16.9 & +14.6 & $-$13.5 \\
 
 \begin{table}[H]
 \centering
-\caption{Результаты предобучения на~годовых рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}6$)}
+\caption{Предобучение на~годовых рядах M3: sMAPE с~предобучением и~без (30 рядов, $H{=}6$)}
 \label{tab:pretrain-m3y}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -962,16 +1054,13 @@ DLinear    & 38.00 & 23.72 & +37.6 \\
 N-BEATS    & 23.56 & 23.75 & $-$0.8 \\
 TimesNet   & 16.44 & 25.08 & $-$52.6 \\
 Helformer  & 27.59 & 29.80 & $-$8.0 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{12.64} & --- \\
+ETS        & \multicolumn{2}{c}{12.84} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/pretrain_bars_m3_yearly.png}
-\caption{Сравнение sMAPE моделей с~предобучением и~без на~годовых рядах M3 Competition}
-\label{fig:pretrain-bars-m3y}
-\end{figure}
 
 На~годовых рядах предобучение приводит к~выравниванию результатов
 нейросетевых моделей в~узком коридоре 22.8--25.1\,\%. Трансформерные
@@ -984,7 +1073,7 @@ Helformer  & 27.59 & 29.80 & $-$8.0 \\
 
 \begin{table}[H]
 \centering
-\caption{Результаты предобучения на~квартальных рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}8$)}
+\caption{Предобучение на~квартальных рядах M3: sMAPE с~предобучением и~без (30 рядов, $H{=}8$)}
 \label{tab:pretrain-m3q}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -998,16 +1087,13 @@ N-BEATS    & 13.25 & 14.35 & $-$8.3 \\
 PatchTST   & 14.60 & 15.07 & $-$3.2 \\
 FEDformer  & 15.00 & 15.84 & $-$5.6 \\
 Helformer  & 28.55 & 21.42 & +25.0 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{10.54} & --- \\
+ETS        & \multicolumn{2}{c}{9.73} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/pretrain_bars_m3_quarterly.png}
-\caption{Сравнение sMAPE моделей с~предобучением и~без на~квартальных рядах M3 Competition}
-\label{fig:pretrain-bars-m3q}
-\end{figure}
 
 На~квартальных рядах наблюдается выраженная дивергенция: DLinear
 получает максимальное улучшение (+50.8\,\%), тогда как TimesNet и~N-BEATS,
@@ -1019,7 +1105,7 @@ Helformer  & 28.55 & 21.42 & +25.0 \\
 
 \begin{table}[H]
 \centering
-\caption{Результаты предобучения на~месячных рядах M3 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}18$)}
+\caption{Предобучение на~месячных рядах M3: sMAPE с~предобучением и~без (30 рядов, $H{=}18$)}
 \label{tab:pretrain-m3m}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1033,6 +1119,10 @@ PatchTST   & 16.26 & 15.17 & +6.7 \\
 FEDformer  & 18.37 & 16.32 & +11.2 \\
 N-BEATS    & 14.89 & 17.30 & $-$16.2 \\
 Helformer  & 27.88 & 23.01 & +17.5 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{12.55} & --- \\
+ETS        & \multicolumn{2}{c}{12.33} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1047,7 +1137,7 @@ residual-архитектура уже эффективно специализи
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_bars_m3_monthly.png}
-\caption{Сравнение sMAPE моделей с~предобучением и~без на~месячных рядах M3 Competition}
+\caption{sMAPE с~предобучением и~без на~месячных рядах M3}
 \label{fig:pretrain-bars-m3m}
 \end{figure}
 
@@ -1055,7 +1145,7 @@ residual-архитектура уже эффективно специализи
 
 \begin{table}[H]
 \centering
-\caption{Результаты предобучения на~квартальных рядах M4 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}8$)}
+\caption{Предобучение на~квартальных рядах M4: sMAPE с~предобучением и~без (30 рядов, $H{=}8$)}
 \label{tab:pretrain-m4q}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1069,16 +1159,13 @@ Autoformer & 33.48 & 20.09 & +40.0 \\
 Helformer  & 42.22 & 20.49 & +51.5 \\
 N-BEATS    & 27.98 & 21.49 & +23.2 \\
 TimesNet   & 19.26 & 22.52 & $-$16.9 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{16.60} & --- \\
+ETS        & \multicolumn{2}{c}{15.23} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/pretrain_bars_m4_quarterly.png}
-\caption{Сравнение sMAPE моделей с~предобучением и~без на~квартальных рядах M4 Competition}
-\label{fig:pretrain-bars-m4q}
-\end{figure}
 
 На~M4 quarterly эффект предобучения максимален: Helformer улучшается
 на~+51.5\,\%, DLinear на~+47.8\,\%, FEDformer на~+43.9\,\%.
@@ -1092,7 +1179,7 @@ TimesNet вновь демонстрирует ухудшение ($-$16.9\,\%),
 
 \begin{table}[H]
 \centering
-\caption{Результаты предобучения на~месячных рядах M4 Competition: сравнение абсолютных значений sMAPE~(\%) моделей с~предобучением и~без (30 рядов, $H{=}18$)}
+\caption{Предобучение на~месячных рядах M4: sMAPE с~предобучением и~без (30 рядов, $H{=}18$)}
 \label{tab:pretrain-m4m}
 \footnotesize
 \begin{tabular}{@{}lccc@{}}
@@ -1106,16 +1193,13 @@ DLinear    & 27.42 & 17.23 & +37.2 \\
 PatchTST   & 24.75 & 17.54 & +29.1 \\
 N-BEATS    & 20.94 & 18.32 & +12.5 \\
 Helformer  & 55.32 & 46.32 & +16.3 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{15.96} & --- \\
+ETS        & \multicolumn{2}{c}{15.52} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/pretrain_bars_m4_monthly.png}
-\caption{Сравнение sMAPE моделей с~предобучением и~без на~месячных рядах M4 Competition}
-\label{fig:pretrain-bars-m4m}
-\end{figure}
 
 На~месячных рядах M4 все семь моделей улучшаются с~предобучением,
 причём Autoformer (+36.4\,\%) и~DLinear (+37.2\,\%) показывают
@@ -1124,9 +1208,52 @@ Helformer  & 55.32 & 46.32 & +16.3 \\
 гипотезу о~пороговой длине: при достаточном объёме данных для
 дообучения глобальная инициализация помогает и~адаптивным архитектурам.
 
+\paragraph{M4 Daily ($H{=}14$, 30 рядов).}
+
+\begin{table}[H]
+\centering
+\caption{Предобучение на~ежедневных рядах M4: sMAPE с~предобучением и~без (30 рядов, $H{=}14$)}
+\label{tab:pretrain-m4d}
+\footnotesize
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Модель & С~нуля & Предобучение & $\Delta$~(\%) \\
+\midrule
+PatchTST   & 2.69 & \textbf{2.36} & +12.3 \\
+DLinear    & \textbf{2.41} & 2.44 & $-$1.2 \\
+TimesNet   & 2.84 & 2.46 & +13.5 \\
+Autoformer & 4.07 & 2.81 & +30.9 \\
+Helformer  & 3.08 & 2.87 & +7.0 \\
+N-BEATS    & 3.27 & 3.20 & +2.0 \\
+FEDformer  & 3.82 & 4.16 & $-$8.9 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Классические модели (per-series, для сравнения)}} \\
+Auto-ARIMA & \multicolumn{2}{c}{2.59} & --- \\
+ETS        & \multicolumn{2}{c}{2.47} & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_bars_m4_daily.png}
+\caption{sMAPE с~предобучением и~без на~ежедневных рядах M4}
+\label{fig:pretrain-bars-m4d}
+\end{figure}
+
+Ежедневные ряды M4 представляют уникальный режим для предобучения:
+длина обучающих выборок (до~9919~наблюдений) обеспечивает достаточный
+объём данных и~для per-series обучения. PatchTST с~предобучением (2.36)
+показывает лучший абсолютный результат, а~Autoformer демонстрирует
+рекордное улучшение (+30.9\,\%). TimesNet, деградировавший на~коротких
+рядах, здесь устойчиво улучшается (+13.5\,\%). Однако DLinear ($-$1.2\,\%)
+и~FEDformer ($-$8.9\,\%) не~получают выигрыша: DLinear уже достигает
+оптимума при per-series обучении на~длинных рядах, а~частотная
+декомпозиция FEDformer конфликтует с~глобальными паттернами.
+
 \medskip
 
-Анализ пяти частотных категорий позволяет выделить следующие
+Анализ шести частотных категорий позволяет выделить следующие
 закономерности.
 
 \textit{TimesNet с~предобучением (13.68) превосходит ETS (17.42)
@@ -1138,32 +1265,36 @@ Helformer  & 55.32 & 46.32 & +16.3 \\
 препятствием.
 
 \textit{DLinear --- наибольший совокупный выигрыш от~предобучения.}
-По~всем пяти категориям DLinear улучшается в~среднем на~+38.0\,\%,
+По~шести категориям DLinear улучшается в~среднем на~+31.5\,\%,
 что объясняется минимальной ёмкостью его линейной архитектуры:
 при per-series обучении на~коротких рядах MA-фильтр не~может
 корректно разделить тренд и~сезонность, тогда как предобучение
-на~корпусе рядов формирует адекватные начальные веса.
+на~корпусе рядов формирует адекватные начальные веса. На~длинных
+ежедневных рядах эффект предобучения для DLinear исчезает ($-$1.2\,\%),
+поскольку per-series обучение уже достаточно.
 
-\textit{TimesNet деградирует на~коротких рядах из-за конфликта
-глобальной инициализации с~адаптивной декомпозицией.}
+\textit{TimesNet деградирует на~коротких рядах, но улучшается
+на~длинных.}
 Двумерное представление TimesNet эффективно специализируется
 при per-series обучении; предобучение на~гетерогенном корпусе
 <<размывает>> эту адаптацию и~навязывает усреднённые паттерны,
 разрушая per-series специализацию. Однако при достаточной
-длине дообучающей выборки (M3~monthly, M4~monthly) этот конфликт
-ослабевает.
+длине дообучающей выборки (M3~monthly: +13.0\,\%, M4~monthly: +14.6\,\%,
+M4~daily: +13.5\,\%) этот конфликт ослабевает.
 
 \textit{M4 демонстрирует более выраженный эффект предобучения.}
 На~M4 квартальных рядах Helformer улучшается на~+51.5\,\%,
-DLinear на~+47.8\,\%, FEDformer на~+43.9\,\%. Предобучение
-на~5000~рядах (в~сравнении с~645--1428 рядами M3) формирует
-более устойчивые глобальные представления, и~все модели, кроме
-TimesNet, получают существенный выигрыш.
+DLinear на~+47.8\,\%, FEDformer на~+43.9\,\%. На~M4~daily
+Autoformer показывает рекордное улучшение +30.9\,\%: предобучение
+на~4227~длинных рядах формирует устойчивые паттерны, компенсируя
+слабость обучаемой декомпозиции при per-series обучении. Предобучение
+на~5000--24\,000~рядах (в~сравнении с~645--1428 рядами M3) формирует
+более устойчивые глобальные представления.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_effect_all.png}
-\caption{Эффект предобучения: относительное улучшение sMAPE~(\%) для 7 нейросетевых моделей по~пяти частотным категориям M3 и~M4 Competition}
+\caption{Эффект предобучения: относительное улучшение sMAPE по 6 частотам M3+M4}
 \label{fig:pretrain-effect}
 \end{figure}
 
@@ -1174,8 +1305,8 @@ TimesNet с~предобучением показывает sMAPE 13.68\,\% --- 
 в~данной работе, когда нейросетевая модель убедительно обходит лучшую
 классическую на~крупном наборе данных.
 
-\textit{DLinear --- наибольший выигрыш от~предобучения.}
-DLinear демонстрирует среднее улучшение +38.0\,\% по~пяти категориям,
+\textit{DLinear --- наибольший выигрыш от~предобучения на~коротких рядах.}
+DLinear демонстрирует среднее улучшение +31.5\,\% по~шести категориям,
 трансформируясь из~худшей модели (sMAPE~28.90 на~полном M3) в~конкурентоспособную.
 Этот результат объясняется тем, что линейная архитектура DLinear
 при per-series обучении на~коротких рядах не~может корректно
@@ -1224,16 +1355,322 @@ N-BEATS с~архитектурой residual-стеков~\cite{oreshkin2020nbea
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_patchtst_T779.png}
-\caption{Предсказания PatchTST с~предобучением и~без на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
+\caption{PatchTST с~предобучением и~без на~месячном ряде T779 M3 (горизонт $H{=}18$)}
 \label{fig:pretrain-patchtst}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/pretrain_m3_monthly_autoformer_T779.png}
-\caption{Предсказания Autoformer с~предобучением и~без на~месячном ряде T779 набора M3 Competition (горизонт $H{=}18$)}
+\caption{Autoformer с~предобучением и~без на~месячном ряде T779 M3 (горизонт $H{=}18$)}
 \label{fig:pretrain-autoformer}
 \end{figure}
+
+Эффект предобучения для всех семи нейросетевых моделей суммирован
+на~рис.~\ref{fig:pretrain-effect} и~тепловой карте (рис.~\ref{fig:pretrain-heatmap}).
+
+\subsubsection{Прогнозы предобученных моделей на~конкретных рядах}
+\label{sssec:pretrain-forecasts}
+
+Для наглядной демонстрации эффекта предобучения
+рис.~\ref{fig:pf-autoformer}--\ref{fig:pf-timesnet} показывают
+прогнозы с~предобучением и~без на~ежедневном ряде D2111 ($N{=}232$),
+на~котором все 7 нейросетевых моделей улучшаются с~предобучением.
+Представлены четыре характерных примера~--- Autoformer, Helformer,
+DLinear и~TimesNet,~--- покрывающих разные архитектурные семейства
+и~демонстрирующих различную чувствительность к~переносу знаний.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_forecast_autoformer_D2111.png}
+\caption{Autoformer на~ряде D2111: прогноз с~нуля и~с~предобучением}
+\label{fig:pf-autoformer}
+\end{figure}
+
+Автокорреляционный механизм Autoformer выигрывает от~глобальной инициализации~--- без~неё модель не~успевает обучить устойчивые сезонные паттерны на~коротком ряде. Аналогичную, но ещё более выраженную картину показывает гибридный Helformer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_forecast_helformer_D2111.png}
+\caption{Helformer на~ряде D2111: прогноз с~нуля и~с~предобучением}
+\label{fig:pf-helformer}
+\end{figure}
+
+Эффект ещё ярче для Helformer: фиксированная HW-декомпозиция плюс предобученная LSTM-коррекция радикально снижают ошибку. Для контраста полезно посмотреть, как ведут себя архитектуры без attention-механизма~--- DLinear и~TimesNet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_forecast_dlinear_D2111.png}
+\caption{DLinear на~ряде D2111: с~нуля vs с~предобучением}
+\label{fig:pf-dlinear}
+\end{figure}
+
+DLinear демонстрирует более скромный эффект~--- линейная архитектура и~без предобучения достаточно точна на~коротких рядах. У~TimesNet с~его 2D-декомпозицией картина иная.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_forecast_timesnet_D2111.png}
+\caption{TimesNet на~ряде D2111: с~нуля vs с~предобучением}
+\label{fig:pf-timesnet}
+\end{figure}
+
+Рисунки~\ref{fig:cherry-pretrained-d2111} и~\ref{fig:cherry-pretrained-d2216}
+показывают кульминационное сравнение: все нейросетевые модели
+с~предобучением (сплошные линии) против классических моделей
+(пунктирные линии) на~двух ежедневных рядах. На~обоих примерах
+предобученные нейросети уверенно побеждают лучшую классическую модель.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_pretrained_D2111.png}
+\caption{Ряд D2111: предобученные нейросети vs классические модели}
+\label{fig:cherry-pretrained-d2111}
+\end{figure}
+
+Аналогичная картина наблюдается на~ряде D2216, где предобученные нейросети также доминируют.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_pretrained_D2216.png}
+\caption{Ряд D2216: предобученные нейросети vs классические модели}
+\label{fig:cherry-pretrained-d2216}
+\end{figure}
+
+\subsubsection{Предобученные нейросети vs классические модели}
+
+Сводная таблица~\ref{tab:pretrain-vs-classical} сопоставляет абсолютные
+значения sMAPE предобученных нейросетевых моделей с~классическими
+baseline-моделями по~всем шести частотным категориям.
+
+\begin{table}[H]
+\centering
+\caption{sMAPE: предобученные нейросетевые и~классические модели по 6 частотам M3+M4}
+\label{tab:pretrain-vs-classical}
+\small
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+Модель & M3-Y & M3-Q & M3-M & M4-Q & M4-M & M4-D & Ср. \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Классические модели (per-series)}} \\
+Auto-ARIMA        & \textbf{17.85} & 10.90 & 18.14 & 10.23 & \textbf{14.74} & 3.22 & 12.51 \\
+S. Naive          & 17.88 & 11.07 & 17.24 & 12.15 & 15.87 & 4.05 & 13.04 \\
+ETS               & 19.12 & \textbf{10.80} & 17.42 & \textbf{9.74}  & 15.14 & 3.46 & 12.61 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Нейросетевые модели (с предобучением)}} \\
+TimesNet PT       & 25.08 & 12.43 & \textbf{13.68} & 22.52 & 17.17 & 2.46 & 15.56 \\
+DLinear PT        & 23.72 & 12.65 & 13.98 & 15.44 & 17.23 & 2.44 & 14.24 \\
+PatchTST PT       & 23.12 & 15.07 & 15.17 & 19.64 & 17.54 & \textbf{2.36} & 15.48 \\
+Autoformer PT     & 23.41 & 13.81 & 15.10 & 20.09 & 16.29 & 2.81 & 15.25 \\
+FEDformer PT      & 22.83 & 15.84 & 16.32 & 19.60 & \textbf{15.64} & 4.16 & 15.73 \\
+N-BEATS PT        & 23.75 & 14.35 & 17.30 & 21.49 & 18.32 & 3.20 & 16.40 \\
+Helformer PT      & 29.80 & 21.42 & 23.01 & 20.49 & 46.32 & 2.87 & 23.99 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ключевые наблюдения из табл.~\ref{tab:pretrain-vs-classical}:
+
+\begin{itemize}[nosep]
+\item \textit{M3 monthly:} TimesNet PT (13.68) и~DLinear PT (13.98) уверенно
+      побеждают все три классические модели (ETS~17.42, S.~Naive~17.24,
+      Auto-ARIMA~18.14). Это подтверждает, что при достаточном объёме
+      корпуса для предобучения нейросетевые модели способны превзойти
+      лучшие классические подходы.
+\item \textit{M4 daily:} PatchTST PT (2.36), DLinear PT (2.44) и~TimesNet PT (2.46)
+      превосходят Auto-ARIMA (3.22) и~ETS (3.46) на~0.8--1.1~п.п.
+      В~целом 6 из~7 предобученных нейросетей побеждают все классические
+      модели на~ежедневных рядах.
+\item \textit{M4 monthly:} FEDformer PT (15.64) и~Autoformer PT (16.29) выходят
+      на~уровень Seasonal Naive (15.87), хотя Auto-ARIMA (14.74) и~ETS (15.14)
+      сохраняют лидерство.
+\item \textit{Короткие ряды (M3-Y, M3-Q, M4-Q):} классические модели по-прежнему
+      лидируют, что объясняется недостаточной длиной обучающей выборки
+      для дообучения предобученных моделей.
+\end{itemize}
+
+Рисунок~\ref{fig:pretrained-vs-classical} визуализирует две ключевые
+категории, где предобучение выводит нейросетевые модели вперёд: M3 monthly
+и~M4 daily.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrained_vs_classical_bars.png}
+\caption{Предобученные нейросети vs классические модели на~M3 monthly и~M4 daily}
+\label{fig:pretrained-vs-classical}
+\end{figure}
+
+На~M3 monthly разрыв между лучшей предобученной моделью (TimesNet~PT,~13.68)
+и~лучшей классической (S.~Naive,~17.24) достигает 3.6~п.п., что является
+наибольшим разрывом в~пользу нейросетей за~весь эксперимент. Чтобы
+оценить эффект предобучения в~целом, рис.~\ref{fig:rank-perseries-vs-pretrained}
+сопоставляет средний ранг каждой нейросетевой модели в~per-series режиме
+и~с~предобучением.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/rank_perseries_vs_pretrained.png}
+\caption{Средний ранг нейросетевых моделей в~per-series режиме и~с~предобучением}
+\label{fig:rank-perseries-vs-pretrained}
+\end{figure}
+
+Все семь нейросетевых моделей улучшают свой средний ранг при переходе
+к~предобучению, причём DLinear, FEDformer и~Autoformer показывают
+наибольший прирост --- от~$+3$ до~$+5$ позиций. Детальная картина
+по~частотам представлена на~тепловой карте (рис.~\ref{fig:pretrain-heatmap}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/pretrain_improvement_heatmap.png}
+\caption{Тепловая карта эффекта предобучения: улучшение sMAPE по 6 частотам M3+M4}
+\label{fig:pretrain-heatmap}
+\end{figure}
+
+Положительные значения преобладают на~M4 quarterly,
+M4 monthly и~M3 monthly, а~отрицательные на~M3 yearly у~TimesNet
+и~Helformer --- именно там, где обучающие выборки слишком коротки для
+эффективного fine-tuning. Альтернативный взгляд на~разрыв между классическими
+и~нейросетевыми подходами --- абсолютная разница лучших sMAPE по~каждой
+категории (рис.~\ref{fig:neural-vs-classical-gap}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/neural_vs_classical_gap.png}
+\caption{Лучшая классическая vs лучшая нейросетевая модель (per-series) по 6 частотам M3+M4}
+\label{fig:neural-vs-classical-gap}
+\end{figure}
+
+Разрыв планомерно сокращается с~ростом длины ряда: на~M3 yearly
+классические модели опережают нейросетевые на~5--6~п.п., тогда как
+на~M4 daily разрыв исчезает и~меняет знак в~пользу нейросетей.
+Чтобы понять, насколько массовым является это преимущество на~ежедневных
+рядах, рис.~\ref{fig:daily-win-rate} показывает, у~скольких рядов
+M4~daily Auto-ARIMA опережает $K$ нейросетевых моделей.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/daily_neural_win_rate.png}
+\caption{Число нейросетевых моделей, побеждающих Auto-ARIMA на ежедневных рядах M4 (1000 рядов)}
+\label{fig:daily-win-rate}
+\end{figure}
+
+Лишь на~$\sim$30\,\% рядов Auto-ARIMA лидирует с~отрывом, тогда как
+на~остальных хотя~бы одна нейросетевая модель её догоняет или превосходит.
+Завершает обзор распределение sMAPE по~моделям на~M4 daily
+(рис.~\ref{fig:daily-distribution}), которое демонстрирует не~только
+средние значения, но~и~хвосты распределений.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/daily_smape_distribution.png}
+\caption{sMAPE по~моделям на~ежедневных рядах M4}
+\label{fig:daily-distribution}
+\end{figure}
+
+Auto-ARIMA, ETS и~TimesNet имеют наиболее компактные распределения
+с~короткими хвостами, тогда как DLinear, Autoformer и~FEDformer показывают
+более широкое распределение, что объясняет их более высокий средний sMAPE
+несмотря на~приемлемые медианы.
+
+% ---------------------------------------------------------------------------
+\subsection{Анализ отдельных рядов}
+\label{subsec:case-studies}
+
+Для наглядной демонстрации возможностей нейросетевых моделей
+представлены прогнозы на~отдельных рядах, где нейросети значимо
+превосходят классические подходы.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/neural_win_rate_all_categories.png}
+\caption{Доля рядов, где нейросеть побеждает лучшую классическую модель, по 6 частотам M3+M4 (per-series)}
+\label{fig:win-rate-all}
+\end{figure}
+
+Рисунок~\ref{fig:win-rate-all} показывает, что доля рядов, на~которых
+нейросетевые модели побеждают лучшую классическую, растёт с~увеличением
+длины ряда: на~M3~yearly (14--20 наблюдений) win rate составляет
+10--15\,\%, а~на~M4~daily (107--9919 наблюдений) достигает 30--50\,\%
+для TimesNet и~Helformer, подтверждая порог длины ряда как критический
+фактор конкурентоспособности нейросетевых моделей. Этот контекст
+мотивирует более детальный взгляд на~отдельные ряды, где нейросети
+демонстрируют наибольший выигрыш.
+
+\subsubsection{Ежедневные ряды: нейросети vs классика}
+
+Среди 1000~ежедневных рядов M4 на~517~рядах (51.7\,\%) лучшая
+нейросетевая модель превосходит лучшую классическую по~sMAPE,
+а~на~295~рядах (29.5\,\%) побеждают 3~и~более нейросетевых моделей.
+Рисунки~\ref{fig:cherry-d1117}--\ref{fig:cherry-d1816} иллюстрируют
+характерные примеры.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D1117.png}
+\caption{Ряд D1117 ($N{=}4197$): все нейросетевые модели побеждают классические}
+\label{fig:cherry-d1117}
+\end{figure}
+
+Здесь все 7~нейросетевых моделей побеждают классические~--- Autoformer и~Helformer показывают sMAPE втрое ниже Seasonal Naive. На~следующем ряде D2052 проверим, удерживается ли преимущество при существенно меньшей длине выборки.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D2052.png}
+\caption{Ряд D2052 ($N{=}174$): N-BEATS улавливает восходящий тренд}
+\label{fig:cherry-d2052}
+\end{figure}
+
+На~коротком ряде ($N{=}174$) N-BEATS втрое точнее Seasonal Naive за~счёт корректного захвата восходящего тренда. Ряд D2361 возвращает нас к~режиму длинной серии, но с~другой архитектурной победительницей.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D2361.png}
+\caption{Ряд D2361 ($N{=}4193$): DLinear и~PatchTST точнее классических моделей}
+\label{fig:cherry-d2361}
+\end{figure}
+
+На~длинной серии DLinear (1.4\,\%) и~PatchTST (2.1\,\%) значительно опережают классические модели. Ряд D4166 показывает работу TimesNet на~нестационарном паттерне.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D4166.png}
+\caption{Ряд D4166 ($N{=}327$): TimesNet моделирует нестационарный паттерн}
+\label{fig:cherry-d4166}
+\end{figure}
+
+TimesNet (4.3\,\%) втрое точнее Seasonal Naive~--- пример, где 2D-декомпозиция корректно моделирует нестационарный паттерн. Завершают подборку два ряда умеренной длины.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D4121.png}
+\caption{Ряд D4121 ($N{=}268$)}
+\label{fig:cherry-d4121}
+\end{figure}
+
+PatchTST (1.0\,\%) и~N-BEATS (1.3\,\%) точнее S.~Naive (3.0\,\%) при умеренной длине обучающей выборки. Последний пример~--- ряд D1816, на~котором длина выборки уже близка к~критическому порогу.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/cherry_D1816.png}
+\caption{Ряд D1816 ($N{=}93$)}
+\label{fig:cherry-d1816}
+\end{figure}
+
+Представленные примеры демонстрируют, что нейросетевые модели
+побеждают на~рядах с~нестационарными паттернами (смена тренда,
+нелинейная сезонность), где статистические подходы неизбежно
+воспроизводят устаревшие паттерны. Ключевые наблюдения:
+
+\begin{itemize}[nosep]
+\item На~длинных рядах ($N > 500$) нейросети побеждают за~счёт
+  обучаемости на~нестационарных структурах (D1117, D2361).
+\item На~рядах умеренной длины ($N = 100{-}500$) выигрыш менее
+  выражен, но N-BEATS и~PatchTST систематически превосходят
+  Seasonal Naive (D2052, D4166).
+\item Autoformer и~Helformer особенно эффективны на~рядах
+  с~выраженной сезонностью (D1117), где декомпозиция серийного типа
+  и~фиксированная HW-декомпозиция корректно изолируют сезонную
+  компоненту.
+\end{itemize}
 
 % ---------------------------------------------------------------------------
 \subsection{Выводы}
@@ -1245,35 +1682,35 @@ N-BEATS с~архитектурой residual-стеков~\cite{oreshkin2020nbea
 \begin{itemize}[nosep]
 \item На~полном M3 Competition (2829~рядов) классические модели
 лидируют в~целом: Seasonal Naive (15.74), ETS (16.04), Auto-ARIMA (16.14).
-TimesNet (17.65) --- лучшая нейросетевая модель, отставая от~ETS менее
-чем на~2~п.п. Нейросетевые модели побеждают лучшую классическую
-в~40\,\% годовых, 41\,\% квартальных и~47\,\% месячных рядов.
+TimesNet (17.65) --- лучшая нейросетевая модель, отставая от~Seasonal Naive
+менее чем на~2~п.п. На~полной выборке M4 (1000~рядов на~категорию)
+картина аналогична: Auto-ARIMA (12.51) и~ETS (12.61) лидируют,
+TimesNet (14.29) ближе всего к~классическим.
 Обучаемая декомпозиция (TimesNet, N-BEATS) становится конкурентоспособной
 при длине ряда свыше 80--100~наблюдений (M3 monthly, M4 daily).
-На~ежедневных рядах M4 нейросетевые модели побеждают классические
-в~67\,\% рядов.
 
 \item На~коротких рядах лидируют ETS и~Auto-ARIMA.
 Среди нейросетевых архитектур TimesNet с~2D-свертками
 и~N-BEATS с~residual-стеками показывают лучшие результаты,
 значительно превосходя трансформерные модели (Autoformer, FEDformer,
 PatchTST). Helformer конкурентоспособен на~месячных рядах
-(17.98 на~M3 monthly), но числовая нестабильность на~годовых
-рядах ограничивает его применимость.
+(17.98 на~M3 monthly, 17.06 на~M4 monthly), но числовая нестабильность
+на~годовых рядах ограничивает его применимость.
 
-\item В~per-series режиме --- нет: PatchTST (ранг~7.17), Autoformer (ранг~9.83),
-FEDformer (ранг~10.17) проигрывают более простым N-BEATS (ранг~6.67)
-и~TimesNet (ранг~5.50). Однако гибридный Helformer (ранг~4.33)
-демонстрирует, что трансформерная компонента может быть эффективной
-при наличии качественной фиксированной декомпозиции. Масштабный эксперимент
-с~предобучением на~пяти частотах подтверждает этот эффект:
-DLinear улучшается на~+38\,\%, Autoformer~--- на~+24\,\%, что
-свидетельствует об~оправданности сложности нейросетевых архитектур
-при доступе к~достаточному объёму данных.
+\item В~per-series режиме --- нет: PatchTST (ранг~6.83), Autoformer (ранг~9.33),
+FEDformer (ранг~10.33) проигрывают более простым N-BEATS (ранг~6.00)
+и~TimesNet (ранг~4.17). Масштабный эксперимент
+с~предобучением на~шести частотах подтверждает, что нейросетевые
+архитектуры эффективны при наличии достаточного объёма данных:
+DLinear улучшается на~+31.5\,\%, Autoformer~--- на~+25.5\,\%.
+На~M4~daily PatchTST с~предобучением (2.36) показывает лучший
+абсолютный результат среди всех моделей, превосходя Auto-ARIMA (3.22)
+и~ETS (3.46).
 
 \item  На~годовых рядах любая обучаемая декомпозиция проигрывает фиксированной;
 на~квартальных обучаемая 2D-декомпозиция TimesNet выходит на~уровень ETS;
-на~ежедневных рядах достаточно простой MA-декомпозиции (DLinear).
+на~ежедневных рядах все нейросетевые модели конкурентоспособны
+с~классическими подходами.
 
 \item Эксперименты показывают критическую границу порядка 50--100~наблюдений.
 Ниже этого порога нейросетевые модели систематически уступают
@@ -1282,22 +1719,37 @@ DLinear улучшается на~+38\,\%, Autoformer~--- на~+24\,\%, что
 позволяет эффективно сдвинуть эту границу вниз.
 \end{itemize}
 
-Систематический эксперимент с~предобучением на~пяти частотных категориях
-(M3~yearly/quarterly/monthly, M4~quarterly/monthly) и~семи моделях
+Систематический эксперимент с~предобучением на~шести частотных категориях
+(M3~yearly/quarterly/monthly, M4~quarterly/monthly/daily) и~семи моделях
 выявил дифференцированный эффект переноса знаний. DLinear показывает
-наибольший средний выигрыш (+38.0\,\%), трансформируясь из~худшей
-нейросетевой модели в~конкурентоспособную. Autoformer (+24.4\,\%)
-и~FEDformer (+21.9\,\%) получают значительное улучшение, особенно
-на~M4 (+36--44\,\%). TimesNet, напротив, в~среднем ухудшается
-($-$13.5\,\%), что свидетельствует о~конфликте глобального
-предобучения с~адаптивной 2D-декомпозицией.
+наибольший средний выигрыш (+31.5\,\%), трансформируясь из~худшей
+нейросетевой модели в~конкурентоспособную. Autoformer (+25.5\,\%)
+получает значительное улучшение, особенно на~M4 daily (+30.9\,\%)
+и~M4~quarterly (+40.0\,\%). TimesNet, напротив, в~среднем ухудшается
+($-$9.0\,\%) на~коротких рядах, но улучшается на~длинных
+(M3~monthly: +13.0\,\%, M4~daily: +13.5\,\%), что свидетельствует
+о~пороговой зависимости эффекта предобучения от~длины ряда.
 
-Наиболее значимым результатом предобучения является достижение
-нейросетевыми моделями уровня, превосходящего ETS на~месячных рядах:
-TimesNet с~предобучением показывает sMAPE~13.68\,\% на~полном
-M3~monthly --- на~3.7~п.п. лучше, чем ETS (17.42\,\%). Это первый
-случай в~данной работе, когда нейросетевая модель убедительно обходит
-лучшую классическую на~крупном наборе данных, подтверждая гипотезу
-о~том, что дефицит данных, а~не~архитектурные ограничения, является
+Наиболее значимым результатом предобучения является превосходство
+нейросетевых моделей над классическими на~двух крупных категориях:
+
+\begin{itemize}[nosep]
+\item \textit{M3 monthly (1428~рядов):} TimesNet PT (13.68) побеждает
+ETS (17.42) и~Auto-ARIMA (18.14) на~3.7--4.5~п.п.
+DLinear PT (13.98) и~Autoformer PT (15.10) также превосходят
+все три классические модели.
+
+\item \textit{M4 daily (1000~рядов):} 6 из~7 предобученных нейросетей
+побеждают все три классические модели. PatchTST PT (2.36) и~DLinear PT (2.44)
+лидируют, превосходя Auto-ARIMA (3.22) на~0.8--0.9~п.п.
+TimesNet PT (2.46) и~Autoformer PT (2.81) также выигрывают.
+Только FEDformer PT (4.16) не~достигает уровня Auto-ARIMA.
+\end{itemize}
+
+Эти результаты подтверждают центральную гипотезу работы:
+дефицит данных, а~не~архитектурные ограничения, является
 главным препятствием для глубоких моделей прогнозирования.
+При наличии достаточного корпуса для предобучения нейросетевые модели
+не~только сокращают разрыв с~классическими, но и~уверенно превосходят
+их на~длинных рядах.
 % ---------------------------------------------------------------------------

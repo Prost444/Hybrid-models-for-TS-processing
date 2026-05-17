@@ -4,7 +4,33 @@ __pycache__/
 .env
 .venv/
 src/hybridts.egg-info
-.csv
-.pdf
-.docx
-.png
+
+# Office temp lock files
+~$*
+**/~$*
+
+# LaTeX build artefacts (PDF is committed, intermediates are not)
+thesis/main.aux
+thesis/main.bbl
+thesis/main.bcf
+thesis/main.blg
+thesis/main.fdb_latexmk
+thesis/main.fls
+thesis/main.log
+thesis/main.out
+thesis/main.toc
+thesis/main.xdv
+thesis/main.run.xml
+main.aux
+main.bbl
+main.bcf
+main.blg
+main.log
+
+# Large regenerable raw datasets (recreated via ensure_m4_csv / ensure_m3_csv)
+src/data/m4/csv/M4_monthly_TRAIN.csv
+src/data/m4/csv/M4_monthly_TEST.csv
+
+# Node
+node_modules/
+package-lock.json
