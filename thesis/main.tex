@@ -197,6 +197,10 @@ ARIMA, ETS, Prophet, N-BEATS, DLinear, Autoformer, TimesNet и Helformer.
 \phantomsection
 \addcontentsline{toc}{section}{Список литературы}
 \renewcommand{\refname}{Список литературы}
+% Нумерация по ГОСТ: «1.», «2.», … вместо «[1]», «[2]»
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
 \begin{thebibliography}{99}
 
 \bibitem{hamilton1994time} Hamilton J.D. Time Series Analysis / J.D.~Hamilton. − Princeton, NJ: Princeton University Press, 1994. − 799~p.
