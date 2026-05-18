@@ -1,440 +1,522 @@
 #!/usr/bin/env python3
-"""Build the ВКР defense presentation (.pptx) — mature, clean, portable.
+"""ВКР defense presentation — rich, structured, academic register.
 
-Design: deep navy + warm terracotta accent, light background, Calibri (safe
-for PowerPoint export). Thin top accent bar, title + italic subtitle, footer
-with slide number. No childish card-blocks. Real figures from thesis/figures.
+Design: full-width navy header band (white title + light subtitle + accent
+underline), tinted content panels with accent left border, structured
+conclusion band, redesigned takeaways. Calibri (portable to PowerPoint).
+Academic nominal phrasing — no colloquial verb-phrases.
 """
 import struct
 from pathlib import Path
 from pptx import Presentation
-from pptx.util import Inches, Pt, Emu
+from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
-from pptx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parent.parent
 FIG = ROOT / "thesis" / "figures"
 OUT = ROOT / "docs" / "Презентация_Лазарев_ВКР.pptx"
 
-# ---- Palette --------------------------------------------------------------
-NAVY      = RGBColor(0x1F, 0x2A, 0x4E)   # titles, top bar
-NAVY_SOFT = RGBColor(0x37, 0x46, 0x76)   # subtitles
-ACCENT    = RGBColor(0xE0, 0x7A, 0x5F)   # warm terracotta — key highlights
-INK       = RGBColor(0x2B, 0x2B, 0x2B)   # body text
-MUTE      = RGBColor(0x5A, 0x64, 0x78)   # captions
-LIGHTBG   = RGBColor(0xFF, 0xFF, 0xFF)
-PANEL     = RGBColor(0xF3, 0xF5, 0xFA)   # very light panel (used sparingly)
-WHITE     = RGBColor(0xFF, 0xFF, 0xFF)
-RULE      = RGBColor(0xD8, 0xDD, 0xE8)
+NAVY    = RGBColor(0x1B, 0x26, 0x49)   # header band, titles
+NAVY2   = RGBColor(0x2E, 0x3D, 0x6B)   # secondary navy
+ACCENT  = RGBColor(0xE0, 0x7A, 0x5F)   # terracotta accent
+ACC_DK  = RGBColor(0xC2, 0x5A, 0x40)   # darker accent
+INK     = RGBColor(0x29, 0x2E, 0x3A)   # body text
+MUTE    = RGBColor(0x66, 0x6E, 0x82)   # captions
+WHITE   = RGBColor(0xFF, 0xFF, 0xFF)
+PANEL   = RGBColor(0xEE, 0xF1, 0xF7)   # tinted content panel
+PANEL2  = RGBColor(0xF6, 0xF7, 0xFB)   # lighter panel
+LBLUE   = RGBColor(0xB7, 0xC2, 0xDE)   # light blue (on navy)
+RULE    = RGBColor(0xD7, 0xDD, 0xEA)
 
 FONT = "Calibri"
 SW, SH = Inches(13.333), Inches(7.5)
+TOTAL = 14
 
 
 def png_size(path):
     with open(path, "rb") as f:
         head = f.read(24)
     if head[:8] == b"\x89PNG\r\n\x1a\n":
-        w, h = struct.unpack(">II", head[16:24])
-        return w, h
+        return struct.unpack(">II", head[16:24])
     return 1600, 900
 
 
-def solid(shape, color):
+def solid(shape, color, line=None):
     shape.fill.solid()
     shape.fill.fore_color.rgb = color
-    shape.line.fill.background()
+    if line is None:
+        shape.line.fill.background()
+    else:
+        shape.line.color.rgb = line
+        shape.line.width = Pt(0.75)
+    shape.shadow.inherit = False
 
 
-def textbox(slide, x, y, w, h, runs, align=PP_ALIGN.LEFT,
-            anchor=MSO_ANCHOR.TOP, line_spacing=1.0, space_after=0):
-    """runs: list of paragraphs; each paragraph = list of (text, size, color, bold, italic)."""
-    tb = slide.shapes.add_textbox(x, y, w, h)
-    tf = tb.text_frame
+def rect(slide, x, y, w, h, color, line=None):
+    sh = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, w, h)
+    solid(sh, color, line)
+    return sh
+
+
+def tb(slide, x, y, w, h, runs, align=PP_ALIGN.LEFT,
+       anchor=MSO_ANCHOR.TOP, ls=1.0, sa=0):
+    box = slide.shapes.add_textbox(x, y, w, h)
+    tf = box.text_frame
     tf.word_wrap = True
     tf.vertical_anchor = anchor
-    tf.margin_left = 0
-    tf.margin_right = 0
-    tf.margin_top = 0
-    tf.margin_bottom = 0
+    tf.margin_left = 0; tf.margin_right = 0
+    tf.margin_top = 0; tf.margin_bottom = 0
     for i, para in enumerate(runs):
         p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
         p.alignment = align
-        p.line_spacing = line_spacing
-        if space_after:
-            p.space_after = Pt(space_after)
-        for (txt, size, color, bold, italic) in para:
+        p.line_spacing = ls
+        if sa:
+            p.space_after = Pt(sa)
+        for (t, sz, c, b, it) in para:
             r = p.add_run()
-            r.text = txt
+            r.text = t
             r.font.name = FONT
-            r.font.size = Pt(size)
-            r.font.color.rgb = color
-            r.font.bold = bold
-            r.font.italic = italic
-    return tb
+            r.font.size = Pt(sz)
+            r.font.color.rgb = c
+            r.font.bold = b
+            r.font.italic = it
+    return box
 
 
-def base(slide, title, subtitle, page, total):
-    """Common chrome: bg, top accent bar, title, italic subtitle, footer."""
-    bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SW, SH)
-    solid(bg, LIGHTBG)
-    bg.shadow.inherit = False
-    # top accent bar
-    bar = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SW, Inches(0.16))
-    solid(bar, NAVY)
-    bar.shadow.inherit = False
-    # title
-    textbox(slide, Inches(0.7), Inches(0.42), Inches(11.9), Inches(0.95),
-            [[(title, 30, NAVY, True, False)]], line_spacing=1.0)
+def header(slide, title, subtitle, page):
+    """Full-width navy header band — strong anchor, no pale floating."""
+    rect(slide, 0, 0, SW, SH, WHITE)
+    band = rect(slide, 0, 0, SW, Inches(1.46), NAVY)
+    rect(slide, 0, Inches(1.46), SW, Pt(3), ACCENT)
+    tb(slide, Inches(0.7), Inches(0.26), Inches(10.2), Inches(0.72),
+       [[(title, 27, WHITE, True, False)]], ls=1.0)
     if subtitle:
-        textbox(slide, Inches(0.72), Inches(1.22), Inches(11.9), Inches(0.45),
-                [[(subtitle, 16, NAVY_SOFT, False, True)]])
-    # footer rule + page
-    fr = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.7), Inches(7.02),
-                                Inches(11.93), Pt(0.75))
-    solid(fr, RULE)
-    fr.shadow.inherit = False
-    textbox(slide, Inches(11.4), Inches(7.08), Inches(1.2), Inches(0.3),
-            [[(f"{page} / {total}", 11, MUTE, False, False)]],
-            align=PP_ALIGN.RIGHT)
-    textbox(slide, Inches(0.7), Inches(7.08), Inches(7.0), Inches(0.3),
-            [[("Прогнозирование временных рядов · ВКР · Лазарев А.К.",
-               10, MUTE, False, False)]])
+        tb(slide, Inches(0.72), Inches(0.98), Inches(10.0), Inches(0.4),
+           [[(subtitle, 14, LBLUE, False, True)]])
+    # page chip
+    chip = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE,
+                                  Inches(11.95), Inches(0.42), Inches(0.95),
+                                  Inches(0.5))
+    solid(chip, NAVY2)
+    tb(slide, Inches(11.95), Inches(0.52), Inches(0.95), Inches(0.34),
+       [[(f"{page:02d} / {TOTAL}", 13, WHITE, True, False)]],
+       align=PP_ALIGN.CENTER)
+    # footer
+    rect(slide, Inches(0.7), Inches(7.04), Inches(11.93), Pt(0.75), RULE)
+    tb(slide, Inches(0.7), Inches(7.1), Inches(9.0), Inches(0.3),
+       [[("Прогнозирование временных рядов · ВКР · Лазарев А.К. · 2026",
+          10, MUTE, False, False)]])
 
 
-def add_image_fit(slide, path, x, y, max_w, max_h):
-    w, h = png_size(path)
-    ar = w / h
-    box_ar = max_w / max_h
-    if ar > box_ar:
-        nw = max_w
-        nh = int(max_w / ar)
-    else:
-        nh = max_h
-        nw = int(max_h * ar)
-    px = x + (max_w - nw) // 2
-    py = y + (max_h - nh) // 2
-    slide.shapes.add_picture(str(path), px, py, nw, nh)
-
-
-def bullets(slide, x, y, w, h, items, size=17, gap=10, accent_lead=True):
-    """Clean bullets — small accent square marker, no card boxes."""
+def panel(slide, x, y, w, h, title, items, fill=PANEL, size=14, gap=8):
+    """Tinted content panel with accent left border + title + bullets.
+    Sophisticated grouping block — fills space, not childish."""
+    rect(slide, x, y, w, h, fill)
+    rect(slide, x, y, Pt(4), h, ACCENT)
+    tb(slide, x + Inches(0.28), y + Inches(0.18), w - Inches(0.4),
+       Inches(0.4), [[(title, 15, NAVY, True, False)]])
     runs = []
     for it in items:
         if isinstance(it, tuple):
-            head, tail = it
             runs.append([("▪  ", size, ACCENT, True, False),
-                         (head, size, INK, True, False),
-                         (tail, size, INK, False, False)])
+                         (it[0], size, INK, True, False),
+                         (it[1], size, INK, False, False)])
         else:
             runs.append([("▪  ", size, ACCENT, True, False),
                          (it, size, INK, False, False)])
-    textbox(slide, x, y, w, h, runs, line_spacing=1.12, space_after=gap)
+    tb(slide, x + Inches(0.28), y + Inches(0.66), w - Inches(0.5),
+       h - Inches(0.8), runs, ls=1.1, sa=gap)
 
 
-def keystat(slide, x, y, number, label, w=Inches(3.0)):
-    """A large accent number with a label underneath — for key takeaways."""
-    textbox(slide, x, y, w, Inches(0.95),
-            [[(number, 40, ACCENT, True, False)]])
-    textbox(slide, x, y + Inches(0.85), w, Inches(0.7),
-            [[(label, 13, MUTE, False, False)]], line_spacing=1.05)
+def conclusion_band(slide, text, y=Inches(6.32)):
+    """Full-width tinted conclusion strip with accent border — academic."""
+    rect(slide, Inches(0.7), y, Inches(11.93), Inches(0.62), PANEL)
+    rect(slide, Inches(0.7), y, Pt(4), Inches(0.62), ACCENT)
+    tb(slide, Inches(1.0), y + Inches(0.08), Inches(1.7), Inches(0.46),
+       [[("ВЫВОД", 13, ACC_DK, True, False)]], anchor=MSO_ANCHOR.MIDDLE)
+    tb(slide, Inches(2.15), y, Inches(10.3), Inches(0.62),
+       [[(text, 14.5, INK, False, False)]], anchor=MSO_ANCHOR.MIDDLE, ls=1.05)
+
+
+def keystat(slide, x, y, number, label, w=Inches(3.5)):
+    tb(slide, x, y, w, Inches(0.9), [[(number, 38, ACCENT, True, False)]])
+    tb(slide, x, y + Inches(0.78), w, Inches(0.85),
+       [[(label, 13, MUTE, False, False)]], ls=1.06)
+
+
+def img_fit(slide, path, x, y, mw, mh):
+    w, h = png_size(path)
+    ar = w / h
+    if ar > mw / mh:
+        nw, nh = mw, int(mw / ar)
+    else:
+        nh, nw = mh, int(mh * ar)
+    slide.shapes.add_picture(str(path), x + (mw - nw) // 2,
+                             y + (mh - nh) // 2, nw, nh)
 
 
 prs = Presentation()
 prs.slide_width = SW
 prs.slide_height = SH
 BLANK = prs.slide_layouts[6]
-TOTAL = 13
-
-
-def takeaway(slide, text, y=Inches(6.45), x=Inches(0.7), w=Inches(11.9)):
-    """Bold accent one-line conclusion at the bottom of a graph slide —
-    gives the speaker a clear anchor phrase so they don't get lost."""
-    bar = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, Pt(3), Inches(0.42))
-    solid(bar, ACCENT); bar.shadow.inherit = False
-    textbox(slide, x + Inches(0.18), y, w, Inches(0.5),
-            [[("Главное:  ", 15, ACCENT, True, False),
-              (text, 15, INK, False, False)]], line_spacing=1.05)
-
-
-def comp_table(slide, x, y, rows, col_w, total_w):
-    """Native pptx table — classical vs pretrained-neural comparison.
-    rows: list of (label, [vals...], kind) where kind in
-    {'head','classic','neural','win'}."""
-    nrows, ncols = len(rows), len(rows[0][1]) + 1
-    gtbl = slide.shapes.add_table(nrows, ncols, x, y, total_w, Inches(0.3)).table
-    gtbl.first_row = False
-    gtbl.horz_banding = False
-    gtbl.columns[0].width = col_w[0]
-    for j in range(1, ncols):
-        gtbl.columns[j].width = col_w[1]
-    for i, (label, vals, kind) in enumerate(rows):
-        cells = [label] + [str(v) for v in vals]
-        for j, txt in enumerate(cells):
-            c = gtbl.cell(i, j)
-            c.margin_left = Pt(4); c.margin_right = Pt(4)
-            c.margin_top = Pt(2); c.margin_bottom = Pt(2)
-            c.vertical_anchor = MSO_ANCHOR.MIDDLE
-            tf = c.text_frame; tf.word_wrap = False
-            p = tf.paragraphs[0]
-            p.alignment = PP_ALIGN.LEFT if j == 0 else PP_ALIGN.CENTER
-            r = p.add_run(); r.text = txt
-            r.font.name = FONT
-            if kind == "head":
-                c.fill.solid(); c.fill.fore_color.rgb = NAVY
-                r.font.color.rgb = WHITE; r.font.bold = True
-                r.font.size = Pt(12.5)
-            elif kind == "group":
-                c.fill.solid(); c.fill.fore_color.rgb = PANEL
-                r.font.color.rgb = NAVY; r.font.bold = True
-                r.font.italic = True; r.font.size = Pt(12)
-            else:
-                c.fill.solid()
-                c.fill.fore_color.rgb = WHITE if i % 2 else RGBColor(0xF8,0xF9,0xFC)
-                r.font.size = Pt(12.5)
-                if kind == "classic":
-                    r.font.color.rgb = MUTE
-                    if j == 0: r.font.bold = True
-                else:  # neural (pretrained)
-                    r.font.color.rgb = INK
-                    if j == 0: r.font.bold = True
-    return gtbl
 
 
 def new():
     return prs.slides.add_slide(BLANK)
 
-# ---- Slide 1 — Title ------------------------------------------------------
+# ===== Slide 1 — Title =====================================================
 s = new()
-bg = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SW, SH)
-solid(bg, NAVY); bg.shadow.inherit = False
-strip = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, Inches(5.05), SW, Pt(2))
-solid(strip, ACCENT); strip.shadow.inherit = False
-textbox(s, Inches(0.9), Inches(0.7), Inches(11.5), Inches(0.4),
-        [[("МИРЭА — Российский технологический университет", 15, WHITE, False, False)]])
-textbox(s, Inches(0.9), Inches(1.06), Inches(11.5), Inches(0.4),
-        [[("Институт искусственного интеллекта · Кафедра высшей математики",
-           13, RGBColor(0xB9, 0xC3, 0xDE), False, True)]])
-textbox(s, Inches(0.9), Inches(2.0), Inches(11.5), Inches(0.4),
-        [[("ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА", 14, ACCENT, True, False)]])
-textbox(s, Inches(0.9), Inches(2.55), Inches(11.6), Inches(2.0),
-        [[("Прогнозирование временных рядов за счёт обучаемой", 31, WHITE, True, False)],
-         [("декомпозиции и нейросетевых механизмов учёта", 31, WHITE, True, False)],
-         [("долгосрочных зависимостей", 31, WHITE, True, False)]],
-        line_spacing=1.05)
-textbox(s, Inches(0.9), Inches(5.35), Inches(11.5), Inches(0.45),
-        [[("Выполнил: ", 15, RGBColor(0xB9,0xC3,0xDE), False, False),
-          ("студент группы КМБО-03-22 — Лазарев А.К.", 15, WHITE, True, False)]])
-textbox(s, Inches(0.9), Inches(5.8), Inches(11.5), Inches(0.45),
-        [[("Научный руководитель: ", 15, RGBColor(0xB9,0xC3,0xDE), False, False),
-          ("к.ф.-м.н., доцент кафедры ВМ — Петрусевич Д.А.", 15, WHITE, True, False)]])
-textbox(s, Inches(0.9), Inches(6.6), Inches(4.0), Inches(0.4),
-        [[("Москва, 2026", 13, RGBColor(0x9A,0xA6,0xC8), False, False)]])
+rect(s, 0, 0, SW, SH, NAVY)
+rect(s, 0, 0, Inches(0.22), SH, ACCENT)
+rect(s, Inches(0.9), Inches(4.62), Inches(4.4), Pt(2.5), ACCENT)
+tb(s, Inches(0.95), Inches(0.66), Inches(11.4), Inches(0.4),
+   [[("МИРЭА — Российский технологический университет", 15, WHITE, False, False)]])
+tb(s, Inches(0.95), Inches(1.04), Inches(11.4), Inches(0.4),
+   [[("Институт искусственного интеллекта · Кафедра высшей математики",
+      13, LBLUE, False, True)]])
+tb(s, Inches(0.95), Inches(1.95), Inches(11.4), Inches(0.4),
+   [[("ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА", 14, ACCENT, True, False)]])
+tb(s, Inches(0.92), Inches(2.5), Inches(11.7), Inches(2.0),
+   [[("Прогнозирование временных рядов за счёт", 30, WHITE, True, False)],
+    [("обучаемой декомпозиции и нейросетевых механизмов", 30, WHITE, True, False)],
+    [("учёта долгосрочных зависимостей", 30, WHITE, True, False)]], ls=1.06)
+tb(s, Inches(0.95), Inches(4.95), Inches(11.4), Inches(0.42),
+   [[("Выполнил: ", 15, LBLUE, False, False),
+     ("студент группы КМБО-03-22 — Лазарев А.К.", 15, WHITE, True, False)]])
+tb(s, Inches(0.95), Inches(5.42), Inches(11.4), Inches(0.42),
+   [[("Научный руководитель: ", 15, LBLUE, False, False),
+     ("к.ф.-м.н., доцент кафедры ВМ — Петрусевич Д.А.", 15, WHITE, True, False)]])
+tb(s, Inches(0.95), Inches(6.55), Inches(5.0), Inches(0.4),
+   [[("Москва · 2026", 13, LBLUE, False, False)]])
 
-# ---- Slide 2 — Актуальность и цель ---------------------------------------
+# ===== Slide 2 — Актуальность и цель =======================================
 s = new()
-base(s, "Актуальность и цель работы", "Раздел 1. Постановка исследования", 2, TOTAL)
-bullets(s, Inches(0.7), Inches(1.95), Inches(6.4), Inches(4.4), [
-    ("Краткосрочный прогноз ", "временных рядов нужен в планировании: продажи, трафик, спрос, ресурсы."),
-    ("Универсальной модели нет: ", "классика устойчива на коротких рядах, нейросети сильнее на длинных и сложных."),
-    ("Современные архитектуры ", "включают обучаемую декомпозицию и механизмы долгосрочных зависимостей — но дают ли они реальный выигрыш?"),
-], size=17, gap=14)
-# Goal panel (subtle, not a childish box: thin left accent rule)
-rule = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(7.4), Inches(2.0), Pt(3), Inches(3.6))
-solid(rule, ACCENT); rule.shadow.inherit = False
-textbox(s, Inches(7.7), Inches(2.0), Inches(5.0), Inches(0.4),
-        [[("ЦЕЛЬ РАБОТЫ", 14, ACCENT, True, False)]])
-textbox(s, Inches(7.7), Inches(2.5), Inches(5.05), Inches(3.2),
-        [[("Определить условия, при которых обучаемая декомпозиция и "
-           "нейросетевые механизмы учёта долгосрочных зависимостей дают "
-           "практическое преимущество над классическими статистическими "
-           "моделями — и когда более простые методы предпочтительнее.",
-           17, INK, False, False)]], line_spacing=1.18)
+header(s, "Актуальность и цель исследования",
+       "Раздел 1. Постановка задачи", 2)
+panel(s, Inches(0.7), Inches(1.78), Inches(6.05), Inches(4.35),
+      "Проблематика", [
+    ("Прикладная значимость. ", "Краткосрочный прогноз применяется в планировании спроса, трафика и ресурсов."),
+    ("Отсутствие универсальной модели. ", "Статистические методы устойчивы на коротких рядах, нейросетевые — на длинных и сложных."),
+    ("Открытый вопрос. ", "Оправдывают ли обучаемая декомпозиция и механизмы долгосрочных зависимостей свою сложность?"),
+], size=15, gap=12)
+rect(s, Inches(7.0), Inches(1.78), Inches(5.63), Inches(4.35), NAVY)
+rect(s, Inches(7.0), Inches(1.78), Pt(4), Inches(4.35), ACCENT)
+tb(s, Inches(7.3), Inches(2.0), Inches(5.1), Inches(0.4),
+   [[("ЦЕЛЬ РАБОТЫ", 14, ACCENT, True, False)]])
+tb(s, Inches(7.3), Inches(2.55), Inches(5.05), Inches(3.4),
+   [[("Установить условия, при которых обучаемая декомпозиция временных "
+      "рядов и нейросетевые механизмы учёта долгосрочных зависимостей "
+      "обеспечивают практическое преимущество над классическими "
+      "статистическими моделями, и определить области, где более простые "
+      "методы остаются предпочтительными.", 16, WHITE, False, False)]], ls=1.22)
 
-# ---- Slide 3 — Модели и эксперимент --------------------------------------
+# ===== Slide 3 — Классические модели =======================================
 s = new()
-base(s, "Модели и масштаб эксперимента", "Раздел 1. Состав моделей и экспериментальная база", 3, TOTAL)
-textbox(s, Inches(0.7), Inches(1.95), Inches(6.0), Inches(0.4),
-        [[("Классические модели (4)", 18, NAVY, True, False)]])
-bullets(s, Inches(0.7), Inches(2.45), Inches(5.6), Inches(1.8), [
-    "Seasonal Naive · Auto-ARIMA", "ETS · Prophet"], size=16, gap=6)
-textbox(s, Inches(0.7), Inches(3.7), Inches(6.0), Inches(0.4),
-        [[("Нейросетевые модели (7)", 18, NAVY, True, False)]])
-bullets(s, Inches(0.7), Inches(4.2), Inches(5.7), Inches(2.2), [
-    "DLinear · N-BEATS · TimesNet",
-    "Autoformer · FEDformer · PatchTST",
-    "Helformer (гибрид: HW-декомпозиция + нейросеть)"], size=16, gap=6)
-# right: data + regimes
-rule = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(7.4), Inches(2.0), Pt(3), Inches(4.5))
-solid(rule, ACCENT); rule.shadow.inherit = False
-textbox(s, Inches(7.7), Inches(2.0), Inches(5.0), Inches(0.4),
-        [[("ДАННЫЕ", 14, ACCENT, True, False)]])
-bullets(s, Inches(7.7), Inches(2.5), Inches(5.0), Inches(1.8), [
-    ("M3 Competition — ", "2829 рядов (полный набор)"),
-    ("M4 Competition — ", "3000 рядов (Q + M + D)"),
-    "6 частотных категорий, 5829 рядов"], size=15, gap=7)
-textbox(s, Inches(7.7), Inches(4.5), Inches(5.0), Inches(0.4),
-        [[("ТРИ РЕЖИМА", 14, ACCENT, True, False)]])
-bullets(s, Inches(7.7), Inches(5.0), Inches(5.0), Inches(1.5), [
-    "Прямое прогнозирование",
-    "Итеративное прогнозирование",
-    "Предобучение на корпусе рядов"], size=15, gap=6)
+header(s, "Классические статистические модели",
+       "Раздел 1. Четыре эталонные модели сравнения", 3)
+cards = [
+    ("Seasonal Naive",
+     "Прогноз воспроизводит значения предыдущего сезонного периода. "
+     "Не имеет обучаемых параметров.",
+     "Роль: эталон для метрики MASE и нижняя граница качества."),
+    ("Auto-ARIMA",
+     "Линейная модель стационаризованного ряда: авторегрессия, "
+     "интегрирование (разности) и скользящее среднее. Порядки (p, d, q) "
+     "подбираются автоматически по информационному критерию.",
+     "Сильная сторона: устойчивость на коротких рядах."),
+    ("ETS",
+     "Экспоненциальное сглаживание уровня, тренда и сезонности в "
+     "пространстве состояний. Веса α, β, γ оцениваются по правдоподобию.",
+     "Сильная сторона: плавная динамика и сезонность."),
+    ("Prophet",
+     "Аддитивная декомпозиция: кусочно-линейный тренд, сезонные "
+     "гармоники и календарные эффекты с байесовской оценкой "
+     "параметров.",
+     "Особенность: гибкая настройка сезонных компонент."),
+]
+x0 = Inches(0.7); cw = Inches(2.91); chh = Inches(4.35); gap = Inches(0.13)
+for i, (nm, desc, role) in enumerate(cards):
+    x = x0 + i * (cw + gap)
+    rect(s, x, Inches(1.78), cw, chh, PANEL)
+    rect(s, x, Inches(1.78), cw, Inches(0.6), NAVY)
+    tb(s, x, Inches(1.89), cw, Inches(0.4),
+       [[(nm, 15, WHITE, True, False)]], align=PP_ALIGN.CENTER)
+    tb(s, x + Inches(0.22), Inches(2.55), cw - Inches(0.42), Inches(2.7),
+       [[(desc, 13.5, INK, False, False)]], ls=1.18)
+    rect(s, x + Inches(0.22), Inches(5.2), cw - Inches(0.44), Pt(1.2), RULE)
+    tb(s, x + Inches(0.22), Inches(5.32), cw - Inches(0.42), Inches(0.78),
+       [[(role, 12.5, ACC_DK, False, True)]], ls=1.12)
+conclusion_band(s, "Классические модели интерпретируемы и устойчивы при "
+                   "ограниченной истории наблюдений — это сильная база сравнения.")
 
-# ---- Slide 4 — Методология -----------------------------------------------
+# ===== Slide 4 — Нейросетевые модели =======================================
 s = new()
-base(s, "Методология: декомпозиция и зависимости",
-     "Раздел 2. Два ключевых механизма", 4, TOTAL)
-bullets(s, Inches(0.7), Inches(1.95), Inches(5.0), Inches(3.5), [
-    ("Фиксированная декомпозиция ", "— ETS, DLinear, Helformer: тренд и сезонность выделяются заранее заданным правилом."),
-    ("Обучаемая декомпозиция ", "— Autoformer, FEDformer, TimesNet: компоненты выделяет сама сеть в ходе обучения."),
-    ("Долгосрочные зависимости ", "— внимание, свёртки, линейные проекции."),
-], size=16, gap=12)
-add_image_fit(s, FIG / "decomposition_type_bars.png",
-              Inches(5.95), Inches(1.85), Inches(6.7), Inches(4.0))
-takeaway(s, "сама по себе обучаемая декомпозиция не гарантирует выигрыша — "
-            "решает объём данных и режим обучения.")
+header(s, "Нейросетевые модели и их архитектуры",
+       "Раздел 1. Семь моделей: от линейных до гибридных", 4)
+img_fit(s, FIG / "arch_neural_pipelines.png",
+        Inches(0.7), Inches(1.66), Inches(8.55), Inches(4.55))
+panel(s, Inches(9.42), Inches(1.66), Inches(3.21), Inches(4.55),
+      "Семейства", [
+    ("Линейные: ", "DLinear"),
+    ("Базисные: ", "N-BEATS"),
+    ("Свёрточные: ", "TimesNet"),
+    ("Трансформеры: ", "Autoformer, FEDformer, PatchTST"),
+    ("Гибридные: ", "Helformer"),
+], size=13.5, gap=10)
+conclusion_band(s, "Модели различаются способом выделения компонент ряда и "
+                   "механизмом учёта зависимостей — это и есть предмет сравнения.")
 
-# ---- Slide 5 — Прямое прогнозирование ------------------------------------
+# ===== Slide 5 — Эксперимент ===============================================
 s = new()
-base(s, "Прямое прогнозирование: общая картина",
-     "Раздел 3. Классика устойчиво впереди, TimesNet — лучшая нейросеть", 5, TOTAL)
-add_image_fit(s, FIG / "rank_evolution.png",
-              Inches(0.7), Inches(1.8), Inches(7.9), Inches(4.4))
-bullets(s, Inches(8.75), Inches(2.0), Inches(3.9), Inches(4.4), [
-    ("Классика впереди. ", "Auto-ARIMA, ETS и Seasonal Naive занимают верхние ранги на всех шести частотах."),
-    ("TimesNet — лучшая нейросеть, ", "средний ранг ≈ 4, вплотную к классике."),
-    ("Трансформеры ", "(Autoformer, FEDformer) в режиме обучения на одном ряде заметно отстают."),
-    ("Тенденция: ", "чем длиннее ряды, тем выше поднимаются нейросети."),
-], size=14, gap=9)
-takeaway(s, "в обычном режиме классика побеждает, но разрыв сокращается "
-            "с ростом длины ряда.")
+header(s, "Экспериментальная база и протокол",
+       "Раздел 2. Данные, режимы, тип декомпозиции", 5)
+panel(s, Inches(0.7), Inches(1.78), Inches(3.8), Inches(4.35),
+      "Данные", [
+    ("M3 Competition. ", "Полный набор — 2829 рядов: 645 годовых, 756 квартальных, 1428 месячных."),
+    ("M4 Competition. ", "3000 рядов: 1000 квартальных, 1000 месячных, 1000 ежедневных."),
+    ("Итого ", "6 частотных категорий, 5829 рядов."),
+    ("Метрики. ", "sMAPE, MASE, RMSE — для устойчивости выводов к выбору меры."),
+], size=14, gap=13)
+panel(s, Inches(4.66), Inches(1.78), Inches(3.8), Inches(4.35),
+      "Три режима прогнозирования", [
+    ("Прямой. ", "Весь горизонт прогнозируется за один проход модели."),
+    ("Итеративный. ", "Пошаговое продвижение с подстановкой собственных прогнозов; ошибка накапливается."),
+    ("С предобучением. ", "Обучение на корпусе рядов с последующим дообучением на целевом ряде."),
+], size=14, gap=13)
+panel(s, Inches(8.62), Inches(1.78), Inches(4.0), Inches(4.35),
+      "Тип декомпозиции", [
+    ("Фиксированная. ", "Правило задано заранее — ETS, DLinear, Helformer."),
+    ("Обучаемая. ", "Компоненты выделяет сеть — Autoformer, FEDformer, TimesNet."),
+    ("Без декомпозиции. ", "Прямое моделирование — Auto-ARIMA, PatchTST."),
+], size=14, gap=13)
+conclusion_band(s, "Сопоставление по трём осям — длина ряда, режим обучения "
+                   "и тип декомпозиции — формирует структуру анализа.")
 
-# ---- Slide 6 — Длина ряда -------------------------------------------------
+# ===== Slide 6 — Прямое прогнозирование ====================================
 s = new()
-base(s, "Длина ряда — ключевой фактор",
-     "Раздел 3. Порог длины ряда определяет исход сравнения", 6, TOTAL)
-add_image_fit(s, FIG / "bar_m4_daily_full.png",
-              Inches(0.7), Inches(1.8), Inches(7.7), Inches(4.4))
-textbox(s, Inches(8.65), Inches(2.0), Inches(4.0), Inches(0.4),
-        [[("Порог ≈ 50–100 наблюдений", 16, NAVY, True, False)]])
-bullets(s, Inches(8.65), Inches(2.55), Inches(4.0), Inches(3.6), [
-    ("Короткие ряды ", "— уверенное преимущество классики."),
-    ("Длинные ежедневные ряды M4 ", "— нейросети конкурентоспособны."),
-    ("TimesNet (3.62) ", "вплотную к Auto-ARIMA (3.22) и ETS (3.46)."),
-    ("Prophet ", "стоит особняком — слаб на недельной сезонности."),
-], size=14, gap=10)
-takeaway(s, "ниже порога длины лидирует классика, выше — нейросети "
-            "выходят на её уровень.")
+header(s, "Прямое прогнозирование: общая картина",
+       "Раздел 3. Сравнительная позиция моделей по частотам", 6)
+img_fit(s, FIG / "rank_evolution.png",
+        Inches(0.7), Inches(1.7), Inches(8.05), Inches(4.45))
+panel(s, Inches(8.9), Inches(1.7), Inches(3.73), Inches(4.45),
+      "Наблюдения", [
+    ("Лидерство классики. ", "Auto-ARIMA, ETS, Seasonal Naive — верхние ранги на всех частотах."),
+    ("Лучшая нейросеть. ", "TimesNet, средний ранг ≈ 4."),
+    ("Отставание трансформеров ", "в режиме обучения на одном ряде."),
+], size=13.5, gap=10)
+conclusion_band(s, "В режиме обучения на одном ряде классические модели "
+                   "сохраняют лидерство, однако разрыв убывает с ростом длины ряда.")
 
-# ---- Slide 7 — Предобучение ----------------------------------------------
+# ===== Slide 7 — Длина обучающей выборки ===================================
 s = new()
-base(s, "Предобучение — главный результат",
-     "Раздел 3. Эффект переноса знаний", 7, TOTAL)
-add_image_fit(s, FIG / "pretrain_effect_all.png",
-              Inches(0.7), Inches(1.8), Inches(8.0), Inches(4.3))
-keystat(s, Inches(9.0), Inches(1.95), "+31.5%", "DLinear — наибольший выигрыш от предобучения")
-keystat(s, Inches(9.0), Inches(3.45), "+25.5%", "Autoformer")
-keystat(s, Inches(9.0), Inches(4.95), "+18.2%", "Helformer")
-takeaway(s, "предобучение на корпусе рядов превращает слабые в обычном "
-            "режиме нейросети в сильные.")
+header(s, "Длина обучающей выборки как фактор",
+       "Раздел 3. Пороговая зависимость качества от длины ряда", 7)
+img_fit(s, FIG / "bar_m4_daily_full.png",
+        Inches(0.7), Inches(1.7), Inches(7.7), Inches(4.45))
+panel(s, Inches(8.55), Inches(1.7), Inches(4.08), Inches(4.45),
+      "Пороговый эффект (≈ 50–100 набл.)", [
+    ("Короткие ряды. ", "Уверенное преимущество классических моделей."),
+    ("Длинные ряды M4 daily. ", "Нейросети конкурентоспособны."),
+    ("TimesNet (3.62) ", "сопоставим с Auto-ARIMA (3.22) и ETS (3.46)."),
+], size=13.5, gap=11)
+conclusion_band(s, "Существует пороговая длина обучающей выборки: ниже неё "
+                   "лидирует классика, выше — нейросетевые модели выходят на её уровень.")
 
-# ---- Slide 8 — Предобученные нейросети vs классика ------------------------
+# ===== Slide 8 — Предобучение ==============================================
 s = new()
-base(s, "Предобученные нейросети обходят классику",
-     "Раздел 3. Превосходство на среднечастотных и длинных рядах", 8, TOTAL)
-add_image_fit(s, FIG / "cherry_pretrained_D2111.png",
-              Inches(0.7), Inches(1.8), Inches(7.7), Inches(4.3))
-bullets(s, Inches(8.65), Inches(2.0), Inches(4.0), Inches(4.2), [
-    ("M3 monthly: ", "предобученный TimesNet (13.68) точнее ETS (17.42)."),
-    ("M4 daily: ", "предобученный PatchTST (2.36) обходит Auto-ARIMA (3.22) и ETS (3.46)."),
-    ("На графике ", "цветные линии предобученных нейросетей идут плотно к чёрной фактической линии, пунктир классики — дальше."),
-], size=14, gap=11)
-takeaway(s, "при достатке данных предобученные нейросети не догоняют, "
-            "а превосходят лучшую классику.")
+header(s, "Предобучение: эффект переноса знаний",
+       "Раздел 3. Относительное улучшение по частотам и моделям", 8)
+img_fit(s, FIG / "pretrain_effect_all.png",
+        Inches(0.7), Inches(1.7), Inches(7.9), Inches(4.35))
+rect(s, Inches(8.75), Inches(1.7), Inches(3.88), Inches(4.35), NAVY)
+rect(s, Inches(8.75), Inches(1.7), Pt(4), Inches(4.35), ACCENT)
+tb(s, Inches(9.0), Inches(1.92), Inches(3.5), Inches(0.4),
+   [[("СРЕДНИЙ ВЫИГРЫШ sMAPE", 12.5, ACCENT, True, False)]])
+for i, (v, nm) in enumerate([("+31.5 %", "DLinear"), ("+25.5 %", "Autoformer"),
+                              ("+18.2 %", "Helformer")]):
+    yy = Inches(2.42) + i * Inches(1.18)
+    tb(s, Inches(9.0), yy, Inches(3.5), Inches(0.6),
+       [[(v, 30, WHITE, True, False)]])
+    tb(s, Inches(9.0), yy + Inches(0.56), Inches(3.5), Inches(0.34),
+       [[(nm, 13, LBLUE, False, False)]])
+conclusion_band(s, "Предобучение на корпусе рядов выводит ранее слабые "
+                   "нейросетевые модели на конкурентоспособный уровень.")
 
-# ---- Slide 9 — Сравнительная таблица -------------------------------------
+# ===== Slide 9 — Предобученные нейросети vs классика =======================
 s = new()
-base(s, "Предобученные нейросети vs классические модели",
-     "Раздел 3. Сравнение sMAPE по шести частотным категориям", 9, TOTAL)
+header(s, "Предобученные нейросети и классические модели",
+       "Раздел 3. Превосходство на среднечастотных и длинных рядах", 9)
+img_fit(s, FIG / "cherry_pretrained_D2111.png",
+        Inches(0.7), Inches(1.7), Inches(7.8), Inches(4.4))
+panel(s, Inches(8.65), Inches(1.7), Inches(3.98), Inches(4.4),
+      "Ключевые сопоставления", [
+    ("M3 monthly. ", "Предобученный TimesNet (13.68) точнее ETS (17.42)."),
+    ("M4 daily. ", "Предобученный PatchTST (2.36) точнее Auto-ARIMA (3.22) и ETS (3.46)."),
+    ("Прогнозы нейросетей ", "плотно следуют фактической траектории."),
+], size=13.5, gap=11)
+conclusion_band(s, "При достаточном объёме данных предобученные нейросетевые "
+                   "модели обеспечивают точность выше лучших классических "
+                   "моделей.")
+
+# ===== Slide 10 — Сравнительная таблица ====================================
+s = new()
+header(s, "Сводное сравнение: sMAPE по категориям",
+       "Раздел 3. Предобученные нейросети и классические модели", 10)
 rows = [
     ("Модель", ["M3-Y", "M3-Q", "M3-M", "M4-Q", "M4-M", "M4-D", "Ср."], "head"),
-    ("Классические модели (per-series)", ["", "", "", "", "", "", ""], "group"),
-    ("Auto-ARIMA", ["17.9", "10.9", "18.1", "10.2", "14.7", "3.22", "12.5"], "classic"),
-    ("ETS",        ["19.1", "10.8", "17.4", "9.7",  "15.1", "3.46", "12.6"], "classic"),
-    ("Seasonal Naive", ["17.9", "11.1", "17.2", "12.2", "15.9", "4.05", "13.0"], "classic"),
-    ("Нейросетевые модели (с предобучением)", ["", "", "", "", "", "", ""], "group"),
-    ("DLinear",   ["23.7", "12.7", "14.0", "15.4", "17.2", "2.44", "14.2"], "neural"),
-    ("TimesNet",  ["25.1", "12.4", "13.7", "22.5", "17.2", "2.46", "15.6"], "neural"),
-    ("PatchTST",  ["23.1", "15.1", "15.2", "19.6", "17.5", "2.36", "15.5"], "neural"),
-    ("Autoformer",["23.4", "13.8", "15.1", "20.1", "16.3", "2.81", "15.3"], "neural"),
-    ("FEDformer", ["22.8", "15.8", "16.3", "19.6", "15.6", "4.16", "15.7"], "neural"),
+    ("Классические модели (per-series)", [""]*7, "group"),
+    ("Auto-ARIMA",     ["17.9","10.9","18.1","10.2","14.7","3.22","12.5"], "classic"),
+    ("ETS",            ["19.1","10.8","17.4","9.7","15.1","3.46","12.6"], "classic"),
+    ("Seasonal Naive", ["17.9","11.1","17.2","12.2","15.9","4.05","13.0"], "classic"),
+    ("Нейросетевые модели (с предобучением)", [""]*7, "group"),
+    ("DLinear",   ["23.7","12.7","14.0","15.4","17.2","2.44","14.2"], "neural"),
+    ("TimesNet",  ["25.1","12.4","13.7","22.5","17.2","2.46","15.6"], "neural"),
+    ("PatchTST",  ["23.1","15.1","15.2","19.6","17.5","2.36","15.5"], "neural"),
+    ("Autoformer",["23.4","13.8","15.1","20.1","16.3","2.81","15.3"], "neural"),
+    ("FEDformer", ["22.8","15.8","16.3","19.6","15.6","4.16","15.7"], "neural"),
 ]
-comp_table(s, Inches(0.7), Inches(1.8), rows,
-           col_w=[Inches(3.4), Inches(1.2)], total_w=Inches(11.9))
-takeaway(s, "на M3 monthly и M4 daily предобученные нейросети уверенно "
-            "точнее лучшей классики; на коротких рядах классика впереди.",
-         y=Inches(6.35))
+gt = s.shapes.add_table(len(rows), 8, Inches(0.7), Inches(1.74),
+                        Inches(11.93), Inches(0.3)).table
+gt.first_row = False; gt.horz_banding = False
+gt.columns[0].width = Inches(3.5)
+for j in range(1, 8):
+    gt.columns[j].width = Inches(1.205)
+for i, (label, vals, kind) in enumerate(rows):
+    for j, txt in enumerate([label] + list(vals)):
+        c = gt.cell(i, j)
+        c.margin_left = Pt(5); c.margin_right = Pt(4)
+        c.margin_top = Pt(2); c.margin_bottom = Pt(2)
+        c.vertical_anchor = MSO_ANCHOR.MIDDLE
+        p = c.text_frame.paragraphs[0]
+        p.alignment = PP_ALIGN.LEFT if j == 0 else PP_ALIGN.CENTER
+        r = p.add_run(); r.text = txt; r.font.name = FONT
+        if kind == "head":
+            c.fill.solid(); c.fill.fore_color.rgb = NAVY
+            r.font.color.rgb = WHITE; r.font.bold = True; r.font.size = Pt(13)
+        elif kind == "group":
+            if j == 0:
+                c.merge(gt.cell(i, 7))
+            c.fill.solid(); c.fill.fore_color.rgb = NAVY2
+            r.font.color.rgb = WHITE; r.font.bold = True
+            r.font.italic = True; r.font.size = Pt(12.5)
+        else:
+            c.fill.solid()
+            c.fill.fore_color.rgb = WHITE if i % 2 else PANEL2
+            r.font.size = Pt(13)
+            if kind == "classic":
+                r.font.color.rgb = MUTE
+            else:
+                r.font.color.rgb = INK
+            if j == 0:
+                r.font.bold = True
+            # highlight where pretrained neural beats best classical
+            if kind == "neural" and j in (3, 6):
+                c.fill.fore_color.rgb = RGBColor(0xFC, 0xE9, 0xE2)
+                r.font.color.rgb = ACC_DK; r.font.bold = True
+conclusion_band(s, "На M3 monthly и M4 daily предобученные нейросети "
+                   "превосходят лучшую классику; на коротких рядах классика "
+                   "сохраняет преимущество.", y=Inches(6.46))
 
-# ---- Slide 10 — Анализ отдельных рядов ------------------------------------
+# ===== Slide 11 — Анализ отдельных рядов ===================================
 s = new()
-base(s, "Анализ отдельных рядов",
-     "Раздел 3. Преимущество нейросетей носит массовый характер", 10, TOTAL)
-add_image_fit(s, FIG / "cherry_D2052.png",
-              Inches(0.7), Inches(1.8), Inches(8.1), Inches(4.3))
-keystat(s, Inches(9.2), Inches(1.95), "517", "из 1000 ежедневных рядов\nнейросеть точнее классики")
-keystat(s, Inches(9.2), Inches(3.75), "295", "рядов, где побеждают\n3+ нейросетевых модели")
-takeaway(s, "нейросети выигрывают не точечно, а на большинстве длинных "
-            "ежедневных рядов M4.")
+header(s, "Анализ отдельных временных рядов",
+       "Раздел 3. Массовый характер преимущества нейросетей", 11)
+img_fit(s, FIG / "cherry_D2052.png",
+        Inches(0.7), Inches(1.7), Inches(8.1), Inches(4.45))
+rect(s, Inches(8.95), Inches(1.7), Inches(3.68), Inches(4.45), NAVY)
+rect(s, Inches(8.95), Inches(1.7), Pt(4), Inches(4.45), ACCENT)
+tb(s, Inches(9.2), Inches(2.0), Inches(3.2), Inches(0.9),
+   [[("517", 44, WHITE, True, False)]])
+tb(s, Inches(9.2), Inches(2.86), Inches(3.2), Inches(0.7),
+   [[("из 1000 ежедневных рядов M4 — нейросеть точнее классики",
+      13, LBLUE, False, False)]], ls=1.08)
+tb(s, Inches(9.2), Inches(3.92), Inches(3.2), Inches(0.9),
+   [[("295", 44, WHITE, True, False)]])
+tb(s, Inches(9.2), Inches(4.78), Inches(3.2), Inches(0.7),
+   [[("рядов, где побеждают 3 и более нейросетевых модели",
+      13, LBLUE, False, False)]], ls=1.08)
+conclusion_band(s, "Преимущество нейросетевых моделей на длинных рядах носит "
+                   "массовый, а не единичный характер.")
 
-# ---- Slide 11 — Итеративное прогнозирование ------------------------------
+# ===== Slide 12 — Итеративное прогнозирование ==============================
 s = new()
-base(s, "Итеративное прогнозирование",
-     "Раздел 3. Хрупкость обучаемой декомпозиции", 11, TOTAL)
-bullets(s, Inches(0.7), Inches(2.1), Inches(7.4), Inches(4.0), [
-    ("При накоплении ошибки ", "сильнее всего деградируют модели с обучаемой декомпозицией."),
-    ("FEDformer и TimesNet ", "теряют около +5 п.п. sMAPE при переходе к итеративному режиму."),
-    ("PatchTST ", "(без явной декомпозиции) — наиболее устойчивый трансформер."),
-    ("Классические модели ", "(ETS, Auto-ARIMA) практически нечувствительны к режиму."),
-], size=17, gap=15)
-rule = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(8.5), Inches(2.3), Pt(3), Inches(3.4))
-solid(rule, ACCENT); rule.shadow.inherit = False
-textbox(s, Inches(8.8), Inches(2.3), Inches(3.9), Inches(3.6),
-        [[("Вывод: ", 17, ACCENT, True, False),
-          ("сложная обучаемая декомпозиция — это риск при многошаговом "
-           "прогнозе. Простые и классические модели предпочтительнее, "
-           "если нужен итеративный режим.", 17, INK, False, False)]],
-        line_spacing=1.18)
+header(s, "Итеративное прогнозирование",
+       "Раздел 3. Устойчивость моделей к накоплению ошибки", 12)
+panel(s, Inches(0.7), Inches(1.78), Inches(7.3), Inches(4.35),
+      "Деградация при переходе от прямого режима к итеративному", [
+    ("Обучаемая декомпозиция уязвима. ", "FEDformer и TimesNet теряют около 5 п.п. sMAPE — выделенные компоненты искажаются на собственных прогнозах."),
+    ("PatchTST устойчив. ", "Наименьшая деградация среди трансформеров: модель работает с патчами без явного разделения на компоненты."),
+    ("Классические модели стабильны. ", "ETS и Auto-ARIMA практически нечувствительны к режиму — рекуррентная структура заложена в самой модели."),
+    ("Закономерность. ", "Чем сложнее обучаемое разложение, тем сильнее накопление ошибки на горизонте."),
+], size=14.5, gap=13)
+rect(s, Inches(8.25), Inches(1.78), Inches(4.38), Inches(4.35), NAVY)
+rect(s, Inches(8.25), Inches(1.78), Pt(4), Inches(4.35), ACCENT)
+tb(s, Inches(8.5), Inches(2.02), Inches(3.9), Inches(0.4),
+   [[("СЛЕДСТВИЕ", 13, ACCENT, True, False)]])
+tb(s, Inches(8.5), Inches(2.5), Inches(3.95), Inches(2.5),
+   [[("Сложная обучаемая декомпозиция повышает риск накопления ошибки "
+      "при многошаговом прогнозе. В задачах с итеративным "
+      "прогнозированием простые и классические модели предпочтительнее.",
+      15, WHITE, False, False)]], ls=1.22)
+rect(s, Inches(8.5), Inches(4.95), Inches(3.7), Pt(1), NAVY2)
+tb(s, Inches(8.5), Inches(5.12), Inches(3.95), Inches(1.0),
+   [[("Рекомендация: ", 14, ACCENT, True, False),
+     ("выбор модели должен учитывать не только точность, но и режим "
+      "её применения.", 14, LBLUE, False, False)]], ls=1.18)
+conclusion_band(s, "Тип декомпозиции должен соответствовать режиму "
+                   "прогнозирования.")
 
-# ---- Slide 12 — Выводы ----------------------------------------------------
+# ===== Slide 13 — Выводы (structured matrix) ===============================
 s = new()
-base(s, "Выводы и практические рекомендации",
-     "Раздел 4. Основные результаты", 12, TOTAL)
-bullets(s, Inches(0.7), Inches(1.9), Inches(11.9), Inches(4.8), [
-    ("Длина ряда решает. ", "Ниже ≈ 50–100 наблюдений лидирует классика (ETS, Auto-ARIMA); выше — нейросети конкурентоспособны."),
-    ("TimesNet — лучшая нейросеть ", "в per-series режиме; обучаемая 2D-декомпозиция эффективна при достатке данных."),
-    ("Предобучение кардинально усиливает нейросети ", "(+18…32 %) и выводит их на уровень и выше классики (M3 monthly, M4 daily)."),
-    ("Тип декомпозиции должен соответствовать режиму: ", "фиксированная — устойчивее, обучаемая — адаптивнее, но хрупка при итеративном прогнозе."),
-    ("Ответ не бинарный: ", "эффективность нейросетевых механизмов зависит от длины ряда, режима обучения и объёма данных."),
-], size=16.5, gap=13)
+header(s, "Выводы и практические рекомендации",
+       "Раздел 4. Основные результаты исследования", 13)
+findings = [
+    ("Длина обучающей выборки",
+     "Определяющий фактор. Ниже ≈ 50–100 наблюдений предпочтительны ETS и Auto-ARIMA; выше — нейросети конкурентоспособны."),
+    ("TimesNet — лучшая нейросеть",
+     "В режиме обучения на одном ряде; обучаемая 2D-декомпозиция эффективна при достаточном объёме данных."),
+    ("Предобучение",
+     "Повышает качество нейросетей на 18–32 % и выводит их на уровень и выше классики на M3 monthly и M4 daily."),
+    ("Тип декомпозиции и режим",
+     "Фиксированная декомпозиция устойчивее, обучаемая адаптивнее, но хрупка при итеративном прогнозировании."),
+    ("Общий вывод",
+     "Эффективность нейросетевых механизмов не абсолютна — она определяется длиной ряда, режимом обучения и объёмом данных."),
+]
+y = Inches(1.74); rh = Inches(1.0)
+for i, (t, d) in enumerate(findings):
+    fill = PANEL if i % 2 == 0 else PANEL2
+    rect(s, Inches(0.7), y, Inches(11.93), rh - Inches(0.06), fill)
+    rect(s, Inches(0.7), y, Pt(4), rh - Inches(0.06), ACCENT)
+    num = slide_num = slide if False else s
+    chip = s.shapes.add_shape(MSO_SHAPE.OVAL, Inches(0.95), y + Inches(0.21),
+                              Inches(0.56), Inches(0.56))
+    solid(chip, NAVY)
+    tb(s, Inches(0.95), y + Inches(0.29), Inches(0.56), Inches(0.4),
+       [[(str(i + 1), 19, WHITE, True, False)]], align=PP_ALIGN.CENTER)
+    tb(s, Inches(1.75), y + Inches(0.13), Inches(3.5), Inches(0.7),
+       [[(t, 15.5, NAVY, True, False)]], anchor=MSO_ANCHOR.MIDDLE, ls=1.0)
+    tb(s, Inches(5.35), y + Inches(0.1), Inches(7.1), Inches(0.82),
+       [[(d, 13.5, INK, False, False)]], anchor=MSO_ANCHOR.MIDDLE, ls=1.1)
+    y += rh
 
-# ---- Slide 13 — Спасибо ---------------------------------------------------
+# ===== Slide 14 — Заключение ===============================================
 s = new()
-bg = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SW, SH)
-solid(bg, NAVY); bg.shadow.inherit = False
-strip = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, Inches(4.3), SW, Pt(2))
-solid(strip, ACCENT); strip.shadow.inherit = False
-textbox(s, Inches(0.9), Inches(2.7), Inches(11.5), Inches(1.1),
-        [[("Спасибо за внимание!", 40, WHITE, True, False)]])
-textbox(s, Inches(0.9), Inches(4.55), Inches(11.5), Inches(0.5),
-        [[("Прогнозирование временных рядов за счёт обучаемой декомпозиции "
-           "и нейросетевых механизмов учёта долгосрочных зависимостей",
-           15, RGBColor(0xB9,0xC3,0xDE), False, True)]])
-textbox(s, Inches(0.9), Inches(5.5), Inches(11.5), Inches(0.4),
-        [[("Лазарев А.К. · КМБО-03-22 · Научный руководитель Петрусевич Д.А.",
-           14, WHITE, False, False)]])
+rect(s, 0, 0, SW, SH, NAVY)
+rect(s, 0, 0, Inches(0.22), SH, ACCENT)
+rect(s, Inches(0.95), Inches(4.05), Inches(4.4), Pt(2.5), ACCENT)
+tb(s, Inches(0.95), Inches(2.55), Inches(11.4), Inches(1.0),
+   [[("Спасибо за внимание", 42, WHITE, True, False)]])
+tb(s, Inches(0.95), Inches(4.35), Inches(11.4), Inches(0.9),
+   [[("Прогнозирование временных рядов за счёт обучаемой декомпозиции и "
+      "нейросетевых механизмов учёта долгосрочных зависимостей",
+      15, LBLUE, False, True)]], ls=1.2)
+tb(s, Inches(0.95), Inches(5.55), Inches(11.4), Inches(0.4),
+   [[("Лазарев А.К. · КМБО-03-22 · Научный руководитель — Петрусевич Д.А.",
+      14, WHITE, False, False)]])
+tb(s, Inches(0.95), Inches(6.05), Inches(11.4), Inches(0.4),
+   [[("Готов ответить на вопросы комиссии", 13, LBLUE, False, True)]])
 
 prs.save(str(OUT))
-print(f"Saved: {OUT}")
-print(f"Slides: {len(prs.slides._sldIdLst)}")
+print(f"Saved: {OUT}  ({len(prs.slides._sldIdLst)} slides)")
