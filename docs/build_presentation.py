@@ -32,7 +32,7 @@ RULE    = RGBColor(0xD7, 0xDD, 0xEA)
 
 FONT = "Calibri"
 SW, SH = Inches(13.333), Inches(7.5)
-TOTAL = 15
+TOTAL = 16
 
 
 def png_size(path):
@@ -294,20 +294,22 @@ panel(s, Inches(8.62), Inches(1.78), Inches(4.0), Inches(4.35),
 conclusion_band(s, "Сопоставление по трём осям — длина ряда, режим обучения "
                    "и тип декомпозиции — формирует структуру анализа.")
 
-# ===== Slide 6 — Прямое прогнозирование ====================================
+# ===== Slide 6 — Прямое прогнозирование (тепловая карта рангов) ===========
 s = new()
-header(s, "Прямое прогнозирование: общая картина",
-       "Раздел 3. Сравнительная позиция моделей по частотам", 6)
-img_fit(s, FIG / "rank_evolution.png",
-        Inches(0.7), Inches(1.7), Inches(8.05), Inches(4.45))
-panel(s, Inches(8.9), Inches(1.7), Inches(3.73), Inches(4.45),
-      "Наблюдения", [
-    ("Лидерство классики. ", "Auto-ARIMA, ETS, Seasonal Naive — верхние ранги на всех частотах."),
-    ("Лучшая нейросеть. ", "TimesNet, средний ранг ≈ 4."),
-    ("Отставание трансформеров ", "в режиме обучения на одном ряде."),
-], size=13.5, gap=10)
-conclusion_band(s, "В режиме обучения на одном ряде классические модели "
-                   "сохраняют лидерство, однако разрыв убывает с ростом длины ряда.")
+header(s, "Прямое прогнозирование: кто точнее",
+       "Раздел 3. Ранг моделей по 6 частотным категориям", 6)
+img_fit(s, FIG / "heatmap_rank.png",
+        Inches(0.7), Inches(1.7), Inches(7.9), Inches(4.4))
+panel(s, Inches(8.75), Inches(1.7), Inches(3.88), Inches(4.4),
+      "Как читать карту", [
+    ("Строка — модель, ", "столбец — частотная категория."),
+    ("Цвет — ранг: ", "зелёный = лучше, красный = хуже."),
+    ("Зелёная полоса вверху ", "— классика (Auto-ARIMA, ETS, S. Naive) стабильно в топе."),
+    ("TimesNet ", "— единственная нейросеть рядом с лидерами."),
+], size=13.5, gap=11)
+conclusion_band(s, "В режиме обучения на одном ряде классика устойчиво "
+                   "лидирует во всех категориях; среди нейросетей выделяется "
+                   "только TimesNet.")
 
 # ===== Slide 7 — Длина обучающей выборки ===================================
 s = new()
@@ -469,21 +471,22 @@ tb(s, Inches(8.5), Inches(5.12), Inches(3.95), Inches(1.0),
 conclusion_band(s, "Тип декомпозиции должен соответствовать режиму "
                    "прогнозирования.")
 
-# ===== Slide 13 — Итеративное прогнозирование: график =====================
+# ===== Slide 13 — Итеративное прогнозирование: деградация =================
 s = new()
-header(s, "Итеративное прогнозирование: прямой vs итеративный",
-       "Раздел 3. Прогноз на квартальном ряде M3 (T478)", 13)
-img_fit(s, FIG / "rollout_m3_quarterly_T478.png",
+header(s, "Итеративное прогнозирование: масштаб деградации",
+       "Раздел 3. Прямой vs итеративный sMAPE по моделям (M3)", 13)
+img_fit(s, FIG / "rollout_degradation_bars.png",
         Inches(0.7), Inches(1.7), Inches(7.95), Inches(4.4))
 panel(s, Inches(8.8), Inches(1.7), Inches(3.83), Inches(4.4),
-      "Как читать график", [
-    ("Чёрная линия — ", "фактические значения."),
-    ("Пунктир ", "— прямой прогноз модели."),
-    ("Сплошная ", "— итеративный прогноз той же модели."),
-    ("Расхождение ", "пунктира и сплошной линии показывает деградацию модели в итеративном режиме."),
-], size=13.5, gap=12)
-conclusion_band(s, "Модели с обучаемой декомпозицией заметно отклоняются от "
-                   "факта в итеративном режиме; классические — нет.")
+      "Что показывает диаграмма", [
+    ("Синий — ", "прямой прогноз, оранжевый — итеративный."),
+    ("Классика ", "(S. Naive, ARIMA, ETS) — деградации практически нет."),
+    ("Обучаемая декомпозиция ", "(FEDformer, Autoformer, TimesNet) теряет 4–6 п.п. sMAPE."),
+    ("Модели упорядочены ", "по росту деградации слева направо."),
+], size=13.5, gap=11)
+conclusion_band(s, "Чем сложнее обучаемая декомпозиция, тем сильнее "
+                   "накопление ошибки в итеративном режиме; классика "
+                   "к режиму нечувствительна.")
 
 # ===== Slide 14 — Выводы (structured matrix) ===============================
 s = new()
@@ -518,7 +521,48 @@ for i, (t, d) in enumerate(findings):
        [[(d, 13.5, INK, False, False)]], anchor=MSO_ANCHOR.MIDDLE, ls=1.1)
     y += rh
 
-# ===== Slide 15 — Заключение ===============================================
+# ===== Slide 15 — Список литературы (избранное) ===========================
+s = new()
+header(s, "Список литературы (избранное)",
+       "Раздел 5. Полный список — 49 источников в ВКР", 15)
+refs_left = [
+    "Hyndman R.J., Athanasopoulos G. Forecasting: principles and practice. — Melbourne: OTexts, 2021.",
+    "Box G.E.P., Jenkins G.M. Time series analysis: forecasting and control. — Holden-Day, 1970.",
+    "Makridakis S., Spiliotis E., Assimakopoulos V. The M4 Competition // Int. J. Forecasting. — 2020. — Vol. 36(1).",
+    "Makridakis S., Hibon M. The M3-Competition // Int. J. Forecasting. — 2000. — Vol. 16(4).",
+    "Cleveland R.B. et al. STL: A Seasonal-Trend Decomposition Procedure Based on Loess // J. Official Statistics. — 1990.",
+    "Hyndman R.J. et al. A state space framework for automatic forecasting // Int. J. Forecasting. — 2002.",
+    "Taylor S.J., Letham B. Forecasting at scale // The American Statistician. — 2018. — Vol. 72(1).",
+    "Zeng A. et al. Are Transformers Effective for Time Series Forecasting? (DLinear) // AAAI. — 2023.",
+]
+refs_right = [
+    "Oreshkin B.N. et al. N-BEATS: Neural basis expansion analysis. — arXiv:1905.10437, 2020.",
+    "Wu H. et al. TimesNet: Temporal 2D-Variation Modeling. — ICLR, 2023.",
+    "Wu H. et al. Autoformer: Decomposition Transformers with Auto-Correlation. — NeurIPS, 2021.",
+    "Zhou T. et al. FEDformer: Frequency Enhanced Decomposed Transformer // ICML. — 2022.",
+    "Nie Y. et al. A Time Series is Worth 64 Words (PatchTST). — ICLR, 2023.",
+    "Kehinde T.O. et al. Helformer: An Attention-Based Deep Learning Model // J. Big Data. — 2025.",
+    "Vaswani A. et al. Attention Is All You Need. — NeurIPS, 2017.",
+    "Wen Q. et al. Transformers in Time Series: A Survey // IJCAI. — 2023.",
+]
+
+
+def ref_column(slide, x, items, start):
+    runs = []
+    for k, txt in enumerate(items):
+        runs.append([(f"{start + k}.  ", 11, ACC_DK, True, False),
+                     (txt, 11, INK, False, False)])
+    tb(slide, x, Inches(1.85), Inches(5.9), Inches(4.9), runs,
+       ls=1.12, sa=13)
+
+
+ref_column(s, Inches(0.7), refs_left, 1)
+rect(s, Inches(6.66), Inches(1.95), Pt(0.75), Inches(4.5), RULE)
+ref_column(s, Inches(6.9), refs_right, 9)
+conclusion_band(s, "Полный пронумерованный список из 49 источников по ГОСТ "
+                   "Р 7.0.5-2008 приведён в тексте ВКР.", y=Inches(6.45))
+
+# ===== Slide 16 — Заключение ===============================================
 s = new()
 rect(s, 0, 0, SW, SH, NAVY)
 rect(s, 0, 0, Inches(0.22), SH, ACCENT)
